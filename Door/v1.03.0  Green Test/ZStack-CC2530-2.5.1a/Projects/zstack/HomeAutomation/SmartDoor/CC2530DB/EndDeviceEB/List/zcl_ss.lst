@@ -1,0 +1,1931 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         08/Aug/2017  09:25:15 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Components\stack\zcl\zc #
+#                          l_ss.c                                             #
+#    Command line       =  -f "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\To #
+#                          ols\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3              #
+#                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE    #
+#                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT             #
+#                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work      #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wCo #
+#                          nfig.cfg" (-DZIGBEEPRO -DSECURE=1                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x06108800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,0x6F, #
+#                          0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0           #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart    #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wZC #
+#                          L.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT        #
+#                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF            #
+#                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_GE #
+#                          NERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GENER #
+#                          ATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GENERA #
+#                          TE_TIMEOUT=10 -DZCL_LOAD_CONTROL                   #
+#                          -DZCL_SIMPLE_METERING -DZCL_PRICING -DZCL_MESSAGE  #
+#                          -DZCL_TUNNELING -DZCL_TOU) -DZCL_DEVICE_MGMT       #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Components\stack\zcl\z #
+#                          cl_ss.c" -lC "D:\work space\Smart Product\Two      #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\EndDe #
+#                          viceEB\List\" -lA "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\List\"      #
+#                          --diag_suppress Pe001,Pa010 -o "D:\work            #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\Obj\" -e    #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\" -I  #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\Source\" -I         #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\Source\" -I      #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\..\ZMain\TI2530D #
+#                          B\" -I "D:\work space\Smart Product\Two            #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\hal\include\" -I "D:\work     #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\hal\target\CC2530EB\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\include\" -I "D:\work space\Smart           #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\high_level\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\single_chip\" -I "D:\work   #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mt\" -I "D:\work space\Smart Product\Two        #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\osal\include\" -I "D:\work    #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\saddr\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\sdata\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\af\" -I "D:\work space\Smart Product\Two  #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\stack\nwk\" -I "D:\work       #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sapi\" -I "D:\work space\Smart            #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sec\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sys\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zcl\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zdo\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\zmac\" -I "D:\work space\Smart Product\Two      #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\zmac\f8w\" -Oh                #
+#                          --require_prototypes                               #
+#    List file          =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\List\zcl_ss #
+#                          .lst                                               #
+#    Object file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\Obj\zcl_ss. #
+#                          r51                                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\work space\Smart Product\Two YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Components\stack\zcl\zcl_ss.c
+      1          /**************************************************************************************************
+      2            Filename:       zcl_ss.c
+      3            Revised:        $Date: 2010-02-09 15:28:14 -0800 (Tue, 09 Feb 2010) $
+      4            Revision:       $Revision: 21679 $
+      5          
+      6            Description:    Zigbee Cluster Library - Security and Safety ( SS )
+      7          
+      8          
+      9            Copyright 2006-2010 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com. 
+     38          **************************************************************************************************/
+     39          
+     40          /*******************************************************************************
+     41           * INCLUDES
+     42           */
+     43          #include "ZComDef.h"
+     44          #include "OSAL.h"
+     45          #include "zcl.h"
+     46          #include "zcl_general.h"
+     47          #include "zcl_ss.h"
+     48          
+     49          #if defined ( INTER_PAN )
+     50            #include "stub_aps.h"
+     51          #endif
+     52          
+     53          /*******************************************************************************
+     54           * MACROS
+     55           */
+     56          #define zclSS_ZoneTypeSupported( a ) ( (a) == SS_IAS_ZONE_TYPE_STANDARD_CIE              || \
+     57                                                 (a) == SS_IAS_ZONE_TYPE_MOTION_SENSOR             || \
+     58                                                 (a) == SS_IAS_ZONE_TYPE_CONTACT_SWITCH            || \
+     59                                                 (a) == SS_IAS_ZONE_TYPE_FIRE_SENSOR               || \
+     60                                                 (a) == SS_IAS_ZONE_TYPE_WATER_SENSOR              || \
+     61                                                 (a) == SS_IAS_ZONE_TYPE_GAS_SENSOR                || \
+     62                                                 (a) == SS_IAS_ZONE_TYPE_PERSONAL_EMERGENCY_DEVICE || \
+     63                                                 (a) == SS_IAS_ZONE_TYPE_VIBRATION_MOVEMENT_SENSOR || \
+     64                                                 (a) == SS_IAS_ZONE_TYPE_REMOTE_CONTROL            || \
+     65                                                 (a) == SS_IAS_ZONE_TYPE_KEY_FOB                   || \
+     66                                                 (a) == SS_IAS_ZONE_TYPE_KEYPAD                    || \
+     67                                                 (a) == SS_IAS_ZONE_TYPE_STANDARD_WARNING_DEVICE )
+     68          
+     69          /*******************************************************************************
+     70           * CONSTANTS
+     71           */
+     72          
+     73          /*******************************************************************************
+     74           * TYPEDEFS
+     75           */
+     76          typedef struct zclSSCBRec
+     77          {
+     78            struct zclSSCBRec       *next;
+     79            uint8                   endpoint; // Used to link it into the endpoint descriptor
+     80            zclSS_AppCallbacks_t    *CBs;     // Pointer to Callback function
+     81          } zclSSCBRec_t;
+     82          
+     83          typedef struct zclSS_ZoneItem
+     84          {
+     85            struct zclSS_ZoneItem   *next;
+     86            uint8                   endpoint; // Used to link it into the endpoint descriptor
+     87            IAS_ACE_ZoneTable_t     zone;     // Zone info
+     88          } zclSS_ZoneItem_t;
+     89          
+     90          /*******************************************************************************
+     91           * GLOBAL VARIABLES
+     92           */
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     93          const uint8 zclSS_UknownIeeeAddress[8] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
+   \                     zclSS_UknownIeeeAddress:
+   \   000000   FF           DB 255
+   \   000001   FF           DB 255
+   \   000002   FF           DB 255
+   \   000003   FF           DB 255
+   \   000004   FF           DB 255
+   \   000005   FF           DB 255
+   \   000006   FF           DB 255
+   \   000007   FF           DB 255
+     94          
+     95          /*******************************************************************************
+     96           * GLOBAL FUNCTIONS
+     97           */
+     98          
+     99          /*******************************************************************************
+    100           * LOCAL VARIABLES
+    101           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    102          static zclSSCBRec_t *zclSSCBs = (zclSSCBRec_t *)NULL;
+   \                     zclSSCBs:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    103          static uint8 zclSSPluginRegisted = FALSE;
+   \                     zclSSPluginRegisted:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    104          
+    105          #if defined(ZCL_ZONE) || defined(ZCL_ACE)
+    106          static zclSS_ZoneItem_t *zclSS_ZoneTable = (zclSS_ZoneItem_t *)NULL;
+    107          #endif // ZCL_ZONE || ZCL_ACE
+    108          
+    109          /*******************************************************************************
+    110           * LOCAL FUNCTIONS
+    111           */
+    112          static ZStatus_t zclSS_HdlIncoming( zclIncoming_t *pInHdlrMsg );
+    113          static ZStatus_t zclSS_HdlInSpecificCommands( zclIncoming_t *pInMsg );
+    114          static zclSS_AppCallbacks_t *zclSS_FindCallbacks( uint8 endpoint );
+    115          
+    116          #ifdef ZCL_ZONE
+    117          static ZStatus_t zclSS_ProcessInZoneStatusCmdsServer( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    118          static ZStatus_t zclSS_ProcessInZoneStatusCmdsClient( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    119          
+    120          static void zclSS_ProcessInCmd_ZoneStatus_ChangeNotification( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    121          static ZStatus_t zclSS_ProcessInCmd_ZoneStatus_EnrollRequest( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    122          static void zclSS_ProcessInCmd_ZoneStatus_EnrollResponse( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    123          #endif // ZCL_ZONE
+    124          
+    125          #ifdef ZCL_ACE
+    126          static ZStatus_t zclSS_ProcessInACECmdsServer( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    127          static ZStatus_t zclSS_ProcessInACECmdsClient( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    128          
+    129          static ZStatus_t zclSS_ProcessInCmd_ACE_Arm( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    130          static void zclSS_ProcessInCmd_ACE_Bypass( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    131          static void zclSS_ProcessInCmd_ACE_Emergency( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    132          static void zclSS_ProcessInCmd_ACE_Fire( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    133          static void zclSS_ProcessInCmd_ACE_Panic( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    134          static ZStatus_t zclSS_ProcessInCmd_ACE_GetZoneIDMap( zclIncoming_t *pInMsg );
+    135          static ZStatus_t zclSS_ProcessInCmd_ACE_GetZoneInformation( zclIncoming_t *pInMsg );
+    136          static void zclSS_ProcessInCmd_ACE_ArmResponse( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    137          static void zclSS_ProcessInCmd_ACE_GetZoneIDMapResponse( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    138          static void zclSS_ProcessInCmd_ACE_GetZoneInformationResponse( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    139          #endif // ZCL_ACE
+    140          
+    141          #ifdef ZCL_WD
+    142          static ZStatus_t zclSS_ProcessInWDCmds( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    143          
+    144          static void zclSS_ProcessInCmd_WD_StartWarning( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    145          static void zclSS_ProcessInCmd_WD_Squawk( zclIncoming_t *pInMsg, zclSS_AppCallbacks_t *pCBs );
+    146          #endif // ZCL_WD
+    147          
+    148          #ifdef ZCL_ZONE
+    149          static uint8 zclSS_GetNextFreeZoneID( void );
+    150          static ZStatus_t zclSS_AddZone( uint8 endpoint, IAS_ACE_ZoneTable_t *zone );
+    151          static uint8 zclSS_CountAllZones( void );
+    152          static uint8 zclSS_ZoneIDAvailable( uint8 zoneID );
+    153          #endif // ZCL_ZONE
+    154          
+    155          #if defined(ZCL_ZONE) || defined(ZCL_ACE)
+    156          static IAS_ACE_ZoneTable_t *zclSS_FindZone( uint8 endpoint, uint8 zoneID );
+    157          #endif // ZCL_ZONE || ZCL_ACE
+    158          
+    159          /******************************************************************************
+    160           * @fn      zclSS_RegisterCmdCallbacks
+    161           *
+    162           * @brief   Register an applications command callbacks
+    163           *
+    164           * @param   endpoint - application's endpoint
+    165           * @param   callbacks - pointer to the callback record.
+    166           *
+    167           * @return  ZMemError if not able to allocate
+    168           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    169          ZStatus_t zclSS_RegisterCmdCallbacks( uint8 endpoint, zclSS_AppCallbacks_t *callbacks )
+   \                     zclSS_RegisterCmdCallbacks:
+    170          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   89..         MOV     ?V0 + 0,R1
+   \   000007   EA           MOV     A,R2
+   \   000008   FE           MOV     R6,A
+   \   000009   EB           MOV     A,R3
+   \   00000A   FF           MOV     R7,A
+    171            zclSSCBRec_t *pNewItem;
+    172            zclSSCBRec_t *pLoop;
+    173          
+    174            // Register as a ZCL Plugin
+    175            if ( !zclSSPluginRegisted )
+   \   00000B   90....       MOV     DPTR,#zclSSPluginRegisted
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   7021         JNZ     ??zclSS_RegisterCmdCallbacks_0
+    176            {
+    177              zcl_registerPlugin( ZCL_CLUSTER_ID_SS_IAS_ZONE,
+    178                                  ZCL_CLUSTER_ID_SS_IAS_WD,
+    179                                  zclSS_HdlIncoming );
+   \   000011                ; Setup parameters for call to function zcl_registerPlugin
+   \   000011   75....       MOV     ?V0 + 2,#??zclSS_HdlIncoming?relay & 0xff
+   \   000014   75....       MOV     ?V0 + 3,#(??zclSS_HdlIncoming?relay >> 8) & 0xff
+   \   000017   78..         MOV     R0,#?V0 + 2
+   \   000019   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00001C   7C02         MOV     R4,#0x2
+   \   00001E   7D05         MOV     R5,#0x5
+   \   000020   7A00         MOV     R2,#0x0
+   \   000022   7B05         MOV     R3,#0x5
+   \   000024   12....       LCALL   ??zcl_registerPlugin?relay
+   \   000027   7402         MOV     A,#0x2
+   \   000029   12....       LCALL   ?DEALLOC_XSTACK8
+    180              zclSSPluginRegisted = TRUE;
+   \   00002C   90....       MOV     DPTR,#zclSSPluginRegisted
+   \   00002F   7401         MOV     A,#0x1
+   \   000031   F0           MOVX    @DPTR,A
+    181            }
+    182          
+    183            // Fill in the new profile list
+    184            pNewItem = osal_mem_alloc( sizeof( zclSSCBRec_t ) );
+   \                     ??zclSS_RegisterCmdCallbacks_0:
+   \   000032                ; Setup parameters for call to function osal_mem_alloc
+   \   000032   7A05         MOV     R2,#0x5
+   \   000034   7B00         MOV     R3,#0x0
+   \   000036   12....       LCALL   ??osal_mem_alloc?relay
+   \   000039   8A..         MOV     ?V0 + 2,R2
+   \   00003B   8B..         MOV     ?V0 + 3,R3
+   \   00003D   A8..         MOV     R0,?V0 + 2
+   \   00003F   A9..         MOV     R1,?V0 + 3
+    185            if ( pNewItem == NULL )
+   \   000041   E8           MOV     A,R0
+   \   000042   49           ORL     A,R1
+   \   000043   7004         JNZ     ??zclSS_RegisterCmdCallbacks_1
+    186              return (ZMemError);
+   \   000045   7910         MOV     R1,#0x10
+   \   000047   804E         SJMP    ??zclSS_RegisterCmdCallbacks_2
+    187          
+    188            pNewItem->next = (zclSSCBRec_t *)NULL;
+   \                     ??zclSS_RegisterCmdCallbacks_1:
+   \   000049   8882         MOV     DPL,R0
+   \   00004B   8983         MOV     DPH,R1
+   \   00004D   E4           CLR     A
+   \   00004E   F0           MOVX    @DPTR,A
+   \   00004F   A3           INC     DPTR
+   \   000050   F0           MOVX    @DPTR,A
+    189            pNewItem->endpoint = endpoint;
+   \   000051   8882         MOV     DPL,R0
+   \   000053   8983         MOV     DPH,R1
+   \   000055   A3           INC     DPTR
+   \   000056   A3           INC     DPTR
+   \   000057   E5..         MOV     A,?V0 + 0
+   \   000059   F0           MOVX    @DPTR,A
+    190            pNewItem->CBs = callbacks;
+   \   00005A   8882         MOV     DPL,R0
+   \   00005C   8983         MOV     DPH,R1
+   \   00005E   A3           INC     DPTR
+   \   00005F   A3           INC     DPTR
+   \   000060   A3           INC     DPTR
+   \   000061   EE           MOV     A,R6
+   \   000062   F0           MOVX    @DPTR,A
+   \   000063   A3           INC     DPTR
+   \   000064   EF           MOV     A,R7
+   \   000065   F0           MOVX    @DPTR,A
+    191          
+    192            // Find spot in list
+    193            if ( zclSSCBs == NULL )
+   \   000066   90....       MOV     DPTR,#zclSSCBs
+   \   000069   E0           MOVX    A,@DPTR
+   \   00006A   FA           MOV     R2,A
+   \   00006B   A3           INC     DPTR
+   \   00006C   E0           MOVX    A,@DPTR
+   \   00006D   FB           MOV     R3,A
+   \   00006E   EA           MOV     A,R2
+   \   00006F   4B           ORL     A,R3
+   \   000070   90....       MOV     DPTR,#zclSSCBs
+   \   000073   601B         JZ      ??zclSS_RegisterCmdCallbacks_3
+    194            {
+    195              zclSSCBs = pNewItem;
+    196            }
+    197            else
+    198            {
+    199              // Look for end of list
+    200              pLoop = zclSSCBs;
+   \   000075   E0           MOVX    A,@DPTR
+   \   000076   FC           MOV     R4,A
+   \   000077   A3           INC     DPTR
+   \   000078   E0           MOVX    A,@DPTR
+   \   000079   8003         SJMP    ??zclSS_RegisterCmdCallbacks_4
+    201              while ( pLoop->next != NULL )
+    202                pLoop = pLoop->next;
+   \                     ??zclSS_RegisterCmdCallbacks_5:
+   \   00007B   EA           MOV     A,R2
+   \   00007C   FC           MOV     R4,A
+   \   00007D   EB           MOV     A,R3
+   \                     ??zclSS_RegisterCmdCallbacks_4:
+   \   00007E   FD           MOV     R5,A
+   \   00007F   8C82         MOV     DPL,R4
+   \   000081   8D83         MOV     DPH,R5
+   \   000083   E0           MOVX    A,@DPTR
+   \   000084   FA           MOV     R2,A
+   \   000085   A3           INC     DPTR
+   \   000086   E0           MOVX    A,@DPTR
+   \   000087   FB           MOV     R3,A
+   \   000088   EA           MOV     A,R2
+   \   000089   4B           ORL     A,R3
+   \   00008A   70EF         JNZ     ??zclSS_RegisterCmdCallbacks_5
+    203          
+    204              // Put new item at end of list
+    205              pLoop->next = pNewItem;
+   \   00008C   8C82         MOV     DPL,R4
+   \   00008E   8D83         MOV     DPH,R5
+   \                     ??zclSS_RegisterCmdCallbacks_3:
+   \   000090   E8           MOV     A,R0
+   \   000091   F0           MOVX    @DPTR,A
+   \   000092   A3           INC     DPTR
+   \   000093   E9           MOV     A,R1
+   \   000094   F0           MOVX    @DPTR,A
+    206            }
+    207            return ( ZSuccess );
+   \   000095   7900         MOV     R1,#0x0
+   \                     ??zclSS_RegisterCmdCallbacks_2:
+   \   000097   7F04         MOV     R7,#0x4
+   \   000099   02....       LJMP    ?BANKED_LEAVE_XDATA
+    208          }
+    209          
+    210          #ifdef ZCL_ZONE
+    211          /*******************************************************************************
+    212           * @fn      zclSS_Send_IAS_ZoneStatusChangeNotificationCmd
+    213           *
+    214           * @brief   Call to send out a Change Notification Command
+    215           *
+    216           * @param   srcEP - Sending application's endpoint
+    217           * @param   dstAddr - where you want the message to go
+    218           * @param   zoneStatus - current zone status - bit map
+    219           * @param   extendedStatus - bit map, currently set to All zeros ( reserved)
+    220           *
+    221           * @return  ZStatus_t
+    222           */
+    223          ZStatus_t zclSS_IAS_Send_ZoneStatusChangeNotificationCmd( uint8 srcEP, afAddrType_t *dstAddr,
+    224                                                 uint16 zoneStatus, uint8 extendedStatus, 
+    225                                                 uint8 disableDefaultRsp, uint8 seqNum )
+    226          {
+    227            uint8 buf[3];
+    228          
+    229            buf[0] = LO_UINT16( zoneStatus );
+    230            buf[1] = HI_UINT16( zoneStatus );
+    231            buf[2] = extendedStatus;
+    232          
+    233            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ZONE,
+    234                                    COMMAND_SS_IAS_ZONE_STATUS_CHANGE_NOTIFICATION, TRUE, 
+    235                                    ZCL_FRAME_SERVER_CLIENT_DIR, disableDefaultRsp, 0, seqNum, 3, buf );
+    236          }
+    237          
+    238          /*******************************************************************************
+    239           * @fn      zclSS_Send_IAS_ZoneStatusEnrollRequestCmd
+    240           *
+    241           * @brief   Call to send out a Enroll Request Command
+    242           *
+    243           * @param   srcEP - Sending application's endpoint
+    244           * @param   dstAddr - where you want the message to go
+    245           * @param   zoneType - 	  current value of Zone Type attribute
+    246           * @param   manufacturerCode - manuf. code from node descriptor for the device
+    247           *
+    248           * @return  ZStatus_t
+    249           */
+    250          ZStatus_t zclSS_IAS_Send_ZoneStatusEnrollRequestCmd( uint8 srcEP, afAddrType_t *dstAddr,
+    251                                          uint16 zoneType, uint16 manufacturerCode, 
+    252                                          uint8 disableDefaultRsp, uint8 seqNum )
+    253          {
+    254            uint8 buf[4];
+    255          
+    256            buf[0] = LO_UINT16( zoneType );
+    257            buf[1] = HI_UINT16( zoneType );
+    258            buf[2] = LO_UINT16( manufacturerCode );
+    259            buf[3] = HI_UINT16( manufacturerCode );
+    260          
+    261            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ZONE,
+    262                                    COMMAND_SS_IAS_ZONE_STATUS_ENROLL_REQUEST, TRUE, 
+    263                                    ZCL_FRAME_SERVER_CLIENT_DIR, disableDefaultRsp, 0, seqNum, 4, buf );
+    264          }
+    265          
+    266          /*******************************************************************************
+    267           * @fn      zclSS_IAS_Send_ZoneStatusEnrollResponseCmd
+    268           *
+    269           * @brief   Call to send out a Enroll Response Command
+    270           *
+    271           * @param   srcEP - Sending application's endpoint
+    272           * @param   dstAddr - where you want the message to go
+    273           * @param   responseCode -  value of  response Code
+    274           * @param   zoneID  - index to the zone table of the CIE
+    275           *
+    276           * @return  ZStatus_t
+    277           */
+    278          ZStatus_t zclSS_IAS_Send_ZoneStatusEnrollResponseCmd( uint8 srcEP, afAddrType_t *dstAddr,
+    279                                                   uint8 responseCode, uint8 zoneID, 
+    280                                                   uint8 disableDefaultRsp, uint8 seqNum )
+    281          {
+    282            uint8 buf[2];
+    283          
+    284            buf[0] = responseCode;
+    285            buf[1] = zoneID;
+    286          
+    287            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ZONE,
+    288                                    COMMAND_SS_IAS_ZONE_STATUS_ENROLL_RESPONSE, TRUE, 
+    289                                    ZCL_FRAME_CLIENT_SERVER_DIR, disableDefaultRsp, 0, seqNum, 2, buf );
+    290          }
+    291          #endif // ZCL_ZONE
+    292          
+    293          #ifdef ZCL_ACE
+    294          /*******************************************************************************
+    295           * @fn      zclSS_Send_IAS_ACE_ArmCmd
+    296           *
+    297           * @brief   Call to send out a Arm  Command  ( IAS ACE Cluster )
+    298           *
+    299           * @param   srcEP - Sending application's endpoint
+    300           * @param   dstAddr - where you want the message to go
+    301           * @param   armMode -  value of armMode
+    302           *
+    303           * @return  ZStatus_t
+    304           */
+    305          ZStatus_t zclSS_Send_IAS_ACE_ArmCmd( uint8 srcEP, afAddrType_t *dstAddr,
+    306                                    uint8 armMode, uint8 disableDefaultRsp, uint8 seqNum )
+    307          {
+    308            uint8 buf[1];
+    309          
+    310            buf[0] = armMode;
+    311          
+    312            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ACE,
+    313                                    COMMAND_SS_IAS_ACE_ARM, TRUE, 
+    314                                    ZCL_FRAME_CLIENT_SERVER_DIR, disableDefaultRsp, 0, seqNum, 1, buf );
+    315          }
+    316          
+    317          /*********************************************************************
+    318           * @fn      zclSS_Send_IAS_ACE_BypassCmd
+    319           *
+    320           * @brief   Call to send out a Bypass Command  ( IAS ACE Cluster )
+    321           *
+    322           * @param   srcEP - Sending application's endpoint
+    323           * @param   dstAddr - where you want the message to go
+    324           * @param   numberOfZones - one byte
+    325           * @param   bypassBuf - zone IDs array of 256 entries one byte each
+    326           *
+    327           * @return  ZStatus_t
+    328           */
+    329          ZStatus_t zclSS_Send_IAS_ACE_BypassCmd( uint8 srcEP, afAddrType_t *dstAddr,
+    330                                                  uint8 numberOfZones, uint8 *bypassBuf, 
+    331                                                  uint8 disableDefaultRsp, uint8 seqNum )
+    332          {
+    333            uint8 *buf;
+    334            uint8 *pBuf;
+    335            uint8 len = 1 + numberOfZones;
+    336            ZStatus_t stat;
+    337          
+    338            buf = osal_mem_alloc( len );
+    339            if ( buf )
+    340            {
+    341              pBuf = buf;
+    342              
+    343              *pBuf++ = numberOfZones;
+    344              osal_memcpy( pBuf, bypassBuf, numberOfZones );
+    345          
+    346              stat = zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ACE,
+    347                                      COMMAND_SS_IAS_ACE_BYPASS, TRUE, 
+    348                                      ZCL_FRAME_CLIENT_SERVER_DIR, disableDefaultRsp, 0, seqNum, len, buf );
+    349              osal_mem_free( buf );
+    350            }
+    351            else
+    352              stat = ZFailure;
+    353            
+    354            return ( stat );
+    355          }
+    356          
+    357          /*********************************************************************
+    358           * @fn      zclSS_Send_IAS_ACE_GetZoneInformationCmd
+    359           *
+    360           * @brief   Call to send out a Get Zone Information Command ( IAS ACE Cluster )
+    361           *
+    362           * @param   srcEP - Sending application's endpoint
+    363           * @param   dstAddr - where you want the message to go
+    364           * @param   zoneID - 8 bit value from 0 to 255
+    365           *
+    366           * @return  ZStatus_t
+    367           */
+    368          ZStatus_t zclSS_Send_IAS_ACE_GetZoneInformationCmd( uint8 srcEP, afAddrType_t *dstAddr, 
+    369                                            uint8 zoneID, uint8 disableDefaultRsp, uint8 seqNum )
+    370          {
+    371            uint8 buf[1];
+    372          
+    373            buf[0] = zoneID;
+    374          
+    375            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ACE,
+    376                                    COMMAND_SS_IAS_ACE_GET_ZONE_INFORMATION, TRUE, 
+    377                                    ZCL_FRAME_CLIENT_SERVER_DIR, disableDefaultRsp, 0, seqNum, 1, buf );
+    378          }
+    379          
+    380          /*******************************************************************************
+    381           * @fn      zclSS_Send_IAS_ACE_ArmRespponse
+    382           *
+    383           * @brief   Call to send out a Arm Response Command ( IAS ACE Cluster )
+    384           *
+    385           * @param   srcEP - Sending application's endpoint
+    386           * @param   dstAddr - where you want the message to go
+    387           * @param   armNotification
+    388           *
+    389           * @return  ZStatus_t
+    390           */
+    391          ZStatus_t zclSS_Send_IAS_ACE_ArmResponse( uint8 srcEP, afAddrType_t *dstAddr,
+    392                            uint8 armNotification, uint8 disableDefaultRsp, uint8 seqNum )
+    393          {
+    394            uint8 buf[1];
+    395          
+    396            buf[0] = armNotification;
+    397          
+    398            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ACE,
+    399                                    COMMAND_SS_IAS_ACE_ARM_RESPONSE, TRUE, 
+    400                                    ZCL_FRAME_SERVER_CLIENT_DIR, disableDefaultRsp, 0, seqNum, 1, buf );
+    401          }
+    402          
+    403          /*********************************************************************
+    404           * @fn      zclSS_Send_IAS_ACE_GetZoneIDMapResponseCmd
+    405           *
+    406           * @brief   Call to send out a Get Zone ID Map Response Cmd  ( IAS ACE Cluster )
+    407           *
+    408           * @param   srcEP - Sending application's endpoint
+    409           * @param   dstAddr - where you want the message to go
+    410           * @param   zoneIDMap - pointer to an array of 16 uint16
+    411           *
+    412           * @return  ZStatus_t
+    413           */
+    414          ZStatus_t zclSS_Send_IAS_ACE_GetZoneIDMapResponseCmd( uint8 srcEP, afAddrType_t *dstAddr, 
+    415                                          uint16 *zoneIDMap, uint8 disableDefaultRsp, uint8 seqNum )
+    416          {
+    417            uint8 *buf;
+    418            uint8 *pIndex;
+    419            uint8 j,len = 32;
+    420            ZStatus_t stat;
+    421          
+    422            buf = osal_mem_alloc( len );
+    423          
+    424            if ( buf )
+    425            {
+    426              pIndex = buf;
+    427          
+    428              for( j = 0; j < 16; j++ )
+    429              {
+    430                *pIndex++  = LO_UINT16( *zoneIDMap   );
+    431                *pIndex++  = HI_UINT16( *zoneIDMap++ );
+    432              }
+    433          
+    434              stat = zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ACE,
+    435                                      COMMAND_SS_IAS_ACE_GET_ZONE_ID_MAP_RESPONSE, TRUE, 
+    436                                      ZCL_FRAME_SERVER_CLIENT_DIR, disableDefaultRsp, 0, seqNum, len, buf );
+    437              osal_mem_free( buf );
+    438            }
+    439            else
+    440              stat = ZMemError;
+    441          
+    442            return ( stat );
+    443          
+    444          }
+    445          
+    446          /*******************************************************************************
+    447           * @fn      zclSS_Send_IAS_ACE_GetZoneInformationResponseCmd
+    448           *
+    449           * @brief   Call to send out Get Zone Information Response Cmd (IAS ACE Cluster)
+    450           *
+    451           * @param   srcEP - Sending application's endpoint
+    452           * @param   dstAddr - where you want the message to go
+    453           * @param   zoneID - 8 bit value from 0 to 255
+    454           * @param   zoneType - 16 bit
+    455           * @param   ieeeAddress - pointer to 64 bit address ( 8bytes*8)
+    456           *
+    457           * @return  ZStatus_t
+    458           */
+    459          ZStatus_t zclSS_Send_IAS_ACE_GetZoneInformationResponseCmd( uint8 srcEP, afAddrType_t *dstAddr, 
+    460                                                       uint8 zoneID, uint16 zoneType, uint8 *ieeeAddress, 
+    461                                                       uint8 disableDefaultRsp, uint8 seqNum )
+    462          {
+    463            uint8 *buf;
+    464            uint8 len = 11; // zoneID (1) + zoneType (2) + zoneAddress (8)
+    465            ZStatus_t stat;
+    466          
+    467            buf = osal_mem_alloc( len );
+    468          
+    469            if ( buf )
+    470            {
+    471              buf[0] = zoneID;
+    472              buf[1] = LO_UINT16( zoneType);
+    473              buf[2] = HI_UINT16( zoneType);
+    474              osal_cpyExtAddr( &buf[3], ieeeAddress );
+    475          
+    476              stat = zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_ACE,
+    477                                      COMMAND_SS_IAS_ACE_GET_ZONE_INFORMATION_RESPONSE, TRUE,
+    478                                      ZCL_FRAME_SERVER_CLIENT_DIR, disableDefaultRsp, 0, seqNum, len, buf );
+    479              osal_mem_free( buf );
+    480            }
+    481            else
+    482              stat = ZMemError;
+    483          
+    484            return ( stat );
+    485          }
+    486          #endif // ZCL_ACE
+    487          
+    488          #ifdef ZCL_WD
+    489          /*******************************************************************************
+    490           * @fn      zclSS_Send_IAS_WD_StartWarningCmd
+    491           *
+    492           * @brief   Call to send out a Start Warning  Command (IAS WD Cluster)
+    493           *
+    494           * @param   warning - 3 bytes  of type	zclCmdSSWDStartWarningPayload_t
+    495           *
+    496           * @return  ZStatus_t
+    497           */
+    498          ZStatus_t zclSS_Send_IAS_WD_StartWarningCmd( uint8 srcEP, afAddrType_t *dstAddr,
+    499                                                 zclCmdSSWDStartWarningPayload_t *warning, 
+    500                                                 uint8 disableDefaultRsp, uint8 seqNum )
+    501          {
+    502            uint8 buf[3];
+    503          
+    504            buf[0] = warning->warningmessage.warningbyte;
+    505            buf[1] = LO_UINT16( warning->duration );
+    506            buf[2] = HI_UINT16( warning->duration );
+    507          
+    508            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_WD,
+    509                                    COMMAND_SS_IAS_WD_START_WARNING, TRUE, 
+    510                                    ZCL_FRAME_CLIENT_SERVER_DIR, disableDefaultRsp, 0, seqNum, 3, buf );
+    511          }
+    512          
+    513          /******************************************************************************
+    514           * @fn      zclSS_Send_IAS_WD_StartWarningCmd
+    515           *
+    516           * @brief   Call to send out a Squawk Command  ( IAS WD Cluster )
+    517           *
+    518           * @param   squawk - one byte of type zclCmdSSWDSquawkPayload_t
+    519           *
+    520           * @return  ZStatus_t
+    521           */
+    522          ZStatus_t zclSS_Send_IAS_WD_SquawkCmd( uint8 srcEP, afAddrType_t *dstAddr,
+    523                                                 zclCmdSSWDSquawkPayload_t *squawk, 
+    524                                                 uint8 disableDefaultRsp, uint8 seqNum )
+    525          {
+    526            uint8 buf[1];
+    527            buf[0] = squawk->squawkbyte;
+    528          
+    529            return zcl_SendCommand( srcEP, dstAddr, ZCL_CLUSTER_ID_SS_IAS_WD,
+    530                                    COMMAND_SS_IAS_WD_SQUAWK, TRUE, 
+    531                                    ZCL_FRAME_CLIENT_SERVER_DIR, disableDefaultRsp, 0, seqNum, 1, buf);
+    532          }
+    533          #endif // ZCL_WD
+    534          
+    535          /*********************************************************************
+    536           * @fn      zclSS_FindCallbacks
+    537           *
+    538           * @brief   Find the callbacks for an endpoint
+    539           *
+    540           * @param   endpoint
+    541           *
+    542           * @return  pointer to the callbacks
+    543           */
+    544          static zclSS_AppCallbacks_t *zclSS_FindCallbacks( uint8 endpoint )
+    545          {
+    546            zclSSCBRec_t *pCBs;
+    547            
+    548            pCBs = zclSSCBs;
+    549            while ( pCBs )
+    550            {
+    551              if ( pCBs->endpoint == endpoint )
+    552                return ( pCBs->CBs );
+    553              pCBs = pCBs->next;
+    554            }
+    555            return ( (zclSS_AppCallbacks_t *)NULL );
+    556          }
+    557          
+    558          /*********************************************************************
+    559           * @fn      zclSS_HdlIncoming
+    560           *
+    561           * @brief   Callback from ZCL to process incoming Commands specific
+    562           *          to this cluster library or Profile commands for attributes
+    563           *          that aren't in the attribute list
+    564           *
+    565           * @param   pInMsg - pointer to the incoming message
+    566           * @param   logicalClusterID
+    567           *
+    568           * @return  ZStatus_t
+    569           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    570          static ZStatus_t zclSS_HdlIncoming( zclIncoming_t *pInMsg )
+   \                     zclSS_HdlIncoming:
+    571          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    572            ZStatus_t stat = ZSuccess;
+    573          
+    574          #if defined ( INTER_PAN )
+    575            if ( StubAPS_InterPan( pInMsg->msg->srcAddr.panId, pInMsg->msg->srcAddr.endPoint ) )
+    576              return ( stat ); // Cluster not supported thru Inter-PAN
+    577          #endif
+    578            if ( zcl_ClusterCmd( pInMsg->hdr.fc.type ) )
+   \   000004   8A82         MOV     DPL,R2
+   \   000006   8B83         MOV     DPH,R3
+   \   000008   A3           INC     DPTR
+   \   000009   A3           INC     DPTR
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   F8           MOV     R0,A
+   \   00000C   5403         ANL     A,#0x3
+   \   00000E   6401         XRL     A,#0x1
+   \   000010   7034         JNZ     ??zclSS_HdlIncoming_0
+    579            {
+    580              // Is this a manufacturer specific command?
+    581              if ( pInMsg->hdr.fc.manuSpecific == 0 ) 
+   \   000012   E8           MOV     A,R0
+   \   000013   5404         ANL     A,#0x4
+   \   000015   702F         JNZ     ??zclSS_HdlIncoming_0
+    582              {
+    583                stat = zclSS_HdlInSpecificCommands( pInMsg );
+   \   000017   8A82         MOV     DPL,R2
+   \   000019   8B83         MOV     DPH,R3
+   \   00001B   E0           MOVX    A,@DPTR
+   \   00001C   2414         ADD     A,#0x14
+   \   00001E   F8           MOV     R0,A
+   \   00001F   A3           INC     DPTR
+   \   000020   E0           MOVX    A,@DPTR
+   \   000021   3400         ADDC    A,#0x0
+   \   000023   F9           MOV     R1,A
+   \   000024   8882         MOV     DPL,R0
+   \   000026   8983         MOV     DPH,R1
+   \   000028   E0           MOVX    A,@DPTR
+   \   000029   FA           MOV     R2,A
+   \   00002A   90....       MOV     DPTR,#zclSSCBs
+   \   00002D   8004         SJMP    ??zclSS_HdlIncoming_1
+   \                     ??zclSS_HdlIncoming_2:
+   \   00002F   8882         MOV     DPL,R0
+   \   000031   8983         MOV     DPH,R1
+   \                     ??zclSS_HdlIncoming_1:
+   \   000033   E0           MOVX    A,@DPTR
+   \   000034   F8           MOV     R0,A
+   \   000035   A3           INC     DPTR
+   \   000036   E0           MOVX    A,@DPTR
+   \   000037   F9           MOV     R1,A
+   \   000038   E8           MOV     A,R0
+   \   000039   49           ORL     A,R1
+   \   00003A   600A         JZ      ??zclSS_HdlIncoming_0
+   \   00003C   8882         MOV     DPL,R0
+   \   00003E   8983         MOV     DPH,R1
+   \   000040   A3           INC     DPTR
+   \   000041   A3           INC     DPTR
+   \   000042   E0           MOVX    A,@DPTR
+   \   000043   6A           XRL     A,R2
+   \   000044   70E9         JNZ     ??zclSS_HdlIncoming_2
+    584              }
+    585              else
+    586              {
+    587                // We don't support any manufacturer specific command -- ignore it.
+    588                stat = ZFailure;
+    589              }
+    590            }
+    591            else
+    592            {
+    593              // Handle all the normal (Read, Write...) commands
+    594              stat = ZFailure;
+    595            }
+    596            return ( stat );
+   \                     ??zclSS_HdlIncoming_0:
+   \   000046   7901         MOV     R1,#0x1
+   \   000048   D083         POP     DPH
+   \   00004A   D082         POP     DPL
+   \   00004C   02....       LJMP    ?BRET
+    597          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSS_RegisterCmdCallbacks?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSS_RegisterCmdCallbacks
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSS_HdlIncoming?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSS_HdlIncoming
+    598          
+    599          /*********************************************************************
+    600           * @fn      zclSS_HdlInSpecificCommands
+    601           *
+    602           * @brief   Callback from ZCL to process incoming Commands specific
+    603           *          to this cluster library
+    604          
+    605           * @param   pInMsg - pointer to the incoming message
+    606           *
+    607           * @return  ZStatus_t
+    608           */
+    609          static ZStatus_t zclSS_HdlInSpecificCommands( zclIncoming_t *pInMsg )
+    610          {
+    611            ZStatus_t stat = ZSuccess;
+    612            zclSS_AppCallbacks_t *pCBs;
+    613            
+    614            // make sure endpoint exists
+    615            pCBs = (void*)zclSS_FindCallbacks( pInMsg->msg->endPoint );
+    616            if ( pCBs == NULL )
+    617              return ( ZFailure );
+    618            
+    619            switch ( pInMsg->msg->clusterId )			
+    620            {
+    621          #ifdef ZCL_ZONE
+    622              case ZCL_CLUSTER_ID_SS_IAS_ZONE:
+    623                if ( zcl_ServerCmd( pInMsg->hdr.fc.direction ) )
+    624                  stat = zclSS_ProcessInZoneStatusCmdsServer( pInMsg, pCBs );
+    625                else
+    626                  stat = zclSS_ProcessInZoneStatusCmdsClient( pInMsg, pCBs );
+    627                break;
+    628          #endif // ZCL_ZONE
+    629          
+    630          #ifdef ZCL_ACE
+    631              case ZCL_CLUSTER_ID_SS_IAS_ACE:
+    632                if ( zcl_ServerCmd( pInMsg->hdr.fc.direction ) )
+    633                  stat = zclSS_ProcessInACECmdsServer( pInMsg, pCBs );
+    634                else
+    635                  stat = zclSS_ProcessInACECmdsClient( pInMsg, pCBs );
+    636                break;
+    637          #endif // ZCL_ACE
+    638          
+    639          #ifdef ZCL_WD      
+    640              case ZCL_CLUSTER_ID_SS_IAS_WD:
+    641                stat = zclSS_ProcessInWDCmds( pInMsg, pCBs );
+    642                break;
+    643          #endif // ZCL_WD
+    644                
+    645              default:
+    646                stat = ZFailure;
+    647                break;
+    648            }
+    649          
+    650            return ( stat );
+    651          }
+    652          
+    653          #ifdef ZCL_ZONE
+    654          /*********************************************************************
+    655           * @fn      zclSS_ProcessInZoneStatusCmdsServer
+    656           *
+    657           * @brief   Callback from ZCL to process incoming Commands specific
+    658           *          to this cluster library on a command ID basis
+    659          
+    660           * @param   pInMsg - pointer to the incoming message
+    661           *
+    662           * @return  ZStatus_t
+    663           */
+    664          static ZStatus_t zclSS_ProcessInZoneStatusCmdsServer( zclIncoming_t *pInMsg,
+    665                                                                zclSS_AppCallbacks_t *pCBs )
+    666          {
+    667            ZStatus_t stat = ZSuccess;
+    668            
+    669            if ( pInMsg->hdr.commandID == COMMAND_SS_IAS_ZONE_STATUS_ENROLL_RESPONSE )
+    670              zclSS_ProcessInCmd_ZoneStatus_EnrollResponse( pInMsg, pCBs );
+    671            else
+    672              stat = ZFailure;
+    673          
+    674            return ( stat );
+    675          }
+    676          
+    677          /*********************************************************************
+    678           * @fn      zclSS_ProcessInZoneStatusCmdsClient
+    679           *
+    680           * @brief   Callback from ZCL to process incoming Commands specific
+    681           *          to this cluster library on a command ID basis
+    682          
+    683           * @param   pInMsg - pointer to the incoming message
+    684           *
+    685           * @return  ZStatus_t
+    686           */
+    687          static ZStatus_t zclSS_ProcessInZoneStatusCmdsClient( zclIncoming_t *pInMsg,
+    688                                                                zclSS_AppCallbacks_t *pCBs )
+    689          {
+    690            ZStatus_t stat = ZSuccess;
+    691          
+    692            switch ( pInMsg->hdr.commandID )				
+    693            {
+    694              case COMMAND_SS_IAS_ZONE_STATUS_CHANGE_NOTIFICATION:
+    695                zclSS_ProcessInCmd_ZoneStatus_ChangeNotification( pInMsg, pCBs );
+    696                break;
+    697          
+    698              case COMMAND_SS_IAS_ZONE_STATUS_ENROLL_REQUEST:
+    699                stat = zclSS_ProcessInCmd_ZoneStatus_EnrollRequest( pInMsg, pCBs );
+    700                break;
+    701          
+    702              default:
+    703                stat = ZFailure;
+    704                break;
+    705            }
+    706          
+    707            return ( stat );
+    708          }
+    709          #endif // ZCL_ZONE
+    710          
+    711          #ifdef ZCL_ACE
+    712          /*********************************************************************
+    713           * @fn      zclSS_ProcessInACECmdsServer
+    714           *
+    715           * @brief   Callback from ZCL to process incoming Commands specific
+    716           *          to this cluster library on a command ID basis
+    717          
+    718           * @param   pInMsg - pointer to the incoming message
+    719           *
+    720           * @return  ZStatus_t
+    721           */
+    722          static ZStatus_t zclSS_ProcessInACECmdsServer( zclIncoming_t *pInMsg,
+    723                                                         zclSS_AppCallbacks_t *pCBs )
+    724          {
+    725            ZStatus_t stat = ZSuccess;
+    726          
+    727            switch ( pInMsg->hdr.commandID )				
+    728            {
+    729              case COMMAND_SS_IAS_ACE_ARM:
+    730                stat = zclSS_ProcessInCmd_ACE_Arm( pInMsg, pCBs );
+    731                break;
+    732          
+    733              case COMMAND_SS_IAS_ACE_BYPASS:
+    734                zclSS_ProcessInCmd_ACE_Bypass( pInMsg, pCBs );
+    735                break;
+    736          
+    737              case COMMAND_SS_IAS_ACE_EMERGENCY:
+    738                zclSS_ProcessInCmd_ACE_Emergency( pInMsg, pCBs );
+    739                break;
+    740          
+    741              case COMMAND_SS_IAS_ACE_FIRE:
+    742                zclSS_ProcessInCmd_ACE_Fire( pInMsg, pCBs );
+    743                break;
+    744          
+    745              case COMMAND_SS_IAS_ACE_PANIC:
+    746                zclSS_ProcessInCmd_ACE_Panic( pInMsg, pCBs );
+    747                break;
+    748          
+    749              case COMMAND_SS_IAS_ACE_GET_ZONE_ID_MAP:
+    750                stat = zclSS_ProcessInCmd_ACE_GetZoneIDMap( pInMsg );
+    751                break;
+    752          
+    753              case COMMAND_SS_IAS_ACE_GET_ZONE_INFORMATION:
+    754                stat = zclSS_ProcessInCmd_ACE_GetZoneInformation( pInMsg );
+    755                break;
+    756                
+    757              default:
+    758                stat = ZFailure;
+    759                break;
+    760            }
+    761          
+    762            return ( stat );
+    763          }
+    764          
+    765          /*********************************************************************
+    766           * @fn      zclSS_ProcessInACECmdsClient
+    767           *
+    768           * @brief   Callback from ZCL to process incoming Commands specific
+    769           *          to this cluster library on a command ID basis
+    770          
+    771           * @param   pInMsg - pointer to the incoming message
+    772           *
+    773           * @return  ZStatus_t
+    774           */
+    775          static ZStatus_t zclSS_ProcessInACECmdsClient( zclIncoming_t *pInMsg,
+    776                                                         zclSS_AppCallbacks_t *pCBs )
+    777          {
+    778            ZStatus_t stat = ZSuccess;
+    779            
+    780            switch ( pInMsg->hdr.commandID )				
+    781            {
+    782              case COMMAND_SS_IAS_ACE_ARM_RESPONSE:
+    783                zclSS_ProcessInCmd_ACE_ArmResponse( pInMsg, pCBs );
+    784                break;
+    785          
+    786              case COMMAND_SS_IAS_ACE_GET_ZONE_ID_MAP_RESPONSE:
+    787                zclSS_ProcessInCmd_ACE_GetZoneIDMapResponse( pInMsg, pCBs );
+    788                break;
+    789          
+    790              case COMMAND_SS_IAS_ACE_GET_ZONE_INFORMATION_RESPONSE:
+    791                zclSS_ProcessInCmd_ACE_GetZoneInformationResponse( pInMsg, pCBs );
+    792                break;
+    793          
+    794              default:
+    795                stat = ZFailure;
+    796                break;
+    797            }
+    798          
+    799            return ( stat );
+    800          }
+    801          #endif // ZCL_ACE
+    802          
+    803          #ifdef ZCL_ZONE
+    804          /*********************************************************************
+    805           * @fn      zclSS_AddZone
+    806           *
+    807           * @brief   Add a zone for an endpoint
+    808           *
+    809           * @param   endpoint -
+    810           * @param   zone - new zone item
+    811           *
+    812           * @return  ZStatus_t
+    813           */
+    814          static ZStatus_t zclSS_AddZone( uint8 endpoint, IAS_ACE_ZoneTable_t *zone )
+    815          {
+    816            zclSS_ZoneItem_t *pNewItem;
+    817            zclSS_ZoneItem_t *pLoop;
+    818          
+    819            // Fill in the new profile list
+    820            pNewItem = osal_mem_alloc( sizeof( zclSS_ZoneItem_t ) );
+    821            if ( pNewItem == NULL )
+    822              return ( ZMemError );
+    823          
+    824            // Fill in the plugin record.
+    825            pNewItem->next = (zclSS_ZoneItem_t *)NULL;
+    826            pNewItem->endpoint = endpoint;
+    827            osal_memcpy( (uint8*)&(pNewItem->zone), (uint8*)zone, sizeof ( IAS_ACE_ZoneTable_t ));
+    828          
+    829            // Find spot in list
+    830            if (  zclSS_ZoneTable == NULL )
+    831            {
+    832              zclSS_ZoneTable = pNewItem;
+    833            }
+    834            else
+    835            {
+    836              // Look for end of list
+    837              pLoop = zclSS_ZoneTable;
+    838              while ( pLoop->next != NULL )
+    839                pLoop = pLoop->next;
+    840          
+    841              // Put new item at end of list
+    842              pLoop->next = pNewItem;
+    843            }
+    844          
+    845            return ( ZSuccess );
+    846          }
+    847          
+    848          /*********************************************************************
+    849           * @fn      zclSS_CountAllZones
+    850           *
+    851           * @brief   Count the total number of zones
+    852           *
+    853           * @param   none
+    854           *
+    855           * @return  number of zones
+    856           */
+    857          uint8 zclSS_CountAllZones( void )
+    858          {
+    859            zclSS_ZoneItem_t *pLoop;
+    860            uint8 cnt = 0;
+    861          
+    862            // Look for end of list
+    863            pLoop = zclSS_ZoneTable;
+    864            while ( pLoop )
+    865            {
+    866              cnt++;
+    867              pLoop = pLoop->next;
+    868            }
+    869            return ( cnt );
+    870          }
+    871          
+    872          /*********************************************************************
+    873           * @fn      zclSS_GetNextFreeZoneID
+    874           *
+    875           * @brief   Get the next free zone ID
+    876           *
+    877           * @param   none
+    878           *
+    879           * @return  free zone ID (0-254)
+    880           */
+    881          static uint8 zclSS_GetNextFreeZoneID( void )
+    882          {
+    883            static uint8 nextAvailZoneID = 0;
+    884          
+    885            if ( zclSS_ZoneIDAvailable( nextAvailZoneID ) == FALSE )
+    886            {
+    887              uint8 zoneID = nextAvailZoneID;
+    888          
+    889              // Look for next available zone ID
+    890              do
+    891              {
+    892                if ( ++zoneID == ZCL_SS_MAX_ZONE_ID )
+    893                  zoneID = 0; // roll over
+    894          
+    895              } while ( (zoneID != nextAvailZoneID) && (zclSS_ZoneIDAvailable( nextAvailZoneID ) == FALSE) );
+    896              
+    897              // Did we found a free zone ID?
+    898              if ( zoneID != nextAvailZoneID )
+    899                nextAvailZoneID = zoneID;
+    900            }
+    901            
+    902            return ( nextAvailZoneID );
+    903          }
+    904          
+    905          
+    906          /*********************************************************************
+    907           * @fn      zclSS_ZoneIDAvailable
+    908           *
+    909           * @brief   Check to see whether zoneID is available for use
+    910           *
+    911           * @param   zoneID - ID to look for zone
+    912           *
+    913           * @return  TRUE if zoneID is available, FALSE otherwise
+    914           */
+    915          static uint8 zclSS_ZoneIDAvailable( uint8 zoneID )
+    916          {
+    917            zclSS_ZoneItem_t *pLoop;
+    918          
+    919            if ( zoneID < ZCL_SS_MAX_ZONE_ID )
+    920            {
+    921              pLoop = zclSS_ZoneTable;
+    922              while ( pLoop )
+    923              {
+    924                if ( pLoop->zone.zoneID == zoneID  )
+    925                {
+    926                  return ( FALSE );
+    927                }
+    928                pLoop = pLoop->next;
+    929              }
+    930              
+    931              // Zone ID not in use
+    932              return ( TRUE );
+    933            }
+    934          
+    935            return ( FALSE );
+    936          }
+    937          #endif // ZCL_ZONE
+    938          
+    939          #if defined(ZCL_ZONE) || defined(ZCL_ACE)
+    940          /*********************************************************************
+    941           * @fn      zclSS_FindZone
+    942           *
+    943           * @brief   Find a zone with endpoint and ZoneID
+    944           *
+    945           * @param   endpoint -
+    946           * @param   zoneID - ID to look for zone
+    947           *
+    948           * @return  a pointer to the zone information, NULL if not found
+    949           */
+    950          static IAS_ACE_ZoneTable_t *zclSS_FindZone( uint8 endpoint, uint8 zoneID )
+    951          {
+    952            zclSS_ZoneItem_t *pLoop;
+    953          
+    954            // Look for end of list
+    955            pLoop = zclSS_ZoneTable;
+    956            while ( pLoop )
+    957            {
+    958              if ( pLoop->endpoint == endpoint && pLoop->zone.zoneID == zoneID  )
+    959              {
+    960                return ( &(pLoop->zone) );
+    961              }
+    962              pLoop = pLoop->next;
+    963            }
+    964          
+    965            return ( (IAS_ACE_ZoneTable_t *)NULL );
+    966          }
+    967          
+    968          /*********************************************************************
+    969           * @fn      zclSS_RemoveZone
+    970           *
+    971           * @brief   Remove a zone with endpoint and zoneID
+    972           *
+    973           * @param   endpoint -
+    974           * @param   zoneID - ID to look for zone
+    975           *
+    976           * @return  TRUE if removed, FALSE if not found
+    977           */
+    978          uint8 zclSS_RemoveZone( uint8 endpoint, uint8 zoneID )
+    979          {
+    980            zclSS_ZoneItem_t *pLoop;
+    981            zclSS_ZoneItem_t *pPrev;
+    982          
+    983            // Look for end of list
+    984            pLoop = zclSS_ZoneTable;
+    985            pPrev = NULL;
+    986            while ( pLoop )
+    987            {
+    988              if ( pLoop->endpoint == endpoint && pLoop->zone.zoneID == zoneID )
+    989              {
+    990                if ( pPrev == NULL )
+    991                  zclSS_ZoneTable = pLoop->next;
+    992                else
+    993                  pPrev->next = pLoop->next;
+    994          
+    995                // Free the memory
+    996                osal_mem_free( pLoop );
+    997          
+    998                return ( TRUE );
+    999              }
+   1000              pPrev = pLoop;
+   1001              pLoop = pLoop->next;
+   1002            }
+   1003          
+   1004            return ( FALSE );
+   1005          }
+   1006          
+   1007          /*********************************************************************
+   1008           * @fn      zclSS_UpdateZoneAddress
+   1009           *
+   1010           * @brief   Update Zone Address for zoneID
+   1011           *
+   1012           * @param   endpoint -
+   1013           * @param   zoneID - ID to look for zone
+   1014           * @param   ieeeAddr - Device IEEE Address
+   1015           *
+   1016           * @return  none
+   1017           */
+   1018          void zclSS_UpdateZoneAddress( uint8 endpoint, uint8 zoneID, uint8 *ieeeAddr )
+   1019          {
+   1020            IAS_ACE_ZoneTable_t *zone;
+   1021            
+   1022            zone = zclSS_FindZone( endpoint, zoneID );
+   1023            if ( zone != NULL )
+   1024            {
+   1025              // Update the zone address
+   1026              osal_cpyExtAddr( zone->zoneAddress, ieeeAddr );
+   1027            }
+   1028          }
+   1029          #endif // ZCL_ZONE || ZCL_ACE
+   1030          
+   1031          #ifdef ZCL_ZONE
+   1032          /*******************************************************************************
+   1033           * @fn      zclSS_ProcessInCmd_ZoneStatus_ChangeNotification
+   1034           *
+   1035           * @brief   Process in the received StatusChangeNotification Command.
+   1036           *
+   1037           * @param   pInMsg - pointer to the incoming message
+   1038           *
+   1039           * @return  ZStatus_t
+   1040           */
+   1041          static void zclSS_ProcessInCmd_ZoneStatus_ChangeNotification( zclIncoming_t *pInMsg,
+   1042                                                                        zclSS_AppCallbacks_t *pCBs )
+   1043          {
+   1044            if ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ZONE_STATUS_CHANGE_NOTIFICATION )
+   1045              return;   // Error ignore the command
+   1046          
+   1047            if ( pCBs->pfnChangeNotification )
+   1048            {
+   1049              zclZoneChangeNotif_t cmd;
+   1050              
+   1051              cmd.zoneStatus = BUILD_UINT16( pInMsg->pData[0], pInMsg->pData[1] );
+   1052              cmd.extendedStatus = pInMsg->pData[2];
+   1053              
+   1054              pCBs->pfnChangeNotification( &cmd );
+   1055            }
+   1056          }
+   1057          
+   1058          /*******************************************************************************
+   1059           * @fn      zclSS_ProcessInCmd_ZoneStatus_EnrollRequest
+   1060           *
+   1061           * @brief   Process in the received StatusEnrollRequest Command.
+   1062           *
+   1063           * @param   pInMsg - pointer to the incoming message
+   1064           *
+   1065           * @return  ZStatus_t
+   1066           */
+   1067          static ZStatus_t zclSS_ProcessInCmd_ZoneStatus_EnrollRequest( zclIncoming_t *pInMsg,
+   1068                                                                        zclSS_AppCallbacks_t *pCBs )
+   1069          {
+   1070            IAS_ACE_ZoneTable_t zone;
+   1071            uint16 zoneType;
+   1072            uint16 manuCode;
+   1073            uint8 zoneID;
+   1074            uint8 status;
+   1075          
+   1076            if ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ZONE_STATUS_ENROLL_REQUEST )
+   1077              return ( ZFailure );   // Error ignore the command
+   1078          
+   1079            zoneType = BUILD_UINT16( pInMsg->pData[0], pInMsg->pData[1] );
+   1080            manuCode = BUILD_UINT16( pInMsg->pData[2], pInMsg->pData[3] );
+   1081            
+   1082            if ( zclSS_ZoneTypeSupported( zoneType ) )
+   1083            {
+   1084              // What if the entry already exists?????
+   1085              if ( zclSS_CountAllZones() < ZCL_SS_MAX_ZONES-1 )
+   1086              {
+   1087                // Add zone to the table
+   1088                zoneID = zclSS_GetNextFreeZoneID();
+   1089                
+   1090                zone.zoneID = zoneID;
+   1091                zone.zoneType = zoneType;
+   1092          
+   1093                // The application will fill in the right IEEE Address later
+   1094                osal_cpyExtAddr( zone.zoneAddress, (void *)zclSS_UknownIeeeAddress );
+   1095                
+   1096                if ( zclSS_AddZone( pInMsg->msg->endPoint, &zone ) == ZSuccess )
+   1097                {
+   1098                  status = ZCL_STATUS_SUCCESS;
+   1099                }
+   1100                else
+   1101                {
+   1102                  // CIE does not permit new zones to enroll at this time
+   1103                  status = SS_IAS_ZONE_STATUS_ENROLL_RESPONSE_CODE_NO_ENROLL_PERMIT;
+   1104                }
+   1105              }
+   1106              else
+   1107              {
+   1108                // CIE reached its limit of number of enrolled zones
+   1109                status = SS_IAS_ZONE_STATUS_ENROLL_RESPONSE_CODE_TOO_MANY_ZONES;
+   1110              }
+   1111            }
+   1112            else
+   1113            {
+   1114              // Zone type is not known to CIE and is not supported
+   1115              status = SS_IAS_ZONE_STATUS_ENROLL_RESPONSE_CODE_NOT_SUPPORTED;
+   1116            }
+   1117            
+   1118            // Send a response back
+   1119            zclSS_IAS_Send_ZoneStatusEnrollResponseCmd( pInMsg->msg->endPoint, &(pInMsg->msg->srcAddr),
+   1120                                                        status, zoneID, true, pInMsg->hdr.transSeqNum );
+   1121            if ( status == ZCL_STATUS_SUCCESS )
+   1122            {
+   1123              // Callback the application so it can fill in the Device IEEE Address  
+   1124              if ( pCBs->pfnEnrollRequest )
+   1125              {
+   1126                zclZoneEnrollReq_t req;
+   1127                
+   1128                req.srcAddr = &(pInMsg->msg->srcAddr);
+   1129                req.zoneID = zoneID;  
+   1130                req.zoneType = zoneType;
+   1131                req.manufacturerCode = manuCode;
+   1132                  
+   1133                pCBs->pfnEnrollRequest( &req );
+   1134              }
+   1135            }
+   1136            
+   1137            return ( ZCL_STATUS_CMD_HAS_RSP );
+   1138          }
+   1139          
+   1140          /*******************************************************************************
+   1141           * @fn      zclSS_ProcessInCmd_ZoneStatus_EnrollResponse
+   1142           *
+   1143           * @brief   Process in the received STATUS_ENROLL_RESPONSE Command.
+   1144           *
+   1145           * @param   pInMsg - pointer to the incoming message
+   1146           *
+   1147           * @return  ZStatus_t
+   1148           */
+   1149          static void zclSS_ProcessInCmd_ZoneStatus_EnrollResponse( zclIncoming_t *pInMsg,
+   1150                                                                    zclSS_AppCallbacks_t *pCBs )
+   1151          {
+   1152            if ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ZONE_STATUS_ENROLL_RESPONSE )
+   1153              return;   // Error ignore the command
+   1154          
+   1155            if ( pCBs->pfnEnrollResponse )
+   1156            {
+   1157              zclZoneEnrollRsp_t rsp;
+   1158              
+   1159              rsp.responseCode = pInMsg->pData[0];
+   1160              rsp.zoneID = pInMsg->pData[1];
+   1161                  
+   1162              pCBs->pfnEnrollResponse( &rsp );
+   1163            }
+   1164          }
+   1165          #endif // ZCL_ZONE
+   1166          
+   1167          #ifdef ZCL_ACE
+   1168          /*********************************************************************
+   1169           * @fn      zclSS_ProcessInCmd_ACE_Arm
+   1170           *
+   1171           * @brief   Process in the received Arm Command.
+   1172           *
+   1173           * @param   pInMsg - pointer to the incoming message
+   1174           *
+   1175           */
+   1176          static ZStatus_t zclSS_ProcessInCmd_ACE_Arm( zclIncoming_t *pInMsg,
+   1177                                                       zclSS_AppCallbacks_t *pCBs )
+   1178          {
+   1179            uint8 armNotification;
+   1180          
+   1181            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_ARM )
+   1182              return ( ZFailure );   // Error ignore the command
+   1183          
+   1184            if ( pCBs->pfnACE_Arm )
+   1185            {
+   1186              armNotification = pCBs->pfnACE_Arm( pInMsg->pData[0] );
+   1187            
+   1188              // Send a response back
+   1189              zclSS_Send_IAS_ACE_ArmResponse( pInMsg->msg->endPoint, &(pInMsg->msg->srcAddr),
+   1190                                              armNotification, true, pInMsg->hdr.transSeqNum );
+   1191            }
+   1192            
+   1193            return ( ZCL_STATUS_CMD_HAS_RSP );
+   1194          }
+   1195          
+   1196          /*********************************************************************
+   1197           * @fn      zclSS_ProcessInCmd_ACE_Bypass
+   1198           *
+   1199           * @brief   Process in the received Bypass Command.
+   1200           *
+   1201           * @param   pInMsg - pointer to the incoming message
+   1202           *
+   1203           */
+   1204          static void zclSS_ProcessInCmd_ACE_Bypass( zclIncoming_t *pInMsg,
+   1205                                                     zclSS_AppCallbacks_t *pCBs )
+   1206          {
+   1207            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_BYPASS )
+   1208              return;   // Error ignore the command
+   1209          
+   1210            if ( pCBs->pfnACE_Bypass )
+   1211            {
+   1212              zclACEBypass_t cmd;
+   1213              
+   1214              cmd.numberOfZones = pInMsg->pData[0];
+   1215              cmd.bypassBuf = &(pInMsg->pData[1]);
+   1216              
+   1217              pCBs->pfnACE_Bypass( &cmd ) ;
+   1218            }
+   1219          }
+   1220          
+   1221          /*********************************************************************
+   1222           * @fn      zclSS_ProcessInCmd_ACE_Emergency
+   1223           *
+   1224           * @brief   Process in the received Emergency Command.
+   1225           *
+   1226           * @param   pInMsg - pointer to the incoming message
+   1227           *
+   1228           */
+   1229          static void zclSS_ProcessInCmd_ACE_Emergency( zclIncoming_t *pInMsg,
+   1230                                                        zclSS_AppCallbacks_t *pCBs )
+   1231          {
+   1232            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_EMERGENCY )
+   1233              return;   // Error ignore the command
+   1234          
+   1235            if ( pCBs->pfnACE_Emergency )
+   1236              pCBs->pfnACE_Emergency();
+   1237          
+   1238          }
+   1239          
+   1240          /*********************************************************************
+   1241           * @fn      zclSS_ProcessInCmd_ACE_Fire
+   1242           *
+   1243           * @brief   Process in the received Fire Command.
+   1244           *
+   1245           * @param   pInMsg - pointer to the incoming message
+   1246           *
+   1247           */
+   1248          static void zclSS_ProcessInCmd_ACE_Fire( zclIncoming_t *pInMsg,
+   1249                                                   zclSS_AppCallbacks_t *pCBs )
+   1250          {
+   1251            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_FIRE )
+   1252              return;   // Error ignore the command
+   1253          
+   1254            if ( pCBs->pfnACE_Fire )
+   1255              pCBs->pfnACE_Fire();
+   1256          }
+   1257          
+   1258          /*********************************************************************
+   1259           * @fn      zclSS_ProcessInCmd_ACE_Panic
+   1260           *
+   1261           * @brief   Process in the received Panic Command.
+   1262           *
+   1263           * @param   pInMsg - pointer to the incoming message
+   1264           *
+   1265           */
+   1266          static void zclSS_ProcessInCmd_ACE_Panic( zclIncoming_t *pInMsg,
+   1267                                                    zclSS_AppCallbacks_t *pCBs )
+   1268          {
+   1269            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_PANIC )
+   1270              return;   // Error ignore the command
+   1271          
+   1272            if ( pCBs->pfnACE_Panic )
+   1273              pCBs->pfnACE_Panic();
+   1274          }
+   1275          
+   1276          /*********************************************************************
+   1277           * @fn      zclSS_ProcessInCmd_ACE_GetZoneIDMap
+   1278           *
+   1279           * @brief   Process in the received GetZoneIDMap Command.
+   1280           *
+   1281           * @param   pInMsg - pointer to the incoming message
+   1282           *
+   1283           */
+   1284          static ZStatus_t zclSS_ProcessInCmd_ACE_GetZoneIDMap( zclIncoming_t *pInMsg )
+   1285          {
+   1286            uint16 zoneIDMap[16];
+   1287            uint16 mapSection;
+   1288            uint8 zoneID;
+   1289            uint8 i, j;
+   1290          
+   1291            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_GET_ZONE_ID_MAP )
+   1292              return ( ZFailure );   // Error ignore the command
+   1293          
+   1294            for ( i = 0; i < 16; i++ )
+   1295            {
+   1296              mapSection = 0;
+   1297          
+   1298              // Find out Zone IDs that are allocated for this map section
+   1299              for ( j = 0; j < 16; j++ )
+   1300              {
+   1301                zoneID = 16 * i + j;
+   1302                if ( zclSS_FindZone( pInMsg->msg->endPoint, zoneID ) != NULL )
+   1303                {
+   1304                  // Set the corresponding bit
+   1305                  mapSection |= (0x01 << j );
+   1306                }
+   1307              }
+   1308              zoneIDMap[i] = mapSection;
+   1309            }
+   1310            
+   1311            // Send a response back
+   1312            zclSS_Send_IAS_ACE_GetZoneIDMapResponseCmd( pInMsg->msg->endPoint, &(pInMsg->msg->srcAddr),
+   1313                                                        zoneIDMap, true, pInMsg->hdr.transSeqNum );
+   1314            return ( ZCL_STATUS_CMD_HAS_RSP );
+   1315          }
+   1316          
+   1317          /*********************************************************************
+   1318           * @fn      zclSS_ProcessInCmd_ACE_GetZoneInformation
+   1319           *
+   1320           * @brief   Process in the received GetZoneInformation Command.
+   1321           *
+   1322           * @param   pInMsg - pointer to the incoming message
+   1323           *
+   1324           */
+   1325          static ZStatus_t zclSS_ProcessInCmd_ACE_GetZoneInformation( zclIncoming_t *pInMsg )
+   1326          {
+   1327            IAS_ACE_ZoneTable_t zone;
+   1328            IAS_ACE_ZoneTable_t *pZone;
+   1329          
+   1330            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_GET_ZONE_INFORMATION )
+   1331              return ( ZFailure );   // Error ignore the command
+   1332            
+   1333            pZone = zclSS_FindZone( pInMsg->msg->endPoint, pInMsg->pData[0] );
+   1334            if ( pZone == NULL )
+   1335            {
+   1336              // Zone not found
+   1337              pZone = &zone;
+   1338              pZone->zoneID = pInMsg->pData[0];
+   1339              pZone->zoneType = SS_IAS_ZONE_TYPE_INVALID_ZONE_TYPE;
+   1340              osal_cpyExtAddr( pZone->zoneAddress, (void *)zclSS_UknownIeeeAddress );
+   1341            }
+   1342            
+   1343            // Send a response back
+   1344            zclSS_Send_IAS_ACE_GetZoneInformationResponseCmd( pInMsg->msg->endPoint, &(pInMsg->msg->srcAddr),
+   1345                                                              pZone->zoneID, pZone->zoneType,
+   1346                                                              pZone->zoneAddress, true, pInMsg->hdr.transSeqNum );
+   1347            return ( ZCL_STATUS_CMD_HAS_RSP );
+   1348          }
+   1349          
+   1350          /*********************************************************************
+   1351           * @fn      zclSS_ProcessInCmd_ACE_ArmResponse
+   1352           *
+   1353           * @brief   Process in the received Arm Response Command.
+   1354           *
+   1355           * @param   pInMsg - pointer to the incoming message
+   1356           *
+   1357           */
+   1358          static void zclSS_ProcessInCmd_ACE_ArmResponse( zclIncoming_t *pInMsg,
+   1359                                                          zclSS_AppCallbacks_t *pCBs )
+   1360          {
+   1361            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_ARM_RESPONSE )
+   1362              return;   // Error ignore the command
+   1363          
+   1364            if ( pCBs->pfnACE_ArmResponse )
+   1365              pCBs->pfnACE_ArmResponse(pInMsg->pData[0]);
+   1366          }
+   1367          
+   1368          
+   1369          /*********************************************************************
+   1370           * @fn      zclSS_ProcessInCmd_ACE_GetZoneIDMapResponse
+   1371           *
+   1372           * @brief   Process in the received GetZoneIDMapResponse Command.
+   1373           *
+   1374           * @param   pInMsg - pointer to the incoming message
+   1375           *
+   1376           */
+   1377          static void zclSS_ProcessInCmd_ACE_GetZoneIDMapResponse( zclIncoming_t *pInMsg,
+   1378                                                                   zclSS_AppCallbacks_t *pCBs )
+   1379          {
+   1380            uint16 *buf;
+   1381            uint16 *pIndex;
+   1382            uint8 *pData;
+   1383            uint8 i, len = 32; // 16 fields of 2 octects
+   1384          
+   1385            if ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_GET_ZONE_ID_MAP_RESPONSE )
+   1386              return;   // Error ignore the command
+   1387          
+   1388            buf = osal_mem_alloc( len );
+   1389          
+   1390            if ( buf )
+   1391            {
+   1392              pIndex = buf;
+   1393              pData = pInMsg->pData;
+   1394              
+   1395              for ( i = 0; i < 16; i++ )
+   1396              {
+   1397                *pIndex++ = BUILD_UINT16( pData[0], pData[1] );
+   1398                pData += 2;
+   1399              }
+   1400          
+   1401              if ( pCBs->pfnACE_GetZoneIDMapResponse )
+   1402                pCBs->pfnACE_GetZoneIDMapResponse( buf );
+   1403          
+   1404              osal_mem_free( buf );
+   1405            }
+   1406          }
+   1407          
+   1408          /*********************************************************************
+   1409           * @fn      zclSS_ProcessInCmd_ACE_GetZoneInformationResponse
+   1410           *
+   1411           * @brief   Process in the received GetZoneInformationResponse Command.
+   1412           *
+   1413           * @param   pInMsg - pointer to the incoming message
+   1414           *
+   1415           */
+   1416          static void zclSS_ProcessInCmd_ACE_GetZoneInformationResponse( zclIncoming_t *pInMsg,
+   1417                                                                         zclSS_AppCallbacks_t *pCBs )
+   1418          {
+   1419            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_ACE_GET_ZONE_INFORMATION_RESPONSE )
+   1420              return;   // Error ignore the command
+   1421          
+   1422            if ( pCBs->pfnACE_GetZoneInformationResponse )
+   1423            {
+   1424              zclACEGetZoneInfoRsp_t rsp;
+   1425              
+   1426              rsp.zoneID = pInMsg->pData[0];
+   1427              rsp.zoneType = BUILD_UINT16( pInMsg->pData[1], pInMsg->pData[2] );
+   1428              rsp.ieeeAddr = &(pInMsg->pData[3]);
+   1429              
+   1430              pCBs->pfnACE_GetZoneInformationResponse( &rsp );
+   1431            }
+   1432          }
+   1433          #endif // ZCL_ACE
+   1434          
+   1435          #ifdef ZCL_WD
+   1436          /*********************************************************************
+   1437           * @fn      zclSS_ProcessInWDCmds
+   1438           *
+   1439           * @brief   Callback from ZCL to process incoming Commands specific
+   1440           *          to this cluster library on a command ID basis
+   1441          
+   1442           * @param   pInMsg - pointer to the incoming message
+   1443           *
+   1444           * @return  ZStatus_t
+   1445           */
+   1446          static ZStatus_t zclSS_ProcessInWDCmds( zclIncoming_t *pInMsg,
+   1447                                                  zclSS_AppCallbacks_t *pCBs )
+   1448          {
+   1449            ZStatus_t stat = ZSuccess;
+   1450          
+   1451            switch ( pInMsg->hdr.commandID )				
+   1452            {
+   1453              case COMMAND_SS_IAS_WD_START_WARNING:
+   1454                zclSS_ProcessInCmd_WD_StartWarning( pInMsg, pCBs );
+   1455                break;
+   1456          
+   1457              case COMMAND_SS_IAS_WD_SQUAWK:
+   1458                zclSS_ProcessInCmd_WD_Squawk( pInMsg, pCBs );
+   1459                break;
+   1460          
+   1461              default:
+   1462                stat = ZFailure;
+   1463                break;
+   1464            }
+   1465          
+   1466            return ( stat );
+   1467          }
+   1468          
+   1469          /*********************************************************************
+   1470           * @fn      zclSS_ProcessInCmd_WD_StartWarning
+   1471           *
+   1472           * @brief   Process in the received StartWarning Command.
+   1473           *
+   1474           * @param   pInMsg - pointer to the incoming message
+   1475           *
+   1476           */
+   1477          static void zclSS_ProcessInCmd_WD_StartWarning( zclIncoming_t *pInMsg,
+   1478                                                          zclSS_AppCallbacks_t *pCBs )
+   1479          {
+   1480            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_WD_START_WARNING )
+   1481              return;   // Error ignore the command
+   1482          
+   1483            if ( pCBs->pfnWD_StartWarning )
+   1484            {
+   1485              zclWDStartWarning_t cmd;
+   1486              
+   1487              cmd.warnings.warningbyte = pInMsg->pData[0];
+   1488              cmd.duration = BUILD_UINT16( pInMsg->pData[1], pInMsg->pData[2] );
+   1489              
+   1490              pCBs->pfnWD_StartWarning( &cmd );
+   1491            }
+   1492          }
+   1493          
+   1494          /*********************************************************************
+   1495           * @fn      zclSS_ProcessInCmd_WD_Squawk
+   1496           *
+   1497           * @brief   Process in the received Squawk Command.
+   1498           *
+   1499           * @param   pInMsg - pointer to the incoming message
+   1500           *
+   1501           */
+   1502          static void zclSS_ProcessInCmd_WD_Squawk( zclIncoming_t *pInMsg,
+   1503                                                    zclSS_AppCallbacks_t *pCBs )
+   1504          {
+   1505            zclCmdSSWDSquawkPayload_t squawk;
+   1506          
+   1507            if  ( pInMsg->hdr.commandID != COMMAND_SS_IAS_WD_SQUAWK )
+   1508              return;   // Error ignore the command
+   1509          
+   1510            if ( pCBs->pfnWD_Squawk )
+   1511            {
+   1512              squawk.squawkbyte = pInMsg->pData[0];
+   1513              pCBs->pfnWD_Squawk( squawk );
+   1514            }
+   1515          }
+   1516          #endif // ZCL_WD
+   1517          
+   1518          /*******************************************************************************
+   1519          *******************************************************************************/
+   1520          
+
+   Maximum stack usage in bytes:
+
+     Function                   ISTACK PSTACK XSTACK
+     --------                   ------ ------ ------
+     zclSS_HdlIncoming              2      0      0
+     zclSS_RegisterCmdCallbacks     1      0     14
+       -> zcl_registerPlugin        0      0     28
+       -> osal_mem_alloc            0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                     Bytes
+     --------------                     -----
+     zclSS_UknownIeeeAddress               8
+     zclSSCBs                              2
+     zclSSPluginRegisted                   1
+     zclSS_RegisterCmdCallbacks          156
+     zclSS_HdlIncoming                    79
+     ??zclSS_RegisterCmdCallbacks?relay    6
+     ??zclSS_HdlIncoming?relay             6
+
+ 
+ 235 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+   8 bytes in segment XDATA_ROM_C
+   3 bytes in segment XDATA_Z
+ 
+ 247 bytes of CODE  memory
+   8 bytes of CONST memory
+   3 bytes of XDATA memory
+
+Errors: none
+Warnings: none

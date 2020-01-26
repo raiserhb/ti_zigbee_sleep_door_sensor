@@ -1,0 +1,430 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         08/Aug/2017  09:57:21 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Components\hal\target\C #
+#                          C2530EB\hal_dma.c                                  #
+#    Command line       =  -f "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\To #
+#                          ols\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3              #
+#                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE    #
+#                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT             #
+#                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work      #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wCo #
+#                          nfig.cfg" (-DZIGBEEPRO -DSECURE=1                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x06108800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,0x6F, #
+#                          0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0           #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart    #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wZC #
+#                          L.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT        #
+#                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF            #
+#                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_GE #
+#                          NERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GENER #
+#                          ATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GENERA #
+#                          TE_TIMEOUT=10 -DZCL_LOAD_CONTROL                   #
+#                          -DZCL_SIMPLE_METERING -DZCL_PRICING -DZCL_MESSAGE  #
+#                          -DZCL_TUNNELING -DZCL_TOU) -DZCL_DEVICE_MGMT       #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Components\hal\target\ #
+#                          CC2530EB\hal_dma.c" -lC "D:\work space\Smart       #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\List\" -lA  #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\EndDeviceEB\List\"     #
+#                          --diag_suppress Pe001,Pa010 -o "D:\work            #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\Obj\" -e    #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\" -I  #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\Source\" -I         #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\Source\" -I      #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\..\ZMain\TI2530D #
+#                          B\" -I "D:\work space\Smart Product\Two            #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\hal\include\" -I "D:\work     #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\hal\target\CC2530EB\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\include\" -I "D:\work space\Smart           #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\high_level\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\single_chip\" -I "D:\work   #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mt\" -I "D:\work space\Smart Product\Two        #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\osal\include\" -I "D:\work    #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\saddr\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\sdata\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\af\" -I "D:\work space\Smart Product\Two  #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\stack\nwk\" -I "D:\work       #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sapi\" -I "D:\work space\Smart            #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sec\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sys\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zcl\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zdo\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\zmac\" -I "D:\work space\Smart Product\Two      #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\zmac\f8w\" -Oh                #
+#                          --require_prototypes                               #
+#    List file          =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\List\hal_dm #
+#                          a.lst                                              #
+#    Object file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\Obj\hal_dma #
+#                          .r51                                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\work space\Smart Product\Two YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Components\hal\target\CC2530EB\hal_dma.c
+      1          /**************************************************************************************************
+      2            Filename:       hal_dma.c
+      3            Revised:        $Date: 2010-07-21 16:20:44 -0700 (Wed, 21 Jul 2010) $
+      4            Revision:       $Revision: 23090 $
+      5          
+      6            Description:    This file contains the interface to the DMA.
+      7          
+      8          
+      9            Copyright 2007-2010 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com. 
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41           * INCLUDES
+     42           */
+     43          
+     44          //#define HAL_IRGEN TRUE
+     45          
+     46          #include "hal_types.h"
+     47          #include "hal_defs.h"
+     48          #include "hal_dma.h"
+
+   \                                 In  segment SFR_AN, at 0xd2
+   \   unsigned char volatile __sfr DMA1CFGL
+   \                     DMA1CFGL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xd3
+   \   unsigned char volatile __sfr DMA1CFGH
+   \                     DMA1CFGH:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xd4
+   \   unsigned char volatile __sfr DMA0CFGL
+   \                     DMA0CFGL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xd5
+   \   unsigned char volatile __sfr DMA0CFGH
+   \                     DMA0CFGH:
+   \   000000                DS 1
+     49          #include "hal_mcu.h"
+     50          #include "hal_uart.h"
+     51          
+     52          #if (defined HAL_IRGEN) && (HAL_IRGEN == TRUE)
+     53          #include "hal_irgen.h"
+     54          #endif
+     55          
+     56          #if (defined HAL_SPI) && (HAL_SPI == TRUE)
+     57          #include "hal_spi.h"
+     58          #endif
+     59          
+     60          
+     61          #if ((defined HAL_DMA) && (HAL_DMA == TRUE))
+     62          
+     63          /*********************************************************************
+     64           * MACROS
+     65           */
+     66          
+     67          /*********************************************************************
+     68           * CONSTANTS
+     69           */
+     70          
+     71          /*********************************************************************
+     72           * TYPEDEFS
+     73           */
+     74          
+     75          /*********************************************************************
+     76           * GLOBAL VARIABLES
+     77           */
+     78          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     79          halDMADesc_t dmaCh0;
+   \                     dmaCh0:
+   \   000000                DS 8
+   \   000008                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     80          halDMADesc_t dmaCh1234[4];
+   \                     dmaCh1234:
+   \   000000                DS 32
+   \   000020                REQUIRE __INIT_XDATA_Z
+     81          
+     82          /*********************************************************************
+     83           * GLOBAL FUNCTIONS
+     84           */
+     85          
+     86          /*********************************************************************
+     87           * LOCAL VARIABLES
+     88           */
+     89          
+     90          /*********************************************************************
+     91           * LOCAL FUNCTIONS
+     92           */
+     93          
+     94          /******************************************************************************
+     95           * @fn      HalDMAInit
+     96           *
+     97           * @brief   DMA Interrupt Service Routine
+     98           *
+     99           * @param   None
+    100           *
+    101           * @return  None
+    102           *****************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    103          void HalDmaInit( void )
+   \                     HalDmaInit:
+    104          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    105            HAL_DMA_SET_ADDR_DESC0( &dmaCh0 );
+   \   000000   74..         MOV     A,#(dmaCh0 >> 8) & 0xff
+   \   000002   F5D5         MOV     0xd5,A
+   \   000004   75D4..       MOV     0xd4,#dmaCh0 & 0xff
+    106            HAL_DMA_SET_ADDR_DESC1234( dmaCh1234 );
+   \   000007   74..         MOV     A,#(dmaCh1234 >> 8) & 0xff
+   \   000009   F5D3         MOV     0xd3,A
+   \   00000B   75D2..       MOV     0xd2,#dmaCh1234 & 0xff
+    107          #if (HAL_UART_DMA || \
+    108             ((defined HAL_SPI) && (HAL_SPI == TRUE))  || \
+    109             ((defined HAL_IRGEN) && (HAL_IRGEN == TRUE)))
+    110            DMAIE = 1;
+    111          #endif
+    112          }
+   \   00000E   02....       LJMP    ?BRET
+   \   000011                REQUIRE DMA0CFGH
+   \   000011                REQUIRE DMA0CFGL
+   \   000011                REQUIRE DMA1CFGH
+   \   000011                REQUIRE DMA1CFGL
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??HalDmaInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    HalDmaInit
+    113          
+    114          #if (HAL_UART_DMA || \
+    115             ((defined HAL_SPI) && (HAL_SPI == TRUE))  || \
+    116             ((defined HAL_IRGEN) && (HAL_IRGEN == TRUE)))
+    117          /******************************************************************************
+    118           * @fn      HalDMAInit
+    119           *
+    120           * @brief   DMA Interrupt Service Routine
+    121           *
+    122           * @param   None
+    123           *
+    124           * @return  None
+    125           *****************************************************************************/
+    126          HAL_ISR_FUNCTION( halDmaIsr, DMA_VECTOR )
+    127          {
+    128            extern void HalUARTIsrDMA(void);
+    129          
+    130            HAL_ENTER_ISR();
+    131          
+    132            DMAIF = 0;
+    133          
+    134          #if HAL_UART_DMA
+    135            if (HAL_DMA_CHECK_IRQ(HAL_DMA_CH_TX))
+    136            {
+    137              HalUARTIsrDMA();
+    138            }
+    139          #endif // HAL_UART_DMA
+    140          
+    141          #if (defined HAL_SPI) && (HAL_SPI == TRUE)
+    142            if ( HAL_DMA_CHECK_IRQ( HAL_DMA_CH_RX ) )
+    143            {
+    144              HAL_DMA_CLEAR_IRQ( HAL_DMA_CH_RX );
+    145              HalSpiRxIsr();
+    146            }
+    147          
+    148            if ( HAL_DMA_CHECK_IRQ( HAL_DMA_CH_TX ) )
+    149            {
+    150              HAL_DMA_CLEAR_IRQ( HAL_DMA_CH_TX );
+    151              HalSpiTxIsr();
+    152            }
+    153          #endif // (defined HAL_SPI) && (HAL_SPI == TRUE)
+    154          
+    155          #if (defined HAL_IRGEN) && (HAL_IRGEN == TRUE)
+    156            if ( HAL_IRGEN == TRUE && HAL_DMA_CHECK_IRQ( HAL_IRGEN_DMA_CH ) )
+    157            {
+    158              HAL_DMA_CLEAR_IRQ( HAL_IRGEN_DMA_CH );
+    159              HalIrGenDmaIsr();
+    160            }
+    161          #endif // (defined HAL_IRGEN) && (HAL_IRGEN == TRUE)
+    162          
+    163            CLEAR_SLEEP_MODE();
+    164            HAL_EXIT_ISR();
+    165          }
+    166          #endif
+    167          #endif  // #if ((defined HAL_DMA) && (HAL_DMA == TRUE))
+    168          /******************************************************************************
+    169          ******************************************************************************/
+
+   Maximum stack usage in bytes:
+
+     Function   ISTACK PSTACK XSTACK
+     --------   ------ ------ ------
+     HalDmaInit     0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label     Bytes
+     --------------     -----
+     DMA1CFGL              1
+     DMA1CFGH              1
+     DMA0CFGL              1
+     DMA0CFGH              1
+     dmaCh0                8
+     dmaCh1234            32
+     HalDmaInit           17
+     ??HalDmaInit?relay    6
+
+ 
+ 17 bytes in segment BANKED_CODE
+  6 bytes in segment BANK_RELAYS
+  4 bytes in segment SFR_AN
+ 40 bytes in segment XDATA_Z
+ 
+ 23 bytes of CODE  memory
+  0 bytes of DATA  memory (+ 4 bytes shared)
+ 40 bytes of XDATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,2373 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         08/Aug/2017  09:57:14 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\Source\zcl_SmartDoor.c           #
+#    Command line       =  -f "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\To #
+#                          ols\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3              #
+#                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE    #
+#                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT             #
+#                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work      #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wCo #
+#                          nfig.cfg" (-DZIGBEEPRO -DSECURE=1                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x06108800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,0x6F, #
+#                          0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0           #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart    #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wZC #
+#                          L.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT        #
+#                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF            #
+#                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_GE #
+#                          NERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GENER #
+#                          ATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GENERA #
+#                          TE_TIMEOUT=10 -DZCL_LOAD_CONTROL                   #
+#                          -DZCL_SIMPLE_METERING -DZCL_PRICING -DZCL_MESSAGE  #
+#                          -DZCL_TUNNELING -DZCL_TOU) -DZCL_DEVICE_MGMT       #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\Source\zcl_SmartDoor.c" -lC     #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\EndDeviceEB\List\"     #
+#                          -lA "D:\work space\Smart Product\Two               #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\EndDe #
+#                          viceEB\List\" --diag_suppress Pe001,Pa010 -o       #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\EndDeviceEB\Obj\" -e   #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\" -I  #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\Source\" -I         #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\Source\" -I      #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\..\ZMain\TI2530D #
+#                          B\" -I "D:\work space\Smart Product\Two            #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\hal\include\" -I "D:\work     #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\hal\target\CC2530EB\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\include\" -I "D:\work space\Smart           #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\high_level\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\single_chip\" -I "D:\work   #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mt\" -I "D:\work space\Smart Product\Two        #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\osal\include\" -I "D:\work    #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\saddr\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\sdata\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\af\" -I "D:\work space\Smart Product\Two  #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\stack\nwk\" -I "D:\work       #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sapi\" -I "D:\work space\Smart            #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sec\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sys\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zcl\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zdo\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\zmac\" -I "D:\work space\Smart Product\Two      #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\zmac\f8w\" -Oh                #
+#                          --require_prototypes                               #
+#    List file          =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\List\zcl_Sm #
+#                          artDoor.lst                                        #
+#    Object file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\Obj\zcl_Sma #
+#                          rtDoor.r51                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\work space\Smart Product\Two YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SmartDoor\Source\zcl_SmartDoor.c
+      1          /**************************************************************************************************
+      2          Filename:       zcl_sampleSwitch.c
+      3          Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+      4          Revision:       $Revision: 19453 $
+      5          
+      6          
+      7          Description:    Zigbee Cluster Library - sample device application.
+      8          
+      9          
+     10          Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+     11          
+     12          IMPORTANT: Your use of this Software is limited to those specific rights
+     13          granted under the terms of a software license agreement between the user
+     14          who downloaded the software, his/her employer (which must be your employer)
+     15          and Texas Instruments Incorporated (the "License").  You may not use this
+     16          Software unless you agree to abide by the terms of the License. The License
+     17          limits your use, and you acknowledge, that the Software may not be modified,
+     18          copied or distributed unless embedded on a Texas Instruments microcontroller
+     19          or used solely and exclusively in conjunction with a Texas Instruments radio
+     20          frequency transceiver, which is integrated into your product.  Other than for
+     21          the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     22          works of, modify, distribute, perform, display or sell this Software and/or
+     23          its documentation for any purpose.
+     24          
+     25          YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     26          PROVIDED 揂S IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     27          INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     28          NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     29          TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     30          NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     31          LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     32          INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     33          OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     34          OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     35          (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     36          
+     37          Should you have any questions regarding your right to use this Software,
+     38          contact Texas Instruments Incorporated at www.TI.com. 
+     39          **************************************************************************************************/
+     40          
+     41          /*********************************************************************
+     42          This device will be like a Switch device.  This application is not
+     43          intended to be a Switch device, but will use the device description
+     44          to implement this sample code.
+     45          *********************************************************************/
+     46          
+     47          /*********************************************************************
+     48          * INCLUDES
+     49          */
+     50          #include "ZComDef.h"
+     51          #include "OSAL.h"
+     52          #include "AF.h"
+     53          #include "ZDApp.h"
+     54          
+     55          #include "zcl.h"
+     56          #include "zcl_general.h"
+     57          #include "zcl_ha.h"
+     58          
+     59          #include "zcl_SmartDoor.h"
+     60          
+     61          #include "onboard.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8c
+   \   unsigned char volatile __sfr PICTL
+   \                     PICTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xab
+   \   unsigned char volatile __sfr P0IEN
+   \                     P0IEN:
+   \   000000                DS 1
+     62          
+     63          /* HAL */
+     64          #include "hal_lcd.h"
+     65          #include "hal_led.h"
+     66          #include "hal_key.h"
+     67          
+     68          #include "zcl_door_control.h"
+     69          #include "zcl_device_info.h"
+     70          
+     71          
+     72          /*********************************************************************
+     73          * MACROS
+     74          */
+     75          
+     76          /*********************************************************************
+     77          * CONSTANTS
+     78          */
+     79          /*********************************************************************
+     80          * TYPEDEFS
+     81          */
+     82          
+     83          
+     84          
+     85          #define JOINNWKCYCLETIME_20S    0
+     86          #define JOINNWKCYCLETIME_1MIN   1
+     87          #define JOINNWKCYCLETIME_10MIN  2
+     88          #define JOINNWKCYCLETIME_30MIN  3
+     89          #define JOINNWKCYCLETIME_1H     4
+     90          #define JOINNWKCYCLETIME_2H     5
+     91          
+     92          #define JOINNWKCYCLEEVENTTIME_20S   (20000+(osal_rand() & 0x00FF))
+     93          #define JOINNWKCYCLEEVENTTIME_60S   (60000+(osal_rand() & 0x00FF))
+     94          
+     95          #define JOINNWKCYCLE_ACCOUNT 4
+     96          
+     97          /*********************************************************************
+     98          * GLOBAL VARIABLES
+     99          */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    100          byte zclSmartDoor_TaskID;
+   \                     zclSmartDoor_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    101          devStates_t zclDevice_NwkState;
+   \                     zclDevice_NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    102          uint8 zclDevice_RejoinCounter = 0;
+   \                     zclDevice_RejoinCounter:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    103          int8 zclDevice_JoinNetworkOk = 12;
+   \                     zclDevice_JoinNetworkOk:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclDevice_JoinNetworkOk>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    104          int8 zclDevice_InitDone = 0;
+   \                     zclDevice_InitDone:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    105          uint8 zcl_Led_Blink = 0;
+   \                     zcl_Led_Blink:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    106          uint8 zcl_Flag = 0;//0表示当前无门磁变化 1表示关门 2表示开门
+   \                     zcl_Flag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    107          uint8 zcl_onoffFlag = 1; //1表示检测到门磁开关 0表示正在执行开或关信息上报
+   \                     zcl_onoffFlag:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zcl_onoffFlag>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    108          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    109          uint8 AppDEviceJoinNwkState = 0;
+   \                     AppDEviceJoinNwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    110          uint8 u8_AppDEviceJoinNwkTimeComing = 0;
+   \                     u8_AppDEviceJoinNwkTimeComing:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    111          uint16 u16_AppDeviceJoinNwkCycleTimeCount = 0;
+   \                     u16_AppDeviceJoinNwkCycleTimeCount:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    112          uint8 u8_ZDApp_StopJoiningCycleFlag = 0; //0:star  1:stop
+   \                     u8_ZDApp_StopJoiningCycleFlag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    113          
+    114          extern uint8 g_u8HeartBeatCount;//心跳包计数
+    115          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    116          uint8 g_u8sendDeviceInfoFlag = 0;//0x00默认发送；0x01收到服务器缺少设备信息的回执
+   \                     g_u8sendDeviceInfoFlag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    117          uint8 ReJoinNetFlagInFlash[1] = {0xFF};//0x01:表示复位加入网络；0x02:表示断电重启
+   \                     ReJoinNetFlagInFlash:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for ReJoinNetFlagInFlash>`
+   \   000001                REQUIRE __INIT_XDATA_I
+    118          /*********************************************************************
+    119          * GLOBAL FUNCTIONS
+    120          */
+    121          
+    122          /*********************************************************************
+    123          * LOCAL VARIABLES
+    124          */
+    125          //static afAddrType_t zclSmartDoor_DstAddr;
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    126          uint8 g_RestCount = 0;
+   \                     g_RestCount:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    127          /*********************************************************************
+    128          * LOCAL FUNCTIONS
+    129          */
+    130          static void zclSmartDoor_HandleKeys( byte shift, byte keys );
+    131          static void zclSmartDoor_BasicResetCB( void );
+    132          static void zclSmartDoor_IdentifyCB( zclIdentify_t *pCmd );
+    133          static void zclSmartDoor_IdentifyQueryRspCB( zclIdentifyQueryRsp_t *pRsp );
+    134          static void zclSmartDoor0_OnOffCB(uint8 cmd );
+    135          static void zclSmartDoor_OnOffCB(uint8 s, uint8 cmd );
+    136          static void zclSmartDoor_ProcessIdentifyTimeChange( void );
+    137          
+    138          // Functions to process ZCL Foundation incoming Command/Response messages 
+    139          static void zclSmartDoor_ProcessIncomingMsg( zclIncomingMsg_t *msg );
+    140          #ifdef ZCL_READ
+    141          static uint8 zclSmartDoor_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg );
+    142          #endif
+    143          #ifdef ZCL_WRITE
+    144          static uint8 zclSmartDoor_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg );
+    145          #endif
+    146          static uint8 zclSmartDoor_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg );
+    147          #ifdef ZCL_DISCOVER
+    148          static uint8 zclSmartDoor_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg );
+    149          #endif
+    150          
+    151          /*********************************************************************
+    152          * ZCL General Profile Callback table
+    153          */
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    154          static zclGeneral_AppCallbacks_t zclSmartDoor0_CmdCallbacks =
+   \                     zclSmartDoor0_CmdCallbacks:
+   \   000000                DS 30
+   \   00001E                REQUIRE `?<Initializer for zclSmartDoor0_CmdCallbacks>`
+   \   00001E                REQUIRE __INIT_XDATA_I
+    155          {
+    156            zclSmartDoor_BasicResetCB,              // Basic Cluster Reset command
+    157            zclSmartDoor_IdentifyCB,                // Identify command  
+    158            zclSmartDoor_IdentifyQueryRspCB,        // Identify Query Response command
+    159            zclSmartDoor0_OnOffCB,                   // On/Off cluster command
+    160            NULL,                                     // Level Control Move to Level command
+    161            NULL,                                     // Level Control Move command
+    162            NULL,                                     // Level Control Step command
+    163            NULL,                                     // Group Response commands
+    164            NULL,                                     // Scene Store Request command
+    165            NULL,                                     // Scene Recall Request command
+    166            NULL,                                     // Scene Response command
+    167            NULL,                                     // Alarm (Response) command
+    168            NULL,                                     // RSSI Location commands
+    169            NULL,                                     // RSSI Location Response commands
+    170          };
+    171          
+    172          /*********************************************************************
+    173          * @fn          zclSmartDoor_Init
+    174          *
+    175          * @brief       Initialization function for the zclGeneral layer.
+    176          *
+    177          * @param       none
+    178          *
+    179          * @return      none
+    180          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    181          void zclSmartDoor_Init( byte task_id )
+   \                     zclSmartDoor_Init:
+    182          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+    183            zclSmartDoor_TaskID = task_id;
+   \   000006   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   000009   F0           MOVX    @DPTR,A
+    184            zclDevice_NwkState = DEV_INIT;
+   \   00000A   90....       MOV     DPTR,#zclDevice_NwkState
+   \   00000D   7401         MOV     A,#0x1
+   \   00000F   F0           MOVX    @DPTR,A
+    185            zclDevice_InitDone = 0;
+   \   000010   90....       MOV     DPTR,#zclDevice_InitDone
+   \   000013   E4           CLR     A
+   \   000014   F0           MOVX    @DPTR,A
+    186            zclDevice_RejoinCounter = 0;
+   \   000015   90....       MOV     DPTR,#zclDevice_RejoinCounter
+   \   000018   F0           MOVX    @DPTR,A
+    187            
+    188            
+    189            // This app is part of the Home Automation Profile
+    190            zclHA_Init( &zclSmartDoor_SimpleDesc );
+   \   000019                ; Setup parameters for call to function zclHA_Init
+   \   000019   7A..         MOV     R2,#zclSmartDoor_SimpleDesc & 0xff
+   \   00001B   7B..         MOV     R3,#(zclSmartDoor_SimpleDesc >> 8) & 0xff
+   \   00001D   12....       LCALL   ??zclHA_Init?relay
+    191            
+    192            // Register the ZCL General Cluster Library callback functions
+    193            zclGeneral_RegisterCmdCallbacks( SAMRTDOOR_ENDPOINT, &zclSmartDoor0_CmdCallbacks );
+   \   000020                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+   \   000020   7A..         MOV     R2,#zclSmartDoor0_CmdCallbacks & 0xff
+   \   000022   7B..         MOV     R3,#(zclSmartDoor0_CmdCallbacks >> 8) & 0xff
+   \   000024   7920         MOV     R1,#0x20
+   \   000026   12....       LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+    194            
+    195            // Register the application's attribute list
+    196            zcl_registerAttrList( SAMRTDOOR_ENDPOINT, SMARTDOOR_MAX_ATTRIBUTES, zclSmartDoor_Attrs );
+   \   000029                ; Setup parameters for call to function zcl_registerAttrList
+   \   000029   7C..         MOV     R4,#zclSmartDoor_Attrs & 0xff
+   \   00002B   7D..         MOV     R5,#(zclSmartDoor_Attrs >> 8) & 0xff
+   \   00002D   7A0C         MOV     R2,#0xc
+   \   00002F   7920         MOV     R1,#0x20
+   \   000031   12....       LCALL   ??zcl_registerAttrList?relay
+    197            
+    198            // Register the Application to receive the unprocessed Foundation command/response messages
+    199            zcl_registerForMsg( zclSmartDoor_TaskID );
+   \   000034                ; Setup parameters for call to function zcl_registerForMsg
+   \   000034   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   F9           MOV     R1,A
+   \   000039   12....       LCALL   ??zcl_registerForMsg?relay
+    200            
+    201            // Register for all key events - This app will handle all key events
+    202            RegisterForKeys( zclSmartDoor_TaskID );
+   \   00003C                ; Setup parameters for call to function RegisterForKeys
+   \   00003C   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   00003F   E0           MOVX    A,@DPTR
+   \   000040   F9           MOV     R1,A
+   \   000041   12....       LCALL   ??RegisterForKeys?relay
+    203            
+    204            zclDeviceInfoInit();
+   \   000044                ; Setup parameters for call to function zclDeviceInfoInit
+   \   000044   12....       LCALL   ??zclDeviceInfoInit?relay
+    205            zclSwitchControlInit();
+   \   000047                ; Setup parameters for call to function zclSwitchControlInit
+   \   000047   12....       LCALL   ??zclSwitchControlInit?relay
+    206          }
+   \   00004A   7F01         MOV     R7,#0x1
+   \   00004C   02....       LJMP    ?BANKED_LEAVE_XDATA
+    207          
+    208          /*********************************************************************
+    209          * @fn          zclSample_event_loop
+    210          *
+    211          * @brief       Event Loop Processor for zclGeneral.
+    212          *
+    213          * @param       none
+    214          *
+    215          * @return      none
+    216          */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    217          uint8 DeviceRehoinEventFlag = 0;
+   \                     DeviceRehoinEventFlag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    218          uint16 zclSmartDoor_event_loop( uint8 task_id, uint16 events )
+   \                     zclSmartDoor_event_loop:
+    219          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+    220            afIncomingMSGPacket_t *MSGpkt;
+    221            
+    222            (void)task_id;  // Intentionally unreferenced parameter
+    223            
+    224            if ( events & SYS_EVENT_MSG )
+   \   000009   5480         ANL     A,#0x80
+   \   00000B   7068         JNZ     ??zclSmartDoor_event_loop_0
+    225            {
+    226              while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( zclSmartDoor_TaskID )) )
+    227              {
+    228                switch ( MSGpkt->hdr.event )
+    229                {
+    230                case ZCL_INCOMING_MSG:
+    231                  // Incoming ZCL Foundation command/response messages
+    232                  zclSmartDoor_ProcessIncomingMsg( (zclIncomingMsg_t *)MSGpkt );
+    233                  break;
+    234                  
+    235                case KEY_CHANGE:
+    236                  zclSmartDoor_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    237                  break;
+    238                case ZDO_STATE_CHANGE:
+    239                  zclDevice_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    240                  if (zclDevice_NwkState == DEV_END_DEVICE ) {
+    241                    osal_start_timerEx(zclSmartDoor_TaskID, 
+    242                                       ZCL_DEVICE_INFO_SEND_EVENT,
+    243                                       ZCL_DEVICE_SEND_INIF_TIME_1S);
+    244                    osal_start_timerEx(zclSmartDoor_TaskID, 
+    245                                       ZCL_DEVICE_JOIN_NETWORK_OK_EVENT,
+    246                                       200);
+    247                    
+    248                    zclDevice_JoinNetworkOk = 12;//LED
+    249                    zclDevice_RejoinCounter= 0;
+    250                    u8_ZDApp_StopJoiningCycleFlag = 0;
+    251                    u8_AppDEviceJoinNwkTimeComing = 0;
+    252                    DeviceRehoinEventFlag = 0;
+    253                    AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+    254                    u16_AppDeviceJoinNwkCycleTimeCount= 0;
+    255                    
+    256                    pwrmgr_attribute.pwrmgr_device =PWRMGR_BATTERY;
+    257                    pwrmgr_attribute.pwrmgr_task_state = 0; 
+    258                  } 
+    259                  else if( zclDevice_NwkState == DEV_NWK_ORPHAN )
+    260                  {
+    261                    
+    262                  }
+    263                  else if (zclDevice_NwkState == DEV_NWK_DISC) 
+    264                  {
+    265                    if(u8_ZDApp_StopJoiningCycleFlag == 0)
+    266                    {
+    267                      zclDevice_RejoinCounter++;
+    268                      AppDevNwkDiscCyCle();
+    269                    }
+    270                  }
+    271                  break;
+    272                default:
+    273                  break;
+    274                }
+    275                
+    276                // Release the memory
+    277                osal_msg_deallocate( (uint8 *)MSGpkt );
+    278              }
+    279              
+    280              // return unprocessed events
+    281              // return (events ^ SYS_EVENT_MSG);
+    282            }
+    283            
+    284            if (events & ZCL_DEVICE_REJOIN_EVENT) {
+   \                     ??zclSmartDoor_event_loop_1:
+   \   00000D   EF           MOV     A,R7
+   \   00000E   5408         ANL     A,#0x8
+   \   000010   600B         JZ      ??zclSmartDoor_event_loop_2
+    285              if(zclDevice_NwkState != DEV_END_DEVICE)
+   \   000012   90....       MOV     DPTR,#zclDevice_NwkState
+   \   000015   E0           MOVX    A,@DPTR
+   \   000016   6406         XRL     A,#0x6
+   \   000018   6003         JZ      ??zclSmartDoor_event_loop_2
+    286              {
+    287                AppDEviceJoinNwk(); 
+   \   00001A                ; Setup parameters for call to function AppDEviceJoinNwk
+   \   00001A   12....       LCALL   ??AppDEviceJoinNwk?relay
+    288              }
+    289            }
+    290            
+    291            if ( events & SMARTDOOR_IDENTIFY_TIMEOUT_EVT )
+   \                     ??zclSmartDoor_event_loop_2:
+   \   00001D   EE           MOV     A,R6
+   \   00001E   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000020   4003         JC      $+5
+   \   000022   02....       LJMP    ??zclSmartDoor_event_loop_3 & 0xFFFF
+    292            {
+    293              if ( zclSmartDoor_IdentifyTime > 0 )
+   \   000025   90....       MOV     DPTR,#zclSmartDoor_IdentifyTime
+   \   000028   E0           MOVX    A,@DPTR
+   \   000029   F8           MOV     R0,A
+   \   00002A   A3           INC     DPTR
+   \   00002B   E0           MOVX    A,@DPTR
+   \   00002C   F9           MOV     R1,A
+   \   00002D   E8           MOV     A,R0
+   \   00002E   49           ORL     A,R1
+   \   00002F   7003         JNZ     $+5
+   \   000031   02....       LJMP    ??zclSmartDoor_event_loop_4 & 0xFFFF
+    294                zclSmartDoor_IdentifyTime--;
+   \   000034   90....       MOV     DPTR,#zclSmartDoor_IdentifyTime
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   24FF         ADD     A,#-0x1
+   \   00003A   F0           MOVX    @DPTR,A
+   \   00003B   A3           INC     DPTR
+   \   00003C   E0           MOVX    A,@DPTR
+   \   00003D   34FF         ADDC    A,#-0x1
+   \   00003F   F0           MOVX    @DPTR,A
+    295              zclSmartDoor_ProcessIdentifyTimeChange();
+   \   000040   18           DEC     R0
+   \   000041   F9           MOV     R1,A
+   \   000042   E8           MOV     A,R0
+   \   000043   49           ORL     A,R1
+   \   000044   7003         JNZ     $+5
+   \   000046   02....       LJMP    ??zclSmartDoor_event_loop_4 & 0xFFFF
+   \   000049                ; Setup parameters for call to function osal_start_timerEx
+   \   000049   7CE8         MOV     R4,#-0x18
+   \   00004B   7D03         MOV     R5,#0x3
+   \   00004D   7A01         MOV     R2,#0x1
+   \   00004F   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+    296              
+    297              //  return ( events ^ SmartDoor_IDENTIFY_TIMEOUT_EVT );
+    298            }
+   \                     ??CrossCallReturnLabel_31:
+   \   000052   02....       LJMP    ??zclSmartDoor_event_loop_3 & 0xFFFF
+   \                     ??zclSmartDoor_event_loop_5:
+   \   000055   E0           MOVX    A,@DPTR
+   \   000056   640A         XRL     A,#0xa
+   \   000058   6014         JZ      ??zclSmartDoor_event_loop_6
+   \   00005A   E0           MOVX    A,@DPTR
+   \   00005B   6402         XRL     A,#0x2
+   \   00005D   700F         JNZ     ??zclSmartDoor_event_loop_6
+   \   00005F   90....       MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+   \   000062   E0           MOVX    A,@DPTR
+   \   000063   7009         JNZ     ??zclSmartDoor_event_loop_6
+   \   000065   90....       MOV     DPTR,#zclDevice_RejoinCounter
+   \   000068   E0           MOVX    A,@DPTR
+   \   000069   04           INC     A
+   \   00006A   F0           MOVX    @DPTR,A
+   \   00006B                ; Setup parameters for call to function AppDevNwkDiscCyCle
+   \   00006B   12....       LCALL   ??AppDevNwkDiscCyCle?relay
+   \                     ??zclSmartDoor_event_loop_6:
+   \   00006E                ; Setup parameters for call to function osal_msg_deallocate
+   \   00006E   AA..         MOV     R2,?V0 + 0
+   \   000070   AB..         MOV     R3,?V0 + 1
+   \   000072   12....       LCALL   ??osal_msg_deallocate?relay
+   \                     ??zclSmartDoor_event_loop_0:
+   \   000075                ; Setup parameters for call to function osal_msg_receive
+   \   000075   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   000078   E0           MOVX    A,@DPTR
+   \   000079   F9           MOV     R1,A
+   \   00007A   12....       LCALL   ??osal_msg_receive?relay
+   \   00007D   8A..         MOV     ?V0 + 0,R2
+   \   00007F   8B..         MOV     ?V0 + 1,R3
+   \   000081   EA           MOV     A,R2
+   \   000082   45..         ORL     A,?V0 + 1
+   \   000084   6087         JZ      ??zclSmartDoor_event_loop_1
+   \   000086   8A82         MOV     DPL,R2
+   \   000088   8B83         MOV     DPH,R3
+   \   00008A   E0           MOVX    A,@DPTR
+   \   00008B   24CC         ADD     A,#-0x34
+   \   00008D   6006         JZ      ??zclSmartDoor_event_loop_7
+   \   00008F   2463         ADD     A,#0x63
+   \   000091   6039         JZ      ??zclSmartDoor_event_loop_8
+   \   000093   80D9         SJMP    ??zclSmartDoor_event_loop_6
+   \                     ??zclSmartDoor_event_loop_7:
+   \   000095   A3           INC     DPTR
+   \   000096   A3           INC     DPTR
+   \   000097   A3           INC     DPTR
+   \   000098   A3           INC     DPTR
+   \   000099   A3           INC     DPTR
+   \   00009A   A3           INC     DPTR
+   \   00009B   A3           INC     DPTR
+   \   00009C   E0           MOVX    A,@DPTR
+   \   00009D   14           DEC     A
+   \   00009E   6011         JZ      ??zclSmartDoor_event_loop_9
+   \   0000A0   24FD         ADD     A,#-0x3
+   \   0000A2   7018         JNZ     ??zclSmartDoor_event_loop_10
+   \   0000A4   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   0000A7   6013         JZ      ??zclSmartDoor_event_loop_10
+   \                     ??zclSmartDoor_event_loop_11:
+   \   0000A9   08           INC     R0
+   \   0000AA   E8           MOV     A,R0
+   \   0000AB   C3           CLR     C
+   \   0000AC   99           SUBB    A,R1
+   \   0000AD   500D         JNC     ??zclSmartDoor_event_loop_10
+   \   0000AF   80F8         SJMP    ??zclSmartDoor_event_loop_11
+   \                     ??zclSmartDoor_event_loop_9:
+   \   0000B1   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   0000B4   6006         JZ      ??zclSmartDoor_event_loop_10
+   \                     ??zclSmartDoor_event_loop_12:
+   \   0000B6   08           INC     R0
+   \   0000B7   E8           MOV     A,R0
+   \   0000B8   C3           CLR     C
+   \   0000B9   99           SUBB    A,R1
+   \   0000BA   40FA         JC      ??zclSmartDoor_event_loop_12
+   \                     ??zclSmartDoor_event_loop_10:
+   \   0000BC   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   0000BF   FA           MOV     R2,A
+   \   0000C0   A3           INC     DPTR
+   \   0000C1   E0           MOVX    A,@DPTR
+   \   0000C2   FB           MOV     R3,A
+   \   0000C3   EA           MOV     A,R2
+   \   0000C4   4B           ORL     A,R3
+   \   0000C5   60A7         JZ      ??zclSmartDoor_event_loop_6
+   \   0000C7                ; Setup parameters for call to function osal_mem_free
+   \   0000C7   12....       LCALL   ??osal_mem_free?relay
+   \   0000CA   80A2         SJMP    ??zclSmartDoor_event_loop_6
+   \                     ??zclSmartDoor_event_loop_8:
+   \   0000CC   A3           INC     DPTR
+   \   0000CD   E0           MOVX    A,@DPTR
+   \   0000CE   90....       MOV     DPTR,#zclDevice_NwkState
+   \   0000D1   F0           MOVX    @DPTR,A
+   \   0000D2   6406         XRL     A,#0x6
+   \   0000D4   6003         JZ      $+5
+   \   0000D6   02....       LJMP    ??zclSmartDoor_event_loop_5 & 0xFFFF
+   \   0000D9                ; Setup parameters for call to function osal_rand
+   \   0000D9   12....       LCALL   ??osal_rand?relay
+   \   0000DC                ; Setup parameters for call to function osal_start_timerEx
+   \   0000DC   EA           MOV     A,R2
+   \   0000DD   24E8         ADD     A,#-0x18
+   \   0000DF   FC           MOV     R4,A
+   \   0000E0   E4           CLR     A
+   \   0000E1   3403         ADDC    A,#0x3
+   \   0000E3   FD           MOV     R5,A
+   \   0000E4   7A00         MOV     R2,#0x0
+   \   0000E6   7B01         MOV     R3,#0x1
+   \   0000E8   12....       LCALL   ??Subroutine10_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_25:
+   \   0000EB                ; Setup parameters for call to function osal_start_timerEx
+   \   0000EB   7CC8         MOV     R4,#-0x38
+   \   0000ED   7D00         MOV     R5,#0x0
+   \   0000EF   7A02         MOV     R2,#0x2
+   \   0000F1   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_20:
+   \   0000F4   90....       MOV     DPTR,#zclDevice_JoinNetworkOk
+   \   0000F7   740C         MOV     A,#0xc
+   \   0000F9   F0           MOVX    @DPTR,A
+   \   0000FA   90....       MOV     DPTR,#zclDevice_RejoinCounter
+   \   0000FD   E4           CLR     A
+   \   0000FE   F0           MOVX    @DPTR,A
+   \   0000FF   90....       MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+   \   000102   F0           MOVX    @DPTR,A
+   \   000103   90....       MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+   \   000106   F0           MOVX    @DPTR,A
+   \   000107   90....       MOV     DPTR,#DeviceRehoinEventFlag
+   \   00010A   12....       LCALL   ??Subroutine8_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_16:
+   \   00010D   F0           MOVX    @DPTR,A
+   \   00010E   90....       MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+   \   000111   F0           MOVX    @DPTR,A
+   \   000112   A3           INC     DPTR
+   \   000113   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   000116   02....       LJMP    ??zclSmartDoor_event_loop_6 & 0xFFFF
+   \                     ??zclSmartDoor_event_loop_4:
+   \   000119                ; Setup parameters for call to function osal_stop_timerEx
+   \   000119   7A01         MOV     R2,#0x1
+   \   00011B   7B00         MOV     R3,#0x0
+   \   00011D   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   000120   E0           MOVX    A,@DPTR
+   \   000121   F9           MOV     R1,A
+   \   000122   12....       LCALL   ??osal_stop_timerEx?relay
+    299            
+    300            if (events & ZCL_DEVICE_INIT_DONE_EVENT) 
+   \                     ??zclSmartDoor_event_loop_3:
+   \   000125   EE           MOV     A,R6
+   \   000126   5408         ANL     A,#0x8
+   \   000128   600B         JZ      ??zclSmartDoor_event_loop_13
+    301            {
+    302              zclDevice_InitDone = 1;
+   \   00012A   90....       MOV     DPTR,#zclDevice_InitDone
+   \   00012D   7401         MOV     A,#0x1
+   \   00012F   F0           MOVX    @DPTR,A
+    303              LED_RED_OFF();
+   \   000130   D286         SETB    0x80.6
+    304              zclSwitchControlTouchPanelEnable(); 
+   \   000132                ; Setup parameters for call to function zclSwitchControlTouchPanelEnable
+   \   000132   12....       LCALL   ??zclSwitchControlTouchPanelEnable?relay
+    305              //   return (events ^ ZCL_DEVICE_INIT_DONE_EVENT);
+    306            }
+    307            
+    308            if (events & ZCL_DEVICE_INFO_SEND_EVENT) 
+   \                     ??zclSmartDoor_event_loop_13:
+   \   000135   EF           MOV     A,R7
+   \   000136   5401         ANL     A,#0x1
+   \   000138   6003         JZ      ??zclSmartDoor_event_loop_14
+    309            {
+    310              zclSendDeviceInfo();
+   \   00013A                ; Setup parameters for call to function zclSendDeviceInfo
+   \   00013A   12....       LCALL   ??zclSendDeviceInfo?relay
+    311              //     return (events ^ ZCL_DEVICE_INFO_SEND_EVENT);
+    312            }
+    313            
+    314            if (events & ZCL_DEVICE_HEARTBEAT_EVENT) 
+   \                     ??zclSmartDoor_event_loop_14:
+   \   00013D   EF           MOV     A,R7
+   \   00013E   5402         ANL     A,#0x2
+   \   000140   6027         JZ      ??CrossCallReturnLabel_26
+    315            {
+    316              g_u8HeartBeatCount++;
+   \   000142   90....       MOV     DPTR,#g_u8HeartBeatCount
+   \   000145   E0           MOVX    A,@DPTR
+   \   000146   04           INC     A
+   \   000147   F0           MOVX    @DPTR,A
+    317              if(g_u8HeartBeatCount >= 2)
+   \   000148   C3           CLR     C
+   \   000149   9402         SUBB    A,#0x2
+   \   00014B   4005         JC      ??zclSmartDoor_event_loop_15
+    318              {
+    319                g_u8HeartBeatCount=0;
+   \   00014D   E4           CLR     A
+   \   00014E   F0           MOVX    @DPTR,A
+    320                zclSendHeartbeat();
+   \   00014F                ; Setup parameters for call to function zclSendHeartbeat
+   \   00014F   12....       LCALL   ??zclSendHeartbeat?relay
+    321              }
+    322              osal_start_timerEx(zclSmartDoor_TaskID, 
+    323                                 ZCL_DEVICE_HEARTBEAT_EVENT,
+    324                                 ZCL_HEARTBEAT_PERIOD);
+   \                     ??zclSmartDoor_event_loop_15:
+   \   000152                ; Setup parameters for call to function osal_rand
+   \   000152   12....       LCALL   ??osal_rand?relay
+   \   000155                ; Setup parameters for call to function osal_start_timerEx
+   \   000155   EA           MOV     A,R2
+   \   000156   75F01E       MOV     B,#0x1e
+   \   000159   A4           MUL     AB
+   \   00015A   2450         ADD     A,#0x50
+   \   00015C   FC           MOV     R4,A
+   \   00015D   E5F0         MOV     A,B
+   \   00015F   34C3         ADDC    A,#-0x3d
+   \   000161   FD           MOV     R5,A
+   \   000162   7A00         MOV     R2,#0x0
+   \   000164   7B02         MOV     R3,#0x2
+   \   000166   12....       LCALL   ??Subroutine10_0 & 0xFFFF
+    325              //    return (events ^ ZCL_DEVICE_HEARTBEAT_EVENT);
+    326            }
+    327            
+    328            if (events & ZCL_DEVICE_JOIN_NETWORK_OK_EVENT) 
+   \                     ??CrossCallReturnLabel_26:
+   \   000169   EE           MOV     A,R6
+   \   00016A   5402         ANL     A,#0x2
+   \   00016C   6031         JZ      ??CrossCallReturnLabel_21
+    329            {
+    330              if (zclDevice_JoinNetworkOk-- % 2) {
+   \   00016E   90....       MOV     DPTR,#zclDevice_JoinNetworkOk
+   \   000171   E0           MOVX    A,@DPTR
+   \   000172   75F002       MOV     B,#0x2
+   \   000175   12....       LCALL   ?SC_DIV_MOD
+   \   000178   E5F0         MOV     A,B
+   \   00017A   6007         JZ      ??zclSmartDoor_event_loop_16
+   \   00017C   E0           MOVX    A,@DPTR
+   \   00017D   14           DEC     A
+   \   00017E   F0           MOVX    @DPTR,A
+    331                LED_RED_OFF(); 
+   \   00017F   D286         SETB    0x80.6
+   \   000181   8005         SJMP    ??zclSmartDoor_event_loop_17
+    332              } else {
+   \                     ??zclSmartDoor_event_loop_16:
+   \   000183   E0           MOVX    A,@DPTR
+   \   000184   14           DEC     A
+   \   000185   F0           MOVX    @DPTR,A
+    333                LED_RED_ON();
+   \   000186   C286         CLR     0x80.6
+    334              }
+    335              
+    336              if (zclDevice_JoinNetworkOk <= 0) 
+   \                     ??zclSmartDoor_event_loop_17:
+   \   000188   E0           MOVX    A,@DPTR
+   \   000189   9401         SUBB    A,#0x1
+   \   00018B   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   00018D   65D0         XRL     A,PSW
+   \   00018F   33           RLC     A
+   \   000190   5004         JNC     ??zclSmartDoor_event_loop_18
+    337              {
+    338                LED_RED_OFF();
+   \   000192   D286         SETB    0x80.6
+   \   000194   8009         SJMP    ??CrossCallReturnLabel_21
+    339              } else {
+    340                osal_start_timerEx(zclSmartDoor_TaskID, 
+    341                                   ZCL_DEVICE_JOIN_NETWORK_OK_EVENT,
+    342                                   500);
+   \                     ??zclSmartDoor_event_loop_18:
+   \   000196                ; Setup parameters for call to function osal_start_timerEx
+   \   000196   7CF4         MOV     R4,#-0xc
+   \   000198   7D01         MOV     R5,#0x1
+   \   00019A   7A02         MOV     R2,#0x2
+   \   00019C   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+    343              }
+    344              //return events ^ IAS_ZONE_IR_JOIN_OK_EVENT;
+    345            }
+    346          
+    347            if (events & ZCL_DEVICE_SWITCH0_TOUCHPANEL_EVENT) //门磁
+   \                     ??CrossCallReturnLabel_21:
+   \   00019F   EE           MOV     A,R6
+   \   0001A0   5410         ANL     A,#0x10
+   \   0001A2   6071         JZ      ??CrossCallReturnLabel_23
+    348            {
+    349              if( zcl_Flag == 0)
+   \   0001A4   90....       MOV     DPTR,#zcl_Flag
+   \   0001A7   E0           MOVX    A,@DPTR
+   \   0001A8   706B         JNZ     ??CrossCallReturnLabel_23
+    350              {
+    351                if( P0_1 == 0 )/*反转上升沿和下降沿*/
+   \   0001AA   A281         MOV     C,0x80.1
+   \   0001AC   5003         JNC     $+5
+   \   0001AE   02....       LJMP    ??zclSmartDoor_event_loop_19 & 0xFFFF
+    352                { 
+    353                  PICTL &= ~(0x1 << 0);
+   \   0001B1   538CFE       ANL     0x8c,#0xfe
+    354                  zcl_Flag = 1;//关门低电平
+   \   0001B4   7401         MOV     A,#0x1
+   \   0001B6   F0           MOVX    @DPTR,A
+    355                }
+    356                else if( P0_1 == 1 )
+    357                {
+    358                  PICTL |= (0x1 << 0);
+    359                  zcl_Flag = 2;//开门高电平
+    360                }
+    361                
+    362                if( zcl_Flag & 1 )//关门
+    363                {
+    364                  if( (zclSmartDoor_OnOff == SWITCH_ON) && (zcl_onoffFlag == 1) )
+   \   0001B7   90....       MOV     DPTR,#zclSmartDoor_OnOff
+   \   0001BA   E0           MOVX    A,@DPTR
+   \   0001BB   6401         XRL     A,#0x1
+   \   0001BD   701A         JNZ     ??CrossCallReturnLabel_18
+   \   0001BF   90....       MOV     DPTR,#zcl_onoffFlag
+   \   0001C2   E0           MOVX    A,@DPTR
+   \   0001C3   6401         XRL     A,#0x1
+   \   0001C5   7012         JNZ     ??CrossCallReturnLabel_18
+    365                  {
+    366                    zcl_onoffFlag = 0;
+   \   0001C7   E4           CLR     A
+   \   0001C8   F0           MOVX    @DPTR,A
+    367                    LED_RED_ON();/*LED灯闪一次*/
+   \   0001C9   C286         CLR     0x80.6
+    368                    zclSmartDoor_OnOff = SWITCH_OFF;
+   \   0001CB   90....       MOV     DPTR,#zclSmartDoor_OnOff
+   \   0001CE   F0           MOVX    @DPTR,A
+    369                    
+    370                    zclSwitchReportEvent(SAMRTDOOR_ENDPOINT, &zclSmartDoor_OnOff); 
+   \   0001CF                ; Setup parameters for call to function zclSwitchReportEvent
+   \   0001CF   7C..         MOV     R4,#zclSmartDoor_OnOff & 0xff
+   \   0001D1   7D..         MOV     R5,#(zclSmartDoor_OnOff >> 8) & 0xff
+   \   0001D3   7A20         MOV     R2,#0x20
+   \   0001D5   FB           MOV     R3,A
+   \   0001D6   12....       LCALL   ?Subroutine4 & 0xFFFF
+    371                    osal_start_timerEx(zclSmartDoor_TaskID, 
+    372                                       ZCL_DEVICE_LEN_RED_OFF_EVENT,
+    373                                       100);
+    374                    
+    375                  }
+    376                  osal_start_timerEx(zclSmartDoor_TaskID, 
+    377                                     ZCL_DEVICE_SWITCH0_ABLE_EVENT,
+    378                                     200);/*开中断*/
+   \                     ??CrossCallReturnLabel_18:
+   \   0001D9                ; Setup parameters for call to function osal_start_timerEx
+   \   0001D9   7CC8         MOV     R4,#-0x38
+   \   0001DB   7D00         MOV     R5,#0x0
+   \   0001DD   7A20         MOV     R2,#0x20
+   \   0001DF   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+    379                  
+    380                }
+    381                
+    382                if( zcl_Flag & 2 )//开门
+   \                     ??CrossCallReturnLabel_22:
+   \   0001E2   90....       MOV     DPTR,#zcl_Flag
+   \   0001E5   E0           MOVX    A,@DPTR
+   \   0001E6   A2E1         MOV     C,0xE0 /* A   */.1
+   \   0001E8   502B         JNC     ??CrossCallReturnLabel_23
+    383                {
+    384                  if( (zclSmartDoor_OnOff == SWITCH_OFF) && (zcl_onoffFlag == 1) )
+   \   0001EA   90....       MOV     DPTR,#zclSmartDoor_OnOff
+   \   0001ED   E0           MOVX    A,@DPTR
+   \   0001EE   701C         JNZ     ??CrossCallReturnLabel_19
+   \   0001F0   90....       MOV     DPTR,#zcl_onoffFlag
+   \   0001F3   E0           MOVX    A,@DPTR
+   \   0001F4   6401         XRL     A,#0x1
+   \   0001F6   7014         JNZ     ??CrossCallReturnLabel_19
+    385                  {
+    386                    zcl_onoffFlag = 0;
+   \   0001F8   E4           CLR     A
+   \   0001F9   F0           MOVX    @DPTR,A
+    387                    LED_RED_ON();
+   \   0001FA   C286         CLR     0x80.6
+    388                    zclSmartDoor_OnOff = SWITCH_ON;
+   \   0001FC   90....       MOV     DPTR,#zclSmartDoor_OnOff
+   \   0001FF   04           INC     A
+   \   000200   F0           MOVX    @DPTR,A
+    389                    
+    390                    zclSwitchReportEvent(SAMRTDOOR_ENDPOINT, &zclSmartDoor_OnOff); 
+   \   000201                ; Setup parameters for call to function zclSwitchReportEvent
+   \   000201   7C..         MOV     R4,#zclSmartDoor_OnOff & 0xff
+   \   000203   7D..         MOV     R5,#(zclSmartDoor_OnOff >> 8) & 0xff
+   \   000205   7A20         MOV     R2,#0x20
+   \   000207   7B00         MOV     R3,#0x0
+   \   000209   12....       LCALL   ?Subroutine4 & 0xFFFF
+    391                    osal_start_timerEx(zclSmartDoor_TaskID, 
+    392                                       ZCL_DEVICE_LEN_RED_OFF_EVENT,
+    393                                       100);
+    394                    
+    395                  }
+    396                  osal_start_timerEx(zclSmartDoor_TaskID, 
+    397                                     ZCL_DEVICE_SWITCH0_ABLE_EVENT,
+    398                                     200);
+   \                     ??CrossCallReturnLabel_19:
+   \   00020C                ; Setup parameters for call to function osal_start_timerEx
+   \   00020C   7CC8         MOV     R4,#-0x38
+   \   00020E   7D00         MOV     R5,#0x0
+   \   000210   7A20         MOV     R2,#0x20
+   \   000212   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+    399                  
+    400                }
+    401              }
+    402            }
+    403            
+    404            if (events & ZCL_DEVICE_SWITCH0_ABLE_EVENT) 
+   \                     ??CrossCallReturnLabel_23:
+   \   000215   EE           MOV     A,R6
+   \   000216   5420         ANL     A,#0x20
+   \   000218   600D         JZ      ??zclSmartDoor_event_loop_20
+    405            {
+    406              zcl_Flag = 0;
+   \   00021A   90....       MOV     DPTR,#zcl_Flag
+   \   00021D   E4           CLR     A
+   \   00021E   F0           MOVX    @DPTR,A
+    407              zcl_onoffFlag = 1;
+   \   00021F   90....       MOV     DPTR,#zcl_onoffFlag
+   \   000222   04           INC     A
+   \   000223   F0           MOVX    @DPTR,A
+    408              zclSwitch0TouchAble();
+   \   000224                ; Setup parameters for call to function zclSwitch0TouchAble
+   \   000224   12....       LCALL   ??zclSwitch0TouchAble?relay
+    409              //   return (events ^ ZCL_DEVICE_SWITCH0_ABLE_EVENT);
+    410            }
+    411            
+    412            if (events & ZCL_DEVICE_RESET_EVENT) 
+   \                     ??zclSmartDoor_event_loop_20:
+   \   000227   EF           MOV     A,R7
+   \   000228   5404         ANL     A,#0x4
+   \   00022A   6034         JZ      ??CrossCallReturnLabel_27
+    413            {
+    414              if(zcl_Led_Blink > 30)
+   \   00022C   90....       MOV     DPTR,#zcl_Led_Blink
+   \   00022F   E0           MOVX    A,@DPTR
+   \   000230   C3           CLR     C
+   \   000231   941F         SUBB    A,#0x1f
+   \   000233   4013         JC      ??zclSmartDoor_event_loop_21
+    415              {
+    416                zclFactoryReset(TRUE);
+   \   000235                ; Setup parameters for call to function zclFactoryReset
+   \   000235   7901         MOV     R1,#0x1
+   \   000237   12....       LCALL   ??zclFactoryReset?relay
+   \   00023A   8024         SJMP    ??CrossCallReturnLabel_27
+    417              }
+   \                     ??zclSmartDoor_event_loop_19:
+   \   00023C   A281         MOV     C,0x80.1
+   \   00023E   50A2         JNC     ??CrossCallReturnLabel_22
+   \   000240   438C01       ORL     0x8c,#0x1
+   \   000243   7402         MOV     A,#0x2
+   \   000245   F0           MOVX    @DPTR,A
+   \   000246   809A         SJMP    ??CrossCallReturnLabel_22
+    418              else
+    419              {
+    420                if(zcl_Led_Blink % 2 == 0)
+   \                     ??zclSmartDoor_event_loop_21:
+   \   000248   E0           MOVX    A,@DPTR
+   \   000249   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00024B   4004         JC      ??zclSmartDoor_event_loop_22
+    421                {
+    422                  LED_RED_OFF();
+   \   00024D   D286         SETB    0x80.6
+   \   00024F   8002         SJMP    ??zclSmartDoor_event_loop_23
+    423                } else {
+    424                  LED_RED_ON();
+   \                     ??zclSmartDoor_event_loop_22:
+   \   000251   C286         CLR     0x80.6
+    425                }
+    426                zcl_Led_Blink++;
+   \                     ??zclSmartDoor_event_loop_23:
+   \   000253   04           INC     A
+   \   000254   F0           MOVX    @DPTR,A
+    427                osal_start_timerEx(zclSmartDoor_TaskID, 
+    428                                   ZCL_DEVICE_RESET_EVENT,
+    429                                   200);
+   \   000255                ; Setup parameters for call to function osal_start_timerEx
+   \   000255   7CC8         MOV     R4,#-0x38
+   \   000257   7D00         MOV     R5,#0x0
+   \   000259   7A00         MOV     R2,#0x0
+   \   00025B   7B04         MOV     R3,#0x4
+   \   00025D   12....       LCALL   ??Subroutine10_0 & 0xFFFF
+    430              }
+    431              //    return (events ^ ZCL_DEVICE_RESET_EVENT);
+    432            }
+    433            
+    434            if(events & ZCL_DEVICE_SWITCH_RESET_EVENT)
+   \                     ??CrossCallReturnLabel_27:
+   \   000260   EE           MOV     A,R6
+   \   000261   5440         ANL     A,#0x40
+   \   000263   6003         JZ      ??zclSmartDoor_event_loop_24
+    435            {
+    436              zclSwitch0TouchPanelEvent();
+   \   000265                ; Setup parameters for call to function zclSwitch0TouchPanelEvent
+   \   000265   12....       LCALL   ??zclSwitch0TouchPanelEvent?relay
+    437              //   return (events ^ ZCL_DEVICE_SWITCH_RESET_EVENT);
+    438            }
+    439            
+    440            if(events & ZCL_DEVICE_RESET_1_EVENT)
+   \                     ??zclSmartDoor_event_loop_24:
+   \   000268   EF           MOV     A,R7
+   \   000269   5420         ANL     A,#0x20
+   \   00026B   602A         JZ      ??zclSmartDoor_event_loop_25
+    441            {
+    442              if(P0_7 == 0)
+   \   00026D   A287         MOV     C,0x80.7
+   \   00026F   401E         JC      ??zclSmartDoor_event_loop_26
+    443              {
+    444                g_RestCount++;
+   \   000271   90....       MOV     DPTR,#g_RestCount
+   \   000274   E0           MOVX    A,@DPTR
+   \   000275   04           INC     A
+   \   000276   F0           MOVX    @DPTR,A
+    445                if(g_RestCount>=3)
+   \   000277   C3           CLR     C
+   \   000278   9403         SUBB    A,#0x3
+   \   00027A   7C64         MOV     R4,#0x64
+   \   00027C   7D00         MOV     R5,#0x0
+   \   00027E   4009         JC      ??zclSmartDoor_event_loop_27
+    446                {
+    447                  osal_start_timerEx(zclSmartDoor_TaskID, 
+    448                                     ZCL_DEVICE_SWITCH_RESET_EVENT,
+    449                                     100);
+   \   000280                ; Setup parameters for call to function osal_start_timerEx
+   \   000280   7A40         MOV     R2,#0x40
+   \   000282   7B00         MOV     R3,#0x0
+    450                }
+   \                     ??zclSmartDoor_event_loop_28:
+   \   000284   12....       LCALL   ??Subroutine10_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_28:
+   \   000287   800E         SJMP    ??zclSmartDoor_event_loop_25
+    451                else
+    452                {
+    453                  osal_start_timerEx(zclSmartDoor_TaskID, 
+    454                                     ZCL_DEVICE_RESET_1_EVENT,
+    455                                     100);
+   \                     ??zclSmartDoor_event_loop_27:
+   \   000289                ; Setup parameters for call to function osal_start_timerEx
+   \   000289   7A00         MOV     R2,#0x0
+   \   00028B   7B20         MOV     R3,#0x20
+   \   00028D   80F5         SJMP    ??zclSmartDoor_event_loop_28
+    456                }
+    457              }
+    458              else
+    459              {
+    460                P0IEN |= BV(7);
+   \                     ??zclSmartDoor_event_loop_26:
+   \   00028F   43AB80       ORL     0xab,#0x80
+    461                g_RestCount=0;
+   \   000292   90....       MOV     DPTR,#g_RestCount
+   \   000295   E4           CLR     A
+   \   000296   F0           MOVX    @DPTR,A
+    462              }
+    463            }
+    464            if(events & ZCL_DEVICE_LEN_RED_OFF_EVENT)
+   \                     ??zclSmartDoor_event_loop_25:
+   \   000297   EE           MOV     A,R6
+   \   000298   5480         ANL     A,#0x80
+   \   00029A   6002         JZ      ??zclSmartDoor_event_loop_29
+    465            {
+    466              LED_RED_OFF();
+   \   00029C   D286         SETB    0x80.6
+    467              //return (events ^ ZCL_DEVICE_LEN_RED_OFF_EVENT);
+    468            }
+    469            
+    470            // Discard unknown events
+    471            return 0;
+   \                     ??zclSmartDoor_event_loop_29:
+   \   00029E   7A00         MOV     R2,#0x0
+   \   0002A0   7B00         MOV     R3,#0x0
+   \   0002A2   7F04         MOV     R7,#0x4
+   \   0002A4   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   0002A7                REQUIRE _A_P0
+   \   0002A7                REQUIRE PICTL
+   \   0002A7                REQUIRE P0IEN
+    472          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   12....       LCALL   ?Subroutine7 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   000003   F8           MOV     R0,A
+   \   000004   A3           INC     DPTR
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   F9           MOV     R1,A
+   \   000007   8882         MOV     DPL,R0
+   \   000009   8983         MOV     DPH,R1
+   \   00000B   7800         MOV     R0,#0x0
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   F9           MOV     R1,A
+   \   00000F   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine7:
+   \   000000   EA           MOV     A,R2
+   \   000001   2417         ADD     A,#0x17
+   \   000003   F582         MOV     DPL,A
+   \   000005   EB           MOV     A,R3
+   \   000006   3400         ADDC    A,#0x0
+   \   000008   F583         MOV     DPH,A
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine8_0:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   90....       MOV     DPTR,#AppDEviceJoinNwkState
+   \   000004   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   12....       LCALL   ??zclSwitchReportEvent?relay
+   \   000003                ; Setup parameters for call to function osal_start_timerEx
+   \   000003                ; Setup parameters for call to function osal_start_timerEx
+   \   000003   7C64         MOV     R4,#0x64
+   \   000005   7D00         MOV     R5,#0x0
+   \   000007   7A80         MOV     R2,#-0x80
+   \   000009                REQUIRE ??Subroutine9_0
+   \   000009                ; // Fall through to label ??Subroutine9_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine9_0:
+   \   000000   7B00         MOV     R3,#0x0
+   \   000002                REQUIRE ??Subroutine10_0
+   \   000002                ; // Fall through to label ??Subroutine10_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine10_0:
+   \   000000   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   12....       LCALL   ??osal_start_timerEx?relay
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   90....       MOV     DPTR,#pwrmgr_attribute + 6
+   \   000004   04           INC     A
+   \   000005   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   90....       MOV     DPTR,#pwrmgr_attribute
+   \   000004   E4           CLR     A
+   \   000005   F0           MOVX    @DPTR,A
+   \   000006   A3           INC     DPTR
+   \   000007   F0           MOVX    @DPTR,A
+   \   000008   22           RET
+    473          
+    474          /*********************************************************************
+    475          * @fn      zclSmartDoor_HandleKeys
+    476          *
+    477          * @brief   Handles all key events for this device.
+    478          *
+    479          * @param   shift - true if in shift/alt.
+    480          * @param   keys - bit field for key events. Valid entries:
+    481          *                 HAL_KEY_SW_4
+    482          *                 HAL_KEY_SW_3
+    483          *                 HAL_KEY_SW_2
+    484          *                 HAL_KEY_SW_1
+    485          *
+    486          * @return  none
+    487          */
+    488          static void zclSmartDoor_HandleKeys( byte shift, byte keys )
+    489          {
+    490            // zAddrType_t dstAddr;
+    491            
+    492            (void)shift;  // Intentionally unreferenced parameter
+    493            
+    494            if ( keys & HAL_KEY_SW_2 )
+    495            {
+    496            }
+    497            
+    498            if ( keys & HAL_KEY_SW_3 )
+    499            {
+    500            }
+    501            
+    502            if ( keys & HAL_KEY_SW_4 )
+    503            {
+    504            }
+    505          }
+    506          
+    507          /*********************************************************************
+    508          * @fn      zclSmartDoor_ProcessIdentifyTimeChange
+    509          *
+    510          * @brief   Called to process any change to the IdentifyTime attribute.
+    511          *
+    512          * @param   none
+    513          *
+    514          * @return  none
+    515          */
+    516          static void zclSmartDoor_ProcessIdentifyTimeChange( void )
+    517          {
+    518            if ( zclSmartDoor_IdentifyTime > 0 )
+    519            {
+    520              osal_start_timerEx( zclSmartDoor_TaskID, SMARTDOOR_IDENTIFY_TIMEOUT_EVT, 1000 );
+    521            }
+    522            else
+    523            {
+    524              osal_stop_timerEx( zclSmartDoor_TaskID, SMARTDOOR_IDENTIFY_TIMEOUT_EVT );
+    525            }
+    526          }
+    527          
+    528          /*********************************************************************
+    529          * @fn      zclSmartDoor_BasicResetCB
+    530          *
+    531          * @brief   Callback from the ZCL General Cluster Library
+    532          *          to set all the Basic Cluster attributes to default values.
+    533          *
+    534          * @param   none
+    535          *
+    536          * @return  none
+    537          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    538          static void zclSmartDoor_BasicResetCB( void )
+   \                     zclSmartDoor_BasicResetCB:
+    539          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    540            // Reset all attributes to default values
+    541          }
+   \   000000   02....       LJMP    ?BRET
+    542          
+    543          /*********************************************************************
+    544          * @fn      zclSmartDoor_IdentifyCB
+    545          *
+    546          * @brief   Callback from the ZCL General Cluster Library when
+    547          *          it received an Identity Command for this application.
+    548          *
+    549          * @param   srcAddr - source address and endpoint of the response message
+    550          * @param   identifyTime - the number of seconds to identify yourself
+    551          *
+    552          * @return  none
+    553          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    554          static void zclSmartDoor_IdentifyCB( zclIdentify_t *pCmd )
+   \                     zclSmartDoor_IdentifyCB:
+    555          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    556            zclSmartDoor_IdentifyTime = pCmd->identifyTime;
+   \   000004   8A82         MOV     DPL,R2
+   \   000006   8B83         MOV     DPH,R3
+   \   000008   A3           INC     DPTR
+   \   000009   A3           INC     DPTR
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   F8           MOV     R0,A
+   \   00000C   A3           INC     DPTR
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   F9           MOV     R1,A
+   \   00000F   90....       MOV     DPTR,#zclSmartDoor_IdentifyTime
+   \   000012   E8           MOV     A,R0
+   \   000013   F0           MOVX    @DPTR,A
+   \   000014   A3           INC     DPTR
+   \   000015   E9           MOV     A,R1
+   \   000016   F0           MOVX    @DPTR,A
+    557            zclSmartDoor_ProcessIdentifyTimeChange();
+   \   000017   E8           MOV     A,R0
+   \   000018   49           ORL     A,R1
+   \   000019   600B         JZ      ??zclSmartDoor_IdentifyCB_0
+   \   00001B                ; Setup parameters for call to function osal_start_timerEx
+   \   00001B   7CE8         MOV     R4,#-0x18
+   \   00001D   7D03         MOV     R5,#0x3
+   \   00001F   7A01         MOV     R2,#0x1
+   \   000021   12....       LCALL   ??Subroutine9_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_24:
+   \   000024   800C         SJMP    ??zclSmartDoor_IdentifyCB_1
+   \                     ??zclSmartDoor_IdentifyCB_0:
+   \   000026                ; Setup parameters for call to function osal_stop_timerEx
+   \   000026   7A01         MOV     R2,#0x1
+   \   000028   7B00         MOV     R3,#0x0
+   \   00002A   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   F9           MOV     R1,A
+   \   00002F   12....       LCALL   ??osal_stop_timerEx?relay
+    558          }
+   \                     ??zclSmartDoor_IdentifyCB_1:
+   \   000032                REQUIRE ?Subroutine0
+   \   000032                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+    559          
+    560          /*********************************************************************
+    561          * @fn      zclSmartDoor_IdentifyQueryRspCB
+    562          *
+    563          * @brief   Callback from the ZCL General Cluster Library when
+    564          *          it received an Identity Query Response Command for this application.
+    565          *
+    566          * @param   srcAddr - requestor's address
+    567          * @param   timeout - number of seconds to identify yourself (valid for query response)
+    568          *
+    569          * @return  none
+    570          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    571          static void zclSmartDoor_IdentifyQueryRspCB(  zclIdentifyQueryRsp_t *pRsp )
+   \                     zclSmartDoor_IdentifyQueryRspCB:
+    572          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    573            // Query Response (with timeout value)
+    574            (void)pRsp;
+    575          }
+   \   000000   02....       LJMP    ?BRET
+    576          
+    577          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    578          static void zclSmartDoor0_OnOffCB(uint8 cmd )
+   \                     zclSmartDoor0_OnOffCB:
+    579          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    580            zclSmartDoor_OnOffCB(0, cmd);
+    581          }
+   \   000000   02....       LJMP    ?BRET
+    582          
+    583          /*********************************************************************
+    584          * @fn      zclSmartDoor_OnOffCB
+    585          *
+    586          * @brief   Callback from the ZCL General Cluster Library when
+    587          *          it received an On/Off Command for this application.
+    588          *
+    589          * @param   cmd - COMMAND_ON, COMMAND_OFF or COMMAND_TOGGLE
+    590          *
+    591          * @return  none
+    592          */
+    593          static void zclSmartDoor_OnOffCB(uint8 switch0, uint8 cmd )
+    594          {
+    595            
+    596          }
+    597          
+    598          
+    599          /****************************************************************************** 
+    600          * 
+    601          *  Functions for processing ZCL Foundation incoming Command/Response messages
+    602          *
+    603          *****************************************************************************/
+    604          
+    605          /*********************************************************************
+    606          * @fn      zclSmartDoor_ProcessIncomingMsg
+    607          *
+    608          * @brief   Process ZCL Foundation incoming message
+    609          *
+    610          * @param   pInMsg - pointer to the received message
+    611          *
+    612          * @return  none
+    613          */
+    614          static void zclSmartDoor_ProcessIncomingMsg( zclIncomingMsg_t *pInMsg)
+    615          {
+    616            switch ( pInMsg->zclHdr.commandID )
+    617            {
+    618          #ifdef ZCL_READ
+    619            case ZCL_CMD_READ_RSP:
+    620              zclSmartDoor_ProcessInReadRspCmd( pInMsg );
+    621              break;
+    622          #endif
+    623          #ifdef ZCL_WRITE    
+    624            case ZCL_CMD_WRITE_RSP:
+    625              zclSmartDoor_ProcessInWriteRspCmd( pInMsg );
+    626              break;
+    627          #endif
+    628          #ifdef ZCL_REPORT
+    629              // See ZCL Test Applicaiton (zcl_testapp.c) for sample code on Attribute Reporting
+    630            case ZCL_CMD_CONFIG_REPORT:
+    631              //zclSmartDoor_ProcessInConfigReportCmd( pInMsg );
+    632              break;
+    633              
+    634            case ZCL_CMD_CONFIG_REPORT_RSP:
+    635              //zclSmartDoor_ProcessInConfigReportRspCmd( pInMsg );
+    636              break;
+    637              
+    638            case ZCL_CMD_READ_REPORT_CFG:
+    639              //zclSmartDoor_ProcessInReadReportCfgCmd( pInMsg );
+    640              break;
+    641              
+    642            case ZCL_CMD_READ_REPORT_CFG_RSP:
+    643              //zclSmartDoor_ProcessInReadReportCfgRspCmd( pInMsg );
+    644              break;
+    645              
+    646            case ZCL_CMD_REPORT:
+    647              //zclSmartDoor_ProcessInReportCmd( pInMsg );
+    648              break;
+    649          #endif   
+    650            case ZCL_CMD_DEFAULT_RSP:
+    651              zclSmartDoor_ProcessInDefaultRspCmd( pInMsg );
+    652              break;
+    653          #ifdef ZCL_DISCOVER     
+    654            case ZCL_CMD_DISCOVER_RSP:
+    655              zclSmartDoor_ProcessInDiscRspCmd( pInMsg );
+    656              break;
+    657          #endif  
+    658            default:
+    659              break;
+    660            }
+    661            
+    662            if ( pInMsg->attrCmd )
+    663              osal_mem_free( pInMsg->attrCmd );
+    664          }
+    665          
+    666          #ifdef ZCL_READ
+    667          /*********************************************************************
+    668          * @fn      zclSmartDoor_ProcessInReadRspCmd
+    669          *
+    670          * @brief   Process the "Profile" Read Response Command
+    671          *
+    672          * @param   pInMsg - incoming message to process
+    673          *
+    674          * @return  none
+    675          */
+    676          static uint8 zclSmartDoor_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg )
+    677          {
+    678            zclReadRspCmd_t *readRspCmd;
+    679            uint8 i;
+    680            
+    681            readRspCmd = (zclReadRspCmd_t *)pInMsg->attrCmd;
+    682            for (i = 0; i < readRspCmd->numAttr; i++)
+    683            {
+    684              // Notify the originator of the results of the original read attributes 
+    685              // attempt and, for each successfull request, the value of the requested 
+    686              // attribute
+    687            }
+    688            
+    689            return TRUE; 
+    690          }
+    691          #endif // ZCL_READ
+    692          
+    693          #ifdef ZCL_WRITE
+    694          /*********************************************************************
+    695          * @fn      zclSmartDoor_ProcessInWriteRspCmd
+    696          *
+    697          * @brief   Process the "Profile" Write Response Command
+    698          *
+    699          * @param   pInMsg - incoming message to process
+    700          *
+    701          * @return  none
+    702          */
+    703          static uint8 zclSmartDoor_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg )
+    704          {
+    705            zclWriteRspCmd_t *writeRspCmd;
+    706            uint8 i;
+    707            
+    708            writeRspCmd = (zclWriteRspCmd_t *)pInMsg->attrCmd;
+    709            for (i = 0; i < writeRspCmd->numAttr; i++)
+    710            {
+    711              // Notify the device of the results of the its original write attributes
+    712              // command.
+    713            }
+    714            
+    715            return TRUE; 
+    716          }
+    717          #endif // ZCL_WRITE
+    718          
+    719          /*********************************************************************
+    720          * @fn      zclSmartDoor_ProcessInDefaultRspCmd
+    721          *
+    722          * @brief   Process the "Profile" Default Response Command
+    723          *
+    724          * @param   pInMsg - incoming message to process
+    725          *
+    726          * @return  none
+    727          */
+    728          static uint8 zclSmartDoor_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg )
+    729          {
+    730            // zclDefaultRspCmd_t *defaultRspCmd = (zclDefaultRspCmd_t *)pInMsg->attrCmd;
+    731            
+    732            // Device is notified of the Default Response command.
+    733            (void)pInMsg;
+    734            
+    735            return TRUE; 
+    736          }
+    737          
+    738          #ifdef ZCL_DISCOVER
+    739          /*********************************************************************
+    740          * @fn      zclSmartDoor_ProcessInDiscRspCmd
+    741          *
+    742          * @brief   Process the "Profile" Discover Response Command
+    743          *
+    744          * @param   pInMsg - incoming message to process
+    745          *
+    746          * @return  none
+    747          */
+    748          static uint8 zclSmartDoor_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg )
+    749          {
+    750            zclDiscoverRspCmd_t *discoverRspCmd;
+    751            uint8 i;
+    752            
+    753            discoverRspCmd = (zclDiscoverRspCmd_t *)pInMsg->attrCmd;
+    754            for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+    755            {
+    756              // Device is notified of the result of its attribute discovery command.
+    757            }
+    758            
+    759            return TRUE;
+    760          }
+    761          #endif // ZCL_DISCOVER
+    762          
+    763          
+    764          /****************************************************************************
+    765          ****************************************************************************/
+    766          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    767          void AppDEviceJoinNwk()
+   \                     AppDEviceJoinNwk:
+    768          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    769            if(u8_AppDEviceJoinNwkTimeComing == 1)
+   \   000005   90....       MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   6401         XRL     A,#0x1
+   \   00000B   7027         JNZ     ??AppDEviceJoinNwk_0
+    770            {
+    771              u8_AppDEviceJoinNwkTimeComing = 0;
+   \   00000D   E4           CLR     A
+   \   00000E   F0           MOVX    @DPTR,A
+    772              if(zclDevice_NwkState != DEV_END_DEVICE)
+   \   00000F   90....       MOV     DPTR,#zclDevice_NwkState
+   \   000012   E0           MOVX    A,@DPTR
+   \   000013   6406         XRL     A,#0x6
+   \   000015   600D         JZ      ??AppDEviceJoinNwk_1
+    773              {
+    774                pwrmgr_attribute.pwrmgr_device =PWRMGR_ALWAYS_ON;
+   \   000017   90....       MOV     DPTR,#pwrmgr_attribute + 6
+   \   00001A   E4           CLR     A
+   \   00001B   F0           MOVX    @DPTR,A
+    775                pwrmgr_attribute.pwrmgr_task_state = 1;
+   \   00001C   90....       MOV     DPTR,#pwrmgr_attribute
+   \   00001F   04           INC     A
+   \   000020   F0           MOVX    @DPTR,A
+   \   000021   A3           INC     DPTR
+   \   000022   E4           CLR     A
+   \   000023   F0           MOVX    @DPTR,A
+    776              }
+    777              u8_ZDApp_StopJoiningCycleFlag = 0;
+   \                     ??AppDEviceJoinNwk_1:
+   \   000024   90....       MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+   \   000027   E4           CLR     A
+   \   000028   F0           MOVX    @DPTR,A
+    778              
+    779          //    if((_NIB.nwkLogicalChannel >= 0x0B)&&(_NIB.nwkLogicalChannel <= 0x1A))//已经组网
+    780          //    {
+    781          //      ZDOInitDevice(0);
+    782          //    }
+    783              
+    784                if(FALSE == ZDApp_StartJoiningCycle())
+   \   000029                ; Setup parameters for call to function ZDApp_StartJoiningCycle
+   \   000029   12....       LCALL   ??ZDApp_StartJoiningCycle?relay
+   \   00002C   E9           MOV     A,R1
+   \   00002D   7066         JNZ     ??CrossCallReturnLabel_29
+    785                {
+    786                  ZDApp_StartJoiningCycle();    
+   \   00002F                ; Setup parameters for call to function ZDApp_StartJoiningCycle
+   \   00002F   12....       LCALL   ??ZDApp_StartJoiningCycle?relay
+   \   000032   8061         SJMP    ??CrossCallReturnLabel_29
+    787                }
+    788              
+    789            }
+    790            else
+    791            {
+    792              switch(AppDEviceJoinNwkState)
+   \                     ??AppDEviceJoinNwk_0:
+   \   000034   90....       MOV     DPTR,#AppDEviceJoinNwkState
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   600E         JZ      ??AppDEviceJoinNwk_2
+   \   00003A   14           DEC     A
+   \   00003B   600B         JZ      ??AppDEviceJoinNwk_2
+   \   00003D   14           DEC     A
+   \   00003E   601F         JZ      ??AppDEviceJoinNwk_3
+   \   000040   14           DEC     A
+   \   000041   6035         JZ      ??AppDEviceJoinNwk_4
+   \   000043   14           DEC     A
+   \   000044   6054         JZ      ??AppDEviceJoinNwk_5
+   \   000046   805F         SJMP    ??AppDEviceJoinNwk_6
+    793              {
+    794              case JOINNWKCYCLETIME_20S: 
+    795                { 
+    796                  u8_AppDEviceJoinNwkTimeComing = 1;
+   \                     ??AppDEviceJoinNwk_2:
+   \   000048   90....       MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+   \   00004B   7401         MOV     A,#0x1
+    797                }
+   \                     ??AppDEviceJoinNwk_7:
+   \   00004D   12....       LCALL   ??Subroutine8_0 & 0xFFFF
+    798                break;
+    799              case JOINNWKCYCLETIME_1MIN:
+    800                {
+    801                  u8_AppDEviceJoinNwkTimeComing = 1;
+    802                }
+    803                break;
+    804              case JOINNWKCYCLETIME_10MIN:
+    805                {
+    806                  if((u16_AppDeviceJoinNwkCycleTimeCount++) == 10)
+    807                  {
+    808                    u8_AppDEviceJoinNwkTimeComing = 1;
+    809                    u16_AppDeviceJoinNwkCycleTimeCount = 0;
+    810                  }
+    811                }
+    812                break;
+    813              case JOINNWKCYCLETIME_30MIN:
+    814                {
+    815                  if((u16_AppDeviceJoinNwkCycleTimeCount++) == 30)
+    816                  {
+    817                    u8_AppDEviceJoinNwkTimeComing = 1;
+    818                    u16_AppDeviceJoinNwkCycleTimeCount = 0;
+    819                  }
+    820                }
+    821                break;
+    822              case JOINNWKCYCLETIME_1H:
+    823                {
+    824                  if((u16_AppDeviceJoinNwkCycleTimeCount++) == 60)
+    825                  {
+    826                    u8_AppDEviceJoinNwkTimeComing = 1;
+    827                    u16_AppDeviceJoinNwkCycleTimeCount = 0;
+    828                  }
+    829                }
+    830                break;
+    831              default:
+    832                {
+    833                  AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+    834                  u8_AppDEviceJoinNwkTimeComing = 1;
+    835                  u16_AppDeviceJoinNwkCycleTimeCount = 0;
+    836                }
+    837                break;
+    838                
+    839              }
+    840              
+    841              if(AppDEviceJoinNwkState == JOINNWKCYCLETIME_20S)
+   \                     ??CrossCallReturnLabel_17:
+   \   000050   E0           MOVX    A,@DPTR
+   \   000051   7030         JNZ     ??AppDEviceJoinNwk_8
+    842              {
+    843                osal_start_timerEx(zclSmartDoor_TaskID, 
+    844                                   ZCL_DEVICE_REJOIN_EVENT,
+    845                                   JOINNWKCYCLEEVENTTIME_20S);
+   \                     ??AppDEviceJoinNwk_9:
+   \   000053                ; Setup parameters for call to function osal_rand
+   \   000053   12....       LCALL   ??osal_rand?relay
+   \   000056                ; Setup parameters for call to function osal_start_timerEx
+   \   000056   EA           MOV     A,R2
+   \   000057   2420         ADD     A,#0x20
+   \   000059   FC           MOV     R4,A
+   \   00005A   E4           CLR     A
+   \   00005B   344E         ADDC    A,#0x4e
+   \   00005D   802E         SJMP    ??AppDEviceJoinNwk_10
+    846              }
+   \                     ??AppDEviceJoinNwk_3:
+   \   00005F   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   000062   740A         MOV     A,#0xa
+   \   000064   68           XRL     A,R0
+   \   000065   7001         JNZ     ??AppDEviceJoinNwk_11
+   \   000067   E9           MOV     A,R1
+   \                     ??AppDEviceJoinNwk_11:
+   \   000068   7019         JNZ     ??AppDEviceJoinNwk_8
+   \                     ??AppDEviceJoinNwk_12:
+   \   00006A   90....       MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+   \   00006D   7401         MOV     A,#0x1
+   \   00006F   F0           MOVX    @DPTR,A
+   \   000070   90....       MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+   \   000073   E4           CLR     A
+   \   000074   F0           MOVX    @DPTR,A
+   \   000075   A3           INC     DPTR
+   \   000076   80D5         SJMP    ??AppDEviceJoinNwk_7
+   \                     ??AppDEviceJoinNwk_4:
+   \   000078   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   00007B   741E         MOV     A,#0x1e
+   \   00007D   68           XRL     A,R0
+   \   00007E   7001         JNZ     ??AppDEviceJoinNwk_13
+   \   000080   E9           MOV     A,R1
+   \                     ??AppDEviceJoinNwk_13:
+   \   000081   60E7         JZ      ??AppDEviceJoinNwk_12
+    847              else
+    848              {	
+    849                osal_start_timerEx(zclSmartDoor_TaskID, 
+    850                                   ZCL_DEVICE_REJOIN_EVENT,
+    851                                   JOINNWKCYCLEEVENTTIME_60S);    
+   \                     ??AppDEviceJoinNwk_8:
+   \   000083                ; Setup parameters for call to function osal_rand
+   \   000083   12....       LCALL   ??osal_rand?relay
+   \   000086                ; Setup parameters for call to function osal_start_timerEx
+   \   000086   EA           MOV     A,R2
+   \   000087   2460         ADD     A,#0x60
+   \   000089   FC           MOV     R4,A
+   \   00008A   E4           CLR     A
+   \   00008B   34EA         ADDC    A,#-0x16
+   \                     ??AppDEviceJoinNwk_10:
+   \   00008D   FD           MOV     R5,A
+   \   00008E   7A00         MOV     R2,#0x0
+   \   000090   7B08         MOV     R3,#0x8
+    852              }
+   \   000092   12....       LCALL   ??Subroutine10_0 & 0xFFFF
+    853            }
+    854            
+    855            
+    856            
+    857            
+    858          }
+   \                     ??CrossCallReturnLabel_29:
+   \   000095   7F02         MOV     R7,#0x2
+   \   000097   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \                     ??AppDEviceJoinNwk_5:
+   \   00009A   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   00009D   743C         MOV     A,#0x3c
+   \   00009F   68           XRL     A,R0
+   \   0000A0   7001         JNZ     ??AppDEviceJoinNwk_14
+   \   0000A2   E9           MOV     A,R1
+   \                     ??AppDEviceJoinNwk_14:
+   \   0000A3   70DE         JNZ     ??AppDEviceJoinNwk_8
+   \   0000A5   80C3         SJMP    ??AppDEviceJoinNwk_12
+   \                     ??AppDEviceJoinNwk_6:
+   \   0000A7   E4           CLR     A
+   \   0000A8   F0           MOVX    @DPTR,A
+   \   0000A9   90....       MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+   \   0000AC   04           INC     A
+   \   0000AD   F0           MOVX    @DPTR,A
+   \   0000AE   90....       MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+   \   0000B1   E4           CLR     A
+   \   0000B2   F0           MOVX    @DPTR,A
+   \   0000B3   A3           INC     DPTR
+   \   0000B4   F0           MOVX    @DPTR,A
+   \   0000B5   809C         SJMP    ??AppDEviceJoinNwk_9
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   90....       MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F8           MOV     R0,A
+   \   000005   A3           INC     DPTR
+   \   000006   E0           MOVX    A,@DPTR
+   \   000007   F9           MOV     R1,A
+   \   000008   E8           MOV     A,R0
+   \   000009   2401         ADD     A,#0x1
+   \   00000B   FA           MOV     R2,A
+   \   00000C   E9           MOV     A,R1
+   \   00000D   3400         ADDC    A,#0x0
+   \   00000F   FB           MOV     R3,A
+   \   000010   90....       MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+   \   000013   EA           MOV     A,R2
+   \   000014   F0           MOVX    @DPTR,A
+   \   000015   A3           INC     DPTR
+   \   000016   EB           MOV     A,R3
+   \   000017   F0           MOVX    @DPTR,A
+   \   000018   22           RET
+    859          
+    860          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   90....       MOV     DPTR,#DeviceRehoinEventFlag
+   \   000003   7401         MOV     A,#0x1
+   \   000005                REQUIRE ??Subroutine8_0
+   \   000005                ; // Fall through to label ??Subroutine8_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    861          void AppDevNwkDiscCyCle()
+   \                     AppDevNwkDiscCyCle:
+    862          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    863            DeviceRehoinEventFlag = 0;
+   \   000004   90....       MOV     DPTR,#DeviceRehoinEventFlag
+   \   000007   E4           CLR     A
+   \   000008   F0           MOVX    @DPTR,A
+    864            
+    865            if((_NIB.nwkLogicalChannel >= 0x0B)&&(_NIB.nwkLogicalChannel <= 0x1A))//已经组网
+   \   000009   90....       MOV     DPTR,#_NIB + 22
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   24F5         ADD     A,#-0xb
+   \   00000F   C3           CLR     C
+   \   000010   9410         SUBB    A,#0x10
+   \   000012   90....       MOV     DPTR,#zclDevice_RejoinCounter
+   \   000015   E0           MOVX    A,@DPTR
+   \   000016   5067         JNC     ??AppDevNwkDiscCyCle_0
+    866            {
+    867              if (zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*3) 
+   \   000018   C3           CLR     C
+   \   000019   940D         SUBB    A,#0xd
+   \   00001B   500F         JNC     ??AppDevNwkDiscCyCle_1
+    868              {  
+    869                if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+   \                     ??AppDevNwkDiscCyCle_2:
+   \   00001D   E0           MOVX    A,@DPTR
+   \   00001E   5403         ANL     A,#0x3
+   \   000020   6003         JZ      $+5
+   \   000022   02....       LJMP    ??CrossCallReturnLabel_30 & 0xFFFF
+    870                {
+    871                  DeviceRehoinEventFlag = 1;
+   \   000025   12....       LCALL   ?Subroutine2 & 0xFFFF
+    872                  AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+    873                }
+    874                
+    875              }
+   \                     ??CrossCallReturnLabel_11:
+   \   000028   E4           CLR     A
+   \                     ??AppDevNwkDiscCyCle_3:
+   \   000029   F0           MOVX    @DPTR,A
+   \   00002A   8071         SJMP    ??AppDevNwkDiscCyCle_4
+    876              else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*3 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*6)
+   \                     ??AppDevNwkDiscCyCle_1:
+   \   00002C   E0           MOVX    A,@DPTR
+   \   00002D   24F3         ADD     A,#-0xd
+   \   00002F   C3           CLR     C
+   \   000030   940C         SUBB    A,#0xc
+   \   000032   E0           MOVX    A,@DPTR
+   \   000033   500C         JNC     ??AppDevNwkDiscCyCle_5
+    877              {
+    878                if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+   \   000035   5403         ANL     A,#0x3
+   \   000037   6003         JZ      $+5
+   \   000039   02....       LJMP    ??CrossCallReturnLabel_30 & 0xFFFF
+    879                {
+    880                  DeviceRehoinEventFlag = 1;
+   \   00003C   12....       LCALL   ?Subroutine2 & 0xFFFF
+    881                  AppDEviceJoinNwkState = JOINNWKCYCLETIME_1MIN;
+    882                }
+    883              }
+   \                     ??CrossCallReturnLabel_12:
+   \   00003F   80E8         SJMP    ??AppDevNwkDiscCyCle_3
+    884              else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*6 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*9)
+   \                     ??AppDevNwkDiscCyCle_5:
+   \   000041   24E7         ADD     A,#-0x19
+   \   000043   C3           CLR     C
+   \   000044   940C         SUBB    A,#0xc
+   \   000046   E0           MOVX    A,@DPTR
+   \   000047   500A         JNC     ??AppDevNwkDiscCyCle_6
+    885              {
+    886                if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+   \   000049   5403         ANL     A,#0x3
+   \   00004B   7074         JNZ     ??CrossCallReturnLabel_30
+    887                {
+    888                  DeviceRehoinEventFlag = 1;
+   \   00004D   12....       LCALL   ?Subroutine2 & 0xFFFF
+    889                  AppDEviceJoinNwkState = JOINNWKCYCLETIME_10MIN;
+    890                }
+    891              }
+   \                     ??CrossCallReturnLabel_13:
+   \   000050   04           INC     A
+   \   000051   80D6         SJMP    ??AppDevNwkDiscCyCle_3
+    892              else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*9 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*12)
+   \                     ??AppDevNwkDiscCyCle_6:
+   \   000053   24DB         ADD     A,#-0x25
+   \   000055   C3           CLR     C
+   \   000056   940C         SUBB    A,#0xc
+   \   000058   E0           MOVX    A,@DPTR
+   \   000059   500B         JNC     ??AppDevNwkDiscCyCle_7
+    893              {
+    894                if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+   \   00005B   5403         ANL     A,#0x3
+   \   00005D   7062         JNZ     ??CrossCallReturnLabel_30
+    895                {
+    896                  DeviceRehoinEventFlag = 1;
+   \   00005F   12....       LCALL   ?Subroutine2 & 0xFFFF
+    897                  AppDEviceJoinNwkState = JOINNWKCYCLETIME_30MIN;
+    898                }
+    899              }
+   \                     ??CrossCallReturnLabel_14:
+   \   000062   7403         MOV     A,#0x3
+   \   000064   80C3         SJMP    ??AppDevNwkDiscCyCle_3
+    900              else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*12 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*15)
+   \                     ??AppDevNwkDiscCyCle_7:
+   \   000066   24CF         ADD     A,#-0x31
+   \   000068   C3           CLR     C
+   \   000069   940C         SUBB    A,#0xc
+   \   00006B   5054         JNC     ??CrossCallReturnLabel_30
+    901              {
+    902                if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+   \   00006D   E0           MOVX    A,@DPTR
+   \   00006E   5403         ANL     A,#0x3
+   \   000070   704F         JNZ     ??CrossCallReturnLabel_30
+    903                {
+    904                  DeviceRehoinEventFlag = 1;
+   \   000072   12....       LCALL   ?Subroutine2 & 0xFFFF
+    905                  AppDEviceJoinNwkState = JOINNWKCYCLETIME_1H;
+   \                     ??CrossCallReturnLabel_15:
+   \   000075   7404         MOV     A,#0x4
+   \   000077   F0           MOVX    @DPTR,A
+    906                  zclDevice_RejoinCounter = JOINNWKCYCLE_ACCOUNT*12;
+   \   000078   90....       MOV     DPTR,#zclDevice_RejoinCounter
+   \   00007B   7430         MOV     A,#0x30
+   \   00007D   80AA         SJMP    ??AppDevNwkDiscCyCle_3
+    907                }
+    908              }
+    909            }
+    910            else//新设备未组网
+    911            {
+    912              if (zclDevice_RejoinCounter <= 24) 
+   \                     ??AppDevNwkDiscCyCle_0:
+   \   00007F   C3           CLR     C
+   \   000080   9419         SUBB    A,#0x19
+   \   000082   4099         JC      ??AppDevNwkDiscCyCle_2
+    913              {
+    914                if(zclDevice_RejoinCounter%4 == 0)
+    915                {
+    916                  DeviceRehoinEventFlag = 1;
+    917                  AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+    918                }
+    919              }
+    920              else
+    921              {
+    922                pwrmgr_attribute.pwrmgr_device =PWRMGR_BATTERY;
+   \   000084   90....       MOV     DPTR,#pwrmgr_attribute + 6
+   \   000087   7401         MOV     A,#0x1
+   \   000089   12....       LCALL   ?Subroutine6 & 0xFFFF
+    923                pwrmgr_attribute.pwrmgr_task_state = 0;
+    924                DeviceRehoinEventFlag = 0; 
+    925                if(FALSE == ZDApp_StopJoiningCycle())
+   \                     ??CrossCallReturnLabel_7:
+   \   00008C                ; Setup parameters for call to function ZDApp_StopJoiningCycle
+   \   00008C   12....       LCALL   ??ZDApp_StopJoiningCycle?relay
+   \   00008F   E9           MOV     A,R1
+   \   000090   7003         JNZ     ??AppDevNwkDiscCyCle_8
+    926                {
+    927                  ZDApp_StopJoiningCycle();
+   \   000092                ; Setup parameters for call to function ZDApp_StopJoiningCycle
+   \   000092   12....       LCALL   ??ZDApp_StopJoiningCycle?relay
+    928                }
+    929              }
+    930            }
+    931            
+    932            if(DeviceRehoinEventFlag == 1)
+   \                     ??AppDevNwkDiscCyCle_8:
+   \   000095   90....       MOV     DPTR,#DeviceRehoinEventFlag
+   \   000098   E0           MOVX    A,@DPTR
+   \   000099   6401         XRL     A,#0x1
+   \   00009B   7024         JNZ     ??CrossCallReturnLabel_30
+    933            {
+    934              if(FALSE == ZDApp_StopJoiningCycle())
+   \                     ??AppDevNwkDiscCyCle_4:
+   \   00009D                ; Setup parameters for call to function ZDApp_StopJoiningCycle
+   \   00009D   12....       LCALL   ??ZDApp_StopJoiningCycle?relay
+   \   0000A0   E9           MOV     A,R1
+   \   0000A1   7003         JNZ     ??AppDevNwkDiscCyCle_9
+    935              {
+    936                ZDApp_StopJoiningCycle();
+   \   0000A3                ; Setup parameters for call to function ZDApp_StopJoiningCycle
+   \   0000A3   12....       LCALL   ??ZDApp_StopJoiningCycle?relay
+    937              }
+    938              
+    939              u8_ZDApp_StopJoiningCycleFlag = 1;
+   \                     ??AppDevNwkDiscCyCle_9:
+   \   0000A6   90....       MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+   \   0000A9   7401         MOV     A,#0x1
+   \   0000AB   F0           MOVX    @DPTR,A
+    940              
+    941              DeviceRehoinEventFlag = 0;
+   \   0000AC   90....       MOV     DPTR,#DeviceRehoinEventFlag
+   \   0000AF   E4           CLR     A
+   \   0000B0   F0           MOVX    @DPTR,A
+    942              u8_AppDEviceJoinNwkTimeComing = 0;
+   \   0000B1   90....       MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+   \   0000B4   12....       LCALL   ?Subroutine1 & 0xFFFF
+    943              
+    944              pwrmgr_attribute.pwrmgr_device =PWRMGR_BATTERY;
+    945              pwrmgr_attribute.pwrmgr_task_state = 0;  
+    946              
+    947              osal_start_timerEx(zclSmartDoor_TaskID, 
+    948                                 ZCL_DEVICE_REJOIN_EVENT,
+    949                                 500); 
+   \                     ??CrossCallReturnLabel_1:
+   \   0000B7                ; Setup parameters for call to function osal_start_timerEx
+   \   0000B7   7CF4         MOV     R4,#-0xc
+   \   0000B9   7D01         MOV     R5,#0x1
+   \   0000BB   FA           MOV     R2,A
+   \   0000BC   7B08         MOV     R3,#0x8
+   \   0000BE   12....       LCALL   ??Subroutine10_0 & 0xFFFF
+    950            }
+    951            
+    952          }
+   \                     ??CrossCallReturnLabel_30:
+   \   0000C1   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclDevice_JoinNetworkOk>`:
+   \   000000   0C           DB 12
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zcl_onoffFlag>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for ReJoinNetFlagInFlash>`:
+   \   000000   FF           DB 255
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclSmartDoor0_CmdCallbacks>`:
+   \   000000   ....         DW ??zclSmartDoor_BasicResetCB?relay
+   \   000002   ....         DW ??zclSmartDoor_IdentifyCB?relay
+   \   000004   ....         DW ??zclSmartDoor_IdentifyQueryRspCB?relay
+   \   000006   ....         DW ??zclSmartDoor0_OnOffCB?relay
+   \   000008   0000         DW 0H
+   \   00000A   0000         DW 0H
+   \   00000C   0000         DW 0H
+   \   00000E   0000         DW 0H
+   \   000010   0000         DW 0H
+   \   000012   0000         DW 0H
+   \   000014   0000         DW 0H
+   \   000016   0000         DW 0H
+   \   000018   0000         DW 0H
+   \   00001A   0000         DW 0H
+   \   00001C   0000         DB 0, 0
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSmartDoor_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSmartDoor_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSmartDoor_event_loop?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSmartDoor_event_loop
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSmartDoor_BasicResetCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSmartDoor_BasicResetCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSmartDoor_IdentifyCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSmartDoor_IdentifyCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSmartDoor_IdentifyQueryRspCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSmartDoor_IdentifyQueryRspCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSmartDoor0_OnOffCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSmartDoor0_OnOffCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??AppDEviceJoinNwk?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    AppDEviceJoinNwk
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??AppDevNwkDiscCyCle?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    AppDevNwkDiscCyCle
+
+   Maximum stack usage in bytes:
+
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     AppDEviceJoinNwk                   0      0     22
+       -> ZDApp_StartJoiningCycle       0      0     20
+       -> ZDApp_StartJoiningCycle       0      0     20
+       -> osal_rand                     0      0     20
+       -> osal_start_timerEx            0      0     20
+       -> osal_rand                     0      0     20
+       -> osal_start_timerEx            0      0     20
+     AppDevNwkDiscCyCle                 2      0     12
+       -> ZDApp_StopJoiningCycle        4      0      0
+       -> ZDApp_StopJoiningCycle        4      0      0
+       -> ZDApp_StopJoiningCycle        4      0      0
+       -> ZDApp_StopJoiningCycle        4      0      0
+       -> osal_start_timerEx            4      0      0
+     zclSmartDoor0_OnOffCB              0      0      0
+     zclSmartDoor_BasicResetCB          0      0      0
+     zclSmartDoor_IdentifyCB            2      0      0
+       -> osal_start_timerEx            4      0      0
+       -> osal_stop_timerEx             4      0      0
+     zclSmartDoor_IdentifyQueryRspCB
+                                        0      0      0
+     zclSmartDoor_Init                  0      0      9
+       -> zclHA_Init                    0      0     18
+       -> zclGeneral_RegisterCmdCallbacks
+                                        0      0     18
+       -> zcl_registerAttrList          0      0     18
+       -> zcl_registerForMsg            0      0     18
+       -> RegisterForKeys               0      0     18
+       -> zclDeviceInfoInit             0      0     18
+       -> zclSwitchControlInit          0      0     18
+     zclSmartDoor_event_loop            0      0     12
+       -> AppDEviceJoinNwk              0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> AppDevNwkDiscCyCle            0      0     24
+       -> osal_msg_deallocate           0      0     24
+       -> osal_msg_receive              0      0     24
+       -> osal_mem_free                 0      0     24
+       -> osal_rand                     0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> osal_stop_timerEx             0      0     24
+       -> zclSwitchControlTouchPanelEnable
+                                        0      0     24
+       -> zclSendDeviceInfo             0      0     24
+       -> zclSendHeartbeat              0      0     24
+       -> osal_rand                     0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> zclSwitchReportEvent          0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> zclSwitchReportEvent          0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> zclSwitch0TouchAble           0      0     24
+       -> zclFactoryReset               0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> zclSwitch0TouchPanelEvent     0      0     24
+       -> osal_start_timerEx            0      0     24
+       -> osal_start_timerEx            0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                                Bytes
+     --------------                                -----
+     _A_P0                                            1
+     PICTL                                            1
+     P0IEN                                            1
+     zclSmartDoor_TaskID                              1
+     zclDevice_NwkState                               1
+     zclDevice_RejoinCounter                          1
+     zclDevice_JoinNetworkOk                          1
+     zclDevice_InitDone                               1
+     zcl_Led_Blink                                    1
+     zcl_Flag                                         1
+     zcl_onoffFlag                                    1
+     AppDEviceJoinNwkState                            1
+     u8_AppDEviceJoinNwkTimeComing                    1
+     u16_AppDeviceJoinNwkCycleTimeCount
+                                                      2
+     u8_ZDApp_StopJoiningCycleFlag                    1
+     g_u8sendDeviceInfoFlag                           1
+     ReJoinNetFlagInFlash                             1
+     g_RestCount                                      1
+     zclSmartDoor0_CmdCallbacks                      30
+     zclSmartDoor_Init                               79
+     DeviceRehoinEventFlag                            1
+     zclSmartDoor_event_loop                        679
+     ?Subroutine5                                    16
+     ?Subroutine7                                    12
+     ??Subroutine8_0                                  5
+     ?Subroutine4                                     9
+     ??Subroutine9_0                                  2
+     ??Subroutine10_0                                 9
+     ?Subroutine1                                     9
+     ?Subroutine6                                     9
+     zclSmartDoor_BasicResetCB                        3
+     zclSmartDoor_IdentifyCB                         50
+     ?Subroutine0                                     7
+     zclSmartDoor_IdentifyQueryRspCB
+                                                      3
+     zclSmartDoor0_OnOffCB                            3
+     AppDEviceJoinNwk                               183
+     ?Subroutine3                                    25
+     ?Subroutine2                                     5
+     AppDevNwkDiscCyCle                             196
+     ?<Initializer for zclDevice_JoinNetworkOk>       1
+     ?<Initializer for zcl_onoffFlag>                 1
+     ?<Initializer for ReJoinNetFlagInFlash>          1
+     ?<Initializer for zclSmartDoor0_CmdCallbacks>   30
+     ??zclSmartDoor_Init?relay                        6
+     ??zclSmartDoor_event_loop?relay                  6
+     ??zclSmartDoor_BasicResetCB?relay                6
+     ??zclSmartDoor_IdentifyCB?relay                  6
+     ??zclSmartDoor_IdentifyQueryRspCB?relay          6
+     ??zclSmartDoor0_OnOffCB?relay                    6
+     ??AppDEviceJoinNwk?relay                         6
+     ??AppDevNwkDiscCyCle?relay                       6
+
+ 
+ 1 304 bytes in segment BANKED_CODE
+    48 bytes in segment BANK_RELAYS
+     3 bytes in segment SFR_AN
+    33 bytes in segment XDATA_I
+    33 bytes in segment XDATA_ID
+    14 bytes in segment XDATA_Z
+ 
+ 1 385 bytes of CODE  memory
+     0 bytes of DATA  memory (+ 3 bytes shared)
+    47 bytes of XDATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>OnOffSwitch/EndDeviceEB</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>302</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1356</ColumnWidth1><ColumnWidth2>361</ColumnWidth2><ColumnWidth3>90</ColumnWidth3></Build>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1808</ColumnWidth1></Debug-Log>
+      <TerminalIO/>
+    <Find-in-Files><ColumnWidth0>646</ColumnWidth0><ColumnWidth1>92</ColumnWidth1><ColumnWidth2>1107</ColumnWidth2></Find-in-Files><Disassembly><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly></Static>
+    <Windows>
+      
+      
+    <Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-32208-9421</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>OnOffSwitch</ExpandedNode><ExpandedNode>OnOffSwitch/App</ExpandedNode><ExpandedNode>OnOffSwitch/HAL</ExpandedNode><ExpandedNode>OnOffSwitch/Services</ExpandedNode><ExpandedNode>OnOffSwitch/Tools</ExpandedNode><ExpandedNode>OnOffSwitch/ZMain</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-3873-10975</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-14580-12412</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-594-344</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\zdo\ZDObject.h</Filename><XPos>0</XPos><YPos>87</YPos><SelStart>3642</SelStart><SelEnd>3667</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\EndDeviceEB\List\OnOffSwitch.map</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\hal\target\CC2530EB\hal_sleep.c</Filename><XPos>0</XPos><YPos>101</YPos><SelStart>2990</SelStart><SelEnd>2990</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\mt\MT_TASK.c</Filename><XPos>0</XPos><YPos>225</YPos><SelStart>7847</SelStart><SelEnd>7847</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\include\hal_lcd.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\osal\common\OSAL_Timers.c</Filename><XPos>0</XPos><YPos>91</YPos><SelStart>4065</SelStart><SelEnd>4065</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\zcl\zcl_general.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>2435</SelStart><SelEnd>2435</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Source\zcl_ha.c</Filename><XPos>0</XPos><YPos>78</YPos><SelStart>4120</SelStart><SelEnd>4120</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\osal\include\OSAL_Clock.h</Filename><XPos>0</XPos><YPos>42</YPos><SelStart>1671</SelStart><SelEnd>1671</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\include\hal_key.h</Filename><XPos>0</XPos><YPos>54</YPos><SelStart>3530</SelStart><SelEnd>3530</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\include\hal_sleep.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\include\hal_timer.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\include\hal_uart.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\sapi\sapi.h</Filename><XPos>0</XPos><YPos>84</YPos><SelStart>5030</SelStart><SelEnd>5053</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\mt\MT_SAPI.c</Filename><XPos>0</XPos><YPos>70</YPos><SelStart>4083</SelStart><SelEnd>4107</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\osal\include\ZComDef.h</Filename><XPos>0</XPos><YPos>48</YPos><SelStart>3110</SelStart><SelEnd>3110</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\mt\MT.c</Filename><XPos>0</XPos><YPos>135</YPos><SelStart>4555</SelStart><SelEnd>4555</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\sys\ZGlobals.h</Filename><XPos>0</XPos><YPos>25</YPos><SelStart>2977</SelStart><SelEnd>2984</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8wRouter.cfg</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>768</SelStart><SelEnd>768</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\zdo\ZDObject.c</Filename><XPos>0</XPos><YPos>165</YPos><SelStart>6620</SelStart><SelEnd>6620</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\ZMain\TI2530DB\OnBoard.h</Filename><XPos>0</XPos><YPos>193</YPos><SelStart>7748</SelStart><SelEnd>7748</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\mt\MT_NWK.c</Filename><XPos>0</XPos><YPos>104</YPos><SelStart>4750</SelStart><SelEnd>4750</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\sys\ZGlobals.c</Filename><XPos>0</XPos><YPos>314</YPos><SelStart>6656</SelStart><SelEnd>6656</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h</Filename><XPos>0</XPos><YPos>106</YPos><SelStart>6793</SelStart><SelEnd>6793</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\include\hal_defs.h</Filename><XPos>0</XPos><YPos>93</YPos><SelStart>4691</SelStart><SelEnd>4691</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\..\..\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5.1a\COMPONENTS\osal\common\OSAL.c</Filename><XPos>0</XPos><YPos>1031</YPos><SelStart>27036</SelStart><SelEnd>27036</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\..\..\..\ZStack-CC2530-2.5.1a\ZStack-CC2530-2.5.1a\Projects\zstack\ZMain\TI2530DB\ZMain.c</Filename><XPos>0</XPos><YPos>61</YPos><SelStart>3263</SelStart><SelEnd>3263</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\osal\common\OSAL.c</Filename><XPos>0</XPos><YPos>1052</YPos><SelStart>27820</SelStart><SelEnd>27820</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\zdo\ZDApp.h</Filename><XPos>0</XPos><YPos>162</YPos><SelStart>6745</SelStart><SelEnd>6755</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_globals.c</Filename><XPos>0</XPos><YPos>229</YPos><SelStart>10498</SelStart><SelEnd>10498</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\nwk\nwk_globals.h</Filename><XPos>0</XPos><YPos>426</YPos><SelStart>14527</SelStart><SelEnd>14527</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8wZCL.cfg</Filename><XPos>0</XPos><YPos>243</YPos><SelStart>2588</SelStart><SelEnd>2588</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\zdo\ZDApp.c</Filename><XPos>0</XPos><YPos>387</YPos><SelStart>12150</SelStart><SelEnd>12150</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8w2530.xcl</Filename><XPos>0</XPos><YPos>225</YPos><SelStart>1654</SelStart><SelEnd>1654</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\nwk\nwk.h</Filename><XPos>0</XPos><YPos>316</YPos><SelStart>11218</SelStart><SelEnd>11218</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\stack\zcl\zcl.c</Filename><XPos>0</XPos><YPos>303</YPos><SelStart>13732</SelStart><SelEnd>13732</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\osal\include\OSAL_Tasks.h</Filename><XPos>0</XPos><YPos>54</YPos><SelStart>3090</SelStart><SelEnd>3090</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\OSAL_OnOffSwitch.c</Filename><XPos>0</XPos><YPos>59</YPos><SelStart>3129</SelStart><SelEnd>3129</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\af\AF.h</Filename><XPos>0</XPos><YPos>225</YPos><SelStart>8381</SelStart><SelEnd>8381</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\COMPONENTS\osal\common\OSAL_Clock.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1172</SelStart><SelEnd>1172</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\nwk\stub_aps.c</Filename><XPos>0</XPos><YPos>243</YPos><SelStart>12825</SelStart><SelEnd>12825</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_OnOffSwitch_data.c</Filename><XPos>0</XPos><YPos>71</YPos><SelStart>3997</SelStart><SelEnd>3997</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8wConfig.cfg</Filename><XPos>0</XPos><YPos>150</YPos><SelStart>2652</SelStart><SelEnd>2652</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_switch_control.h</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>554</SelStart><SelEnd>554</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Tools\CC2530DB\f8wEndev.cfg</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>646</SelStart><SelEnd>646</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\ZMain\TI2530DB\ZMain.c</Filename><XPos>0</XPos><YPos>76</YPos><SelStart>3353</SelStart><SelEnd>3367</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_device_info.c</Filename><XPos>0</XPos><YPos>94</YPos><SelStart>3018</SelStart><SelEnd>3018</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_switch_control.c</Filename><XPos>0</XPos><YPos>87</YPos><SelStart>2648</SelStart><SelEnd>2666</SelEnd></Tab><ActiveTab>47</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_OnOffSwitch.c</Filename><XPos>0</XPos><YPos>249</YPos><SelStart>9865</SelStart><SelEnd>9880</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_OnOffSwitch.h</Filename><XPos>0</XPos><YPos>50</YPos><SelStart>3484</SelStart><SelEnd>3484</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Source\zcl_ha.h</Filename><XPos>0</XPos><YPos>65</YPos><SelStart>4607</SelStart><SelEnd>4607</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\zcl_device_info.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>382</SelStart><SelEnd>382</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\stack\zcl\zcl.h</Filename><XPos>0</XPos><YPos>46</YPos><SelStart>2630</SelStart><SelEnd>2630</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_board_cfg.h</Filename><XPos>0</XPos><YPos>68</YPos><SelStart>4342</SelStart><SelEnd>4342</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-006cdb40><key>iaridepm.enu1</key></Toolbar-006cdb40></Sizes></Row0></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>737</Bottom><Right>376</Right><x>-2</x><y>-2</y><xscreen>90</xscreen><yscreen>110</yscreen><sizeHorzCX>46875</sizeHorzCX><sizeHorzCY>110220</sizeHorzCY><sizeVertCX>196875</sizeVertCX><sizeVertCY>740481</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>216</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>218</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>218437</sizeHorzCY><sizeVertCX>46875</sizeVertCX><sizeVertCY>110220</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

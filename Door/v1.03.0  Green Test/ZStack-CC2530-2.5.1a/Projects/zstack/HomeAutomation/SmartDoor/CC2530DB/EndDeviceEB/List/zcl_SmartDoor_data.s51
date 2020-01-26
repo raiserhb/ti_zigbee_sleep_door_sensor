@@ -1,0 +1,746 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        08/Aug/2017  09:25:11 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0  /
+//                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeA /
+//                          utomation\SmartDoor\Source\zcl_SmartDoor_data.c   /
+//    Command line       =  -f "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ          /
+//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
+//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3             /
+//                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE   /
+//                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT            /
+//                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work     /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8w /
+//                          Config.cfg" (-DZIGBEEPRO -DSECURE=1               /
+//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//                          -DDEFAULT_CHANLIST=0x06108800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,     /
+//                          0x6F,0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,     /
+//                          0x74} -DMAC_MAX_FRAME_SIZE=116                    /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0          /
+//                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0       /
+//                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart   /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8w /
+//                          ZCL.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT     /
+//                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF           /
+//                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_G /
+//                          ENERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_LOAD_CONTROL               /
+//                          -DZCL_SIMPLE_METERING -DZCL_PRICING               /
+//                          -DZCL_MESSAGE -DZCL_TUNNELING -DZCL_TOU)          /
+//                          -DZCL_DEVICE_MGMT "D:\work space\Smart            /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\Source\zcl_SmartDoor_data.c"   /
+//                          -lC "D:\work space\Smart Product\Two              /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\End /
+//                          DeviceEB\List\" -lA "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\EndDeviceEB\List\"    /
+//                          --diag_suppress Pe001,Pa010 -o "D:\work           /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\EndDeviceEB\Obj\" -e  /
+//                          --debug --core=plain --dptr=16,1                  /
+//                          --data_model=large --code_model=banked            /
+//                          --calling_convention=xdata_reentrant              /
+//                          --place_constants=data_rom --nr_virtual_regs 16   /
+//                          -I "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\"   /
+//                          -I "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          Source\" -I "D:\work space\Smart Product\Two      /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\Source\" -I "D:\work space\Smart Product\Two   /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\ZMain\TI2530DB\" -I "D:\work space\Smart    /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\hal\include\" -I "D:\work space\Smart        /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\hal\target\CC2530EB\" -I "D:\work            /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\include\" -I "D:\work space\Smart        /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\high_level\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\low_level\srf04\" -I "D:\work            /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\low_level\srf04\single_chip\" -I         /
+//                          "D:\work space\Smart Product\Two                  /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\..\..\Components\mt\" -I "D:\work           /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\osal\include\" -I "D:\work space\Smart       /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\services\saddr\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\services\sdata\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\af\" -I "D:\work space\Smart           /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\nwk\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sapi\" -I "D:\work space\Smart         /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sec\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sys\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\zcl\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\zdo\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\zmac\" -I "D:\work space\Smart Product\Two   /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\..\..\Components\zmac\f8w\" -Oh             /
+//                          --require_prototypes                              /
+//    List file          =  D:\work space\Smart Product\Two YHY\Door\v1.03.0  /
+//                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeA /
+//                          utomation\SmartDoor\CC2530DB\EndDeviceEB\List\zcl /
+//                          _SmartDoor_data.s51                               /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME zcl_SmartDoor_data
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC zclOnOffSwitch_DateCode
+        PUBLIC zclOnOffSwitch_DeviceEnable
+        PUBLIC zclOnOffSwitch_HWRevision
+        PUBLIC zclOnOffSwitch_InClusterList
+        PUBLIC zclOnOffSwitch_LocationDescription
+        PUBLIC zclOnOffSwitch_ManufacturerName
+        PUBLIC zclOnOffSwitch_ModelId
+        PUBLIC zclOnOffSwitch_OutClusterList
+        PUBLIC zclOnOffSwitch_PhysicalEnvironment
+        PUBLIC zclOnOffSwitch_PowerSource
+        PUBLIC zclOnOffSwitch_ZCLVersion
+        PUBLIC zclSmartDoor_Attrs
+        PUBLIC zclSmartDoor_IdentifyTime
+        PUBLIC zclSmartDoor_OnOff
+        PUBLIC zclSmartDoor_SimpleDesc
+// D:\work space\Smart Product\Two YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SmartDoor\Source\zcl_SmartDoor_data.c
+//    1 /**************************************************************************************************
+//    2   Filename:       zcl_OnOffSwitch_data.c
+//    3   Revised:        $Date: 2008-03-11 11:01:35 -0700 (Tue, 11 Mar 2008) $
+//    4   Revision:       $Revision: 16570 $
+//    5 
+//    6 
+//    7   Description:    Zigbee Cluster Library - sample device application.
+//    8 
+//    9 
+//   10   Copyright 2006-2007 Texas Instruments Incorporated. All rights reserved.
+//   11 
+//   12   IMPORTANT: Your use of this Software is limited to those specific rights
+//   13   granted under the terms of a software license agreement between the user
+//   14   who downloaded the software, his/her employer (which must be your employer)
+//   15   and Texas Instruments Incorporated (the "License").  You may not use this
+//   16   Software unless you agree to abide by the terms of the License. The License
+//   17   limits your use, and you acknowledge, that the Software may not be modified,
+//   18   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   19   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   20   frequency transceiver, which is integrated into your product.  Other than for
+//   21   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   22   works of, modify, distribute, perform, display or sell this Software and/or
+//   23   its documentation for any purpose.
+//   24 
+//   25   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   26   PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+//   27   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+//   28   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   29   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   30   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   31   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   32   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   33   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   34   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   35   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   36 
+//   37   Should you have any questions regarding your right to use this Software,
+//   38   contact Texas Instruments Incorporated at www.TI.com. 
+//   39 **************************************************************************************************/
+//   40 
+//   41 /*********************************************************************
+//   42  * INCLUDES
+//   43  */
+//   44 #include "ZComDef.h"
+//   45 #include "OSAL.h"
+//   46 #include "AF.h"
+//   47 #include "ZDConfig.h"
+//   48 
+//   49 #include "zcl.h"
+//   50 #include "zcl_general.h"
+//   51 #include "zcl_ha.h"
+//   52 #include "zcl_ss.h"
+//   53 
+//   54 #include "zcl_SmartDoor.h"
+//   55 
+//   56 /*********************************************************************
+//   57  * CONSTANTS
+//   58  */
+//   59 
+//   60 #define ONOFFSWITCH_DEVICE_VERSION     0
+//   61 #define ONOFFSWITCH_FLAGS              0
+//   62 
+//   63 #define ONOFFSWITCH_HWVERSION          1
+//   64 #define ONOFFSWITCH_ZCLVERSION         1
+//   65 
+//   66 /*********************************************************************
+//   67  * TYPEDEFS
+//   68  */
+//   69 
+//   70 /*********************************************************************
+//   71  * MACROS
+//   72  */
+//   73 
+//   74 /*********************************************************************
+//   75  * GLOBAL VARIABLES
+//   76  */
+//   77 
+//   78 // Basic Cluster
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   79 const uint8 zclOnOffSwitch_HWRevision = ONOFFSWITCH_HWVERSION;
+zclOnOffSwitch_HWRevision:
+        DB 1
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   80 const uint8 zclOnOffSwitch_ZCLVersion = ONOFFSWITCH_ZCLVERSION;
+zclOnOffSwitch_ZCLVersion:
+        DB 1
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   81 const uint8 zclOnOffSwitch_ManufacturerName[] = { 16, 'T','e','x','a','s','I','n','s','t','r','u','m','e','n','t','s' };
+zclOnOffSwitch_ManufacturerName:
+        DB 16
+        DB 84
+        DB 101
+        DB 120
+        DB 97
+        DB 115
+        DB 73
+        DB 110
+        DB 115
+        DB 116
+        DB 114
+        DB 117
+        DB 109
+        DB 101
+        DB 110
+        DB 116
+        DB 115
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   82 const uint8 zclOnOffSwitch_ModelId[] = { 16, 'T','I','0','0','0','1',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+zclOnOffSwitch_ModelId:
+        DB 16
+        DB 84
+        DB 73
+        DB 48
+        DB 48
+        DB 48
+        DB 49
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   83 const uint8 zclOnOffSwitch_DateCode[] = { 16, '2','0','0','6','0','8','3','1',' ',' ',' ',' ',' ',' ',' ',' ' };
+zclOnOffSwitch_DateCode:
+        DB 16
+        DB 50
+        DB 48
+        DB 48
+        DB 54
+        DB 48
+        DB 56
+        DB 51
+        DB 49
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   84 const uint8 zclOnOffSwitch_PowerSource = POWER_SOURCE_MAINS_1_PHASE;
+zclOnOffSwitch_PowerSource:
+        DB 1
+//   85 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   86 uint8 zclOnOffSwitch_LocationDescription[17] = { 16, ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+zclOnOffSwitch_LocationDescription:
+        DATA8
+        DS 17
+        REQUIRE `?<Initializer for zclOnOffSwitch_LocationDescr`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   87 uint8 zclOnOffSwitch_PhysicalEnvironment = 0;
+zclOnOffSwitch_PhysicalEnvironment:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   88 uint8 zclOnOffSwitch_DeviceEnable = DEVICE_ENABLED;
+zclOnOffSwitch_DeviceEnable:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclOnOffSwitch_DeviceEnable>`
+        REQUIRE __INIT_XDATA_I
+//   89 
+//   90 // Identify Cluster
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//   91 uint16 zclSmartDoor_IdentifyTime = 0;
+zclSmartDoor_IdentifyTime:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+//   92 
+//   93 // On/Off Cluster
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   94 uint8  zclSmartDoor_OnOff = SWITCH_ON;
+zclSmartDoor_OnOff:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclSmartDoor_OnOff>`
+        REQUIRE __INIT_XDATA_I
+//   95 
+//   96 /*********************************************************************
+//   97  * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
+//   98  */
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
+//   99 CONST zclAttrRec_t zclSmartDoor_Attrs[SMARTDOOR_MAX_ATTRIBUTES] =
+zclSmartDoor_Attrs:
+        DATA16
+        DW 0
+        DW 3
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclOnOffSwitch_HWRevision
+        DW 0
+        DW 0
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclOnOffSwitch_ZCLVersion
+        DW 0
+        DW 4
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclOnOffSwitch_ManufacturerName
+        DW 0
+        DW 5
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclOnOffSwitch_ModelId
+        DW 0
+        DW 6
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclOnOffSwitch_DateCode
+        DW 0
+        DW 7
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclOnOffSwitch_PowerSource
+        DW 0
+        DW 16
+        DATA8
+        DB 66
+        DB 3
+        DATA16
+        DW zclOnOffSwitch_LocationDescription
+        DW 0
+        DW 17
+        DATA8
+        DB 32
+        DB 3
+        DATA16
+        DW zclOnOffSwitch_PhysicalEnvironment
+        DW 0
+        DW 18
+        DATA8
+        DB 16
+        DB 3
+        DATA16
+        DW zclOnOffSwitch_DeviceEnable
+        DW 3
+        DW 0
+        DATA8
+        DB 33
+        DB 3
+        DATA16
+        DW zclSmartDoor_IdentifyTime
+        DW 1280
+        DW 2
+        DATA8
+        DB 25
+        DB 1
+        DATA16
+        DW zclSmartDoor_OnOff
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+//  100 {
+//  101   // *** General Basic Cluster Attributes ***
+//  102   {
+//  103     ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+//  104     {  // Attribute record
+//  105       ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  106       ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+//  107       ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+//  108       (void *)&zclOnOffSwitch_HWRevision  // Pointer to attribute variable
+//  109     }
+//  110   },
+//  111   {
+//  112     ZCL_CLUSTER_ID_GEN_BASIC,
+//  113     { // Attribute record
+//  114       ATTRID_BASIC_ZCL_VERSION,
+//  115       ZCL_DATATYPE_UINT8,
+//  116       ACCESS_CONTROL_READ,
+//  117       (void *)&zclOnOffSwitch_ZCLVersion
+//  118     }
+//  119   },
+//  120   {
+//  121     ZCL_CLUSTER_ID_GEN_BASIC,
+//  122     { // Attribute record
+//  123       ATTRID_BASIC_MANUFACTURER_NAME,
+//  124       ZCL_DATATYPE_CHAR_STR,
+//  125       ACCESS_CONTROL_READ,
+//  126       (void *)zclOnOffSwitch_ManufacturerName
+//  127     }
+//  128   },
+//  129   {
+//  130     ZCL_CLUSTER_ID_GEN_BASIC,
+//  131     { // Attribute record
+//  132       ATTRID_BASIC_MODEL_ID,
+//  133       ZCL_DATATYPE_CHAR_STR,
+//  134       ACCESS_CONTROL_READ,
+//  135       (void *)zclOnOffSwitch_ModelId
+//  136     }
+//  137   },
+//  138   {
+//  139     ZCL_CLUSTER_ID_GEN_BASIC,
+//  140     { // Attribute record
+//  141       ATTRID_BASIC_DATE_CODE,
+//  142       ZCL_DATATYPE_CHAR_STR,
+//  143       ACCESS_CONTROL_READ,
+//  144       (void *)zclOnOffSwitch_DateCode
+//  145     }
+//  146   },
+//  147   {
+//  148     ZCL_CLUSTER_ID_GEN_BASIC,
+//  149     { // Attribute record
+//  150       ATTRID_BASIC_POWER_SOURCE,
+//  151       ZCL_DATATYPE_UINT8,
+//  152       ACCESS_CONTROL_READ,
+//  153       (void *)&zclOnOffSwitch_PowerSource
+//  154     }
+//  155   },
+//  156   {
+//  157     ZCL_CLUSTER_ID_GEN_BASIC,
+//  158     { // Attribute record
+//  159       ATTRID_BASIC_LOCATION_DESC,
+//  160       ZCL_DATATYPE_CHAR_STR,
+//  161       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  162       (void *)zclOnOffSwitch_LocationDescription
+//  163     }
+//  164   },
+//  165   {
+//  166     ZCL_CLUSTER_ID_GEN_BASIC,
+//  167     { // Attribute record
+//  168       ATTRID_BASIC_PHYSICAL_ENV,
+//  169       ZCL_DATATYPE_UINT8,
+//  170       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  171       (void *)&zclOnOffSwitch_PhysicalEnvironment
+//  172     }
+//  173   },
+//  174   {
+//  175     ZCL_CLUSTER_ID_GEN_BASIC,
+//  176     { // Attribute record
+//  177       ATTRID_BASIC_DEVICE_ENABLED,
+//  178       ZCL_DATATYPE_BOOLEAN,
+//  179       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  180       (void *)&zclOnOffSwitch_DeviceEnable
+//  181     }
+//  182   },
+//  183 
+//  184   // *** Identify Cluster Attribute ***
+//  185   {
+//  186     ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  187     { // Attribute record
+//  188       ATTRID_IDENTIFY_TIME,
+//  189       ZCL_DATATYPE_UINT16,
+//  190       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  191       (void *)&zclSmartDoor_IdentifyTime
+//  192     }
+//  193   },
+//  194 
+//  195   // *** On/Off Cluster Attributes ***
+//  196   {
+//  197     ZCL_CLUSTER_ID_SS_IAS_ZONE,
+//  198     { // Attribute record
+//  199       ATTRID_SS_IAS_ZONE_STATUS,
+//  200       ZCL_DATATYPE_BITMAP16,
+//  201       ACCESS_CONTROL_READ,
+//  202       (void *)&zclSmartDoor_OnOff
+//  203     }
+//  204   },
+//  205 };
+//  206 
+//  207 /*********************************************************************
+//  208  * SIMPLE DESCRIPTOR
+//  209  */
+//  210 // This is the Cluster ID List and should be filled with Application
+//  211 // specific cluster IDs.
+//  212 #define ZCLONOFFSWITCH_MAX_INCLUSTERS       5
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  213 const cId_t zclOnOffSwitch_InClusterList[ZCLONOFFSWITCH_MAX_INCLUSTERS] =
+zclOnOffSwitch_InClusterList:
+        DATA16
+        DW 0
+        DW 3
+        DW 5
+        DW 4
+        DW 1280
+//  214 {
+//  215   ZCL_CLUSTER_ID_GEN_BASIC,
+//  216   ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  217   ZCL_CLUSTER_ID_GEN_SCENES,
+//  218   ZCL_CLUSTER_ID_GEN_GROUPS,
+//  219   ZCL_CLUSTER_ID_SS_IAS_ZONE
+//  220 };
+//  221 
+//  222 #define ZCLONOFFSWITCH_MAX_OUTCLUSTERS       1
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA16
+//  223 const cId_t zclOnOffSwitch_OutClusterList[ZCLONOFFSWITCH_MAX_OUTCLUSTERS] =
+zclOnOffSwitch_OutClusterList:
+        DW 0
+//  224 {
+//  225   ZCL_CLUSTER_ID_GEN_BASIC
+//  226 };
+//  227 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  228 SimpleDescriptionFormat_t zclSmartDoor_SimpleDesc =
+zclSmartDoor_SimpleDesc:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSmartDoor_SimpleDesc>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclOnOffSwitch_LocationDescr`:
+        DATA8
+        DB 16
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclOnOffSwitch_DeviceEnable>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSmartDoor_OnOff>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSmartDoor_SimpleDesc>`:
+        DATA8
+        DB 32
+        DATA16
+        DW 260
+        DW 1283
+        DATA8
+        DB 0
+        DB 5
+        DATA16
+        DW zclOnOffSwitch_InClusterList
+        DATA8
+        DB 1
+        DATA16
+        DW zclOnOffSwitch_OutClusterList
+
+        END
+//  229 {
+//  230   SAMRTDOOR_ENDPOINT,                  //  int Endpoint;
+//  231   ZCL_HA_PROFILE_ID,                    //  uint16 AppProfId[2];
+//  232   ZCL_HA_DEVICEID_DOOR,         //  uint16 AppDeviceId[2];
+//  233   ONOFFSWITCH_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  234   ONOFFSWITCH_FLAGS,                     //  int   AppFlags:4;
+//  235   ZCLONOFFSWITCH_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  236   (cId_t *)zclOnOffSwitch_InClusterList, //  byte *pAppInClusterList;
+//  237   ZCLONOFFSWITCH_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  238   (cId_t *)zclOnOffSwitch_OutClusterList //  byte *pAppInClusterList;
+//  239 };
+//  240 
+//  241 /*********************************************************************
+//  242  * GLOBAL FUNCTIONS
+//  243  */
+//  244 
+//  245 /*********************************************************************
+//  246  * LOCAL FUNCTIONS
+//  247  */
+//  248 
+//  249 /****************************************************************************
+//  250 ****************************************************************************/
+//  251 
+//  252 
+// 
+// 96 bytes in segment CODE_C
+// 31 bytes in segment XDATA_I
+// 31 bytes in segment XDATA_ID
+// 66 bytes in segment XDATA_ROM_C
+//  3 bytes in segment XDATA_Z
+// 
+// 127 bytes of CODE  memory
+//  66 bytes of CONST memory
+//  34 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

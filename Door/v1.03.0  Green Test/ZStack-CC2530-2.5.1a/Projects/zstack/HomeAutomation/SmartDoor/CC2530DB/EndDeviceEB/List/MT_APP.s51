@@ -1,0 +1,711 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        08/Aug/2017  09:57:17 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0  /
+//                           Green\ZStack-CC2530-2.5.1a\Components\mt\MT_APP. /
+//                          c                                                 /
+//    Command line       =  -f "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ          /
+//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
+//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3             /
+//                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE   /
+//                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT            /
+//                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work     /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8w /
+//                          Config.cfg" (-DZIGBEEPRO -DSECURE=1               /
+//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//                          -DDEFAULT_CHANLIST=0x06108800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,     /
+//                          0x6F,0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,     /
+//                          0x74} -DMAC_MAX_FRAME_SIZE=116                    /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0          /
+//                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0       /
+//                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart   /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8w /
+//                          ZCL.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT     /
+//                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF           /
+//                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_G /
+//                          ENERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_LOAD_CONTROL               /
+//                          -DZCL_SIMPLE_METERING -DZCL_PRICING               /
+//                          -DZCL_MESSAGE -DZCL_TUNNELING -DZCL_TOU)          /
+//                          -DZCL_DEVICE_MGMT "D:\work space\Smart            /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Components\mt\MT_APP.c /
+//                          " -lC "D:\work space\Smart Product\Two            /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\End /
+//                          DeviceEB\List\" -lA "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\EndDeviceEB\List\"    /
+//                          --diag_suppress Pe001,Pa010 -o "D:\work           /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\EndDeviceEB\Obj\" -e  /
+//                          --debug --core=plain --dptr=16,1                  /
+//                          --data_model=large --code_model=banked            /
+//                          --calling_convention=xdata_reentrant              /
+//                          --place_constants=data_rom --nr_virtual_regs 16   /
+//                          -I "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\"   /
+//                          -I "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          Source\" -I "D:\work space\Smart Product\Two      /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\Source\" -I "D:\work space\Smart Product\Two   /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\ZMain\TI2530DB\" -I "D:\work space\Smart    /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\hal\include\" -I "D:\work space\Smart        /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\hal\target\CC2530EB\" -I "D:\work            /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\include\" -I "D:\work space\Smart        /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\high_level\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\low_level\srf04\" -I "D:\work            /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\low_level\srf04\single_chip\" -I         /
+//                          "D:\work space\Smart Product\Two                  /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\..\..\Components\mt\" -I "D:\work           /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\osal\include\" -I "D:\work space\Smart       /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\services\saddr\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\services\sdata\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\af\" -I "D:\work space\Smart           /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\nwk\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sapi\" -I "D:\work space\Smart         /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sec\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sys\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\zcl\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\zdo\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\zmac\" -I "D:\work space\Smart Product\Two   /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\..\..\Components\zmac\f8w\" -Oh             /
+//                          --require_prototypes                              /
+//    List file          =  D:\work space\Smart Product\Two YHY\Door\v1.03.0  /
+//                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeA /
+//                          utomation\SmartDoor\CC2530DB\EndDeviceEB\List\MT_ /
+//                          APP.s51                                           /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME MT_APP
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+
+        END
+// D:\work space\Smart Product\Two YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Components\mt\MT_APP.c
+//    1 /***************************************************************************************************
+//    2   Filename:       MT_APP.c
+//    3   Revised:        $Date: 2011-05-27 16:00:27 -0700 (Fri, 27 May 2011) $
+//    4   Revision:       $Revision: 26145 $
+//    5 
+//    6   Description:    MonitorTest processing for APP commands
+//    7 
+//    8   Copyright 2007-2011 Texas Instruments Incorporated. All rights reserved.
+//    9 
+//   10   IMPORTANT: Your use of this Software is limited to those specific rights
+//   11   granted under the terms of a software license agreement between the user
+//   12   who downloaded the software, his/her employer (which must be your employer)
+//   13   and Texas Instruments Incorporated (the "License"). You may not use this
+//   14   Software unless you agree to abide by the terms of the License. The License
+//   15   limits your use, and you acknowledge, that the Software may not be modified,
+//   16   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   17   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   18   frequency transceiver, which is integrated into your product. Other than for
+//   19   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   20   works of, modify, distribute, perform, display or sell this Software and/or
+//   21   its documentation for any purpose.
+//   22 
+//   23   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   24   PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   25   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   26   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   27   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   28   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   29   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   30   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   31   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   32   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   33   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   34 
+//   35   Should you have any questions regarding your right to use this Software,
+//   36   contact Texas Instruments Incorporated at www.TI.com.
+//   37 
+//   38  ***************************************************************************************************/
+//   39 
+//   40 /***************************************************************************************************
+//   41  * INCLUDES
+//   42  ***************************************************************************************************/
+//   43 #include "ZComDef.h"
+//   44 #include "MT.h"        /* This is here because all the SPI_CMD_XXX are defined in this header */
+//   45 #include "MT_APP.h"
+//   46 #include "MT_AF.h"     /* This is here because this MT_APP makes some routine call to AF */
+//   47 #include "MT_RPC.h"
+//   48 
+//   49 #if defined( APP_TP )
+//   50  #include "TestProfile.h"
+//   51 #endif
+//   52 #if defined( APP_TP2 )
+//   53  #include "TestProfile2.h"
+//   54  #include "nwk_util.h"
+//   55 #endif
+//   56 
+//   57 /***************************************************************************************************
+//   58  * LOCAL FUNCTIONS
+//   59  ***************************************************************************************************/
+//   60 #if defined (MT_APP_FUNC)
+//   61 void MT_AppMsg(uint8 *pBuf);
+//   62 void MT_AppUserCmd(byte *pData);
+//   63 #ifdef MT_APP_GET_NETWORK_FUNC
+//   64 extern void MT_znpSmartLifeGetNetwork(uint8 *pBuf);
+//   65 #endif
+//   66 #ifdef MT_APP_FACTORY_RESET_FUNC
+//   67 extern void MT_znpSmartLifeFactoryReset(uint8 *pBuf);
+//   68 #endif
+//   69 #endif
+//   70 
+//   71 #if defined (MT_APP_FUNC)
+//   72 /***************************************************************************************************
+//   73  * @fn      MT_AppCommandProcessing
+//   74  *
+//   75  * @brief  Process all the APP commands that are issued by test tool
+//   76  *
+//   77  * @param   pBuf - pointer to the received buffer
+//   78  *
+//   79  * @return  status
+//   80  ***************************************************************************************************/
+//   81 uint8 MT_AppCommandProcessing(uint8 *pBuf)
+//   82 {
+//   83   uint8 status = MT_RPC_SUCCESS;
+//   84 
+//   85   switch (pBuf[MT_RPC_POS_CMD1])
+//   86   {
+//   87     case MT_APP_MSG:
+//   88       MT_AppMsg(pBuf);
+//   89       break;
+//   90 
+//   91     case MT_APP_USER_TEST:
+//   92       MT_AppUserCmd(pBuf);
+//   93       break;
+//   94 #ifdef MT_APP_GET_NETWORK_FUNC
+//   95     case MT_APP_GET_NETWORK:
+//   96       MT_znpSmartLifeGetNetwork(pBuf);
+//   97       break;
+//   98 #endif
+//   99 #ifdef MT_APP_FACTORY_RESET_FUNC
+//  100     case MT_APP_FACTORY_RESET:
+//  101       MT_znpSmartLifeFactoryReset(pBuf);
+//  102       break;
+//  103 #endif
+//  104     default:
+//  105       status = MT_RPC_ERR_COMMAND_ID;
+//  106       break;
+//  107   }
+//  108 
+//  109   return status;
+//  110 }
+//  111 
+//  112 /***************************************************************************************************
+//  113  * @fn      MT_AppMsg
+//  114  *
+//  115  * @brief   Process APP_MSG command
+//  116  *
+//  117  * @param   pBuf - pointer to the received buffer
+//  118  *
+//  119  * @return  void
+//  120  ***************************************************************************************************/
+//  121 void MT_AppMsg(uint8 *pBuf)
+//  122 {
+//  123   uint8 retValue = ZFailure;
+//  124   uint8 endpoint;
+//  125   endPointDesc_t *epDesc;
+//  126   mtSysAppMsg_t *msg;
+//  127   uint8 cmdId, dataLen;
+//  128 
+//  129   /* parse header */
+//  130   dataLen = pBuf[MT_RPC_POS_LEN];
+//  131   cmdId = pBuf[MT_RPC_POS_CMD1];
+//  132   pBuf += MT_RPC_FRAME_HDR_SZ;
+//  133 
+//  134   /* Get the endpoint and skip past it.*/
+//  135   endpoint = *pBuf++;
+//  136   dataLen--;
+//  137 
+//  138   /* Look up the endpoint */
+//  139   epDesc = afFindEndPointDesc( endpoint );
+//  140 
+//  141   if (epDesc)
+//  142   {
+//  143     /* Build and send the message to the APP */
+//  144     msg = (mtSysAppMsg_t *)osal_msg_allocate(sizeof(mtSysAppMsg_t) + (dataLen));
+//  145     if ( msg )
+//  146     {
+//  147       /* Build and send message up the app */
+//  148       msg->hdr.event = MT_SYS_APP_MSG;
+//  149       msg->endpoint = endpoint;
+//  150       msg->appDataLen = dataLen;
+//  151       msg->appData = (uint8*)(msg+1);
+//  152       osal_memcpy( msg->appData, pBuf, dataLen);
+//  153       osal_msg_send( *(epDesc->task_id), (uint8 *)msg );
+//  154 
+//  155       /* Info for response */
+//  156       retValue = ZSuccess;
+//  157     }
+//  158   }
+//  159 
+//  160   /* Build and send back the response */
+//  161   MT_BuildAndSendZToolResponse(((uint8)MT_RPC_CMD_SRSP | (uint8)MT_RPC_SYS_APP), cmdId, 1, &retValue);
+//  162 }
+//  163 
+//  164 /***************************************************************************************************
+//  165  * @fn      MT_AppMsg
+//  166  *
+//  167  * @brief   Process APP_MSG command
+//  168  *
+//  169  * @param   pBuf - pointer to the received buffer
+//  170  *
+//  171  * @return  void
+//  172  ***************************************************************************************************/
+//  173 void MT_AppUserCmd(uint8 *pBuf)
+//  174 {
+//  175 
+//  176   uint8 retValue, cmdId;
+//  177 
+//  178 #if defined (APP_TGEN) || defined (NWK_TEST) || defined (APP_TP) || defined (APP_TP2) || defined (OSAL_TOTAL_MEM) || defined (APP_DEBUG)
+//  179   uint16 app_cmd;
+//  180   uint8 srcEp;
+//  181   uint16 param1;
+//  182   uint16 param2;
+//  183 #endif
+//  184 #if defined (OSAL_TOTAL_MEM)
+//  185   uint8 pData[2];
+//  186 #endif
+//  187 
+//  188   /* parse header */
+//  189   cmdId = pBuf[MT_RPC_POS_CMD1];
+//  190   pBuf += MT_RPC_FRAME_HDR_SZ;
+//  191 
+//  192   retValue = INVALID_TASK;     //should be changed later
+//  193 
+//  194 #if defined (APP_TGEN) || defined (NWK_TEST) || defined (APP_TP) || defined (APP_TP2) || defined (OSAL_TOTAL_MEM) || defined (APP_DEBUG)
+//  195 
+//  196   srcEp = *pBuf++;
+//  197 
+//  198   app_cmd = BUILD_UINT16( pBuf[0] , pBuf[1] );
+//  199   pBuf = pBuf + sizeof( uint16 );
+//  200 
+//  201   param1 = BUILD_UINT16( pBuf[0] , pBuf[1] );
+//  202   pBuf = pBuf + sizeof( uint16 );
+//  203 
+//  204   param2 = BUILD_UINT16( pBuf[0] , pBuf[1] );
+//  205 
+//  206   switch ( app_cmd )
+//  207   {
+//  208 
+//  209 #if defined (APP_TGEN)
+//  210     case TGEN_START:
+//  211       TrafficGenApp_SendCmdMSG( param1, param2, TRAFFICGENAPP_CMD_START );
+//  212       retValue = ZSUCCESS;
+//  213       break;
+//  214 
+//  215     case TGEN_STOP:
+//  216       TrafficGenApp_SendCmdMSG( param1, param2, TRAFFICGENAPP_CMD_STOP );
+//  217       retValue = ZSUCCESS;
+//  218       break;
+//  219 
+//  220     case TGEN_COUNT:
+//  221       retValue = TrafficGenApp_CountPkt( param1, param2 );
+//  222       return;
+//  223       break;
+//  224 #endif
+//  225 
+//  226 #if defined (NWK_TEST)
+//  227     case HW_TEST:
+//  228       HwApp_Start( HI_UINT16(param1), LO_UINT16(param1), HI_UINT16(param2),
+//  229                     1000, LO_UINT16(param2), 3, 0 );
+//  230       break;
+//  231 
+//  232     case HW_DISPLAY_RESULT:
+//  233       HwApp_TestInfo();
+//  234       break;
+//  235 
+//  236     case HW_SEND_STATUS:
+//  237       HwApp_SendStats();
+//  238       break;
+//  239 #endif
+//  240 
+//  241 #if defined( APP_TP ) || defined ( APP_TP2 )
+//  242   #if defined( APP_TP )
+//  243     case TP_SEND_NODATA:
+//  244       retValue = TestProfileApp_SendNoData( srcEp, (byte)param1 );
+//  245       break;
+//  246   #endif // APP_TP
+//  247 
+//  248     case TP_SEND_BUFFERTEST:
+//  249       retValue = TestProfileApp_SendBufferReq( srcEp, (byte)param1 );
+//  250       break;
+//  251 
+//  252   #if defined( APP_TP )
+//  253     case TP_SEND_UINT8:
+//  254       retValue = TestProfileApp_SendUint8( srcEp, (byte)param1 );
+//  255       break;
+//  256 
+//  257     case TP_SEND_INT8:
+//  258       retValue = TestProfileApp_SendInt8( srcEp, (byte)param1 );
+//  259       break;
+//  260 
+//  261     case TP_SEND_UINT16:
+//  262       retValue = TestProfileApp_SendUint16( srcEp, (byte)param1 );
+//  263       break;
+//  264 
+//  265     case TP_SEND_INT16:
+//  266       retValue = TestProfileApp_SendInt16( srcEp, (byte)param1 );
+//  267       break;
+//  268 
+//  269     case TP_SEND_SEMIPREC:
+//  270       retValue = TestProfileApp_SendSemiPrec( srcEp, (byte)param1 );
+//  271       break;
+//  272 
+//  273     case TP_SEND_FREEFORM:
+//  274       retValue = TestProfileApp_SendFreeFormReq( srcEp, (byte)param1 );
+//  275       break;
+//  276 
+//  277   #else // APP_TP
+//  278     case TP_SEND_FREEFORM:
+//  279       retValue = TestProfileApp_SendFreeFormReq(srcEp, (byte)param1, (byte)param2);
+//  280       break;
+//  281   #endif
+//  282 
+//  283   #if defined( APP_TP )
+//  284     case TP_SEND_ABS_TIME:
+//  285       retValue = TestProfileApp_SendAbsTime( srcEp, (byte)param1 );
+//  286       break;
+//  287 
+//  288     case TP_SEND_REL_TIME:
+//  289       retValue = TestProfileApp_SendRelativeTime( srcEp, (byte)param1 );
+//  290       break;
+//  291 
+//  292     case TP_SEND_CHAR_STRING:
+//  293       retValue = TestProfileApp_SendCharString( srcEp, (byte)param1 );
+//  294       break;
+//  295 
+//  296     case TP_SEND_OCTET_STRING:
+//  297       retValue = TestProfileApp_SendOctetString( srcEp, (byte)param1 );
+//  298       break;
+//  299   #endif // APP_TP
+//  300 
+//  301     case TP_SET_DSTADDRESS:
+//  302       retValue = TestProfileApp_SetDestAddress(HI_UINT16(param1), LO_UINT16(param1), param2);
+//  303       break;
+//  304 
+//  305   #if defined( APP_TP2 )
+//  306     case TP_SEND_BUFFER_GROUP:
+//  307       retValue = TestProfileApp_SendBufferGroup( srcEp, (byte)param1 );
+//  308       break;
+//  309   #endif // APP_TP
+//  310 
+//  311     case TP_SEND_BUFFER:
+//  312       retValue = TestProfileApp_SendBuffer( srcEp, (byte)param1 );
+//  313       break;
+//  314 
+//  315   #if defined( APP_TP )
+//  316     case TP_SEND_MULT_KVP_8BIT:
+//  317       TestProfileApp_SendMultiKVP_8bit( srcEp, (byte)param1 );
+//  318       retValue = ZSuccess;
+//  319       break;
+//  320 
+//  321     case TP_SEND_MULT_KVP_16BIT:
+//  322       TestProfileApp_SendMultiKVP_16bit( srcEp, (byte)param1 );
+//  323       retValue = ZSuccess;
+//  324       break;
+//  325 
+//  326     case TP_SEND_MULT_KVP_TIME:
+//  327       TestProfileApp_SendMultiKVP_Time( srcEp, (byte)param1 );
+//  328       retValue = ZSuccess;
+//  329       break;
+//  330 
+//  331     case TP_SEND_MULT_KVP_STRING:
+//  332       TestProfileApp_SendMultiKVP_String( srcEp, (byte)param1 );
+//  333       retValue = ZSuccess;
+//  334       break;
+//  335 
+//  336     case TP_SEND_MULTI_KVP_STR_TIME:
+//  337       retValue = ZSuccess;
+//  338       TestProfileApp_SendMultiKVP_String_Time( srcEp, (byte)param1 );
+//  339       break;
+//  340   #endif // APP_TP
+//  341 
+//  342     case TP_SEND_COUNTED_PKTS:
+//  343       TestProfileApp_SendCountedPktsReq(HI_UINT16(param1), LO_UINT16(param1), param2);
+//  344       retValue = ZSuccess;
+//  345       break;
+//  346 
+//  347     case TP_SEND_RESET_COUNTER:
+//  348       TestProfileApp_CountedPakts_ResetCounterReq( (byte)param1 );
+//  349       retValue = ZSuccess;
+//  350       break;
+//  351 
+//  352     case TP_SEND_GET_COUNTER:
+//  353       TestProfileApp_CountedPakts_GetCounterReq( srcEp, (byte)param1 );
+//  354       retValue = ZSuccess;
+//  355       break;
+//  356 
+//  357     case TP_SET_PERMIT_JOIN:
+//  358       if ( ZG_BUILD_RTR_TYPE && ZG_DEVICE_RTR_TYPE )
+//  359       {
+//  360         NLME_PermitJoiningRequest( (byte)param1 );
+//  361         retValue = ZSuccess;
+//  362       }
+//  363       else
+//  364       {
+//  365         retValue = ZFailure;
+//  366       }
+//  367       break;
+//  368 
+//  369   #if defined ( APP_TP2 )
+//  370     case TP_ADD_GROUP:
+//  371       retValue = TestProfileApp_SetGroup( srcEp, param1 );
+//  372       break;
+//  373 
+//  374     case TP_REMOVE_GROUP:
+//  375       retValue = TestProfileApp_RemoveGroup( srcEp, param1 );
+//  376       break;
+//  377 
+//  378     case TP_SEND_UPDATE_KEY:
+//  379       retValue = TestProfileApp_UpdateKey( srcEp, (uint8)param1, param2 );
+//  380       break;
+//  381 
+//  382     case TP_SEND_SWITCH_KEY:
+//  383       retValue = TestProfileApp_SwitchKey(  srcEp, (uint8)param1, param2 );
+//  384       break;
+//  385 
+//  386     case TP_SEND_BUFFERTEST_GROUP:
+//  387       retValue = TestProfileApp_SendBufferGroupReq( srcEp, (byte)param1, (byte)param2 );
+//  388       break;
+//  389 
+//  390     case TP_SEND_ROUTE_DISC_REQ:
+//  391       retValue = TestProfileApp_SendRouteDiscReq( srcEp, param1,
+//  392                                   HI_UINT16( param2 ), LO_UINT16( param2 ) );
+//  393       break;
+//  394 
+//  395     case TP_SEND_ROUTE_DISCOVERY:
+//  396       if ( ZG_BUILD_RTR_TYPE && ZG_DEVICE_RTR_TYPE )
+//  397       {
+//  398         retValue = TestProfileApp_SendRouteDiscovery( param1,
+//  399                                     HI_UINT16( param2 ), LO_UINT16( param2 ) );
+//  400       }
+//  401       break;
+//  402 
+//  403     case TP_SEND_NEW_ADDR:
+//  404       retValue = TestProfileApp_ChangeShortAddr( param1, LO_UINT16(param2) );
+//  405       break;
+//  406 
+//  407     case TP_SEND_NWK_UPDATE:
+//  408       /* Send out a Network Update command. */
+//  409       retValue = NLME_SendNetworkUpdate( NWK_BROADCAST_SHORTADDR, NWKUPDATE_PANID_UPDATE,
+//  410                                         _NIB.extendedPANID, _NIB.nwkUpdateId+1, param1 );
+//  411       break;
+//  412 
+//  413     case TP_NWK_ADDR_CONFLICT:
+//  414       retValue = NLME_SendNetworkStatus( NWK_BROADCAST_SHORTADDR_DEVZCZR, param1,
+//  415                                          NWKSTAT_ADDRESS_CONFLICT, FALSE );
+//  416       break;
+//  417 
+//  418  #if (ZG_BUILD_JOINING_TYPE)
+//  419     case TP_AK_SETUP_PARTNER:
+//  420       retValue = TestProfileApp_AppKeySetupPartner( srcEp, param1, param2 );
+//  421       break;
+//  422 
+//  423     case TP_AK_REQ_KEY:
+//  424       retValue = TestProfileApp_AppKeyRequest( srcEp, param1, param2 );
+//  425       break;
+//  426 
+//  427     case TP_AK_PARTNER_NWKADDR:
+//  428       retValue = TestProfileApp_SetPartnerNwkAddr( srcEp, param1, param2 );
+//  429       break;
+//  430 
+//  431     case TP_AK_PARTNER_EXTADDR7654:
+//  432        retValue = TestProfileApp_SetPartnerExtAddr7654( srcEp, param1, param2 );
+//  433       break;
+//  434 
+//  435     case TP_AK_PARTNER_EXTADDR3210:
+//  436       retValue = TestProfileApp_SetPartnerExtAddr3210( srcEp, param1, param2 );
+//  437       break;
+//  438 
+//  439     case TP_AK_PARTNER_SET:
+//  440       retValue = TestProfileApp_SetPartner( srcEp, param1, param2 );
+//  441       break;
+//  442 #endif /* ZG_BUILD_JOINING_TYPE */
+//  443 
+//  444 #if (ZG_BUILD_COORDINATOR_TYPE)
+//  445     case TP_AK_TYPE_SET:
+//  446       retValue = TestProfileApp_AppKeyTypeSet( srcEp, param1, param2 );
+//  447       break;
+//  448 #endif /* ZG_BUILD_COORDINATOR_TYPE */
+//  449 
+//  450 #if defined ( ZIGBEE_FRAGMENTATION )
+//  451     case TP_FRAG_SKIP_BLOCK:
+//  452       retValue = TestProfileApp_FragSkipBlock( (uint8)param1 );
+//  453       break;
+//  454 #endif
+//  455 
+//  456     case TP_APS_REMOVE:
+//  457       retValue = TestProfileApp_APSRemove( param1, param2 );
+//  458       break;
+//  459 #endif // APP_TP2
+//  460 
+//  461 #endif  // APP_TP || APP_TP2
+//  462 
+//  463 #if defined ( OSAL_TOTAL_MEM )
+//  464     case OSAL_MEM_STACK_HIGH_WATER:
+//  465     case OSAL_MEM_HEAP_HIGH_WATER:
+//  466       if ( app_cmd == OSAL_MEM_STACK_HIGH_WATER)
+//  467       {
+//  468         param1 = osal_stack_used();
+//  469       }
+//  470       else
+//  471       {
+//  472         param1 = osal_heap_high_water();
+//  473       }
+//  474 
+//  475       pData[0] = LO_UINT16( param1 );
+//  476       pData[1] = HI_UINT16( param1 );
+//  477 
+//  478       MT_BuildAndSendZToolResponse((MT_RPC_CMD_SRSP | (uint8)MT_RPC_SYS_APP), cmdId, 2, pData);
+//  479       return;
+//  480 #endif
+//  481 
+//  482 #if defined ( APP_DEBUG )
+//  483     case DEBUG_GET:
+//  484       DebugApp_SendQuery( param1 );
+//  485       retValue = ZSUCCESS;
+//  486       break;
+//  487 #endif
+//  488 
+//  489 #if defined ( APP_TP2 )
+//  490     case TP_SEND_BCAST_RSP:
+//  491       retValue = TestProfileApp_SendBcastRsp( srcEp, (byte)param1 );
+//  492       break;
+//  493 #endif
+//  494 
+//  495     default:
+//  496       break;
+//  497   }
+//  498 #endif // (APP_TGEN) || (NWK_TEST) || (APP_TP) || (APP_TP2) || (OSAL_TOTAL_MEM) || (APP_DEBUG)
+//  499 
+//  500   /* Build and send back the response */
+//  501   MT_BuildAndSendZToolResponse(((uint8)MT_RPC_CMD_SRSP | (uint8)MT_RPC_SYS_APP), cmdId, 1, &retValue);
+//  502 }
+//  503 
+//  504 #endif /* MT_APP_FUNC */
+//  505 
+//  506 /***************************************************************************************************
+//  507  ***************************************************************************************************/
+// 
+// 
+// 0 bytes of memory
+//
+//Errors: none
+//Warnings: none

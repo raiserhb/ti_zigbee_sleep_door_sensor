@@ -1,0 +1,964 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         05/Dec/2016  17:18:47 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\Smart Product\SOS\ZStack-CC2530-2.5. #
+#                          1a\Projects\zstack\HomeAutomation\SOSkey\Source\zc #
+#                          l_switch_control.c                                 #
+#    Command line       =  -f "D:\work space\Smart Product\SOS\ZStack-CC2530- #
+#                          2.5.1a\Projects\zstack\HomeAutomation\SOSkey\CC253 #
+#                          0DB\..\Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ    #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3              #
+#                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE    #
+#                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT             #
+#                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work      #
+#                          space\Smart Product\SOS\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SOSkey\CC2530DB\..\Tools #
+#                          \CC2530DB\f8wConfig.cfg" (-DZIGBEEPRO -DSECURE=1   #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x06108800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,0x6F, #
+#                          0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0           #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart    #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\Tools\CC2530DB\f8 #
+#                          wZCL.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT     #
+#                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF            #
+#                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_GE #
+#                          NERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GENER #
+#                          ATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GENERA #
+#                          TE_TIMEOUT=10 -DZCL_LOAD_CONTROL                   #
+#                          -DZCL_SIMPLE_METERING -DZCL_PRICING -DZCL_MESSAGE  #
+#                          -DZCL_TUNNELING -DZCL_TOU) -DZCL_DEVICE_MGMT       #
+#                          "D:\work space\Smart Product\SOS\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SOSkey\Source\z #
+#                          cl_switch_control.c" -lC "D:\work space\Smart      #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\EndDeviceEB\List\"   #
+#                          -lA "D:\work space\Smart                           #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\EndDeviceEB\List\"   #
+#                          --diag_suppress Pe001,Pa010 -o "D:\work            #
+#                          space\Smart Product\SOS\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SOSkey\CC2530DB\EndDevic #
+#                          eEB\Obj\" -e --debug --core=plain --dptr=16,1      #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "D:\work space\Smart Product\SOS\ZStack-CC2530- #
+#                          2.5.1a\Projects\zstack\HomeAutomation\SOSkey\CC253 #
+#                          0DB\" -I "D:\work space\Smart                      #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\Source\" -I       #
+#                          "D:\work space\Smart Product\SOS\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SOSkey\CC2530DB #
+#                          \..\..\Source\" -I "D:\work space\Smart            #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\ZMain\TI253 #
+#                          0DB\" -I "D:\work space\Smart                      #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\hal\include\" -I "D:\work space\Smart        #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\hal\target\CC2530EB\" -I "D:\work            #
+#                          space\Smart Product\SOS\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SOSkey\CC2530DB\..\..\.. #
+#                          \..\..\Components\mac\include\" -I "D:\work        #
+#                          space\Smart Product\SOS\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SOSkey\CC2530DB\..\..\.. #
+#                          \..\..\Components\mac\high_level\" -I "D:\work     #
+#                          space\Smart Product\SOS\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SOSkey\CC2530DB\..\..\.. #
+#                          \..\..\Components\mac\low_level\srf04\" -I         #
+#                          "D:\work space\Smart Product\SOS\ZStack-CC2530-2.5 #
+#                          .1a\Projects\zstack\HomeAutomation\SOSkey\CC2530DB #
+#                          \..\..\..\..\..\Components\mac\low_level\srf04\sin #
+#                          gle_chip\" -I "D:\work space\Smart                 #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\mt\" -I "D:\work space\Smart                 #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\osal\include\" -I "D:\work space\Smart       #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\services\saddr\" -I "D:\work space\Smart     #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\services\sdata\" -I "D:\work space\Smart     #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\af\" -I "D:\work space\Smart           #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\nwk\" -I "D:\work space\Smart          #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\sapi\" -I "D:\work space\Smart         #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\sec\" -I "D:\work space\Smart          #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\sys\" -I "D:\work space\Smart          #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\zcl\" -I "D:\work space\Smart          #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\stack\zdo\" -I "D:\work space\Smart          #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\zmac\" -I "D:\work space\Smart               #
+#                          Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\H #
+#                          omeAutomation\SOSkey\CC2530DB\..\..\..\..\..\Compo #
+#                          nents\zmac\f8w\" -Oh --require_prototypes          #
+#    List file          =  D:\work space\Smart Product\SOS\ZStack-CC2530-2.5. #
+#                          1a\Projects\zstack\HomeAutomation\SOSkey\CC2530DB\ #
+#                          EndDeviceEB\List\zcl_switch_control.lst            #
+#    Object file        =  D:\work space\Smart Product\SOS\ZStack-CC2530-2.5. #
+#                          1a\Projects\zstack\HomeAutomation\SOSkey\CC2530DB\ #
+#                          EndDeviceEB\Obj\zcl_switch_control.r51             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\work space\Smart Product\SOS\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SOSkey\Source\zcl_switch_control.c
+      1          #include "zcl_switch_control.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x89
+   \   unsigned char volatile __sfr P0IFG
+   \                     P0IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8b
+   \   unsigned char volatile __sfr P2IFG
+   \                     P2IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8c
+   \   unsigned char volatile __sfr PICTL
+   \                     PICTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8f
+   \   unsigned char volatile __sfr P0INP
+   \                     P0INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xab
+   \   unsigned char volatile __sfr P0IEN
+   \                     P0IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xac
+   \   unsigned char volatile __sfr P2IEN
+   \                     P2IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb8
+   \   union <unnamed> volatile __sfr _A_IEN1
+   \                     _A_IEN1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc0
+   \   union <unnamed> volatile __sfr _A_IRCON
+   \                     _A_IRCON:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr P2INP
+   \                     P2INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+      2          #include "zcl_OnOffSwitch.h"
+      3          #include "zcl.h"
+      4          #include "ZDObject.h"
+      5          #include "zcl_device_info.h"
+      6          
+      7          extern byte zclOnOffSwitch_TaskID;
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      8          static afAddrType_t zcl_Coord_nwkAddr;
+   \                     zcl_Coord_nwkAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      9          static uint8 zcl_SeqNum = 0;
+   \                     zcl_SeqNum:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     10          static uint8 zcl_factoryReset = 0;
+   \                     zcl_factoryReset:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     11          uint8 zclOnOffSwitch0_OnOff_temp = 3;
+   \                     zclOnOffSwitch0_OnOff_temp:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclOnOffSwitch0_OnOff_temp>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     12          extern uint8 zcl_Led_Blink;
+     13          /*
+     14          input   LED     SWITCH
+     15          P0_6 -> P1_0 -> P0_0
+     16          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     17          void zclSwitchControlInit(void)
+   \                     zclSwitchControlInit:
+     18          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     19            zclRESETInit();
+   \   000004                ; Setup parameters for call to function zclRESETInit
+   \   000004   12....       LCALL   ??zclRESETInit?relay
+     20            P0SEL &= ~BV(6); //RED
+   \   000007   53F3BF       ANL     0xf3,#0xbf
+     21            P0DIR |= BV(6);
+   \   00000A   43FD40       ORL     0xfd,#0x40
+     22            //P1INP &= ~BV(0);
+     23            
+     24            LED_RED_ON();
+   \   00000D   C286         CLR     0x80.6
+     25            
+     26            ///end init for relay control////////
+     27            osal_start_timerEx(zclOnOffSwitch_TaskID, 
+     28                               ZCL_DEVICE_INIT_DONE_EVENT,
+     29                               3000);
+   \   00000F                ; Setup parameters for call to function osal_start_timerEx
+   \   00000F   7CB8         MOV     R4,#-0x48
+   \   000011   7D0B         MOV     R5,#0xb
+   \   000013   7A08         MOV     R2,#0x8
+   \   000015   7B00         MOV     R3,#0x0
+   \   000017   90....       MOV     DPTR,#zclOnOffSwitch_TaskID
+   \   00001A   E0           MOVX    A,@DPTR
+   \   00001B   F9           MOV     R1,A
+   \   00001C   12....       LCALL   ??osal_start_timerEx?relay
+     30            
+     31            zcl_Coord_nwkAddr.addrMode = afAddr16Bit;
+   \   00001F   90....       MOV     DPTR,#zcl_Coord_nwkAddr + 8
+   \   000022   7402         MOV     A,#0x2
+   \   000024   F0           MOVX    @DPTR,A
+     32            zcl_Coord_nwkAddr.addr.shortAddr = 0x0000;
+   \   000025   90....       MOV     DPTR,#zcl_Coord_nwkAddr
+   \   000028   E4           CLR     A
+   \   000029   F0           MOVX    @DPTR,A
+   \   00002A   A3           INC     DPTR
+   \   00002B   F0           MOVX    @DPTR,A
+     33            zcl_Coord_nwkAddr.endPoint = 0xF0;
+   \   00002C   90....       MOV     DPTR,#zcl_Coord_nwkAddr + 9
+   \   00002F   74F0         MOV     A,#-0x10
+   \   000031   F0           MOVX    @DPTR,A
+     34          }
+   \   000032                REQUIRE ?Subroutine1
+   \   000032                REQUIRE P0SEL
+   \   000032                REQUIRE P0DIR
+   \   000032                REQUIRE _A_P0
+   \   000032                ; // Fall through to label ?Subroutine1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+     35          /*
+     36          input   LED     SWITCH
+     37          P0_6 -> P1_0 -> P0_0
+     38          */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     39          void zclSwitchControlTouchPanelEnable(void)
+   \                     zclSwitchControlTouchPanelEnable:
+     40          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     41            P0SEL &= ~BV(0);
+   \   000000   53F3FE       ANL     0xf3,#0xfe
+     42            P0DIR &= ~BV(0);
+   \   000003   53FDFE       ANL     0xfd,#0xfe
+     43            P0INP &= ~BV(0);
+   \   000006   538FFE       ANL     0x8f,#0xfe
+     44            P0IEN |= BV(0);
+   \   000009   43AB01       ORL     0xab,#0x1
+     45            P2INP &= ~BV(5);//p0 pull-up  
+   \   00000C   53F7DF       ANL     0xf7,#0xdf
+     46            
+     47            PICTL |= (0x1 << 0); //P0 down touch
+   \   00000F   438C01       ORL     0x8c,#0x1
+     48            IEN1 |= (0x1 << 5);//p0 port
+   \   000012                REQUIRE ?Subroutine0
+   \   000012                REQUIRE P0SEL
+   \   000012                REQUIRE P0DIR
+   \   000012                REQUIRE P0INP
+   \   000012                REQUIRE P0IEN
+   \   000012                REQUIRE P2INP
+   \   000012                REQUIRE PICTL
+   \   000012                REQUIRE _A_IEN1
+   \   000012                REQUIRE P0IFG
+   \   000012                REQUIRE _A_IRCON
+   \   000012                ; // Fall through to label ?Subroutine0
+     49            
+     50            P0IFG = 0;
+     51            P0IF = 0; 
+     52            //P0_4 = 0;
+     53          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D2BD         SETB    0xb8.5
+   \   000002   758900       MOV     0x89,#0x0
+   \   000005   C2C5         CLR     0xc0.5
+   \   000007   02....       LJMP    ?BRET
+     54          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     55          void zclRESETInit(void)
+   \                     zclRESETInit:
+     56          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     57            P0SEL &= ~BV(7);
+   \   000000   53F37F       ANL     0xf3,#0x7f
+     58            P0DIR &= ~BV(7);
+   \   000003   53FD7F       ANL     0xfd,#0x7f
+     59            P0INP &= ~BV(7);
+   \   000006   538F7F       ANL     0x8f,#0x7f
+     60            P0IEN |= BV(7);
+   \   000009   43AB80       ORL     0xab,#0x80
+     61            P2INP &= ~BV(5);//p0 pull-up  
+   \   00000C   53F7DF       ANL     0xf7,#0xdf
+     62            
+     63            PICTL |= (0x1 << 7); //P0 down touch
+   \   00000F   438C80       ORL     0x8c,#0x80
+     64            IEN1 |= (0x1 << 5);//p0 port
+   \   000012   80..         SJMP    ?Subroutine0
+   \   000014                REQUIRE P0SEL
+   \   000014                REQUIRE P0DIR
+   \   000014                REQUIRE P0INP
+   \   000014                REQUIRE P0IEN
+   \   000014                REQUIRE P2INP
+   \   000014                REQUIRE PICTL
+   \   000014                REQUIRE _A_IEN1
+   \   000014                REQUIRE P0IFG
+   \   000014                REQUIRE _A_IRCON
+     65            
+     66            P0IFG = 0;
+     67            P0IF = 0; 
+     68          }
+     69          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     70          void zclSwitchReportEvent(uint16 endpoint, uint8 *zclOnOffSwitch_OnOff)
+   \                     zclSwitchReportEvent:
+     71          {
+   \   000000   74F2         MOV     A,#-0xe
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 14
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   EC           MOV     A,R4
+   \   000008   FE           MOV     R6,A
+   \   000009   ED           MOV     A,R5
+   \   00000A   FF           MOV     R7,A
+     72            zclReportCmd_t *pReportCmd;
+     73          
+     74            pReportCmd = osal_mem_alloc( sizeof(zclReportCmd_t) + sizeof(zclReport_t) );
+   \   00000B                ; Setup parameters for call to function osal_mem_alloc
+   \   00000B   7A06         MOV     R2,#0x6
+   \   00000D   7B00         MOV     R3,#0x0
+   \   00000F   12....       LCALL   ??osal_mem_alloc?relay
+   \   000012   8A..         MOV     ?V0 + 2,R2
+   \   000014   8B..         MOV     ?V0 + 3,R3
+     75            if ( pReportCmd != NULL )
+   \   000016   EA           MOV     A,R2
+   \   000017   45..         ORL     A,?V0 + 3
+   \   000019   6055         JZ      ??zclSwitchReportEvent_0
+     76            {
+     77              pReportCmd->numAttr = 1;
+   \   00001B   8A82         MOV     DPL,R2
+   \   00001D   8B83         MOV     DPH,R3
+   \   00001F   7401         MOV     A,#0x1
+   \   000021   F0           MOVX    @DPTR,A
+     78              pReportCmd->attrList[0].attrID = ATTRID_ON_OFF;
+   \   000022   A3           INC     DPTR
+   \   000023   E4           CLR     A
+   \   000024   F0           MOVX    @DPTR,A
+   \   000025   A3           INC     DPTR
+   \   000026   12....       LCALL   ?Subroutine4 & 0xFFFF
+     79              pReportCmd->attrList[0].dataType = ZCL_DATATYPE_UINT8;
+   \                     ??CrossCallReturnLabel_2:
+   \   000029   7420         MOV     A,#0x20
+   \   00002B   12....       LCALL   ?Subroutine4 & 0xFFFF
+     80              pReportCmd->attrList[0].attrData = (void *)(zclOnOffSwitch_OnOff);
+   \                     ??CrossCallReturnLabel_3:
+   \   00002E   A3           INC     DPTR
+   \   00002F   EE           MOV     A,R6
+   \   000030   F0           MOVX    @DPTR,A
+   \   000031   A3           INC     DPTR
+   \   000032   EF           MOV     A,R7
+   \   000033   F0           MOVX    @DPTR,A
+     81          
+     82              zcl_SendReportCmd( endpoint, 
+     83                                &zcl_Coord_nwkAddr,
+     84                                 ZCL_CLUSTER_ID_GEN_ON_OFF,
+     85                                 pReportCmd, ZCL_FRAME_SERVER_CLIENT_DIR, TRUE, 
+     86                                 zcl_SeqNum++ );
+   \   000034   90....       MOV     DPTR,#zcl_SeqNum
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   F8           MOV     R0,A
+   \   000039   7401         MOV     A,#0x1
+   \   00003B   28           ADD     A,R0
+   \   00003C   F0           MOVX    @DPTR,A
+   \   00003D                ; Setup parameters for call to function zcl_SendReportCmd
+   \   00003D   E8           MOV     A,R0
+   \   00003E   F5..         MOV     ?V0 + 4,A
+   \   000040   78..         MOV     R0,#?V0 + 4
+   \   000042   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000045   75..01       MOV     ?V0 + 4,#0x1
+   \   000048   78..         MOV     R0,#?V0 + 4
+   \   00004A   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   00004D   78..         MOV     R0,#?V0 + 4
+   \   00004F   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000052   78..         MOV     R0,#?V0 + 2
+   \   000054   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000057   7C06         MOV     R4,#0x6
+   \   000059   7D00         MOV     R5,#0x0
+   \   00005B   7A..         MOV     R2,#zcl_Coord_nwkAddr & 0xff
+   \   00005D   7B..         MOV     R3,#(zcl_Coord_nwkAddr >> 8) & 0xff
+   \   00005F   A9..         MOV     R1,?V0 + 0
+   \   000061   12....       LCALL   ??zcl_SendReportCmd?relay
+   \   000064   7405         MOV     A,#0x5
+   \   000066   12....       LCALL   ?DEALLOC_XSTACK8
+     87                 
+     88              osal_mem_free( pReportCmd );
+   \   000069                ; Setup parameters for call to function osal_mem_free
+   \   000069   AA..         MOV     R2,?V0 + 2
+   \   00006B   AB..         MOV     R3,?V0 + 3
+   \   00006D   12....       LCALL   ??osal_mem_free?relay
+     89            }
+     90          }
+   \                     ??zclSwitchReportEvent_0:
+   \   000070   7F06         MOV     R7,#0x6
+   \   000072   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   8A82         MOV     DPL,R2
+   \   000003   8B83         MOV     DPH,R3
+   \   000005   A3           INC     DPTR
+   \   000006   A3           INC     DPTR
+   \   000007   A3           INC     DPTR
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     91          void zclSwitch0TouchAble(void)
+   \                     zclSwitch0TouchAble:
+     92          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     93            P0IFG = 0;
+   \   000000   758900       MOV     0x89,#0x0
+     94            P0IF = 0;
+   \   000003   C2C5         CLR     0xc0.5
+     95            P0IEN |= BV(0);
+   \   000005   43AB01       ORL     0xab,#0x1
+     96            P0IEN |= BV(7);
+   \   000008   43AB80       ORL     0xab,#0x80
+     97          }
+   \   00000B   02....       LJMP    ?BRET
+   \   00000E                REQUIRE P0IFG
+   \   00000E                REQUIRE _A_IRCON
+   \   00000E                REQUIRE P0IEN
+     98          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     99          void zclSOSKeyDown()
+   \                     zclSOSKeyDown:
+    100          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 1
+   \   000005   74FF         MOV     A,#-0x1
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    101            uint8 buf[1] = {1};
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#(`?<Constant {1}>` >> 8) & 0xff
+   \   000017   7582..       MOV     DPL,#`?<Constant {1}>` & 0xff
+   \   00001A   7401         MOV     A,#0x1
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    102              zcl_SendCommand(ONOFFSWITCH0_ENDPOINT, &zcl_Coord_nwkAddr,ZCL_CLUSTER_ID_GEN_ON_OFF,0x00, TRUE, 
+    103                              ZCL_FRAME_SERVER_CLIENT_DIR, 1, 0, 1, 1, buf);
+   \   00001F                ; Setup parameters for call to function zcl_SendCommand
+   \   00001F   85..82       MOV     DPL,?XSP + 0
+   \   000022   85..83       MOV     DPH,?XSP + 1
+   \   000025   8582..       MOV     ?V0 + 0,DPL
+   \   000028   8583..       MOV     ?V0 + 1,DPH
+   \   00002B   78..         MOV     R0,#?V0 + 0
+   \   00002D   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000030   75..01       MOV     ?V0 + 0,#0x1
+   \   000033   75..00       MOV     ?V0 + 1,#0x0
+   \   000036   78..         MOV     R0,#?V0 + 0
+   \   000038   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00003B   78..         MOV     R0,#?V0 + 0
+   \   00003D   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000040   E4           CLR     A
+   \   000041   F5..         MOV     ?V0 + 0,A
+   \   000043   78..         MOV     R0,#?V0 + 0
+   \   000045   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000048   75..01       MOV     ?V0 + 0,#0x1
+   \   00004B   78..         MOV     R0,#?V0 + 0
+   \   00004D   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000050   78..         MOV     R0,#?V0 + 0
+   \   000052   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000055   78..         MOV     R0,#?V0 + 0
+   \   000057   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   00005A   75..00       MOV     ?V0 + 0,#0x0
+   \   00005D   78..         MOV     R0,#?V0 + 0
+   \   00005F   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000062   7C06         MOV     R4,#0x6
+   \   000064   7D00         MOV     R5,#0x0
+   \   000066   7A..         MOV     R2,#zcl_Coord_nwkAddr & 0xff
+   \   000068   7B..         MOV     R3,#(zcl_Coord_nwkAddr >> 8) & 0xff
+   \   00006A   7920         MOV     R1,#0x20
+   \   00006C   12....       LCALL   ??zcl_SendCommand?relay
+   \   00006F   740B         MOV     A,#0xb
+   \   000071   12....       LCALL   ?DEALLOC_XSTACK8
+    104            
+    105          }
+   \   000074   7401         MOV     A,#0x1
+   \   000076   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000079   7F02         MOV     R7,#0x2
+   \   00007B   02....       LJMP    ?BANKED_LEAVE_XDATA
+    106          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    107          void zclSwitch0TouchPanelEvent(void)
+   \                     zclSwitch0TouchPanelEvent:
+    108          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    109            if (P0_7 == 0 ) 
+   \   000004   A287         MOV     C,0x80.7
+   \   000006   90....       MOV     DPTR,#zcl_factoryReset
+   \   000009   4020         JC      ??zclSwitch0TouchPanelEvent_0
+    110            {
+    111               if (zcl_factoryReset > ZCL_FACTORY_RESET_TIMECOUNT) 
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   C3           CLR     C
+   \   00000D   9407         SUBB    A,#0x7
+   \   00000F   7CF4         MOV     R4,#-0xc
+   \   000011   7D01         MOV     R5,#0x1
+   \   000013   400B         JC      ??zclSwitch0TouchPanelEvent_1
+    112               {
+    113                 
+    114                   osal_start_timerEx(zclOnOffSwitch_TaskID, 
+    115                                      ZCL_DEVICE_RESET_EVENT,
+    116                                      ZCL_FACTORY_RESET_HINT);
+   \   000015                ; Setup parameters for call to function osal_start_timerEx
+   \   000015   7A00         MOV     R2,#0x0
+   \   000017   7B04         MOV     R3,#0x4
+   \   000019   12....       LCALL   ?Subroutine3 & 0xFFFF
+    117                   zcl_factoryReset = 0;
+    118          
+    119               }
+   \                     ??CrossCallReturnLabel_0:
+   \   00001C   E4           CLR     A
+   \                     ??zclSwitch0TouchPanelEvent_2:
+   \   00001D   F0           MOVX    @DPTR,A
+   \   00001E   8018         SJMP    ??zclSwitch0TouchPanelEvent_3
+    120               else
+    121               {
+    122                 osal_start_timerEx(zclOnOffSwitch_TaskID, 
+    123                                    ZCL_DEVICE_SWITCH_RESET_EVENT,
+    124                                    500);
+   \                     ??zclSwitch0TouchPanelEvent_1:
+   \   000020                ; Setup parameters for call to function osal_start_timerEx
+   \   000020   7A40         MOV     R2,#0x40
+   \   000022   7B00         MOV     R3,#0x0
+   \   000024   12....       LCALL   ?Subroutine3 & 0xFFFF
+    125                 zcl_factoryReset++;
+    126               }
+    127            } 
+   \                     ??CrossCallReturnLabel_1:
+   \   000027   E0           MOVX    A,@DPTR
+   \   000028   04           INC     A
+   \   000029   80F2         SJMP    ??zclSwitch0TouchPanelEvent_2
+    128            else 
+    129            {
+    130              //g_u8restFlag = 0;//3s事件重新使能
+    131              zcl_factoryReset = 0;
+   \                     ??zclSwitch0TouchPanelEvent_0:
+   \   00002B   E4           CLR     A
+   \   00002C   F0           MOVX    @DPTR,A
+    132              P0IFG = 0;
+   \   00002D   758900       MOV     0x89,#0x0
+    133              P0IF = 0;
+   \   000030   C2C5         CLR     0xc0.5
+    134              P0IEN |= BV(0);
+   \   000032   43AB01       ORL     0xab,#0x1
+    135              P0IEN |= BV(7);
+   \   000035   43AB80       ORL     0xab,#0x80
+    136              //P0IEN |= BV(5);
+    137            }
+    138            
+    139          }
+   \                     ??zclSwitch0TouchPanelEvent_3:
+   \   000038   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   00003B                REQUIRE _A_P0
+   \   00003B                REQUIRE P0IFG
+   \   00003B                REQUIRE _A_IRCON
+   \   00003B                REQUIRE P0IEN
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   90....       MOV     DPTR,#zclOnOffSwitch_TaskID
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   12....       LCALL   ??osal_start_timerEx?relay
+   \   000008   90....       MOV     DPTR,#zcl_factoryReset
+   \   00000B   22           RET
+    140          
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+    141          HAL_ISR_FUNCTION(zclSwitchControlPort0Isr, P0INT_VECTOR)
+   \                     zclSwitchControlPort0Isr:
+    142          {
+   \   000000   C0E0         PUSH    A
+   \   000002   74F2         MOV     A,#-0xe
+   \   000004   12....       LCALL   ?INTERRUPT_ENTER_XSP
+   \   000007                ; Saved register size: 15
+   \   000007                ; Auto size: 0
+    143            HAL_ENTER_ISR();
+   \   000007   A2AF         MOV     C,0xa8.7
+   \   000009   E4           CLR     A
+   \   00000A   33           RLC     A
+   \   00000B   FE           MOV     R6,A
+   \   00000C   D2AF         SETB    0xa8.7
+    144          
+    145            if (P0IFG & 0x01)  //P0_0   SOS
+   \   00000E   E589         MOV     A,0x89
+   \   000010   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000012   500C         JNC     ??zclSwitchControlPort0Isr_0
+    146            {
+    147              osal_start_timerEx(zclOnOffSwitch_TaskID, 
+    148                                 ZCL_DEVICE_SWITCH0_TOUCHPANEL_EVENT,
+    149                                 20);
+   \   000014                ; Setup parameters for call to function osal_start_timerEx
+   \   000014   7C14         MOV     R4,#0x14
+   \   000016   7D00         MOV     R5,#0x0
+   \   000018   7A10         MOV     R2,#0x10
+   \   00001A   12....       LCALL   ??Subroutine6_0
+    150              P0IEN &= ~BV(0);
+   \                     ??CrossCallReturnLabel_6:
+   \   00001D   53ABFE       ANL     0xab,#0xfe
+    151            }
+    152            if (P0IFG & 0x80)  //P0_7  RET
+   \                     ??zclSwitchControlPort0Isr_0:
+   \   000020   E589         MOV     A,0x89
+   \   000022   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000024   5006         JNC     ??zclSwitchControlPort0Isr_1
+    153            {
+    154              osal_start_timerEx(zclOnOffSwitch_TaskID, 
+    155                                 ZCL_DEVICE_SWITCH_RESET_EVENT,
+    156                                 80);
+   \   000026                ; Setup parameters for call to function osal_start_timerEx
+   \   000026   12....       LCALL   ?Subroutine5
+    157              P0IEN &= ~BV(7);
+   \                     ??CrossCallReturnLabel_4:
+   \   000029   53AB7F       ANL     0xab,#0x7f
+    158            }
+    159            
+    160            P0IFG = 0;
+   \                     ??zclSwitchControlPort0Isr_1:
+   \   00002C                REQUIRE ?Subroutine2
+   \   00002C                REQUIRE _A_IEN0
+   \   00002C                REQUIRE P0IFG
+   \   00002C                REQUIRE P0IEN
+   \   00002C                REQUIRE _A_IRCON
+   \   00002C                ; // Fall through to label ?Subroutine2
+    161            P0IF = 0;
+    162            
+    163            CLEAR_SLEEP_MODE();
+    164            HAL_EXIT_ISR();
+    165          }
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   758900       MOV     0x89,#0x0
+   \   000003   C2C5         CLR     0xc0.5
+   \   000005   75..00       MOV     halSleepPconValue,#0x0
+   \   000008   EE           MOV     A,R6
+   \   000009   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00000B   92AF         MOV     0xa8.7,C
+   \   00000D   7F01         MOV     R7,#0x1
+   \   00000F   02....       LJMP    ?INTERRUPT_LEAVE_XSP
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   7C50         MOV     R4,#0x50
+   \   000002   7D00         MOV     R5,#0x0
+   \   000004   7A40         MOV     R2,#0x40
+   \   000006                REQUIRE ??Subroutine6_0
+   \   000006                ; // Fall through to label ??Subroutine6_0
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+   \                     ??Subroutine6_0:
+   \   000000   7B00         MOV     R3,#0x0
+   \   000002   90....       MOV     DPTR,#zclOnOffSwitch_TaskID
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   F9           MOV     R1,A
+   \   000007   12....       LCALL   ??osal_start_timerEx?relay
+   \   00000A   22           RET
+    166          
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+    167          HAL_ISR_FUNCTION(zclSwitchControlPort2Isr, P2INT_VECTOR)
+   \                     zclSwitchControlPort2Isr:
+    168          {
+   \   000000   C0E0         PUSH    A
+   \   000002   74F2         MOV     A,#-0xe
+   \   000004   12....       LCALL   ?INTERRUPT_ENTER_XSP
+   \   000007                ; Saved register size: 15
+   \   000007                ; Auto size: 0
+    169            HAL_ENTER_ISR();
+   \   000007   A2AF         MOV     C,0xa8.7
+   \   000009   E4           CLR     A
+   \   00000A   33           RLC     A
+   \   00000B   FE           MOV     R6,A
+   \   00000C   D2AF         SETB    0xa8.7
+    170          
+    171            if (P2IFG & 0x01) //P2_0
+   \   00000E   E58B         MOV     A,0x8b
+   \   000010   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000012   5006         JNC     ??zclSwitchControlPort2Isr_0
+    172            {
+    173              osal_start_timerEx(zclOnOffSwitch_TaskID, 
+    174                                 ZCL_DEVICE_SWITCH_RESET_EVENT,
+    175                                 80);
+   \   000014                ; Setup parameters for call to function osal_start_timerEx
+   \   000014   12....       LCALL   ?Subroutine5
+    176              P2IEN &= ~BV(0);
+   \                     ??CrossCallReturnLabel_5:
+   \   000017   53ACFE       ANL     0xac,#0xfe
+    177            }
+    178          
+    179            P0IFG = 0;
+   \                     ??zclSwitchControlPort2Isr_0:
+   \   00001A   80..         SJMP    ?Subroutine2
+   \   00001C                REQUIRE _A_IEN0
+   \   00001C                REQUIRE P2IFG
+   \   00001C                REQUIRE P2IEN
+   \   00001C                REQUIRE P0IFG
+   \   00001C                REQUIRE _A_IRCON
+    180            P0IF = 0;
+    181            
+    182            CLEAR_SLEEP_MODE();
+    183            HAL_EXIT_ISR();
+    184          }
+
+   \                                 In  segment INTVEC, offset 0x33, root
+   \                     `??zclSwitchControlPort2Isr??INTVEC 51`:
+   \   000033   02....       LJMP       (zclSwitchControlPort2Isr)
+
+   \                                 In  segment INTVEC, offset 0x6b, root
+   \                     `??zclSwitchControlPort0Isr??INTVEC 107`:
+   \   00006B   02....       LJMP       (zclSwitchControlPort0Isr)
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclOnOffSwitch0_OnOff_temp>`:
+   \   000000   03           DB 3
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSwitchControlInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSwitchControlInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSwitchControlTouchPanelEnable?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSwitchControlTouchPanelEnable
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclRESETInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclRESETInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSwitchReportEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSwitchReportEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSwitch0TouchAble?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSwitch0TouchAble
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSOSKeyDown?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSOSKeyDown
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSwitch0TouchPanelEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSwitch0TouchPanelEvent
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {1}>`:
+   \   000000   01           DB 1
+
+   Maximum stack usage in bytes:
+
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     zclRESETInit                       0      0      0
+     zclSOSKeyDown                      2      0     22
+       -> zcl_SendCommand               0      0     44
+     zclSwitch0TouchAble                0      0      0
+     zclSwitch0TouchPanelEvent          2      0      0
+       -> osal_start_timerEx            4      0      0
+       -> osal_start_timerEx            4      0      0
+     zclSwitchControlInit               2      0      0
+       -> zclRESETInit                  4      0      0
+       -> osal_start_timerEx            4      0      0
+     zclSwitchControlPort0Isr          15      0      0
+       -> osal_start_timerEx           30      0      0
+       -> osal_start_timerEx           30      0      0
+     zclSwitchControlPort2Isr          15      0      0
+       -> osal_start_timerEx           30      0      0
+     zclSwitchControlTouchPanelEnable
+                                        0      0      0
+     zclSwitchReportEvent               0      0     19
+       -> osal_mem_alloc                0      0     28
+       -> zcl_SendReportCmd             0      0     38
+       -> osal_mem_free                 0      0     28
+
+
+   Segment part sizes:
+
+     Function/Label                                Bytes
+     --------------                                -----
+     _A_P0                                            1
+     P0IFG                                            1
+     P2IFG                                            1
+     PICTL                                            1
+     P0INP                                            1
+     _A_IEN0                                          1
+     P0IEN                                            1
+     P2IEN                                            1
+     _A_IEN1                                          1
+     _A_IRCON                                         1
+     P0SEL                                            1
+     P2INP                                            1
+     P0DIR                                            1
+     zcl_Coord_nwkAddr                               12
+     zcl_SeqNum                                       1
+     zcl_factoryReset                                 1
+     zclOnOffSwitch0_OnOff_temp                       1
+     zclSwitchControlInit                            50
+     ?Subroutine1                                     7
+     zclSwitchControlTouchPanelEnable
+                                                     18
+     ?Subroutine0                                    10
+     zclRESETInit                                    20
+     zclSwitchReportEvent                           117
+     ?Subroutine4                                     9
+     zclSwitch0TouchAble                             14
+     zclSOSKeyDown                                  126
+     zclSwitch0TouchPanelEvent                       59
+     ?Subroutine3                                    12
+     zclSwitchControlPort0Isr                        44
+     ?Subroutine2                                    18
+     ?Subroutine5                                     6
+     ??Subroutine6_0                                 11
+     zclSwitchControlPort2Isr                        28
+     ??zclSwitchControlPort2Isr??INTVEC 51            3
+     ??zclSwitchControlPort0Isr??INTVEC 107           3
+     ?<Initializer for zclOnOffSwitch0_OnOff_temp>    1
+     ??zclSwitchControlInit?relay                     6
+     ??zclSwitchControlTouchPanelEnable?relay         6
+     ??zclRESETInit?relay                             6
+     ??zclSwitchReportEvent?relay                     6
+     ??zclSwitch0TouchAble?relay                      6
+     ??zclSOSKeyDown?relay                            6
+     ??zclSwitch0TouchPanelEvent?relay                6
+     ?<Constant {1}>                                  1
+
+ 
+ 442 bytes in segment BANKED_CODE
+  42 bytes in segment BANK_RELAYS
+   6 bytes in segment INTVEC
+ 107 bytes in segment NEAR_CODE
+  13 bytes in segment SFR_AN
+   1 byte  in segment XDATA_I
+   1 byte  in segment XDATA_ID
+   1 byte  in segment XDATA_ROM_C
+  14 bytes in segment XDATA_Z
+ 
+ 592 bytes of CODE  memory (+  6 bytes shared)
+   1 byte  of CONST memory
+   0 bytes of DATA  memory (+ 13 bytes shared)
+  15 bytes of XDATA memory
+
+Errors: none
+Warnings: none

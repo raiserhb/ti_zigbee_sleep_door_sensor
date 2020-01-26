@@ -1,0 +1,1141 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         08/Aug/2017  09:57:16 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\Source\zcl_device_info.c         #
+#    Command line       =  -f "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\To #
+#                          ols\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3         #
+#                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3              #
+#                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE    #
+#                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT             #
+#                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work      #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wCo #
+#                          nfig.cfg" (-DZIGBEEPRO -DSECURE=1                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x06108800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4                        #
+#                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,0x6F, #
+#                          0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,0x74}      #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0           #
+#                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0        #
+#                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart    #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8wZC #
+#                          L.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT        #
+#                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF            #
+#                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_GE #
+#                          NERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GENER #
+#                          ATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GENERA #
+#                          TE_TIMEOUT=10 -DZCL_LOAD_CONTROL                   #
+#                          -DZCL_SIMPLE_METERING -DZCL_PRICING -DZCL_MESSAGE  #
+#                          -DZCL_TUNNELING -DZCL_TOU) -DZCL_DEVICE_MGMT       #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\Source\zcl_device_info.c" -lC   #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\EndDeviceEB\List\"     #
+#                          -lA "D:\work space\Smart Product\Two               #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\EndDe #
+#                          viceEB\List\" --diag_suppress Pe001,Pa010 -o       #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\EndDeviceEB\Obj\" -e   #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "D:\work space\Smart Product\Two                #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\" -I  #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\Source\" -I         #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\Source\" -I      #
+#                          "D:\work space\Smart Product\Two YHY\Door\v1.03.0  #
+#                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu #
+#                          tomation\SmartDoor\CC2530DB\..\..\..\ZMain\TI2530D #
+#                          B\" -I "D:\work space\Smart Product\Two            #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\hal\include\" -I "D:\work     #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\hal\target\CC2530EB\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\include\" -I "D:\work space\Smart           #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\high_level\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\" -I "D:\work space\Smart   #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mac\low_level\srf04\single_chip\" -I "D:\work   #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\mt\" -I "D:\work space\Smart Product\Two        #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\osal\include\" -I "D:\work    #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\saddr\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\services\sdata\" -I "D:\work space\Smart        #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\af\" -I "D:\work space\Smart Product\Two  #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\stack\nwk\" -I "D:\work       #
+#                          space\Smart Product\Two YHY\Door\v1.03.0           #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sapi\" -I "D:\work space\Smart            #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sec\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\sys\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zcl\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\stack\zdo\" -I "D:\work space\Smart             #
+#                          Product\Two YHY\Door\v1.03.0                       #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\..\..\..\..\..\Componen #
+#                          ts\zmac\" -I "D:\work space\Smart Product\Two      #
+#                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proje #
+#                          cts\zstack\HomeAutomation\SmartDoor\CC2530DB\..\.. #
+#                          \..\..\..\Components\zmac\f8w\" -Oh                #
+#                          --require_prototypes                               #
+#    List file          =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\List\zcl_de #
+#                          vice_info.lst                                      #
+#    Object file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0   #
+#                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAut #
+#                          omation\SmartDoor\CC2530DB\EndDeviceEB\Obj\zcl_dev #
+#                          ice_info.r51                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\work space\Smart Product\Two YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SmartDoor\Source\zcl_device_info.c
+      1          #include "zcl.h"
+      2          #include "ZDObject.h"
+      3          #include "zcl_device_info.h"
+      4          #include "zcl_SmartDoor.h"
+      5          #include "OnBoard.h"
+
+   \                                 In  segment SFR_AN, at 0xb4
+   \   unsigned char volatile __sfr ADCCON1
+   \                     ADCCON1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb6
+   \   unsigned char volatile __sfr ADCCON3
+   \                     ADCCON3:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr ADCL
+   \                     ADCL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr ADCH
+   \                     ADCH:
+   \   000000                DS 1
+      6          #include "ZGlobals.h"
+      7          #include "ZComDef.h"
+      8          
+      9          #include "zcl_door_control.h"
+     10          
+     11          extern byte zclSmartDoor_TaskID;
+     12          #define ZCL_TASK_ID zclSmartDoor_TaskID
+     13          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     14          afAddrType_t zclIASZoneMotionIR_Coord_nwkAddr;
+   \                     zclIASZoneMotionIR_Coord_nwkAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     15          static uint16 gDeviceInfoSendStatus = 0;
+   \                     gDeviceInfoSendStatus:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     16          uint8 g_u8AdcIsBusy = 0;
+   \                     g_u8AdcIsBusy:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     17          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     18          uint8 softeVision[3] = {0x01,0x08,0x00};//软件版本号 v1.0.0
+   \                     softeVision:
+   \   000000                DS 3
+   \   000003                REQUIRE `?<Initializer for softeVision>`
+   \   000003                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     19          uint8 hardVision[2] = {0x00,0x00};//硬件北版本号
+   \                     hardVision:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     20          uint8 g_u8HeartBeatCount = 0;//心跳包计数
+   \                     g_u8HeartBeatCount:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     21          extern uint8 g_u8sendDeviceInfoFlag;
+     22          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     23          void zclDeviceInfoInit(void)
+   \                     zclDeviceInfoInit:
+     24          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     25            gDeviceInfoSendStatus = 0;
+   \   000004   90....       MOV     DPTR,#gDeviceInfoSendStatus
+   \   000007   E4           CLR     A
+   \   000008   F0           MOVX    @DPTR,A
+   \   000009   A3           INC     DPTR
+   \   00000A   F0           MOVX    @DPTR,A
+     26            zclIASZoneMotionIR_Coord_nwkAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   00000B   90....       MOV     DPTR,#zclIASZoneMotionIR_Coord_nwkAddr + 8
+   \   00000E   7402         MOV     A,#0x2
+   \   000010   F0           MOVX    @DPTR,A
+     27            zclIASZoneMotionIR_Coord_nwkAddr.addr.shortAddr = 0x0000;
+   \   000011   90....       MOV     DPTR,#zclIASZoneMotionIR_Coord_nwkAddr
+   \   000014   E4           CLR     A
+   \   000015   F0           MOVX    @DPTR,A
+   \   000016   A3           INC     DPTR
+   \   000017   F0           MOVX    @DPTR,A
+     28            zclIASZoneMotionIR_Coord_nwkAddr.endPoint = 0xF0;
+   \   000018   90....       MOV     DPTR,#zclIASZoneMotionIR_Coord_nwkAddr + 9
+   \   00001B   74F0         MOV     A,#-0x10
+   \   00001D   F0           MOVX    @DPTR,A
+     29          }
+   \   00001E   D083         POP     DPH
+   \   000020   D082         POP     DPL
+   \   000022   02....       LJMP    ?BRET
+     30          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     31          static void zclActiveEPRsp(void)
+   \                     zclActiveEPRsp:
+     32          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 73
+   \   000005   74B7         MOV     A,#-0x49
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+     33            uint8 pBuf[64];
+     34            byte cnt = 0;
+     35            zAddrType_t srcAddr;
+     36            
+     37            srcAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   00000A   7408         MOV     A,#0x8
+   \   00000C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00000F   7402         MOV     A,#0x2
+   \   000011   F0           MOVX    @DPTR,A
+     38            srcAddr.addr.shortAddr = 0x0000;
+   \   000012   85..82       MOV     DPL,?XSP + 0
+   \   000015   85..83       MOV     DPH,?XSP + 1
+   \   000018   E4           CLR     A
+   \   000019   F0           MOVX    @DPTR,A
+   \   00001A   A3           INC     DPTR
+   \   00001B   F0           MOVX    @DPTR,A
+     39            
+     40            cnt = afNumEndPoints() - 1;
+   \   00001C                ; Setup parameters for call to function afNumEndPoints
+   \   00001C   12....       LCALL   ??afNumEndPoints?relay
+   \   00001F   E9           MOV     A,R1
+   \   000020   FE           MOV     R6,A
+     41            afEndPoints( (uint8 *)pBuf, true );
+   \   000021                ; Setup parameters for call to function afEndPoints
+   \   000021   7901         MOV     R1,#0x1
+   \   000023   7409         MOV     A,#0x9
+   \   000025   12....       LCALL   ?XSTACK_DISP0_8
+   \   000028   AA82         MOV     R2,DPL
+   \   00002A   AB83         MOV     R3,DPH
+   \   00002C   12....       LCALL   ??afEndPoints?relay
+     42            ZDP_ActiveEPRsp(0x0, &srcAddr, ZDP_SUCCESS,
+     43                            NLME_GetShortAddr(), 
+     44                            cnt, (uint8 *)pBuf, 0);
+   \   00002F                ; Setup parameters for call to function ZDP_EPRsp
+   \   00002F   75..00       MOV     ?V0 + 0,#0x0
+   \   000032   78..         MOV     R0,#?V0 + 0
+   \   000034   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000037   740A         MOV     A,#0xa
+   \   000039   12....       LCALL   ?XSTACK_DISP0_8
+   \   00003C   8582..       MOV     ?V0 + 0,DPL
+   \   00003F   8583..       MOV     ?V0 + 1,DPH
+   \   000042   78..         MOV     R0,#?V0 + 0
+   \   000044   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000047   74FF         MOV     A,#-0x1
+   \   000049   2E           ADD     A,R6
+   \   00004A   F5..         MOV     ?V0 + 0,A
+   \   00004C   78..         MOV     R0,#?V0 + 0
+   \   00004E   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000051                ; Setup parameters for call to function NLME_GetShortAddr
+   \   000051   12....       LCALL   ??NLME_GetShortAddr?relay
+   \   000054   8A..         MOV     ?V0 + 0,R2
+   \   000056   8B..         MOV     ?V0 + 1,R3
+   \   000058   78..         MOV     R0,#?V0 + 0
+   \   00005A   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00005D   75..00       MOV     ?V0 + 0,#0x0
+   \   000060   78..         MOV     R0,#?V0 + 0
+   \   000062   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000065   7407         MOV     A,#0x7
+   \   000067   12....       LCALL   ?XSTACK_DISP0_8
+   \   00006A   AC82         MOV     R4,DPL
+   \   00006C   AD83         MOV     R5,DPH
+   \   00006E   7900         MOV     R1,#0x0
+   \   000070   7A05         MOV     R2,#0x5
+   \   000072   7B80         MOV     R3,#-0x80
+   \   000074   12....       LCALL   ??ZDP_EPRsp?relay
+   \   000077   7407         MOV     A,#0x7
+   \   000079   12....       LCALL   ?DEALLOC_XSTACK8
+     45            
+     46            gDeviceInfoSendStatus++;
+   \   00007C   12....       LCALL   ?Subroutine2 & 0xFFFF
+     47            if(g_u8sendDeviceInfoFlag == 0)
+   \                     ??CrossCallReturnLabel_2:
+   \   00007F   7005         JNZ     ??zclActiveEPRsp_0
+     48            {
+     49              
+     50              osal_start_timerEx(ZCL_TASK_ID, 
+     51                                 ZCL_DEVICE_INFO_SEND_EVENT,
+     52                                 ZCL_DEVICE_SEND_INFO_TIME_1S);
+   \   000081                ; Setup parameters for call to function osal_rand
+   \   000081   12....       LCALL   ?Subroutine1 & 0xFFFF
+     53            }
+   \                     ??CrossCallReturnLabel_0:
+   \   000084   8008         SJMP    ??zclActiveEPRsp_1
+     54            else if(g_u8sendDeviceInfoFlag == 1)
+   \                     ??zclActiveEPRsp_0:
+   \   000086   6401         XRL     A,#0x1
+   \   000088   7007         JNZ     ??CrossCallReturnLabel_6
+     55            {
+     56              osal_start_timerEx(ZCL_TASK_ID, 
+     57                                 ZCL_DEVICE_INFO_SEND_EVENT,
+     58                                 ZCL_DEVICE_SEND_INFO_TIME_200MS);
+   \   00008A                ; Setup parameters for call to function osal_start_timerEx
+   \   00008A   7CC8         MOV     R4,#-0x38
+   \   00008C   7D00         MOV     R5,#0x0
+     59            }
+   \                     ??zclActiveEPRsp_1:
+   \   00008E   12....       LCALL   ?Subroutine4 & 0xFFFF
+     60          }
+   \                     ??CrossCallReturnLabel_6:
+   \   000091   7449         MOV     A,#0x49
+   \   000093   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   7A00         MOV     R2,#0x0
+   \   000002   7B01         MOV     R3,#0x1
+   \   000004                REQUIRE ??Subroutine5_0
+   \   000004                ; // Fall through to label ??Subroutine5_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine5_0:
+   \   000000   90....       MOV     DPTR,#zclSmartDoor_TaskID
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   12....       LCALL   ??osal_start_timerEx?relay
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   90....       MOV     DPTR,#gDeviceInfoSendStatus
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   2401         ADD     A,#0x1
+   \   000006   F0           MOVX    @DPTR,A
+   \   000007   A3           INC     DPTR
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   3400         ADDC    A,#0x0
+   \   00000B   F0           MOVX    @DPTR,A
+   \   00000C   90....       MOV     DPTR,#g_u8sendDeviceInfoFlag
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   12....       LCALL   ??osal_rand?relay
+   \   000003                ; Setup parameters for call to function osal_start_timerEx
+   \   000003                ; Setup parameters for call to function osal_start_timerEx
+   \   000003   EA           MOV     A,R2
+   \   000004   75F014       MOV     B,#0x14
+   \   000007   A4           MUL     AB
+   \   000008   24E8         ADD     A,#-0x18
+   \   00000A   FC           MOV     R4,A
+   \   00000B   E5F0         MOV     A,B
+   \   00000D   3403         ADDC    A,#0x3
+   \   00000F   FD           MOV     R5,A
+   \   000010   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000003                REQUIRE ??Subroutine6_0
+   \   000003                ; // Fall through to label ??Subroutine6_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine6_0:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     61          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     62          static void zclSimpleDescRsp(uint16 endpoint)
+   \                     zclSimpleDescRsp:
+     63          {
+   \   000000   74F2         MOV     A,#-0xe
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 14
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 2,R2
+     64            zdoIncomingMsg_t *imMsg;
+     65            uint16 nwkAddr = 0;
+     66            
+     67            nwkAddr = NLME_GetShortAddr();
+   \   000007                ; Setup parameters for call to function NLME_GetShortAddr
+   \   000007   12....       LCALL   ??NLME_GetShortAddr?relay
+   \   00000A   8A..         MOV     ?V0 + 0,R2
+   \   00000C   8B..         MOV     ?V0 + 1,R3
+     68            
+     69            imMsg = (zdoIncomingMsg_t *)osal_msg_allocate( sizeof( zdoIncomingMsg_t ) + 3 );
+   \   00000E                ; Setup parameters for call to function osal_msg_allocate
+   \   00000E   7A18         MOV     R2,#0x18
+   \   000010   7B00         MOV     R3,#0x0
+   \   000012   12....       LCALL   ??osal_msg_allocate?relay
+   \   000015   8A..         MOV     ?V0 + 4,R2
+   \   000017   8B..         MOV     ?V0 + 5,R3
+   \   000019   AE..         MOV     R6,?V0 + 4
+   \   00001B   AF..         MOV     R7,?V0 + 5
+     70            imMsg->srcAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   00001D   8E82         MOV     DPL,R6
+   \   00001F   8F83         MOV     DPH,R7
+   \   000021   A3           INC     DPTR
+   \   000022   A3           INC     DPTR
+   \   000023   A3           INC     DPTR
+   \   000024   A3           INC     DPTR
+   \   000025   A3           INC     DPTR
+   \   000026   A3           INC     DPTR
+   \   000027   A3           INC     DPTR
+   \   000028   A3           INC     DPTR
+   \   000029   A3           INC     DPTR
+   \   00002A   A3           INC     DPTR
+   \   00002B   7402         MOV     A,#0x2
+   \   00002D   F0           MOVX    @DPTR,A
+     71            imMsg->srcAddr.addr.shortAddr = 0x0000;
+   \   00002E   8E82         MOV     DPL,R6
+   \   000030   8F83         MOV     DPH,R7
+   \   000032   A3           INC     DPTR
+   \   000033   A3           INC     DPTR
+   \   000034   E4           CLR     A
+   \   000035   F0           MOVX    @DPTR,A
+   \   000036   A3           INC     DPTR
+   \   000037   F0           MOVX    @DPTR,A
+     72            imMsg->TransSeq = (uint8)0x00;
+   \   000038   EE           MOV     A,R6
+   \   000039   240F         ADD     A,#0xf
+   \   00003B   F582         MOV     DPL,A
+   \   00003D   EF           MOV     A,R7
+   \   00003E   3400         ADDC    A,#0x0
+   \   000040   F583         MOV     DPH,A
+   \   000042   E4           CLR     A
+   \   000043   F0           MOVX    @DPTR,A
+     73            imMsg->asdu = (byte*)(((byte*)imMsg) + sizeof( zdoIncomingMsg_t ));
+   \   000044   EE           MOV     A,R6
+   \   000045   2415         ADD     A,#0x15
+   \   000047   F8           MOV     R0,A
+   \   000048   EF           MOV     A,R7
+   \   000049   3400         ADDC    A,#0x0
+   \   00004B   F9           MOV     R1,A
+   \   00004C   EE           MOV     A,R6
+   \   00004D   2413         ADD     A,#0x13
+   \   00004F   FA           MOV     R2,A
+   \   000050   EF           MOV     A,R7
+   \   000051   3400         ADDC    A,#0x0
+   \   000053   FB           MOV     R3,A
+   \   000054   8A82         MOV     DPL,R2
+   \   000056   8B83         MOV     DPH,R3
+   \   000058   E8           MOV     A,R0
+   \   000059   F0           MOVX    @DPTR,A
+   \   00005A   A3           INC     DPTR
+   \   00005B   E9           MOV     A,R1
+   \   00005C   F0           MOVX    @DPTR,A
+     74            imMsg->asdu[0] = LO_UINT16( nwkAddr );
+   \   00005D   8882         MOV     DPL,R0
+   \   00005F   8983         MOV     DPH,R1
+   \   000061   E5..         MOV     A,?V0 + 0
+   \   000063   F0           MOVX    @DPTR,A
+     75            imMsg->asdu[1] = HI_UINT16( nwkAddr );
+   \   000064   E5..         MOV     A,?V0 + 1
+   \   000066   F5..         MOV     ?V0 + 0,A
+   \   000068   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   00006B   E5..         MOV     A,?V0 + 0
+   \   00006D   F0           MOVX    @DPTR,A
+     76            imMsg->asdu[2] = endpoint;
+   \   00006E   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   000071   A3           INC     DPTR
+   \   000072   E5..         MOV     A,?V0 + 2
+   \   000074   F0           MOVX    @DPTR,A
+     77            
+     78            ZDO_ProcessSimpleDescReq(imMsg);
+   \   000075                ; Setup parameters for call to function ZDO_ProcessSimpleDescReq
+   \   000075   EE           MOV     A,R6
+   \   000076   FA           MOV     R2,A
+   \   000077   EF           MOV     A,R7
+   \   000078   FB           MOV     R3,A
+   \   000079   12....       LCALL   ??ZDO_ProcessSimpleDescReq?relay
+     79            osal_msg_deallocate((uint8 *)imMsg);
+   \   00007C                ; Setup parameters for call to function osal_msg_deallocate
+   \   00007C   EE           MOV     A,R6
+   \   00007D   FA           MOV     R2,A
+   \   00007E   EF           MOV     A,R7
+   \   00007F   FB           MOV     R3,A
+   \   000080   12....       LCALL   ??osal_msg_deallocate?relay
+     80            
+     81            gDeviceInfoSendStatus++;
+   \   000083   12....       LCALL   ?Subroutine2 & 0xFFFF
+     82            if(g_u8sendDeviceInfoFlag == 0)
+   \                     ??CrossCallReturnLabel_3:
+   \   000086   7005         JNZ     ??zclSimpleDescRsp_0
+     83            {
+     84              osal_start_timerEx(ZCL_TASK_ID, 
+     85                                 ZCL_DEVICE_INFO_SEND_EVENT,
+     86                                 ZCL_DEVICE_SEND_INFO_TIME_1S);
+   \   000088                ; Setup parameters for call to function osal_rand
+   \   000088   12....       LCALL   ?Subroutine1 & 0xFFFF
+     87            }
+   \                     ??CrossCallReturnLabel_1:
+   \   00008B   8008         SJMP    ??zclSimpleDescRsp_1
+     88            else if(g_u8sendDeviceInfoFlag == 1)
+   \                     ??zclSimpleDescRsp_0:
+   \   00008D   6401         XRL     A,#0x1
+   \   00008F   7007         JNZ     ??CrossCallReturnLabel_7
+     89            {
+     90              osal_start_timerEx(ZCL_TASK_ID, 
+     91                                 ZCL_DEVICE_INFO_SEND_EVENT,
+     92                                 ZCL_DEVICE_SEND_INFO_TIME_200MS);
+   \   000091                ; Setup parameters for call to function osal_start_timerEx
+   \   000091   7CC8         MOV     R4,#-0x38
+   \   000093   7D00         MOV     R5,#0x0
+     93            }
+   \                     ??zclSimpleDescRsp_1:
+   \   000095   12....       LCALL   ?Subroutine4 & 0xFFFF
+     94          }
+   \                     ??CrossCallReturnLabel_7:
+   \   000098   7F06         MOV     R7,#0x6
+   \   00009A   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   8A82         MOV     DPL,R2
+   \   000002   8B83         MOV     DPH,R3
+   \   000004   E0           MOVX    A,@DPTR
+   \   000005   F8           MOV     R0,A
+   \   000006   A3           INC     DPTR
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   F583         MOV     DPH,A
+   \   00000A   8882         MOV     DPL,R0
+   \   00000C   A3           INC     DPTR
+   \   00000D   22           RET
+     95          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     96          static endPointDesc_t zclHeartbeatDesc = {
+   \                     zclHeartbeatDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE `?<Initializer for zclHeartbeatDesc>`
+   \   000006                REQUIRE __INIT_XDATA_I
+     97            ZCL_HEARTBEAT_ENDPOINT,
+     98            &ZCL_TASK_ID,
+     99            (SimpleDescriptionFormat_t *)&zclSmartDoor_SimpleDesc,
+    100            (afNetworkLatencyReq_t)0
+    101          };
+    102          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    103          static uint8 zclHeartbeatCounter = 0;
+   \                     zclHeartbeatCounter:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    104          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    105          afStatus_t zclSendHeartbeat(void)
+   \                     zclSendHeartbeat:
+    106          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 6
+   \   000005   74FA         MOV     A,#-0x6
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    107            afStatus_t stat;
+    108            uint8 SendDataBuf[6]={0,0,0,0,0,0};
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#(`?<Constant {0, 0, 0, 0, 0, 0}>` >> 8) & 0xff
+   \   000017   7582..       MOV     DPL,#`?<Constant {0, 0, 0, 0, 0, 0}>` & 0xff
+   \   00001A   7406         MOV     A,#0x6
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    109            
+    110            SendDataBuf[0] = DeviceAppBatteryDetect();
+   \   00001F                ; Setup parameters for call to function DeviceAppBatteryDetect
+   \   00001F   12....       LCALL   ??DeviceAppBatteryDetect?relay
+   \   000022   E9           MOV     A,R1
+   \   000023   85..82       MOV     DPL,?XSP + 0
+   \   000026   85..83       MOV     DPH,?XSP + 1
+   \   000029   F0           MOVX    @DPTR,A
+    111            SendDataBuf[1] = softeVision[0];
+   \   00002A   90....       MOV     DPTR,#softeVision
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   C0E0         PUSH    A
+   \   000030   7401         MOV     A,#0x1
+   \   000032   12....       LCALL   ?XSTACK_DISP0_8
+   \   000035   D0E0         POP     A
+   \   000037   F0           MOVX    @DPTR,A
+    112            SendDataBuf[2] = softeVision[1];
+   \   000038   90....       MOV     DPTR,#softeVision + 1
+   \   00003B   E0           MOVX    A,@DPTR
+   \   00003C   C0E0         PUSH    A
+   \   00003E   7402         MOV     A,#0x2
+   \   000040   12....       LCALL   ?XSTACK_DISP0_8
+   \   000043   D0E0         POP     A
+   \   000045   F0           MOVX    @DPTR,A
+    113            SendDataBuf[3] = softeVision[2];
+   \   000046   90....       MOV     DPTR,#softeVision + 2
+   \   000049   E0           MOVX    A,@DPTR
+   \   00004A   C0E0         PUSH    A
+   \   00004C   7403         MOV     A,#0x3
+   \   00004E   12....       LCALL   ?XSTACK_DISP0_8
+   \   000051   D0E0         POP     A
+   \   000053   F0           MOVX    @DPTR,A
+    114            SendDataBuf[4] = hardVision[0];
+   \   000054   90....       MOV     DPTR,#hardVision
+   \   000057   E0           MOVX    A,@DPTR
+   \   000058   C0E0         PUSH    A
+   \   00005A   7404         MOV     A,#0x4
+   \   00005C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00005F   D0E0         POP     A
+   \   000061   F0           MOVX    @DPTR,A
+    115            SendDataBuf[5] = hardVision[1];
+   \   000062   90....       MOV     DPTR,#hardVision + 1
+   \   000065   E0           MOVX    A,@DPTR
+   \   000066   C0E0         PUSH    A
+   \   000068   7405         MOV     A,#0x5
+   \   00006A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00006D   D0E0         POP     A
+   \   00006F   F0           MOVX    @DPTR,A
+    116            
+    117            stat = AF_DataRequest(&zclIASZoneMotionIR_Coord_nwkAddr, 
+    118                                  &zclHeartbeatDesc,
+    119                                  ZCL_HEARTBEAT_CLUSTERID,
+    120                                  sizeof(SendDataBuf),
+    121                                  SendDataBuf,
+    122                                  (uint8 *)&zclHeartbeatCounter,
+    123                                  0,
+    124                                  AF_DEFAULT_RADIUS);
+    125            return stat;
+   \   000070                ; Setup parameters for call to function AF_DataRequest
+   \   000070   75..1E       MOV     ?V0 + 0,#0x1e
+   \   000073   78..         MOV     R0,#?V0 + 0
+   \   000075   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   000078   75....       MOV     ?V0 + 0,#zclHeartbeatCounter & 0xff
+   \   00007B   75....       MOV     ?V0 + 1,#(zclHeartbeatCounter >> 8) & 0xff
+   \   00007E   78..         MOV     R0,#?V0 + 0
+   \   000080   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000083   7403         MOV     A,#0x3
+   \   000085   12....       LCALL   ?XSTACK_DISP0_8
+   \   000088   8582..       MOV     ?V0 + 0,DPL
+   \   00008B   8583..       MOV     ?V0 + 1,DPH
+   \   00008E   78..         MOV     R0,#?V0 + 0
+   \   000090   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000093   75..06       MOV     ?V0 + 0,#0x6
+   \   000096   75..00       MOV     ?V0 + 1,#0x0
+   \   000099   78..         MOV     R0,#?V0 + 0
+   \   00009B   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00009E   75..00       MOV     ?V0 + 0,#0x0
+   \   0000A1   75..FF       MOV     ?V0 + 1,#-0x1
+   \   0000A4   78..         MOV     R0,#?V0 + 0
+   \   0000A6   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   0000A9   7900         MOV     R1,#0x0
+   \   0000AB   7C..         MOV     R4,#zclHeartbeatDesc & 0xff
+   \   0000AD   7D..         MOV     R5,#(zclHeartbeatDesc >> 8) & 0xff
+   \   0000AF   7A..         MOV     R2,#zclIASZoneMotionIR_Coord_nwkAddr & 0xff
+   \   0000B1   7B..         MOV     R3,#(zclIASZoneMotionIR_Coord_nwkAddr >> 8) & 0xff
+   \   0000B3   12....       LCALL   ??AF_DataRequest?relay
+   \   0000B6   7409         MOV     A,#0x9
+   \   0000B8   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000BB   7406         MOV     A,#0x6
+   \   0000BD   80..         SJMP    ?Subroutine0
+    126          }
+    127          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    128          void zclSendDeviceInfo(void)
+   \                     zclSendDeviceInfo:
+    129          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    130            switch (gDeviceInfoSendStatus)
+   \   000005   90....       MOV     DPTR,#gDeviceInfoSendStatus
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   F5..         MOV     ?V0 + 0,A
+   \   00000B   A3           INC     DPTR
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   F5..         MOV     ?V0 + 1,A
+   \   00000F   78..         MOV     R0,#?V0 + 0
+   \   000011   12....       LCALL   ?US_SWITCH_DENSE
+   \                     `?<Jumptable for zclSendDeviceInfo>_0`:
+   \   000014   0000         DW        0
+   \   000016   01           DB        1
+   \   000017   ....         DW        ??zclSendDeviceInfo_0
+   \   000019   ....         DW        ??zclSendDeviceInfo_1
+   \   00001B   ....         DW        ??zclSendDeviceInfo_2
+    131            {
+    132            case 0:
+    133              zclActiveEPRsp();
+   \                     ??zclSendDeviceInfo_1:
+   \   00001D                ; Setup parameters for call to function zclActiveEPRsp
+   \   00001D   12....       LCALL   ??zclActiveEPRsp?relay
+    134              break;
+   \   000020   8032         SJMP    ??zclSendDeviceInfo_3
+    135            case 1:
+    136              zclSimpleDescRsp(SAMRTDOOR_ENDPOINT);
+   \                     ??zclSendDeviceInfo_2:
+   \   000022                ; Setup parameters for call to function zclSimpleDescRsp
+   \   000022   7A20         MOV     R2,#0x20
+   \   000024   7B00         MOV     R3,#0x0
+   \   000026   12....       LCALL   ??zclSimpleDescRsp?relay
+    137              break;
+   \   000029   8029         SJMP    ??zclSendDeviceInfo_3
+    138            default:
+    139              {
+    140                gDeviceInfoSendStatus = 0;
+   \                     ??zclSendDeviceInfo_0:
+   \   00002B   90....       MOV     DPTR,#gDeviceInfoSendStatus
+   \   00002E   E4           CLR     A
+   \   00002F   F0           MOVX    @DPTR,A
+   \   000030   A3           INC     DPTR
+   \   000031   F0           MOVX    @DPTR,A
+    141                
+    142                osal_start_timerEx(ZCL_TASK_ID, 
+    143                                   ZCL_DEVICE_HEARTBEAT_EVENT,
+    144                                   ZCL_HEARTBEAT_PERIOD);
+   \   000032                ; Setup parameters for call to function osal_rand
+   \   000032   12....       LCALL   ??osal_rand?relay
+   \   000035                ; Setup parameters for call to function osal_start_timerEx
+   \   000035   EA           MOV     A,R2
+   \   000036   75F01E       MOV     B,#0x1e
+   \   000039   A4           MUL     AB
+   \   00003A   2450         ADD     A,#0x50
+   \   00003C   FC           MOV     R4,A
+   \   00003D   E5F0         MOV     A,B
+   \   00003F   34C3         ADDC    A,#-0x3d
+   \   000041   FD           MOV     R5,A
+   \   000042   7A00         MOV     R2,#0x0
+   \   000044   7B02         MOV     R3,#0x2
+   \   000046   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+    145                
+    146                g_u8HeartBeatCount = 1;
+   \                     ??CrossCallReturnLabel_8:
+   \   000049   90....       MOV     DPTR,#g_u8HeartBeatCount
+   \   00004C   7401         MOV     A,#0x1
+   \   00004E   F0           MOVX    @DPTR,A
+    147                g_u8sendDeviceInfoFlag =0;//信息发送结束
+   \   00004F   90....       MOV     DPTR,#g_u8sendDeviceInfoFlag
+   \   000052   E4           CLR     A
+   \   000053   F0           MOVX    @DPTR,A
+    148              }
+    149              break;
+    150            }
+    151          }
+   \                     ??zclSendDeviceInfo_3:
+   \   000054   80..         SJMP    ??Subroutine6_0
+    152          
+    153          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    154          void zclFactoryReset(uint8 DataCleanFlag)
+   \                     zclFactoryReset:
+    155          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+    156            static uint8 hasDoReset = 0;
+    157            if (hasDoReset)
+   \   000007   90....       MOV     DPTR,#??hasDoReset
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   7010         JNZ     ??zclFactoryReset_0
+    158              return;
+    159            
+    160            hasDoReset = 1;
+   \   00000D   7401         MOV     A,#0x1
+   \   00000F   F0           MOVX    @DPTR,A
+    161            if(DataCleanFlag)
+   \   000010   EE           MOV     A,R6
+   \   000011   6007         JZ      ??zclFactoryReset_1
+    162            {
+    163              zgWriteStartupOptions(ZG_STARTUP_SET, ZCD_STARTOPT_DEFAULT_NETWORK_STATE);
+   \   000013                ; Setup parameters for call to function zgWriteStartupOptions
+   \   000013   7A02         MOV     R2,#0x2
+   \   000015   79FF         MOV     R1,#-0x1
+   \   000017   12....       LCALL   ??zgWriteStartupOptions?relay
+    164            }
+    165            SystemResetSoft();
+   \                     ??zclFactoryReset_1:
+   \   00001A                ; Setup parameters for call to function Onboard_soft_reset
+   \   00001A   12....       LCALL   Onboard_soft_reset & 0xFFFF
+    166          }
+   \                     ??zclFactoryReset_0:
+   \   00001D   7F01         MOV     R7,#0x1
+   \   00001F   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                     ??hasDoReset:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    167          
+    168          /**************************************************************************
+    169          *低电量检测低于2.6v报警
+    170          *****************************************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    171          uint8 DeviceAppBatteryDetect()
+   \                     DeviceAppBatteryDetect:
+    172          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    173            int16 value= 0,value1 = 0;
+    174            uint8 i = 0;
+    175            uint16 VddValue = 0;
+    176            uint8 u8BatterAlarmValue = 0;
+   \   000005   7900         MOV     R1,#0x0
+    177            if(g_u8AdcIsBusy == 0)
+   \   000007   90....       MOV     DPTR,#g_u8AdcIsBusy
+   \   00000A   E0           MOVX    A,@DPTR
+   \   00000B   7058         JNZ     ??DeviceAppBatteryDetect_0
+    178            {
+    179              g_u8AdcIsBusy = 1;
+    180              uint8 tmpADDCON3 = ADCCON3;
+   \   00000D   E5B6         MOV     A,0xb6
+   \   00000F   FE           MOV     R6,A
+    181              for(i = 0;i < 8;i++)
+   \   000010   7808         MOV     R0,#0x8
+    182              {
+    183                ADCCON3 = 0x0F;
+   \                     ??DeviceAppBatteryDetect_1:
+   \   000012   75B60F       MOV     0xb6,#0xf
+    184                while (!(ADCCON1 & 0x80));
+   \                     ??DeviceAppBatteryDetect_2:
+   \   000015   E5B4         MOV     A,0xb4
+   \   000017   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000019   50FA         JNC     ??DeviceAppBatteryDetect_2
+    185                value = (int8)(ADCH)<<8;
+   \   00001B   E5BB         MOV     A,0xbb
+   \   00001D   FA           MOV     R2,A
+    186                value1 = (int8)(ADCL);
+    187                value1+=value;
+   \   00001E   E5BA         MOV     A,0xba
+   \   000020   FC           MOV     R4,A
+   \   000021   33           RLC     A
+   \   000022   95E0         SUBB    A,0xE0 /* A   */
+   \   000024   FD           MOV     R5,A
+   \   000025   EA           MOV     A,R2
+   \   000026   FB           MOV     R3,A
+   \   000027   EC           MOV     A,R4
+   \   000028   2400         ADD     A,#0x0
+   \   00002A   F5..         MOV     ?V0 + 0,A
+   \   00002C   ED           MOV     A,R5
+   \   00002D   3B           ADDC    A,R3
+   \   00002E   F5..         MOV     ?V0 + 1,A
+    188                VddValue = value1;
+    189                VddValue += VddValue;
+    190              }
+   \   000030   18           DEC     R0
+   \   000031   E8           MOV     A,R0
+   \   000032   70DE         JNZ     ??DeviceAppBatteryDetect_1
+    191              
+    192              VddValue = VddValue>>3; 
+    193              ADCCON3 = tmpADDCON3;
+   \   000034   8EB6         MOV     0xb6,R6
+    194              VddValue = value1>>8;
+    195              VddValue = VddValue*115*3;
+    196              VddValue = VddValue>>7;
+    197              
+    198              if(VddValue < BETTERYALARMVALUE)
+   \   000036   7408         MOV     A,#0x8
+   \   000038   78..         MOV     R0,#?V0 + 0
+   \   00003A   12....       LCALL   ?SS_SHR
+   \   00003D   E5..         MOV     A,?V0 + 0
+   \   00003F   75F059       MOV     B,#0x59
+   \   000042   A4           MUL     AB
+   \   000043   C5..         XCH     A,?V0 + 0
+   \   000045   A8F0         MOV     R0,B
+   \   000047   28           ADD     A,R0
+   \   000048   F8           MOV     R0,A
+   \   000049   75F059       MOV     B,#0x59
+   \   00004C   E5..         MOV     A,?V0 + 1
+   \   00004E   A4           MUL     AB
+   \   00004F   28           ADD     A,R0
+   \   000050   F5..         MOV     ?V0 + 1,A
+   \   000052   7407         MOV     A,#0x7
+   \   000054   78..         MOV     R0,#?V0 + 0
+   \   000056   12....       LCALL   ?US_SHR
+   \   000059   C3           CLR     C
+   \   00005A   E5..         MOV     A,?V0 + 0
+   \   00005C   9404         SUBB    A,#0x4
+   \   00005E   E5..         MOV     A,?V0 + 1
+   \   000060   9401         SUBB    A,#0x1
+   \   000062   5001         JNC     ??DeviceAppBatteryDetect_0
+    199              {
+    200                u8BatterAlarmValue = 1;//报警
+   \   000064   09           INC     R1
+    201              }
+    202              else
+    203              {
+    204                u8BatterAlarmValue = 0;
+    205              }
+    206              g_u8AdcIsBusy = 0;
+    207            }
+    208            return u8BatterAlarmValue;
+   \                     ??DeviceAppBatteryDetect_0:
+   \   000065   02....       LJMP    ??Subroutine6_0 & 0xFFFF
+   \   000068                REQUIRE ADCCON3
+   \   000068                REQUIRE ADCCON1
+   \   000068                REQUIRE ADCH
+   \   000068                REQUIRE ADCL
+    209          }
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for softeVision>`:
+   \   000000   01           DB 1
+   \   000001   08           DB 8
+   \   000002   00           DB 0
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclHeartbeatDesc>`:
+   \   000000   EF           DB 239
+   \   000001   ....         DW zclSmartDoor_TaskID
+   \   000003   ....         DW zclSmartDoor_SimpleDesc
+   \   000005   00           DB 0
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclDeviceInfoInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclDeviceInfoInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclActiveEPRsp?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclActiveEPRsp
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSimpleDescRsp?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSimpleDescRsp
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSendHeartbeat?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSendHeartbeat
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclSendDeviceInfo?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclSendDeviceInfo
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??zclFactoryReset?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclFactoryReset
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??DeviceAppBatteryDetect?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    DeviceAppBatteryDetect
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {0, 0, 0, 0, 0, 0}>`:
+   \   000000   00           DB 0
+   \   000001   00           DB 0
+   \   000002   00           DB 0
+   \   000003   00           DB 0
+   \   000004   00           DB 0
+   \   000005   00           DB 0
+
+   Maximum stack usage in bytes:
+
+     Function                      ISTACK PSTACK XSTACK
+     --------                      ------ ------ ------
+     DeviceAppBatteryDetect            0      0     26
+     zclActiveEPRsp                    0      0    100
+       -> afNumEndPoints               0      0    166
+       -> afEndPoints                  0      0    166
+       -> NLME_GetShortAddr            0      0    174
+       -> ZDP_EPRsp                    0      0    180
+       -> osal_rand                    0      0    166
+       -> osal_start_timerEx           0      0    166
+       -> osal_start_timerEx           0      0    166
+     zclDeviceInfoInit                 2      0      0
+     zclFactoryReset                   0      0      9
+       -> zgWriteStartupOptions        0      0     18
+       -> Onboard_soft_reset           0      0     18
+     zclSendDeviceInfo                 0      0     10
+       -> zclActiveEPRsp               0      0     20
+       -> zclSimpleDescRsp             0      0     20
+       -> osal_rand                    0      0     20
+       -> osal_start_timerEx           0      0     20
+     zclSendHeartbeat                  2      0     25
+       -> DeviceAppBatteryDetect       0      0     32
+       -> AF_DataRequest               0      0     50
+     zclSimpleDescRsp                  1      0     24
+       -> NLME_GetShortAddr            0      0     28
+       -> osal_msg_allocate            0      0     28
+       -> ZDO_ProcessSimpleDescReq     0      0     28
+       -> osal_msg_deallocate          0      0     28
+       -> osal_rand                    0      0     28
+       -> osal_start_timerEx           0      0     28
+       -> osal_start_timerEx           0      0     28
+
+
+   Segment part sizes:
+
+     Function/Label                      Bytes
+     --------------                      -----
+     ADCCON1                                1
+     ADCCON3                                1
+     ADCL                                   1
+     ADCH                                   1
+     zclIASZoneMotionIR_Coord_nwkAddr
+                                           12
+     gDeviceInfoSendStatus                  2
+     g_u8AdcIsBusy                          1
+     softeVision                            3
+     hardVision                             2
+     g_u8HeartBeatCount                     1
+     zclDeviceInfoInit                     37
+     zclActiveEPRsp                       150
+     ?Subroutine4                           4
+     ??Subroutine5_0                        9
+     ?Subroutine2                          17
+     ?Subroutine1                          17
+     ?Subroutine0                           3
+     ??Subroutine6_0                        5
+     zclSimpleDescRsp                     157
+     ?Subroutine3                          14
+     zclHeartbeatDesc                       6
+     zclHeartbeatCounter                    1
+     zclSendHeartbeat                     191
+     zclSendDeviceInfo                     86
+     zclFactoryReset                       34
+     hasDoReset                             1
+     DeviceAppBatteryDetect               104
+     ?<Initializer for softeVision>         3
+     ?<Initializer for zclHeartbeatDesc>    6
+     ??zclDeviceInfoInit?relay              6
+     ??zclActiveEPRsp?relay                 6
+     ??zclSimpleDescRsp?relay               6
+     ??zclSendHeartbeat?relay               6
+     ??zclSendDeviceInfo?relay              6
+     ??zclFactoryReset?relay                6
+     ??DeviceAppBatteryDetect?relay         6
+     ?<Constant {0, 0, 0, 0, 0, 0}>         6
+
+ 
+ 828 bytes in segment BANKED_CODE
+  42 bytes in segment BANK_RELAYS
+   4 bytes in segment SFR_AN
+   9 bytes in segment XDATA_I
+   9 bytes in segment XDATA_ID
+   6 bytes in segment XDATA_ROM_C
+  20 bytes in segment XDATA_Z
+ 
+ 879 bytes of CODE  memory
+   6 bytes of CONST memory
+   0 bytes of DATA  memory (+ 4 bytes shared)
+  29 bytes of XDATA memory
+
+Errors: none
+Warnings: none

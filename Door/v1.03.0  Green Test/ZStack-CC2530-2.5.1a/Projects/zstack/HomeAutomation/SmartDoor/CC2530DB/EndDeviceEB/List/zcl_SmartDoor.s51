@@ -1,0 +1,4138 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        08/Aug/2017  09:57:14 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  D:\work space\Smart Product\Two YHY\Door\v1.03.0  /
+//                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeA /
+//                          utomation\SmartDoor\Source\zcl_SmartDoor.c        /
+//    Command line       =  -f "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          Tools\CC2530DB\f8wEndev.cfg" (-DCPU32MHZ          /
+//                          -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3        /
+//                          -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3             /
+//                          -DHAL_KEY=FALSE -DHAL_LED=FALSE -DHAL_LCD=FALSE   /
+//                          -DHAL_ADC=FALSE -DNV_RESTORE -DNV_INIT            /
+//                          -DPOWER_SAVING -DTC_LINKKEY_JOIN) -f "D:\work     /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8w /
+//                          Config.cfg" (-DZIGBEEPRO -DSECURE=1               /
+//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//                          -DDEFAULT_CHANLIST=0x06108800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          -DDEFAULT_KEY={0x58,0x69,0x6E,0x67,0x48,0x75,     /
+//                          0x6F,0x59,0x75,0x61,0x6E,0x53,0x6D,0x61,0x72,     /
+//                          0x74} -DMAC_MAX_FRAME_SIZE=116                    /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=0          /
+//                          -DQUEUED_POLL_RATE=0 -DRESPONSE_POLL_RATE=0       /
+//                          -DREJOIN_POLL_RATE=440) -f "D:\work space\Smart   /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\Tools\CC2530DB\f8w /
+//                          ZCL.cfg" (-DZCL_READ -DZCL_WRITE -DZCL_REPORT     /
+//                          -DZCL_BASIC -DZCL_IDENTIFY -DZCL_ON_OFF           /
+//                          -DZCL_KEY_ESTABLISH -DZCL_KEY_ESTABLISHMENT_KEY_G /
+//                          ENERATE_TIMEOUT=4 -DZCL_KEY_ESTABLISHMENT_MAC_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_KEY_ESTABLISHMENT_EKEY_GEN /
+//                          ERATE_TIMEOUT=10 -DZCL_LOAD_CONTROL               /
+//                          -DZCL_SIMPLE_METERING -DZCL_PRICING               /
+//                          -DZCL_MESSAGE -DZCL_TUNNELING -DZCL_TOU)          /
+//                          -DZCL_DEVICE_MGMT "D:\work space\Smart            /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\Source\zcl_SmartDoor.c" -lC    /
+//                          "D:\work space\Smart Product\Two                  /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\End /
+//                          DeviceEB\List\" -lA "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\EndDeviceEB\List\"    /
+//                          --diag_suppress Pe001,Pa010 -o "D:\work           /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\EndDeviceEB\Obj\" -e  /
+//                          --debug --core=plain --dptr=16,1                  /
+//                          --data_model=large --code_model=banked            /
+//                          --calling_convention=xdata_reentrant              /
+//                          --place_constants=data_rom --nr_virtual_regs 16   /
+//                          -I "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\"   /
+//                          -I "D:\work space\Smart Product\Two               /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          Source\" -I "D:\work space\Smart Product\Two      /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\Source\" -I "D:\work space\Smart Product\Two   /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\ZMain\TI2530DB\" -I "D:\work space\Smart    /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\hal\include\" -I "D:\work space\Smart        /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\hal\target\CC2530EB\" -I "D:\work            /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\include\" -I "D:\work space\Smart        /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\high_level\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\low_level\srf04\" -I "D:\work            /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\mac\low_level\srf04\single_chip\" -I         /
+//                          "D:\work space\Smart Product\Two                  /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\..\..\Components\mt\" -I "D:\work           /
+//                          space\Smart Product\Two YHY\Door\v1.03.0          /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\osal\include\" -I "D:\work space\Smart       /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\services\saddr\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\services\sdata\" -I "D:\work space\Smart     /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\af\" -I "D:\work space\Smart           /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\nwk\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sapi\" -I "D:\work space\Smart         /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sec\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\sys\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\zcl\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\stack\zdo\" -I "D:\work space\Smart          /
+//                          Product\Two YHY\Door\v1.03.0                      /
+//                          Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAu /
+//                          tomation\SmartDoor\CC2530DB\..\..\..\..\..\Compon /
+//                          ents\zmac\" -I "D:\work space\Smart Product\Two   /
+//                          YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Proj /
+//                          ects\zstack\HomeAutomation\SmartDoor\CC2530DB\..\ /
+//                          ..\..\..\..\Components\zmac\f8w\" -Oh             /
+//                          --require_prototypes                              /
+//    List file          =  D:\work space\Smart Product\Two YHY\Door\v1.03.0  /
+//                           Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeA /
+//                          utomation\SmartDoor\CC2530DB\EndDeviceEB\List\zcl /
+//                          _SmartDoor.s51                                    /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME zcl_SmartDoor
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?SC_DIV_MOD
+        EXTERN ?V0
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??AppDEviceJoinNwk?relay
+        FUNCTION ??AppDEviceJoinNwk?relay,0203H
+        PUBLIC ??AppDevNwkDiscCyCle?relay
+        FUNCTION ??AppDevNwkDiscCyCle?relay,0203H
+        FUNCTION ??zclSmartDoor0_OnOffCB?relay,0203H
+        FUNCTION ??zclSmartDoor_BasicResetCB?relay,0203H
+        FUNCTION ??zclSmartDoor_IdentifyCB?relay,0203H
+        FUNCTION ??zclSmartDoor_IdentifyQueryRspCB?relay,0203H
+        PUBLIC ??zclSmartDoor_Init?relay
+        FUNCTION ??zclSmartDoor_Init?relay,0203H
+        PUBLIC ??zclSmartDoor_event_loop?relay
+        FUNCTION ??zclSmartDoor_event_loop?relay,0203H
+        PUBLIC AppDEviceJoinNwk
+        FUNCTION AppDEviceJoinNwk,021203H
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 10, STACK
+        PUBLIC AppDEviceJoinNwkState
+        PUBLIC AppDevNwkDiscCyCle
+        FUNCTION AppDevNwkDiscCyCle,021203H
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC DeviceRehoinEventFlag
+        PUBWEAK P0IEN
+        PUBWEAK PICTL
+        PUBLIC ReJoinNetFlagInFlash
+        PUBWEAK _A_P0
+        PUBLIC g_RestCount
+        PUBLIC g_u8sendDeviceInfoFlag
+        PUBLIC u16_AppDeviceJoinNwkCycleTimeCount
+        PUBLIC u8_AppDEviceJoinNwkTimeComing
+        PUBLIC u8_ZDApp_StopJoiningCycleFlag
+        PUBLIC zclDevice_InitDone
+        PUBLIC zclDevice_JoinNetworkOk
+        PUBLIC zclDevice_NwkState
+        PUBLIC zclDevice_RejoinCounter
+        FUNCTION zclSmartDoor0_OnOffCB,0603H
+        ARGFRAME XSTACK, 0, STACK
+        FUNCTION zclSmartDoor_BasicResetCB,0603H
+        ARGFRAME XSTACK, 0, STACK
+        FUNCTION zclSmartDoor_IdentifyCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        FUNCTION zclSmartDoor_IdentifyQueryRspCB,0603H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC zclSmartDoor_Init
+        FUNCTION zclSmartDoor_Init,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        PUBLIC zclSmartDoor_TaskID
+        PUBLIC zclSmartDoor_event_loop
+        FUNCTION zclSmartDoor_event_loop,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        PUBLIC zcl_Flag
+        PUBLIC zcl_Led_Blink
+        PUBLIC zcl_onoffFlag
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-2
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B SameValue
+        CFI A SameValue
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 SameValue
+        CFI R1 SameValue
+        CFI R2 SameValue
+        CFI R3 SameValue
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT SameValue
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon1
+        
+zclHA_Init          SYMBOL "zclHA_Init"
+zclGeneral_RegisterCmdCallbacks SYMBOL "zclGeneral_RegisterCmdCallbacks"
+zcl_registerAttrList SYMBOL "zcl_registerAttrList"
+zcl_registerForMsg  SYMBOL "zcl_registerForMsg"
+RegisterForKeys     SYMBOL "RegisterForKeys"
+zclDeviceInfoInit   SYMBOL "zclDeviceInfoInit"
+zclSwitchControlInit SYMBOL "zclSwitchControlInit"
+osal_start_timerEx  SYMBOL "osal_start_timerEx"
+osal_msg_deallocate SYMBOL "osal_msg_deallocate"
+osal_msg_receive    SYMBOL "osal_msg_receive"
+osal_mem_free       SYMBOL "osal_mem_free"
+osal_rand           SYMBOL "osal_rand"
+osal_stop_timerEx   SYMBOL "osal_stop_timerEx"
+zclSwitchControlTouchPanelEnable SYMBOL "zclSwitchControlTouchPanelEnable"
+zclSendDeviceInfo   SYMBOL "zclSendDeviceInfo"
+zclSendHeartbeat    SYMBOL "zclSendHeartbeat"
+zclSwitchReportEvent SYMBOL "zclSwitchReportEvent"
+zclSwitch0TouchAble SYMBOL "zclSwitch0TouchAble"
+zclFactoryReset     SYMBOL "zclFactoryReset"
+zclSwitch0TouchPanelEvent SYMBOL "zclSwitch0TouchPanelEvent"
+ZDApp_StartJoiningCycle SYMBOL "ZDApp_StartJoiningCycle"
+ZDApp_StopJoiningCycle SYMBOL "ZDApp_StopJoiningCycle"
+??RegisterForKeys?relay SYMBOL "?relay", RegisterForKeys
+??ZDApp_StartJoiningCycle?relay SYMBOL "?relay", ZDApp_StartJoiningCycle
+??ZDApp_StopJoiningCycle?relay SYMBOL "?relay", ZDApp_StopJoiningCycle
+??osal_mem_free?relay SYMBOL "?relay", osal_mem_free
+??osal_msg_deallocate?relay SYMBOL "?relay", osal_msg_deallocate
+??osal_msg_receive?relay SYMBOL "?relay", osal_msg_receive
+??osal_rand?relay   SYMBOL "?relay", osal_rand
+??osal_start_timerEx?relay SYMBOL "?relay", osal_start_timerEx
+??osal_stop_timerEx?relay SYMBOL "?relay", osal_stop_timerEx
+??zclDeviceInfoInit?relay SYMBOL "?relay", zclDeviceInfoInit
+??zclFactoryReset?relay SYMBOL "?relay", zclFactoryReset
+??zclGeneral_RegisterCmdCallbacks?relay SYMBOL "?relay", zclGeneral_RegisterCmdCallbacks
+??zclHA_Init?relay  SYMBOL "?relay", zclHA_Init
+??zclSendDeviceInfo?relay SYMBOL "?relay", zclSendDeviceInfo
+??zclSendHeartbeat?relay SYMBOL "?relay", zclSendHeartbeat
+??zclSwitch0TouchAble?relay SYMBOL "?relay", zclSwitch0TouchAble
+??zclSwitch0TouchPanelEvent?relay SYMBOL "?relay", zclSwitch0TouchPanelEvent
+??zclSwitchControlInit?relay SYMBOL "?relay", zclSwitchControlInit
+??zclSwitchControlTouchPanelEnable?relay SYMBOL "?relay", zclSwitchControlTouchPanelEnable
+??zclSwitchReportEvent?relay SYMBOL "?relay", zclSwitchReportEvent
+??zcl_registerAttrList?relay SYMBOL "?relay", zcl_registerAttrList
+??zcl_registerForMsg?relay SYMBOL "?relay", zcl_registerForMsg
+AppDEviceJoinNwk    SYMBOL "AppDEviceJoinNwk"
+??AppDEviceJoinNwk?relay SYMBOL "?relay", AppDEviceJoinNwk
+AppDevNwkDiscCyCle  SYMBOL "AppDevNwkDiscCyCle"
+??AppDevNwkDiscCyCle?relay SYMBOL "?relay", AppDevNwkDiscCyCle
+zclSmartDoor_Init   SYMBOL "zclSmartDoor_Init"
+??zclSmartDoor_Init?relay SYMBOL "?relay", zclSmartDoor_Init
+zclSmartDoor_event_loop SYMBOL "zclSmartDoor_event_loop"
+??zclSmartDoor_event_loop?relay SYMBOL "?relay", zclSmartDoor_event_loop
+
+        EXTERN zclHA_Init
+        FUNCTION zclHA_Init,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclGeneral_RegisterCmdCallbacks
+        FUNCTION zclGeneral_RegisterCmdCallbacks,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zcl_registerAttrList
+        FUNCTION zcl_registerAttrList,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zcl_registerForMsg
+        FUNCTION zcl_registerForMsg,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN RegisterForKeys
+        FUNCTION RegisterForKeys,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclDeviceInfoInit
+        FUNCTION zclDeviceInfoInit,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSwitchControlInit
+        FUNCTION zclSwitchControlInit,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_start_timerEx
+        FUNCTION osal_start_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_msg_deallocate
+        FUNCTION osal_msg_deallocate,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_msg_receive
+        FUNCTION osal_msg_receive,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_mem_free
+        FUNCTION osal_mem_free,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_rand
+        FUNCTION osal_rand,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_stop_timerEx
+        FUNCTION osal_stop_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSwitchControlTouchPanelEnable
+        FUNCTION zclSwitchControlTouchPanelEnable,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSendDeviceInfo
+        FUNCTION zclSendDeviceInfo,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSendHeartbeat
+        FUNCTION zclSendHeartbeat,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSwitchReportEvent
+        FUNCTION zclSwitchReportEvent,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSwitch0TouchAble
+        FUNCTION zclSwitch0TouchAble,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclFactoryReset
+        FUNCTION zclFactoryReset,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSwitch0TouchPanelEvent
+        FUNCTION zclSwitch0TouchPanelEvent,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ZDApp_StartJoiningCycle
+        FUNCTION ZDApp_StartJoiningCycle,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ZDApp_StopJoiningCycle
+        FUNCTION ZDApp_StopJoiningCycle,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ??RegisterForKeys?relay
+        FUNCTION ??RegisterForKeys?relay,00H
+        EXTERN ??ZDApp_StartJoiningCycle?relay
+        FUNCTION ??ZDApp_StartJoiningCycle?relay,00H
+        EXTERN ??ZDApp_StopJoiningCycle?relay
+        FUNCTION ??ZDApp_StopJoiningCycle?relay,00H
+        EXTERN ??osal_mem_free?relay
+        FUNCTION ??osal_mem_free?relay,00H
+        EXTERN ??osal_msg_deallocate?relay
+        FUNCTION ??osal_msg_deallocate?relay,00H
+        EXTERN ??osal_msg_receive?relay
+        FUNCTION ??osal_msg_receive?relay,00H
+        EXTERN ??osal_rand?relay
+        FUNCTION ??osal_rand?relay,00H
+        EXTERN ??osal_start_timerEx?relay
+        FUNCTION ??osal_start_timerEx?relay,00H
+        EXTERN ??osal_stop_timerEx?relay
+        FUNCTION ??osal_stop_timerEx?relay,00H
+        EXTERN ??zclDeviceInfoInit?relay
+        FUNCTION ??zclDeviceInfoInit?relay,00H
+        EXTERN ??zclFactoryReset?relay
+        FUNCTION ??zclFactoryReset?relay,00H
+        EXTERN ??zclGeneral_RegisterCmdCallbacks?relay
+        FUNCTION ??zclGeneral_RegisterCmdCallbacks?relay,00H
+        EXTERN ??zclHA_Init?relay
+        FUNCTION ??zclHA_Init?relay,00H
+        EXTERN ??zclSendDeviceInfo?relay
+        FUNCTION ??zclSendDeviceInfo?relay,00H
+        EXTERN ??zclSendHeartbeat?relay
+        FUNCTION ??zclSendHeartbeat?relay,00H
+        EXTERN ??zclSwitch0TouchAble?relay
+        FUNCTION ??zclSwitch0TouchAble?relay,00H
+        EXTERN ??zclSwitch0TouchPanelEvent?relay
+        FUNCTION ??zclSwitch0TouchPanelEvent?relay,00H
+        EXTERN ??zclSwitchControlInit?relay
+        FUNCTION ??zclSwitchControlInit?relay,00H
+        EXTERN ??zclSwitchControlTouchPanelEnable?relay
+        FUNCTION ??zclSwitchControlTouchPanelEnable?relay,00H
+        EXTERN ??zclSwitchReportEvent?relay
+        FUNCTION ??zclSwitchReportEvent?relay,00H
+        EXTERN ??zcl_registerAttrList?relay
+        FUNCTION ??zcl_registerAttrList?relay,00H
+        EXTERN ??zcl_registerForMsg?relay
+        FUNCTION ??zcl_registerForMsg?relay,00H
+        EXTERN _NIB
+        EXTERN g_u8HeartBeatCount
+        EXTERN pwrmgr_attribute
+        EXTERN zclSmartDoor_Attrs
+        EXTERN zclSmartDoor_IdentifyTime
+        EXTERN zclSmartDoor_OnOff
+        EXTERN zclSmartDoor_SimpleDesc
+
+// D:\work space\Smart Product\Two YHY\Door\v1.03.0  Green\ZStack-CC2530-2.5.1a\Projects\zstack\HomeAutomation\SmartDoor\Source\zcl_SmartDoor.c
+//    1 /**************************************************************************************************
+//    2 Filename:       zcl_sampleSwitch.c
+//    3 Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+//    4 Revision:       $Revision: 19453 $
+//    5 
+//    6 
+//    7 Description:    Zigbee Cluster Library - sample device application.
+//    8 
+//    9 
+//   10 Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+//   11 
+//   12 IMPORTANT: Your use of this Software is limited to those specific rights
+//   13 granted under the terms of a software license agreement between the user
+//   14 who downloaded the software, his/her employer (which must be your employer)
+//   15 and Texas Instruments Incorporated (the "License").  You may not use this
+//   16 Software unless you agree to abide by the terms of the License. The License
+//   17 limits your use, and you acknowledge, that the Software may not be modified,
+//   18 copied or distributed unless embedded on a Texas Instruments microcontroller
+//   19 or used solely and exclusively in conjunction with a Texas Instruments radio
+//   20 frequency transceiver, which is integrated into your product.  Other than for
+//   21 the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   22 works of, modify, distribute, perform, display or sell this Software and/or
+//   23 its documentation for any purpose.
+//   24 
+//   25 YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   26 PROVIDED 揂S IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+//   27 INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+//   28 NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   29 TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   30 NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   31 LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   32 INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   33 OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   34 OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   35 (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   36 
+//   37 Should you have any questions regarding your right to use this Software,
+//   38 contact Texas Instruments Incorporated at www.TI.com. 
+//   39 **************************************************************************************************/
+//   40 
+//   41 /*********************************************************************
+//   42 This device will be like a Switch device.  This application is not
+//   43 intended to be a Switch device, but will use the device description
+//   44 to implement this sample code.
+//   45 *********************************************************************/
+//   46 
+//   47 /*********************************************************************
+//   48 * INCLUDES
+//   49 */
+//   50 #include "ZComDef.h"
+//   51 #include "OSAL.h"
+//   52 #include "AF.h"
+//   53 #include "ZDApp.h"
+//   54 
+//   55 #include "zcl.h"
+//   56 #include "zcl_general.h"
+//   57 #include "zcl_ha.h"
+//   58 
+//   59 #include "zcl_SmartDoor.h"
+//   60 
+//   61 #include "onboard.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,080H
+// union <unnamed> volatile __sfr _A_P0
+_A_P0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,08cH
+// unsigned char volatile __sfr PICTL
+PICTL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0abH
+// unsigned char volatile __sfr P0IEN
+P0IEN:
+        DATA8
+        DS 1
+//   62 
+//   63 /* HAL */
+//   64 #include "hal_lcd.h"
+//   65 #include "hal_led.h"
+//   66 #include "hal_key.h"
+//   67 
+//   68 #include "zcl_door_control.h"
+//   69 #include "zcl_device_info.h"
+//   70 
+//   71 
+//   72 /*********************************************************************
+//   73 * MACROS
+//   74 */
+//   75 
+//   76 /*********************************************************************
+//   77 * CONSTANTS
+//   78 */
+//   79 /*********************************************************************
+//   80 * TYPEDEFS
+//   81 */
+//   82 
+//   83 
+//   84 
+//   85 #define JOINNWKCYCLETIME_20S    0
+//   86 #define JOINNWKCYCLETIME_1MIN   1
+//   87 #define JOINNWKCYCLETIME_10MIN  2
+//   88 #define JOINNWKCYCLETIME_30MIN  3
+//   89 #define JOINNWKCYCLETIME_1H     4
+//   90 #define JOINNWKCYCLETIME_2H     5
+//   91 
+//   92 #define JOINNWKCYCLEEVENTTIME_20S   (20000+(osal_rand() & 0x00FF))
+//   93 #define JOINNWKCYCLEEVENTTIME_60S   (60000+(osal_rand() & 0x00FF))
+//   94 
+//   95 #define JOINNWKCYCLE_ACCOUNT 4
+//   96 
+//   97 /*********************************************************************
+//   98 * GLOBAL VARIABLES
+//   99 */
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  100 byte zclSmartDoor_TaskID;
+zclSmartDoor_TaskID:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  101 devStates_t zclDevice_NwkState;
+zclDevice_NwkState:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  102 uint8 zclDevice_RejoinCounter = 0;
+zclDevice_RejoinCounter:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  103 int8 zclDevice_JoinNetworkOk = 12;
+zclDevice_JoinNetworkOk:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclDevice_JoinNetworkOk>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  104 int8 zclDevice_InitDone = 0;
+zclDevice_InitDone:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  105 uint8 zcl_Led_Blink = 0;
+zcl_Led_Blink:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  106 uint8 zcl_Flag = 0;//0表示当前无门磁变化 1表示关门 2表示开门
+zcl_Flag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  107 uint8 zcl_onoffFlag = 1; //1表示检测到门磁开关 0表示正在执行开或关信息上报
+zcl_onoffFlag:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zcl_onoffFlag>`
+        REQUIRE __INIT_XDATA_I
+//  108 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  109 uint8 AppDEviceJoinNwkState = 0;
+AppDEviceJoinNwkState:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  110 uint8 u8_AppDEviceJoinNwkTimeComing = 0;
+u8_AppDEviceJoinNwkTimeComing:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//  111 uint16 u16_AppDeviceJoinNwkCycleTimeCount = 0;
+u16_AppDeviceJoinNwkCycleTimeCount:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  112 uint8 u8_ZDApp_StopJoiningCycleFlag = 0; //0:star  1:stop
+u8_ZDApp_StopJoiningCycleFlag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  113 
+//  114 extern uint8 g_u8HeartBeatCount;//心跳包计数
+//  115 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  116 uint8 g_u8sendDeviceInfoFlag = 0;//0x00默认发送；0x01收到服务器缺少设备信息的回执
+g_u8sendDeviceInfoFlag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  117 uint8 ReJoinNetFlagInFlash[1] = {0xFF};//0x01:表示复位加入网络；0x02:表示断电重启
+ReJoinNetFlagInFlash:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for ReJoinNetFlagInFlash>`
+        REQUIRE __INIT_XDATA_I
+//  118 /*********************************************************************
+//  119 * GLOBAL FUNCTIONS
+//  120 */
+//  121 
+//  122 /*********************************************************************
+//  123 * LOCAL VARIABLES
+//  124 */
+//  125 //static afAddrType_t zclSmartDoor_DstAddr;
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  126 uint8 g_RestCount = 0;
+g_RestCount:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  127 /*********************************************************************
+//  128 * LOCAL FUNCTIONS
+//  129 */
+//  130 static void zclSmartDoor_HandleKeys( byte shift, byte keys );
+//  131 static void zclSmartDoor_BasicResetCB( void );
+//  132 static void zclSmartDoor_IdentifyCB( zclIdentify_t *pCmd );
+//  133 static void zclSmartDoor_IdentifyQueryRspCB( zclIdentifyQueryRsp_t *pRsp );
+//  134 static void zclSmartDoor0_OnOffCB(uint8 cmd );
+//  135 static void zclSmartDoor_OnOffCB(uint8 s, uint8 cmd );
+//  136 static void zclSmartDoor_ProcessIdentifyTimeChange( void );
+//  137 
+//  138 // Functions to process ZCL Foundation incoming Command/Response messages 
+//  139 static void zclSmartDoor_ProcessIncomingMsg( zclIncomingMsg_t *msg );
+//  140 #ifdef ZCL_READ
+//  141 static uint8 zclSmartDoor_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg );
+//  142 #endif
+//  143 #ifdef ZCL_WRITE
+//  144 static uint8 zclSmartDoor_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg );
+//  145 #endif
+//  146 static uint8 zclSmartDoor_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg );
+//  147 #ifdef ZCL_DISCOVER
+//  148 static uint8 zclSmartDoor_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg );
+//  149 #endif
+//  150 
+//  151 /*********************************************************************
+//  152 * ZCL General Profile Callback table
+//  153 */
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  154 static zclGeneral_AppCallbacks_t zclSmartDoor0_CmdCallbacks =
+zclSmartDoor0_CmdCallbacks:
+        DATA8
+        DS 30
+        REQUIRE `?<Initializer for zclSmartDoor0_CmdCallbacks>`
+        REQUIRE __INIT_XDATA_I
+//  155 {
+//  156   zclSmartDoor_BasicResetCB,              // Basic Cluster Reset command
+//  157   zclSmartDoor_IdentifyCB,                // Identify command  
+//  158   zclSmartDoor_IdentifyQueryRspCB,        // Identify Query Response command
+//  159   zclSmartDoor0_OnOffCB,                   // On/Off cluster command
+//  160   NULL,                                     // Level Control Move to Level command
+//  161   NULL,                                     // Level Control Move command
+//  162   NULL,                                     // Level Control Step command
+//  163   NULL,                                     // Group Response commands
+//  164   NULL,                                     // Scene Store Request command
+//  165   NULL,                                     // Scene Recall Request command
+//  166   NULL,                                     // Scene Response command
+//  167   NULL,                                     // Alarm (Response) command
+//  168   NULL,                                     // RSSI Location commands
+//  169   NULL,                                     // RSSI Location Response commands
+//  170 };
+//  171 
+//  172 /*********************************************************************
+//  173 * @fn          zclSmartDoor_Init
+//  174 *
+//  175 * @brief       Initialization function for the zclGeneral layer.
+//  176 *
+//  177 * @param       none
+//  178 *
+//  179 * @return      none
+//  180 */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  181 void zclSmartDoor_Init( byte task_id )
+zclSmartDoor_Init:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function zclSmartDoor_Init
+        CODE
+//  182 {
+        FUNCALL zclSmartDoor_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_Init, zcl_registerForMsg
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_Init, RegisterForKeys
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_Init, zclDeviceInfoInit
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_Init, zclSwitchControlInit
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+//  183   zclSmartDoor_TaskID = task_id;
+        MOV     DPTR,#zclSmartDoor_TaskID
+        MOVX    @DPTR,A
+//  184   zclDevice_NwkState = DEV_INIT;
+        MOV     DPTR,#zclDevice_NwkState
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  185   zclDevice_InitDone = 0;
+        MOV     DPTR,#zclDevice_InitDone
+        CLR     A
+        MOVX    @DPTR,A
+//  186   zclDevice_RejoinCounter = 0;
+        MOV     DPTR,#zclDevice_RejoinCounter
+        MOVX    @DPTR,A
+//  187   
+//  188   
+//  189   // This app is part of the Home Automation Profile
+//  190   zclHA_Init( &zclSmartDoor_SimpleDesc );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclSmartDoor_SimpleDesc & 0xff
+        MOV     R3,#(zclSmartDoor_SimpleDesc >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay
+//  191   
+//  192   // Register the ZCL General Cluster Library callback functions
+//  193   zclGeneral_RegisterCmdCallbacks( SAMRTDOOR_ENDPOINT, &zclSmartDoor0_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclSmartDoor0_CmdCallbacks & 0xff
+        MOV     R3,#(zclSmartDoor0_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x20
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay
+//  194   
+//  195   // Register the application's attribute list
+//  196   zcl_registerAttrList( SAMRTDOOR_ENDPOINT, SMARTDOOR_MAX_ATTRIBUTES, zclSmartDoor_Attrs );
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclSmartDoor_Attrs & 0xff
+        MOV     R5,#(zclSmartDoor_Attrs >> 8) & 0xff
+        MOV     R2,#0xc
+        MOV     R1,#0x20
+        LCALL   ??zcl_registerAttrList?relay
+//  197   
+//  198   // Register the Application to receive the unprocessed Foundation command/response messages
+//  199   zcl_registerForMsg( zclSmartDoor_TaskID );
+        ; Setup parameters for call to function zcl_registerForMsg
+        MOV     DPTR,#zclSmartDoor_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??zcl_registerForMsg?relay
+//  200   
+//  201   // Register for all key events - This app will handle all key events
+//  202   RegisterForKeys( zclSmartDoor_TaskID );
+        ; Setup parameters for call to function RegisterForKeys
+        MOV     DPTR,#zclSmartDoor_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??RegisterForKeys?relay
+//  203   
+//  204   zclDeviceInfoInit();
+        ; Setup parameters for call to function zclDeviceInfoInit
+        LCALL   ??zclDeviceInfoInit?relay
+//  205   zclSwitchControlInit();
+        ; Setup parameters for call to function zclSwitchControlInit
+        LCALL   ??zclSwitchControlInit?relay
+//  206 }
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock0
+//  207 
+//  208 /*********************************************************************
+//  209 * @fn          zclSample_event_loop
+//  210 *
+//  211 * @brief       Event Loop Processor for zclGeneral.
+//  212 *
+//  213 * @param       none
+//  214 *
+//  215 * @return      none
+//  216 */
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  217 uint8 DeviceRehoinEventFlag = 0;
+DeviceRehoinEventFlag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  218 uint16 zclSmartDoor_event_loop( uint8 task_id, uint16 events )
+zclSmartDoor_event_loop:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI Function zclSmartDoor_event_loop
+        CODE
+//  219 {
+        FUNCALL zclSmartDoor_event_loop, AppDEviceJoinNwk
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, AppDevNwkDiscCyCle
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_msg_deallocate
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_msg_receive
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_mem_free
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_rand
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclSwitchControlTouchPanelEnable
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclSendDeviceInfo
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclSendHeartbeat
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_rand
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclSwitchReportEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclSwitchReportEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclSwitch0TouchAble
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclFactoryReset
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, zclSwitch0TouchPanelEvent
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_event_loop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0xc
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
+        ; Auto size: 0
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+//  220   afIncomingMSGPacket_t *MSGpkt;
+//  221   
+//  222   (void)task_id;  // Intentionally unreferenced parameter
+//  223   
+//  224   if ( events & SYS_EVENT_MSG )
+        ANL     A,#0x80
+        JNZ     ??zclSmartDoor_event_loop_0
+//  225   {
+//  226     while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( zclSmartDoor_TaskID )) )
+//  227     {
+//  228       switch ( MSGpkt->hdr.event )
+//  229       {
+//  230       case ZCL_INCOMING_MSG:
+//  231         // Incoming ZCL Foundation command/response messages
+//  232         zclSmartDoor_ProcessIncomingMsg( (zclIncomingMsg_t *)MSGpkt );
+//  233         break;
+//  234         
+//  235       case KEY_CHANGE:
+//  236         zclSmartDoor_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+//  237         break;
+//  238       case ZDO_STATE_CHANGE:
+//  239         zclDevice_NwkState = (devStates_t)(MSGpkt->hdr.status);
+//  240         if (zclDevice_NwkState == DEV_END_DEVICE ) {
+//  241           osal_start_timerEx(zclSmartDoor_TaskID, 
+//  242                              ZCL_DEVICE_INFO_SEND_EVENT,
+//  243                              ZCL_DEVICE_SEND_INIF_TIME_1S);
+//  244           osal_start_timerEx(zclSmartDoor_TaskID, 
+//  245                              ZCL_DEVICE_JOIN_NETWORK_OK_EVENT,
+//  246                              200);
+//  247           
+//  248           zclDevice_JoinNetworkOk = 12;//LED
+//  249           zclDevice_RejoinCounter= 0;
+//  250           u8_ZDApp_StopJoiningCycleFlag = 0;
+//  251           u8_AppDEviceJoinNwkTimeComing = 0;
+//  252           DeviceRehoinEventFlag = 0;
+//  253           AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+//  254           u16_AppDeviceJoinNwkCycleTimeCount= 0;
+//  255           
+//  256           pwrmgr_attribute.pwrmgr_device =PWRMGR_BATTERY;
+//  257           pwrmgr_attribute.pwrmgr_task_state = 0; 
+//  258         } 
+//  259         else if( zclDevice_NwkState == DEV_NWK_ORPHAN )
+//  260         {
+//  261           
+//  262         }
+//  263         else if (zclDevice_NwkState == DEV_NWK_DISC) 
+//  264         {
+//  265           if(u8_ZDApp_StopJoiningCycleFlag == 0)
+//  266           {
+//  267             zclDevice_RejoinCounter++;
+//  268             AppDevNwkDiscCyCle();
+//  269           }
+//  270         }
+//  271         break;
+//  272       default:
+//  273         break;
+//  274       }
+//  275       
+//  276       // Release the memory
+//  277       osal_msg_deallocate( (uint8 *)MSGpkt );
+//  278     }
+//  279     
+//  280     // return unprocessed events
+//  281     // return (events ^ SYS_EVENT_MSG);
+//  282   }
+//  283   
+//  284   if (events & ZCL_DEVICE_REJOIN_EVENT) {
+??zclSmartDoor_event_loop_1:
+        MOV     A,R7
+        ANL     A,#0x8
+        JZ      ??zclSmartDoor_event_loop_2
+//  285     if(zclDevice_NwkState != DEV_END_DEVICE)
+        MOV     DPTR,#zclDevice_NwkState
+        MOVX    A,@DPTR
+        XRL     A,#0x6
+        JZ      ??zclSmartDoor_event_loop_2
+//  286     {
+//  287       AppDEviceJoinNwk(); 
+        ; Setup parameters for call to function AppDEviceJoinNwk
+        LCALL   ??AppDEviceJoinNwk?relay
+//  288     }
+//  289   }
+//  290   
+//  291   if ( events & SMARTDOOR_IDENTIFY_TIMEOUT_EVT )
+??zclSmartDoor_event_loop_2:
+        MOV     A,R6
+        MOV     C,0xE0 /* A   */.0
+        JC      $+5
+        LJMP    ??zclSmartDoor_event_loop_3 & 0xFFFF
+//  292   {
+//  293     if ( zclSmartDoor_IdentifyTime > 0 )
+        MOV     DPTR,#zclSmartDoor_IdentifyTime
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JNZ     $+5
+        LJMP    ??zclSmartDoor_event_loop_4 & 0xFFFF
+//  294       zclSmartDoor_IdentifyTime--;
+        MOV     DPTR,#zclSmartDoor_IdentifyTime
+        MOVX    A,@DPTR
+        ADD     A,#-0x1
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        ADDC    A,#-0x1
+        MOVX    @DPTR,A
+//  295     zclSmartDoor_ProcessIdentifyTimeChange();
+        DEC     R0
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JNZ     $+5
+        LJMP    ??zclSmartDoor_event_loop_4 & 0xFFFF
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x18
+        MOV     R5,#0x3
+        MOV     R2,#0x1
+        LCALL   ??Subroutine9_0 & 0xFFFF
+//  296     
+//  297     //  return ( events ^ SmartDoor_IDENTIFY_TIMEOUT_EVT );
+//  298   }
+??CrossCallReturnLabel_31:
+        LJMP    ??zclSmartDoor_event_loop_3 & 0xFFFF
+??zclSmartDoor_event_loop_5:
+        MOVX    A,@DPTR
+        XRL     A,#0xa
+        JZ      ??zclSmartDoor_event_loop_6
+        MOVX    A,@DPTR
+        XRL     A,#0x2
+        JNZ     ??zclSmartDoor_event_loop_6
+        MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+        MOVX    A,@DPTR
+        JNZ     ??zclSmartDoor_event_loop_6
+        MOV     DPTR,#zclDevice_RejoinCounter
+        MOVX    A,@DPTR
+        INC     A
+        MOVX    @DPTR,A
+        ; Setup parameters for call to function AppDevNwkDiscCyCle
+        LCALL   ??AppDevNwkDiscCyCle?relay
+??zclSmartDoor_event_loop_6:
+        ; Setup parameters for call to function osal_msg_deallocate
+        MOV     R2,?V0 + 0
+        MOV     R3,?V0 + 1
+        LCALL   ??osal_msg_deallocate?relay
+??zclSmartDoor_event_loop_0:
+        ; Setup parameters for call to function osal_msg_receive
+        MOV     DPTR,#zclSmartDoor_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_msg_receive?relay
+        MOV     ?V0 + 0,R2
+        MOV     ?V0 + 1,R3
+        MOV     A,R2
+        ORL     A,?V0 + 1
+        JZ      ??zclSmartDoor_event_loop_1
+        MOV     DPL,R2
+        MOV     DPH,R3
+        MOVX    A,@DPTR
+        ADD     A,#-0x34
+        JZ      ??zclSmartDoor_event_loop_7
+        ADD     A,#0x63
+        JZ      ??zclSmartDoor_event_loop_8
+        SJMP    ??zclSmartDoor_event_loop_6
+??zclSmartDoor_event_loop_7:
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        DEC     A
+        JZ      ??zclSmartDoor_event_loop_9
+        ADD     A,#-0x3
+        JNZ     ??zclSmartDoor_event_loop_10
+        LCALL   ?Subroutine5 & 0xFFFF
+??CrossCallReturnLabel_5:
+        JZ      ??zclSmartDoor_event_loop_10
+??zclSmartDoor_event_loop_11:
+        INC     R0
+        MOV     A,R0
+        CLR     C
+        SUBB    A,R1
+        JNC     ??zclSmartDoor_event_loop_10
+        SJMP    ??zclSmartDoor_event_loop_11
+??zclSmartDoor_event_loop_9:
+        LCALL   ?Subroutine5 & 0xFFFF
+??CrossCallReturnLabel_6:
+        JZ      ??zclSmartDoor_event_loop_10
+??zclSmartDoor_event_loop_12:
+        INC     R0
+        MOV     A,R0
+        CLR     C
+        SUBB    A,R1
+        JC      ??zclSmartDoor_event_loop_12
+??zclSmartDoor_event_loop_10:
+        LCALL   ?Subroutine7 & 0xFFFF
+??CrossCallReturnLabel_9:
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        MOV     A,R2
+        ORL     A,R3
+        JZ      ??zclSmartDoor_event_loop_6
+        ; Setup parameters for call to function osal_mem_free
+        LCALL   ??osal_mem_free?relay
+        SJMP    ??zclSmartDoor_event_loop_6
+??zclSmartDoor_event_loop_8:
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPTR,#zclDevice_NwkState
+        MOVX    @DPTR,A
+        XRL     A,#0x6
+        JZ      $+5
+        LJMP    ??zclSmartDoor_event_loop_5 & 0xFFFF
+        ; Setup parameters for call to function osal_rand
+        LCALL   ??osal_rand?relay
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     A,R2
+        ADD     A,#-0x18
+        MOV     R4,A
+        CLR     A
+        ADDC    A,#0x3
+        MOV     R5,A
+        MOV     R2,#0x0
+        MOV     R3,#0x1
+        LCALL   ??Subroutine10_0 & 0xFFFF
+??CrossCallReturnLabel_25:
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x38
+        MOV     R5,#0x0
+        MOV     R2,#0x2
+        LCALL   ??Subroutine9_0 & 0xFFFF
+??CrossCallReturnLabel_20:
+        MOV     DPTR,#zclDevice_JoinNetworkOk
+        MOV     A,#0xc
+        MOVX    @DPTR,A
+        MOV     DPTR,#zclDevice_RejoinCounter
+        CLR     A
+        MOVX    @DPTR,A
+        MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+        MOVX    @DPTR,A
+        MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+        MOVX    @DPTR,A
+        MOV     DPTR,#DeviceRehoinEventFlag
+        LCALL   ??Subroutine8_0 & 0xFFFF
+??CrossCallReturnLabel_16:
+        MOVX    @DPTR,A
+        MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+        MOVX    @DPTR,A
+        INC     DPTR
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_0:
+        LJMP    ??zclSmartDoor_event_loop_6 & 0xFFFF
+??zclSmartDoor_event_loop_4:
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x1
+        MOV     R3,#0x0
+        MOV     DPTR,#zclSmartDoor_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_stop_timerEx?relay
+//  299   
+//  300   if (events & ZCL_DEVICE_INIT_DONE_EVENT) 
+??zclSmartDoor_event_loop_3:
+        MOV     A,R6
+        ANL     A,#0x8
+        JZ      ??zclSmartDoor_event_loop_13
+//  301   {
+//  302     zclDevice_InitDone = 1;
+        MOV     DPTR,#zclDevice_InitDone
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  303     LED_RED_OFF();
+        SETB    0x80.6
+//  304     zclSwitchControlTouchPanelEnable(); 
+        ; Setup parameters for call to function zclSwitchControlTouchPanelEnable
+        LCALL   ??zclSwitchControlTouchPanelEnable?relay
+//  305     //   return (events ^ ZCL_DEVICE_INIT_DONE_EVENT);
+//  306   }
+//  307   
+//  308   if (events & ZCL_DEVICE_INFO_SEND_EVENT) 
+??zclSmartDoor_event_loop_13:
+        MOV     A,R7
+        ANL     A,#0x1
+        JZ      ??zclSmartDoor_event_loop_14
+//  309   {
+//  310     zclSendDeviceInfo();
+        ; Setup parameters for call to function zclSendDeviceInfo
+        LCALL   ??zclSendDeviceInfo?relay
+//  311     //     return (events ^ ZCL_DEVICE_INFO_SEND_EVENT);
+//  312   }
+//  313   
+//  314   if (events & ZCL_DEVICE_HEARTBEAT_EVENT) 
+??zclSmartDoor_event_loop_14:
+        MOV     A,R7
+        ANL     A,#0x2
+        JZ      ??CrossCallReturnLabel_26
+//  315   {
+//  316     g_u8HeartBeatCount++;
+        MOV     DPTR,#g_u8HeartBeatCount
+        MOVX    A,@DPTR
+        INC     A
+        MOVX    @DPTR,A
+//  317     if(g_u8HeartBeatCount >= 2)
+        CLR     C
+        SUBB    A,#0x2
+        JC      ??zclSmartDoor_event_loop_15
+//  318     {
+//  319       g_u8HeartBeatCount=0;
+        CLR     A
+        MOVX    @DPTR,A
+//  320       zclSendHeartbeat();
+        ; Setup parameters for call to function zclSendHeartbeat
+        LCALL   ??zclSendHeartbeat?relay
+//  321     }
+//  322     osal_start_timerEx(zclSmartDoor_TaskID, 
+//  323                        ZCL_DEVICE_HEARTBEAT_EVENT,
+//  324                        ZCL_HEARTBEAT_PERIOD);
+??zclSmartDoor_event_loop_15:
+        ; Setup parameters for call to function osal_rand
+        LCALL   ??osal_rand?relay
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     A,R2
+        MOV     B,#0x1e
+        MUL     AB
+        ADD     A,#0x50
+        MOV     R4,A
+        MOV     A,B
+        ADDC    A,#-0x3d
+        MOV     R5,A
+        MOV     R2,#0x0
+        MOV     R3,#0x2
+        LCALL   ??Subroutine10_0 & 0xFFFF
+//  325     //    return (events ^ ZCL_DEVICE_HEARTBEAT_EVENT);
+//  326   }
+//  327   
+//  328   if (events & ZCL_DEVICE_JOIN_NETWORK_OK_EVENT) 
+??CrossCallReturnLabel_26:
+        MOV     A,R6
+        ANL     A,#0x2
+        JZ      ??CrossCallReturnLabel_21
+//  329   {
+//  330     if (zclDevice_JoinNetworkOk-- % 2) {
+        MOV     DPTR,#zclDevice_JoinNetworkOk
+        MOVX    A,@DPTR
+        MOV     B,#0x2
+        LCALL   ?SC_DIV_MOD
+        MOV     A,B
+        JZ      ??zclSmartDoor_event_loop_16
+        MOVX    A,@DPTR
+        DEC     A
+        MOVX    @DPTR,A
+//  331       LED_RED_OFF(); 
+        SETB    0x80.6
+        SJMP    ??zclSmartDoor_event_loop_17
+//  332     } else {
+??zclSmartDoor_event_loop_16:
+        MOVX    A,@DPTR
+        DEC     A
+        MOVX    @DPTR,A
+//  333       LED_RED_ON();
+        CLR     0x80.6
+//  334     }
+//  335     
+//  336     if (zclDevice_JoinNetworkOk <= 0) 
+??zclSmartDoor_event_loop_17:
+        MOVX    A,@DPTR
+        SUBB    A,#0x1
+        MOV     C,0xD0 /* PSW */.2
+        XRL     A,PSW
+        RLC     A
+        JNC     ??zclSmartDoor_event_loop_18
+//  337     {
+//  338       LED_RED_OFF();
+        SETB    0x80.6
+        SJMP    ??CrossCallReturnLabel_21
+//  339     } else {
+//  340       osal_start_timerEx(zclSmartDoor_TaskID, 
+//  341                          ZCL_DEVICE_JOIN_NETWORK_OK_EVENT,
+//  342                          500);
+??zclSmartDoor_event_loop_18:
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0xc
+        MOV     R5,#0x1
+        MOV     R2,#0x2
+        LCALL   ??Subroutine9_0 & 0xFFFF
+//  343     }
+//  344     //return events ^ IAS_ZONE_IR_JOIN_OK_EVENT;
+//  345   }
+//  346 
+//  347   if (events & ZCL_DEVICE_SWITCH0_TOUCHPANEL_EVENT) //门磁
+??CrossCallReturnLabel_21:
+        MOV     A,R6
+        ANL     A,#0x10
+        JZ      ??CrossCallReturnLabel_23
+//  348   {
+//  349     if( zcl_Flag == 0)
+        MOV     DPTR,#zcl_Flag
+        MOVX    A,@DPTR
+        JNZ     ??CrossCallReturnLabel_23
+//  350     {
+//  351       if( P0_1 == 0 )/*反转上升沿和下降沿*/
+        MOV     C,0x80.1
+        JNC     $+5
+        LJMP    ??zclSmartDoor_event_loop_19 & 0xFFFF
+//  352       { 
+//  353         PICTL &= ~(0x1 << 0);
+        ANL     0x8c,#0xfe
+//  354         zcl_Flag = 1;//关门低电平
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  355       }
+//  356       else if( P0_1 == 1 )
+//  357       {
+//  358         PICTL |= (0x1 << 0);
+//  359         zcl_Flag = 2;//开门高电平
+//  360       }
+//  361       
+//  362       if( zcl_Flag & 1 )//关门
+//  363       {
+//  364         if( (zclSmartDoor_OnOff == SWITCH_ON) && (zcl_onoffFlag == 1) )
+        MOV     DPTR,#zclSmartDoor_OnOff
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??CrossCallReturnLabel_18
+        MOV     DPTR,#zcl_onoffFlag
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??CrossCallReturnLabel_18
+//  365         {
+//  366           zcl_onoffFlag = 0;
+        CLR     A
+        MOVX    @DPTR,A
+//  367           LED_RED_ON();/*LED灯闪一次*/
+        CLR     0x80.6
+//  368           zclSmartDoor_OnOff = SWITCH_OFF;
+        MOV     DPTR,#zclSmartDoor_OnOff
+        MOVX    @DPTR,A
+//  369           
+//  370           zclSwitchReportEvent(SAMRTDOOR_ENDPOINT, &zclSmartDoor_OnOff); 
+        ; Setup parameters for call to function zclSwitchReportEvent
+        MOV     R4,#zclSmartDoor_OnOff & 0xff
+        MOV     R5,#(zclSmartDoor_OnOff >> 8) & 0xff
+        MOV     R2,#0x20
+        MOV     R3,A
+        LCALL   ?Subroutine4 & 0xFFFF
+//  371           osal_start_timerEx(zclSmartDoor_TaskID, 
+//  372                              ZCL_DEVICE_LEN_RED_OFF_EVENT,
+//  373                              100);
+//  374           
+//  375         }
+//  376         osal_start_timerEx(zclSmartDoor_TaskID, 
+//  377                            ZCL_DEVICE_SWITCH0_ABLE_EVENT,
+//  378                            200);/*开中断*/
+??CrossCallReturnLabel_18:
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x38
+        MOV     R5,#0x0
+        MOV     R2,#0x20
+        LCALL   ??Subroutine9_0 & 0xFFFF
+//  379         
+//  380       }
+//  381       
+//  382       if( zcl_Flag & 2 )//开门
+??CrossCallReturnLabel_22:
+        MOV     DPTR,#zcl_Flag
+        MOVX    A,@DPTR
+        MOV     C,0xE0 /* A   */.1
+        JNC     ??CrossCallReturnLabel_23
+//  383       {
+//  384         if( (zclSmartDoor_OnOff == SWITCH_OFF) && (zcl_onoffFlag == 1) )
+        MOV     DPTR,#zclSmartDoor_OnOff
+        MOVX    A,@DPTR
+        JNZ     ??CrossCallReturnLabel_19
+        MOV     DPTR,#zcl_onoffFlag
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??CrossCallReturnLabel_19
+//  385         {
+//  386           zcl_onoffFlag = 0;
+        CLR     A
+        MOVX    @DPTR,A
+//  387           LED_RED_ON();
+        CLR     0x80.6
+//  388           zclSmartDoor_OnOff = SWITCH_ON;
+        MOV     DPTR,#zclSmartDoor_OnOff
+        INC     A
+        MOVX    @DPTR,A
+//  389           
+//  390           zclSwitchReportEvent(SAMRTDOOR_ENDPOINT, &zclSmartDoor_OnOff); 
+        ; Setup parameters for call to function zclSwitchReportEvent
+        MOV     R4,#zclSmartDoor_OnOff & 0xff
+        MOV     R5,#(zclSmartDoor_OnOff >> 8) & 0xff
+        MOV     R2,#0x20
+        MOV     R3,#0x0
+        LCALL   ?Subroutine4 & 0xFFFF
+//  391           osal_start_timerEx(zclSmartDoor_TaskID, 
+//  392                              ZCL_DEVICE_LEN_RED_OFF_EVENT,
+//  393                              100);
+//  394           
+//  395         }
+//  396         osal_start_timerEx(zclSmartDoor_TaskID, 
+//  397                            ZCL_DEVICE_SWITCH0_ABLE_EVENT,
+//  398                            200);
+??CrossCallReturnLabel_19:
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x38
+        MOV     R5,#0x0
+        MOV     R2,#0x20
+        LCALL   ??Subroutine9_0 & 0xFFFF
+//  399         
+//  400       }
+//  401     }
+//  402   }
+//  403   
+//  404   if (events & ZCL_DEVICE_SWITCH0_ABLE_EVENT) 
+??CrossCallReturnLabel_23:
+        MOV     A,R6
+        ANL     A,#0x20
+        JZ      ??zclSmartDoor_event_loop_20
+//  405   {
+//  406     zcl_Flag = 0;
+        MOV     DPTR,#zcl_Flag
+        CLR     A
+        MOVX    @DPTR,A
+//  407     zcl_onoffFlag = 1;
+        MOV     DPTR,#zcl_onoffFlag
+        INC     A
+        MOVX    @DPTR,A
+//  408     zclSwitch0TouchAble();
+        ; Setup parameters for call to function zclSwitch0TouchAble
+        LCALL   ??zclSwitch0TouchAble?relay
+//  409     //   return (events ^ ZCL_DEVICE_SWITCH0_ABLE_EVENT);
+//  410   }
+//  411   
+//  412   if (events & ZCL_DEVICE_RESET_EVENT) 
+??zclSmartDoor_event_loop_20:
+        MOV     A,R7
+        ANL     A,#0x4
+        JZ      ??CrossCallReturnLabel_27
+//  413   {
+//  414     if(zcl_Led_Blink > 30)
+        MOV     DPTR,#zcl_Led_Blink
+        MOVX    A,@DPTR
+        CLR     C
+        SUBB    A,#0x1f
+        JC      ??zclSmartDoor_event_loop_21
+//  415     {
+//  416       zclFactoryReset(TRUE);
+        ; Setup parameters for call to function zclFactoryReset
+        MOV     R1,#0x1
+        LCALL   ??zclFactoryReset?relay
+        SJMP    ??CrossCallReturnLabel_27
+//  417     }
+??zclSmartDoor_event_loop_19:
+        MOV     C,0x80.1
+        JNC     ??CrossCallReturnLabel_22
+        ORL     0x8c,#0x1
+        MOV     A,#0x2
+        MOVX    @DPTR,A
+        SJMP    ??CrossCallReturnLabel_22
+//  418     else
+//  419     {
+//  420       if(zcl_Led_Blink % 2 == 0)
+??zclSmartDoor_event_loop_21:
+        MOVX    A,@DPTR
+        MOV     C,0xE0 /* A   */.0
+        JC      ??zclSmartDoor_event_loop_22
+//  421       {
+//  422         LED_RED_OFF();
+        SETB    0x80.6
+        SJMP    ??zclSmartDoor_event_loop_23
+//  423       } else {
+//  424         LED_RED_ON();
+??zclSmartDoor_event_loop_22:
+        CLR     0x80.6
+//  425       }
+//  426       zcl_Led_Blink++;
+??zclSmartDoor_event_loop_23:
+        INC     A
+        MOVX    @DPTR,A
+//  427       osal_start_timerEx(zclSmartDoor_TaskID, 
+//  428                          ZCL_DEVICE_RESET_EVENT,
+//  429                          200);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x38
+        MOV     R5,#0x0
+        MOV     R2,#0x0
+        MOV     R3,#0x4
+        LCALL   ??Subroutine10_0 & 0xFFFF
+//  430     }
+//  431     //    return (events ^ ZCL_DEVICE_RESET_EVENT);
+//  432   }
+//  433   
+//  434   if(events & ZCL_DEVICE_SWITCH_RESET_EVENT)
+??CrossCallReturnLabel_27:
+        MOV     A,R6
+        ANL     A,#0x40
+        JZ      ??zclSmartDoor_event_loop_24
+//  435   {
+//  436     zclSwitch0TouchPanelEvent();
+        ; Setup parameters for call to function zclSwitch0TouchPanelEvent
+        LCALL   ??zclSwitch0TouchPanelEvent?relay
+//  437     //   return (events ^ ZCL_DEVICE_SWITCH_RESET_EVENT);
+//  438   }
+//  439   
+//  440   if(events & ZCL_DEVICE_RESET_1_EVENT)
+??zclSmartDoor_event_loop_24:
+        MOV     A,R7
+        ANL     A,#0x20
+        JZ      ??zclSmartDoor_event_loop_25
+//  441   {
+//  442     if(P0_7 == 0)
+        MOV     C,0x80.7
+        JC      ??zclSmartDoor_event_loop_26
+//  443     {
+//  444       g_RestCount++;
+        MOV     DPTR,#g_RestCount
+        MOVX    A,@DPTR
+        INC     A
+        MOVX    @DPTR,A
+//  445       if(g_RestCount>=3)
+        CLR     C
+        SUBB    A,#0x3
+        MOV     R4,#0x64
+        MOV     R5,#0x0
+        JC      ??zclSmartDoor_event_loop_27
+//  446       {
+//  447         osal_start_timerEx(zclSmartDoor_TaskID, 
+//  448                            ZCL_DEVICE_SWITCH_RESET_EVENT,
+//  449                            100);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R2,#0x40
+        MOV     R3,#0x0
+//  450       }
+??zclSmartDoor_event_loop_28:
+        LCALL   ??Subroutine10_0 & 0xFFFF
+??CrossCallReturnLabel_28:
+        SJMP    ??zclSmartDoor_event_loop_25
+//  451       else
+//  452       {
+//  453         osal_start_timerEx(zclSmartDoor_TaskID, 
+//  454                            ZCL_DEVICE_RESET_1_EVENT,
+//  455                            100);
+??zclSmartDoor_event_loop_27:
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R2,#0x0
+        MOV     R3,#0x20
+        SJMP    ??zclSmartDoor_event_loop_28
+//  456       }
+//  457     }
+//  458     else
+//  459     {
+//  460       P0IEN |= BV(7);
+??zclSmartDoor_event_loop_26:
+        ORL     0xab,#0x80
+//  461       g_RestCount=0;
+        MOV     DPTR,#g_RestCount
+        CLR     A
+        MOVX    @DPTR,A
+//  462     }
+//  463   }
+//  464   if(events & ZCL_DEVICE_LEN_RED_OFF_EVENT)
+??zclSmartDoor_event_loop_25:
+        MOV     A,R6
+        ANL     A,#0x80
+        JZ      ??zclSmartDoor_event_loop_29
+//  465   {
+//  466     LED_RED_OFF();
+        SETB    0x80.6
+//  467     //return (events ^ ZCL_DEVICE_LEN_RED_OFF_EVENT);
+//  468   }
+//  469   
+//  470   // Discard unknown events
+//  471   return 0;
+??zclSmartDoor_event_loop_29:
+        MOV     R2,#0x0
+        MOV     R3,#0x0
+        MOV     R7,#0x4
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock1
+        REQUIRE _A_P0
+        REQUIRE PICTL
+        REQUIRE P0IEN
+//  472 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine5:
+        CFI Block cfiCond2 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_5
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond3 Using cfiCommon0
+        CFI (cfiCond3) NoFunction
+        CFI (cfiCond3) Conditional ??CrossCallReturnLabel_6
+        CFI (cfiCond3) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond3) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond3) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond3) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond3) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond3) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond3) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond3) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond3) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond3) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond3) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond3) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond3) CFA_SP SP+0
+        CFI (cfiCond3) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiPicker4 Using cfiCommon1
+        CFI (cfiPicker4) NoFunction
+        CFI (cfiPicker4) Picker
+        LCALL   ?Subroutine7 & 0xFFFF
+??CrossCallReturnLabel_10:
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     DPL,R0
+        MOV     DPH,R1
+        MOV     R0,#0x0
+        MOVX    A,@DPTR
+        MOV     R1,A
+        RET
+        CFI EndBlock cfiCond2
+        CFI EndBlock cfiCond3
+        CFI EndBlock cfiPicker4
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine7:
+        CFI Block cfiCond5 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_9
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond6 Using cfiCommon0
+        CFI (cfiCond6) NoFunction
+        CFI (cfiCond6) Conditional ??CrossCallReturnLabel_10, ??CrossCallReturnLabel_5
+        CFI (cfiCond6) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond6) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond6) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond6) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond6) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond6) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond6) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond6) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond6) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond6) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond6) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond6) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond6) CFA_SP SP+0
+        CFI (cfiCond6) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond7 Using cfiCommon0
+        CFI (cfiCond7) NoFunction
+        CFI (cfiCond7) Conditional ??CrossCallReturnLabel_10, ??CrossCallReturnLabel_6
+        CFI (cfiCond7) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond7) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond7) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond7) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond7) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond7) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond7) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond7) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond7) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond7) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond7) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond7) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond7) CFA_SP SP+0
+        CFI (cfiCond7) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiPicker8 Using cfiCommon1
+        CFI (cfiPicker8) NoFunction
+        CFI (cfiPicker8) Picker
+        MOV     A,R2
+        ADD     A,#0x17
+        MOV     DPL,A
+        MOV     A,R3
+        ADDC    A,#0x0
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        RET
+        CFI EndBlock cfiCond5
+        CFI EndBlock cfiCond6
+        CFI EndBlock cfiCond7
+        CFI EndBlock cfiPicker8
+//  473 
+//  474 /*********************************************************************
+//  475 * @fn      zclSmartDoor_HandleKeys
+//  476 *
+//  477 * @brief   Handles all key events for this device.
+//  478 *
+//  479 * @param   shift - true if in shift/alt.
+//  480 * @param   keys - bit field for key events. Valid entries:
+//  481 *                 HAL_KEY_SW_4
+//  482 *                 HAL_KEY_SW_3
+//  483 *                 HAL_KEY_SW_2
+//  484 *                 HAL_KEY_SW_1
+//  485 *
+//  486 * @return  none
+//  487 */
+//  488 static void zclSmartDoor_HandleKeys( byte shift, byte keys )
+//  489 {
+//  490   // zAddrType_t dstAddr;
+//  491   
+//  492   (void)shift;  // Intentionally unreferenced parameter
+//  493   
+//  494   if ( keys & HAL_KEY_SW_2 )
+//  495   {
+//  496   }
+//  497   
+//  498   if ( keys & HAL_KEY_SW_3 )
+//  499   {
+//  500   }
+//  501   
+//  502   if ( keys & HAL_KEY_SW_4 )
+//  503   {
+//  504   }
+//  505 }
+//  506 
+//  507 /*********************************************************************
+//  508 * @fn      zclSmartDoor_ProcessIdentifyTimeChange
+//  509 *
+//  510 * @brief   Called to process any change to the IdentifyTime attribute.
+//  511 *
+//  512 * @param   none
+//  513 *
+//  514 * @return  none
+//  515 */
+//  516 static void zclSmartDoor_ProcessIdentifyTimeChange( void )
+//  517 {
+//  518   if ( zclSmartDoor_IdentifyTime > 0 )
+//  519   {
+//  520     osal_start_timerEx( zclSmartDoor_TaskID, SMARTDOOR_IDENTIFY_TIMEOUT_EVT, 1000 );
+//  521   }
+//  522   else
+//  523   {
+//  524     osal_stop_timerEx( zclSmartDoor_TaskID, SMARTDOOR_IDENTIFY_TIMEOUT_EVT );
+//  525   }
+//  526 }
+//  527 
+//  528 /*********************************************************************
+//  529 * @fn      zclSmartDoor_BasicResetCB
+//  530 *
+//  531 * @brief   Callback from the ZCL General Cluster Library
+//  532 *          to set all the Basic Cluster attributes to default values.
+//  533 *
+//  534 * @param   none
+//  535 *
+//  536 * @return  none
+//  537 */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  538 static void zclSmartDoor_BasicResetCB( void )
+zclSmartDoor_BasicResetCB:
+        CFI Block cfiBlock9 Using cfiCommon0
+        CFI Function zclSmartDoor_BasicResetCB
+        CODE
+//  539 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  540   // Reset all attributes to default values
+//  541 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock9
+//  542 
+//  543 /*********************************************************************
+//  544 * @fn      zclSmartDoor_IdentifyCB
+//  545 *
+//  546 * @brief   Callback from the ZCL General Cluster Library when
+//  547 *          it received an Identity Command for this application.
+//  548 *
+//  549 * @param   srcAddr - source address and endpoint of the response message
+//  550 * @param   identifyTime - the number of seconds to identify yourself
+//  551 *
+//  552 * @return  none
+//  553 */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  554 static void zclSmartDoor_IdentifyCB( zclIdentify_t *pCmd )
+zclSmartDoor_IdentifyCB:
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI Function zclSmartDoor_IdentifyCB
+        CODE
+//  555 {
+        FUNCALL zclSmartDoor_IdentifyCB, osal_start_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSmartDoor_IdentifyCB, osal_stop_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    DPH
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  556   zclSmartDoor_IdentifyTime = pCmd->identifyTime;
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     DPTR,#zclSmartDoor_IdentifyTime
+        MOV     A,R0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R1
+        MOVX    @DPTR,A
+//  557   zclSmartDoor_ProcessIdentifyTimeChange();
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??zclSmartDoor_IdentifyCB_0
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0x18
+        MOV     R5,#0x3
+        MOV     R2,#0x1
+        LCALL   ??Subroutine9_0 & 0xFFFF
+??CrossCallReturnLabel_24:
+        SJMP    ??zclSmartDoor_IdentifyCB_1
+??zclSmartDoor_IdentifyCB_0:
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x1
+        MOV     R3,#0x0
+        MOV     DPTR,#zclSmartDoor_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_stop_timerEx?relay
+        CFI EndBlock cfiBlock10
+//  558 }
+??zclSmartDoor_IdentifyCB_1:
+        REQUIRE ?Subroutine0
+        ; // Fall through to label ?Subroutine0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+        CFI Block cfiBlock11 Using cfiCommon0
+        CFI NoFunction
+        CFI CFA_SP SP+-5
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI DPH0 Frame(CFA_SP, 5)
+        POP     DPH
+        CFI CFA_SP SP+-4
+        CFI DPH0 SameValue
+        POP     DPL
+        CFI CFA_SP SP+-3
+        CFI DPL0 SameValue
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock11
+//  559 
+//  560 /*********************************************************************
+//  561 * @fn      zclSmartDoor_IdentifyQueryRspCB
+//  562 *
+//  563 * @brief   Callback from the ZCL General Cluster Library when
+//  564 *          it received an Identity Query Response Command for this application.
+//  565 *
+//  566 * @param   srcAddr - requestor's address
+//  567 * @param   timeout - number of seconds to identify yourself (valid for query response)
+//  568 *
+//  569 * @return  none
+//  570 */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  571 static void zclSmartDoor_IdentifyQueryRspCB(  zclIdentifyQueryRsp_t *pRsp )
+zclSmartDoor_IdentifyQueryRspCB:
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI Function zclSmartDoor_IdentifyQueryRspCB
+        CODE
+//  572 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  573   // Query Response (with timeout value)
+//  574   (void)pRsp;
+//  575 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock12
+//  576 
+//  577 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  578 static void zclSmartDoor0_OnOffCB(uint8 cmd )
+zclSmartDoor0_OnOffCB:
+        CFI Block cfiBlock13 Using cfiCommon0
+        CFI Function zclSmartDoor0_OnOffCB
+        CODE
+//  579 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  580   zclSmartDoor_OnOffCB(0, cmd);
+//  581 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock13
+//  582 
+//  583 /*********************************************************************
+//  584 * @fn      zclSmartDoor_OnOffCB
+//  585 *
+//  586 * @brief   Callback from the ZCL General Cluster Library when
+//  587 *          it received an On/Off Command for this application.
+//  588 *
+//  589 * @param   cmd - COMMAND_ON, COMMAND_OFF or COMMAND_TOGGLE
+//  590 *
+//  591 * @return  none
+//  592 */
+//  593 static void zclSmartDoor_OnOffCB(uint8 switch0, uint8 cmd )
+//  594 {
+//  595   
+//  596 }
+//  597 
+//  598 
+//  599 /****************************************************************************** 
+//  600 * 
+//  601 *  Functions for processing ZCL Foundation incoming Command/Response messages
+//  602 *
+//  603 *****************************************************************************/
+//  604 
+//  605 /*********************************************************************
+//  606 * @fn      zclSmartDoor_ProcessIncomingMsg
+//  607 *
+//  608 * @brief   Process ZCL Foundation incoming message
+//  609 *
+//  610 * @param   pInMsg - pointer to the received message
+//  611 *
+//  612 * @return  none
+//  613 */
+//  614 static void zclSmartDoor_ProcessIncomingMsg( zclIncomingMsg_t *pInMsg)
+//  615 {
+//  616   switch ( pInMsg->zclHdr.commandID )
+//  617   {
+//  618 #ifdef ZCL_READ
+//  619   case ZCL_CMD_READ_RSP:
+//  620     zclSmartDoor_ProcessInReadRspCmd( pInMsg );
+//  621     break;
+//  622 #endif
+//  623 #ifdef ZCL_WRITE    
+//  624   case ZCL_CMD_WRITE_RSP:
+//  625     zclSmartDoor_ProcessInWriteRspCmd( pInMsg );
+//  626     break;
+//  627 #endif
+//  628 #ifdef ZCL_REPORT
+//  629     // See ZCL Test Applicaiton (zcl_testapp.c) for sample code on Attribute Reporting
+//  630   case ZCL_CMD_CONFIG_REPORT:
+//  631     //zclSmartDoor_ProcessInConfigReportCmd( pInMsg );
+//  632     break;
+//  633     
+//  634   case ZCL_CMD_CONFIG_REPORT_RSP:
+//  635     //zclSmartDoor_ProcessInConfigReportRspCmd( pInMsg );
+//  636     break;
+//  637     
+//  638   case ZCL_CMD_READ_REPORT_CFG:
+//  639     //zclSmartDoor_ProcessInReadReportCfgCmd( pInMsg );
+//  640     break;
+//  641     
+//  642   case ZCL_CMD_READ_REPORT_CFG_RSP:
+//  643     //zclSmartDoor_ProcessInReadReportCfgRspCmd( pInMsg );
+//  644     break;
+//  645     
+//  646   case ZCL_CMD_REPORT:
+//  647     //zclSmartDoor_ProcessInReportCmd( pInMsg );
+//  648     break;
+//  649 #endif   
+//  650   case ZCL_CMD_DEFAULT_RSP:
+//  651     zclSmartDoor_ProcessInDefaultRspCmd( pInMsg );
+//  652     break;
+//  653 #ifdef ZCL_DISCOVER     
+//  654   case ZCL_CMD_DISCOVER_RSP:
+//  655     zclSmartDoor_ProcessInDiscRspCmd( pInMsg );
+//  656     break;
+//  657 #endif  
+//  658   default:
+//  659     break;
+//  660   }
+//  661   
+//  662   if ( pInMsg->attrCmd )
+//  663     osal_mem_free( pInMsg->attrCmd );
+//  664 }
+//  665 
+//  666 #ifdef ZCL_READ
+//  667 /*********************************************************************
+//  668 * @fn      zclSmartDoor_ProcessInReadRspCmd
+//  669 *
+//  670 * @brief   Process the "Profile" Read Response Command
+//  671 *
+//  672 * @param   pInMsg - incoming message to process
+//  673 *
+//  674 * @return  none
+//  675 */
+//  676 static uint8 zclSmartDoor_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg )
+//  677 {
+//  678   zclReadRspCmd_t *readRspCmd;
+//  679   uint8 i;
+//  680   
+//  681   readRspCmd = (zclReadRspCmd_t *)pInMsg->attrCmd;
+//  682   for (i = 0; i < readRspCmd->numAttr; i++)
+//  683   {
+//  684     // Notify the originator of the results of the original read attributes 
+//  685     // attempt and, for each successfull request, the value of the requested 
+//  686     // attribute
+//  687   }
+//  688   
+//  689   return TRUE; 
+//  690 }
+//  691 #endif // ZCL_READ
+//  692 
+//  693 #ifdef ZCL_WRITE
+//  694 /*********************************************************************
+//  695 * @fn      zclSmartDoor_ProcessInWriteRspCmd
+//  696 *
+//  697 * @brief   Process the "Profile" Write Response Command
+//  698 *
+//  699 * @param   pInMsg - incoming message to process
+//  700 *
+//  701 * @return  none
+//  702 */
+//  703 static uint8 zclSmartDoor_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg )
+//  704 {
+//  705   zclWriteRspCmd_t *writeRspCmd;
+//  706   uint8 i;
+//  707   
+//  708   writeRspCmd = (zclWriteRspCmd_t *)pInMsg->attrCmd;
+//  709   for (i = 0; i < writeRspCmd->numAttr; i++)
+//  710   {
+//  711     // Notify the device of the results of the its original write attributes
+//  712     // command.
+//  713   }
+//  714   
+//  715   return TRUE; 
+//  716 }
+//  717 #endif // ZCL_WRITE
+//  718 
+//  719 /*********************************************************************
+//  720 * @fn      zclSmartDoor_ProcessInDefaultRspCmd
+//  721 *
+//  722 * @brief   Process the "Profile" Default Response Command
+//  723 *
+//  724 * @param   pInMsg - incoming message to process
+//  725 *
+//  726 * @return  none
+//  727 */
+//  728 static uint8 zclSmartDoor_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg )
+//  729 {
+//  730   // zclDefaultRspCmd_t *defaultRspCmd = (zclDefaultRspCmd_t *)pInMsg->attrCmd;
+//  731   
+//  732   // Device is notified of the Default Response command.
+//  733   (void)pInMsg;
+//  734   
+//  735   return TRUE; 
+//  736 }
+//  737 
+//  738 #ifdef ZCL_DISCOVER
+//  739 /*********************************************************************
+//  740 * @fn      zclSmartDoor_ProcessInDiscRspCmd
+//  741 *
+//  742 * @brief   Process the "Profile" Discover Response Command
+//  743 *
+//  744 * @param   pInMsg - incoming message to process
+//  745 *
+//  746 * @return  none
+//  747 */
+//  748 static uint8 zclSmartDoor_ProcessInDiscRspCmd( zclIncomingMsg_t *pInMsg )
+//  749 {
+//  750   zclDiscoverRspCmd_t *discoverRspCmd;
+//  751   uint8 i;
+//  752   
+//  753   discoverRspCmd = (zclDiscoverRspCmd_t *)pInMsg->attrCmd;
+//  754   for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+//  755   {
+//  756     // Device is notified of the result of its attribute discovery command.
+//  757   }
+//  758   
+//  759   return TRUE;
+//  760 }
+//  761 #endif // ZCL_DISCOVER
+//  762 
+//  763 
+//  764 /****************************************************************************
+//  765 ****************************************************************************/
+//  766 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  767 void AppDEviceJoinNwk()
+AppDEviceJoinNwk:
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI Function AppDEviceJoinNwk
+        CODE
+//  768 {
+        FUNCALL AppDEviceJoinNwk, ZDApp_StartJoiningCycle
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDEviceJoinNwk, ZDApp_StartJoiningCycle
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDEviceJoinNwk, osal_rand
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDEviceJoinNwk, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDEviceJoinNwk, osal_rand
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDEviceJoinNwk, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 10, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 10, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 0
+//  769   if(u8_AppDEviceJoinNwkTimeComing == 1)
+        MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??AppDEviceJoinNwk_0
+//  770   {
+//  771     u8_AppDEviceJoinNwkTimeComing = 0;
+        CLR     A
+        MOVX    @DPTR,A
+//  772     if(zclDevice_NwkState != DEV_END_DEVICE)
+        MOV     DPTR,#zclDevice_NwkState
+        MOVX    A,@DPTR
+        XRL     A,#0x6
+        JZ      ??AppDEviceJoinNwk_1
+//  773     {
+//  774       pwrmgr_attribute.pwrmgr_device =PWRMGR_ALWAYS_ON;
+        MOV     DPTR,#pwrmgr_attribute + 6
+        CLR     A
+        MOVX    @DPTR,A
+//  775       pwrmgr_attribute.pwrmgr_task_state = 1;
+        MOV     DPTR,#pwrmgr_attribute
+        INC     A
+        MOVX    @DPTR,A
+        INC     DPTR
+        CLR     A
+        MOVX    @DPTR,A
+//  776     }
+//  777     u8_ZDApp_StopJoiningCycleFlag = 0;
+??AppDEviceJoinNwk_1:
+        MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+        CLR     A
+        MOVX    @DPTR,A
+//  778     
+//  779 //    if((_NIB.nwkLogicalChannel >= 0x0B)&&(_NIB.nwkLogicalChannel <= 0x1A))//已经组网
+//  780 //    {
+//  781 //      ZDOInitDevice(0);
+//  782 //    }
+//  783     
+//  784       if(FALSE == ZDApp_StartJoiningCycle())
+        ; Setup parameters for call to function ZDApp_StartJoiningCycle
+        LCALL   ??ZDApp_StartJoiningCycle?relay
+        MOV     A,R1
+        JNZ     ??CrossCallReturnLabel_29
+//  785       {
+//  786         ZDApp_StartJoiningCycle();    
+        ; Setup parameters for call to function ZDApp_StartJoiningCycle
+        LCALL   ??ZDApp_StartJoiningCycle?relay
+        SJMP    ??CrossCallReturnLabel_29
+//  787       }
+//  788     
+//  789   }
+//  790   else
+//  791   {
+//  792     switch(AppDEviceJoinNwkState)
+??AppDEviceJoinNwk_0:
+        MOV     DPTR,#AppDEviceJoinNwkState
+        MOVX    A,@DPTR
+        JZ      ??AppDEviceJoinNwk_2
+        DEC     A
+        JZ      ??AppDEviceJoinNwk_2
+        DEC     A
+        JZ      ??AppDEviceJoinNwk_3
+        DEC     A
+        JZ      ??AppDEviceJoinNwk_4
+        DEC     A
+        JZ      ??AppDEviceJoinNwk_5
+        SJMP    ??AppDEviceJoinNwk_6
+//  793     {
+//  794     case JOINNWKCYCLETIME_20S: 
+//  795       { 
+//  796         u8_AppDEviceJoinNwkTimeComing = 1;
+??AppDEviceJoinNwk_2:
+        MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+        MOV     A,#0x1
+//  797       }
+??AppDEviceJoinNwk_7:
+        LCALL   ??Subroutine8_0 & 0xFFFF
+//  798       break;
+//  799     case JOINNWKCYCLETIME_1MIN:
+//  800       {
+//  801         u8_AppDEviceJoinNwkTimeComing = 1;
+//  802       }
+//  803       break;
+//  804     case JOINNWKCYCLETIME_10MIN:
+//  805       {
+//  806         if((u16_AppDeviceJoinNwkCycleTimeCount++) == 10)
+//  807         {
+//  808           u8_AppDEviceJoinNwkTimeComing = 1;
+//  809           u16_AppDeviceJoinNwkCycleTimeCount = 0;
+//  810         }
+//  811       }
+//  812       break;
+//  813     case JOINNWKCYCLETIME_30MIN:
+//  814       {
+//  815         if((u16_AppDeviceJoinNwkCycleTimeCount++) == 30)
+//  816         {
+//  817           u8_AppDEviceJoinNwkTimeComing = 1;
+//  818           u16_AppDeviceJoinNwkCycleTimeCount = 0;
+//  819         }
+//  820       }
+//  821       break;
+//  822     case JOINNWKCYCLETIME_1H:
+//  823       {
+//  824         if((u16_AppDeviceJoinNwkCycleTimeCount++) == 60)
+//  825         {
+//  826           u8_AppDEviceJoinNwkTimeComing = 1;
+//  827           u16_AppDeviceJoinNwkCycleTimeCount = 0;
+//  828         }
+//  829       }
+//  830       break;
+//  831     default:
+//  832       {
+//  833         AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+//  834         u8_AppDEviceJoinNwkTimeComing = 1;
+//  835         u16_AppDeviceJoinNwkCycleTimeCount = 0;
+//  836       }
+//  837       break;
+//  838       
+//  839     }
+//  840     
+//  841     if(AppDEviceJoinNwkState == JOINNWKCYCLETIME_20S)
+??CrossCallReturnLabel_17:
+        MOVX    A,@DPTR
+        JNZ     ??AppDEviceJoinNwk_8
+//  842     {
+//  843       osal_start_timerEx(zclSmartDoor_TaskID, 
+//  844                          ZCL_DEVICE_REJOIN_EVENT,
+//  845                          JOINNWKCYCLEEVENTTIME_20S);
+??AppDEviceJoinNwk_9:
+        ; Setup parameters for call to function osal_rand
+        LCALL   ??osal_rand?relay
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     A,R2
+        ADD     A,#0x20
+        MOV     R4,A
+        CLR     A
+        ADDC    A,#0x4e
+        SJMP    ??AppDEviceJoinNwk_10
+//  846     }
+??AppDEviceJoinNwk_3:
+        LCALL   ?Subroutine3 & 0xFFFF
+??CrossCallReturnLabel_2:
+        MOV     A,#0xa
+        XRL     A,R0
+        JNZ     ??AppDEviceJoinNwk_11
+        MOV     A,R1
+??AppDEviceJoinNwk_11:
+        JNZ     ??AppDEviceJoinNwk_8
+??AppDEviceJoinNwk_12:
+        MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+        MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+        CLR     A
+        MOVX    @DPTR,A
+        INC     DPTR
+        SJMP    ??AppDEviceJoinNwk_7
+??AppDEviceJoinNwk_4:
+        LCALL   ?Subroutine3 & 0xFFFF
+??CrossCallReturnLabel_3:
+        MOV     A,#0x1e
+        XRL     A,R0
+        JNZ     ??AppDEviceJoinNwk_13
+        MOV     A,R1
+??AppDEviceJoinNwk_13:
+        JZ      ??AppDEviceJoinNwk_12
+//  847     else
+//  848     {	
+//  849       osal_start_timerEx(zclSmartDoor_TaskID, 
+//  850                          ZCL_DEVICE_REJOIN_EVENT,
+//  851                          JOINNWKCYCLEEVENTTIME_60S);    
+??AppDEviceJoinNwk_8:
+        ; Setup parameters for call to function osal_rand
+        LCALL   ??osal_rand?relay
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     A,R2
+        ADD     A,#0x60
+        MOV     R4,A
+        CLR     A
+        ADDC    A,#-0x16
+??AppDEviceJoinNwk_10:
+        MOV     R5,A
+        MOV     R2,#0x0
+        MOV     R3,#0x8
+//  852     }
+        LCALL   ??Subroutine10_0 & 0xFFFF
+//  853   }
+//  854   
+//  855   
+//  856   
+//  857   
+//  858 }
+??CrossCallReturnLabel_29:
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+??AppDEviceJoinNwk_5:
+        LCALL   ?Subroutine3 & 0xFFFF
+??CrossCallReturnLabel_4:
+        MOV     A,#0x3c
+        XRL     A,R0
+        JNZ     ??AppDEviceJoinNwk_14
+        MOV     A,R1
+??AppDEviceJoinNwk_14:
+        JNZ     ??AppDEviceJoinNwk_8
+        SJMP    ??AppDEviceJoinNwk_12
+??AppDEviceJoinNwk_6:
+        CLR     A
+        MOVX    @DPTR,A
+        MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+        INC     A
+        MOVX    @DPTR,A
+        MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+        CLR     A
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    @DPTR,A
+        SJMP    ??AppDEviceJoinNwk_9
+        CFI EndBlock cfiBlock14
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine3:
+        CFI Block cfiCond15 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_2
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond16 Using cfiCommon0
+        CFI (cfiCond16) NoFunction
+        CFI (cfiCond16) Conditional ??CrossCallReturnLabel_3
+        CFI (cfiCond16) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond16) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond16) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond16) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond16) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond16) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond16) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond16) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond16) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond16) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond16) CFA_SP SP+0
+        CFI (cfiCond16) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond17 Using cfiCommon0
+        CFI (cfiCond17) NoFunction
+        CFI (cfiCond17) Conditional ??CrossCallReturnLabel_4
+        CFI (cfiCond17) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond17) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond17) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond17) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond17) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond17) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond17) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond17) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond17) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond17) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond17) CFA_SP SP+0
+        CFI (cfiCond17) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiPicker18 Using cfiCommon1
+        CFI (cfiPicker18) NoFunction
+        CFI (cfiPicker18) Picker
+        MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ADD     A,#0x1
+        MOV     R2,A
+        MOV     A,R1
+        ADDC    A,#0x0
+        MOV     R3,A
+        MOV     DPTR,#u16_AppDeviceJoinNwkCycleTimeCount
+        MOV     A,R2
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R3
+        MOVX    @DPTR,A
+        RET
+        CFI EndBlock cfiCond15
+        CFI EndBlock cfiCond16
+        CFI EndBlock cfiCond17
+        CFI EndBlock cfiPicker18
+//  859 
+//  860 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine2:
+        CFI Block cfiCond19 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_11
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        CFI Block cfiCond20 Using cfiCommon0
+        CFI (cfiCond20) NoFunction
+        CFI (cfiCond20) Conditional ??CrossCallReturnLabel_12
+        CFI (cfiCond20) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond20) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond20) CFA_SP SP+-5
+        CFI Block cfiCond21 Using cfiCommon0
+        CFI (cfiCond21) NoFunction
+        CFI (cfiCond21) Conditional ??CrossCallReturnLabel_13
+        CFI (cfiCond21) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond21) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond21) CFA_SP SP+-5
+        CFI Block cfiCond22 Using cfiCommon0
+        CFI (cfiCond22) NoFunction
+        CFI (cfiCond22) Conditional ??CrossCallReturnLabel_14
+        CFI (cfiCond22) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond22) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond22) CFA_SP SP+-5
+        CFI Block cfiCond23 Using cfiCommon0
+        CFI (cfiCond23) NoFunction
+        CFI (cfiCond23) Conditional ??CrossCallReturnLabel_15
+        CFI (cfiCond23) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond23) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond23) CFA_SP SP+-5
+        CFI Block cfiPicker24 Using cfiCommon1
+        CFI (cfiPicker24) NoFunction
+        CFI (cfiPicker24) Picker
+        MOV     DPTR,#DeviceRehoinEventFlag
+        MOV     A,#0x1
+        CFI EndBlock cfiCond19
+        CFI EndBlock cfiCond20
+        CFI EndBlock cfiCond21
+        CFI EndBlock cfiCond22
+        CFI EndBlock cfiCond23
+        CFI EndBlock cfiPicker24
+        REQUIRE ??Subroutine8_0
+        ; // Fall through to label ??Subroutine8_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine8_0:
+        CFI Block cfiCond25 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_16
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond26 Using cfiCommon0
+        CFI (cfiCond26) NoFunction
+        CFI (cfiCond26) Conditional ??CrossCallReturnLabel_17
+        CFI (cfiCond26) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond26) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond26) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond26) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond26) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond26) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond26) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond26) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond26) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond26) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond26) CFA_SP SP+0
+        CFI (cfiCond26) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond27 Using cfiCommon0
+        CFI (cfiCond27) NoFunction
+        CFI (cfiCond27) Conditional ??CrossCallReturnLabel_11
+        CFI (cfiCond27) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond27) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond27) CFA_SP SP+-5
+        CFI Block cfiCond28 Using cfiCommon0
+        CFI (cfiCond28) NoFunction
+        CFI (cfiCond28) Conditional ??CrossCallReturnLabel_12
+        CFI (cfiCond28) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond28) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond28) CFA_SP SP+-5
+        CFI Block cfiCond29 Using cfiCommon0
+        CFI (cfiCond29) NoFunction
+        CFI (cfiCond29) Conditional ??CrossCallReturnLabel_13
+        CFI (cfiCond29) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond29) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond29) CFA_SP SP+-5
+        CFI Block cfiCond30 Using cfiCommon0
+        CFI (cfiCond30) NoFunction
+        CFI (cfiCond30) Conditional ??CrossCallReturnLabel_14
+        CFI (cfiCond30) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond30) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond30) CFA_SP SP+-5
+        CFI Block cfiCond31 Using cfiCommon0
+        CFI (cfiCond31) NoFunction
+        CFI (cfiCond31) Conditional ??CrossCallReturnLabel_15
+        CFI (cfiCond31) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond31) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond31) CFA_SP SP+-5
+        CFI Block cfiPicker32 Using cfiCommon1
+        CFI (cfiPicker32) NoFunction
+        CFI (cfiPicker32) Picker
+        MOVX    @DPTR,A
+        MOV     DPTR,#AppDEviceJoinNwkState
+        RET
+        CFI EndBlock cfiCond25
+        CFI EndBlock cfiCond26
+        CFI EndBlock cfiCond27
+        CFI EndBlock cfiCond28
+        CFI EndBlock cfiCond29
+        CFI EndBlock cfiCond30
+        CFI EndBlock cfiCond31
+        CFI EndBlock cfiPicker32
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  861 void AppDevNwkDiscCyCle()
+AppDevNwkDiscCyCle:
+        CFI Block cfiBlock33 Using cfiCommon0
+        CFI Function AppDevNwkDiscCyCle
+        CODE
+//  862 {
+        FUNCALL AppDevNwkDiscCyCle, ZDApp_StopJoiningCycle
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDevNwkDiscCyCle, ZDApp_StopJoiningCycle
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDevNwkDiscCyCle, ZDApp_StopJoiningCycle
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDevNwkDiscCyCle, ZDApp_StopJoiningCycle
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL AppDevNwkDiscCyCle, osal_start_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    DPH
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  863   DeviceRehoinEventFlag = 0;
+        MOV     DPTR,#DeviceRehoinEventFlag
+        CLR     A
+        MOVX    @DPTR,A
+//  864   
+//  865   if((_NIB.nwkLogicalChannel >= 0x0B)&&(_NIB.nwkLogicalChannel <= 0x1A))//已经组网
+        MOV     DPTR,#_NIB + 22
+        MOVX    A,@DPTR
+        ADD     A,#-0xb
+        CLR     C
+        SUBB    A,#0x10
+        MOV     DPTR,#zclDevice_RejoinCounter
+        MOVX    A,@DPTR
+        JNC     ??AppDevNwkDiscCyCle_0
+//  866   {
+//  867     if (zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*3) 
+        CLR     C
+        SUBB    A,#0xd
+        JNC     ??AppDevNwkDiscCyCle_1
+//  868     {  
+//  869       if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+??AppDevNwkDiscCyCle_2:
+        MOVX    A,@DPTR
+        ANL     A,#0x3
+        JZ      $+5
+        LJMP    ??CrossCallReturnLabel_30 & 0xFFFF
+//  870       {
+//  871         DeviceRehoinEventFlag = 1;
+        LCALL   ?Subroutine2 & 0xFFFF
+//  872         AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+//  873       }
+//  874       
+//  875     }
+??CrossCallReturnLabel_11:
+        CLR     A
+??AppDevNwkDiscCyCle_3:
+        MOVX    @DPTR,A
+        SJMP    ??AppDevNwkDiscCyCle_4
+//  876     else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*3 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*6)
+??AppDevNwkDiscCyCle_1:
+        MOVX    A,@DPTR
+        ADD     A,#-0xd
+        CLR     C
+        SUBB    A,#0xc
+        MOVX    A,@DPTR
+        JNC     ??AppDevNwkDiscCyCle_5
+//  877     {
+//  878       if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+        ANL     A,#0x3
+        JZ      $+5
+        LJMP    ??CrossCallReturnLabel_30 & 0xFFFF
+//  879       {
+//  880         DeviceRehoinEventFlag = 1;
+        LCALL   ?Subroutine2 & 0xFFFF
+//  881         AppDEviceJoinNwkState = JOINNWKCYCLETIME_1MIN;
+//  882       }
+//  883     }
+??CrossCallReturnLabel_12:
+        SJMP    ??AppDevNwkDiscCyCle_3
+//  884     else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*6 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*9)
+??AppDevNwkDiscCyCle_5:
+        ADD     A,#-0x19
+        CLR     C
+        SUBB    A,#0xc
+        MOVX    A,@DPTR
+        JNC     ??AppDevNwkDiscCyCle_6
+//  885     {
+//  886       if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+        ANL     A,#0x3
+        JNZ     ??CrossCallReturnLabel_30
+//  887       {
+//  888         DeviceRehoinEventFlag = 1;
+        LCALL   ?Subroutine2 & 0xFFFF
+//  889         AppDEviceJoinNwkState = JOINNWKCYCLETIME_10MIN;
+//  890       }
+//  891     }
+??CrossCallReturnLabel_13:
+        INC     A
+        SJMP    ??AppDevNwkDiscCyCle_3
+//  892     else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*9 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*12)
+??AppDevNwkDiscCyCle_6:
+        ADD     A,#-0x25
+        CLR     C
+        SUBB    A,#0xc
+        MOVX    A,@DPTR
+        JNC     ??AppDevNwkDiscCyCle_7
+//  893     {
+//  894       if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+        ANL     A,#0x3
+        JNZ     ??CrossCallReturnLabel_30
+//  895       {
+//  896         DeviceRehoinEventFlag = 1;
+        LCALL   ?Subroutine2 & 0xFFFF
+//  897         AppDEviceJoinNwkState = JOINNWKCYCLETIME_30MIN;
+//  898       }
+//  899     }
+??CrossCallReturnLabel_14:
+        MOV     A,#0x3
+        SJMP    ??AppDevNwkDiscCyCle_3
+//  900     else if(zclDevice_RejoinCounter >JOINNWKCYCLE_ACCOUNT*12 && zclDevice_RejoinCounter <= JOINNWKCYCLE_ACCOUNT*15)
+??AppDevNwkDiscCyCle_7:
+        ADD     A,#-0x31
+        CLR     C
+        SUBB    A,#0xc
+        JNC     ??CrossCallReturnLabel_30
+//  901     {
+//  902       if(zclDevice_RejoinCounter%JOINNWKCYCLE_ACCOUNT == 0)
+        MOVX    A,@DPTR
+        ANL     A,#0x3
+        JNZ     ??CrossCallReturnLabel_30
+//  903       {
+//  904         DeviceRehoinEventFlag = 1;
+        LCALL   ?Subroutine2 & 0xFFFF
+//  905         AppDEviceJoinNwkState = JOINNWKCYCLETIME_1H;
+??CrossCallReturnLabel_15:
+        MOV     A,#0x4
+        MOVX    @DPTR,A
+//  906         zclDevice_RejoinCounter = JOINNWKCYCLE_ACCOUNT*12;
+        MOV     DPTR,#zclDevice_RejoinCounter
+        MOV     A,#0x30
+        SJMP    ??AppDevNwkDiscCyCle_3
+//  907       }
+//  908     }
+//  909   }
+//  910   else//新设备未组网
+//  911   {
+//  912     if (zclDevice_RejoinCounter <= 24) 
+??AppDevNwkDiscCyCle_0:
+        CLR     C
+        SUBB    A,#0x19
+        JC      ??AppDevNwkDiscCyCle_2
+//  913     {
+//  914       if(zclDevice_RejoinCounter%4 == 0)
+//  915       {
+//  916         DeviceRehoinEventFlag = 1;
+//  917         AppDEviceJoinNwkState = JOINNWKCYCLETIME_20S;
+//  918       }
+//  919     }
+//  920     else
+//  921     {
+//  922       pwrmgr_attribute.pwrmgr_device =PWRMGR_BATTERY;
+        MOV     DPTR,#pwrmgr_attribute + 6
+        MOV     A,#0x1
+        LCALL   ?Subroutine6 & 0xFFFF
+//  923       pwrmgr_attribute.pwrmgr_task_state = 0;
+//  924       DeviceRehoinEventFlag = 0; 
+//  925       if(FALSE == ZDApp_StopJoiningCycle())
+??CrossCallReturnLabel_7:
+        ; Setup parameters for call to function ZDApp_StopJoiningCycle
+        LCALL   ??ZDApp_StopJoiningCycle?relay
+        MOV     A,R1
+        JNZ     ??AppDevNwkDiscCyCle_8
+//  926       {
+//  927         ZDApp_StopJoiningCycle();
+        ; Setup parameters for call to function ZDApp_StopJoiningCycle
+        LCALL   ??ZDApp_StopJoiningCycle?relay
+//  928       }
+//  929     }
+//  930   }
+//  931   
+//  932   if(DeviceRehoinEventFlag == 1)
+??AppDevNwkDiscCyCle_8:
+        MOV     DPTR,#DeviceRehoinEventFlag
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??CrossCallReturnLabel_30
+//  933   {
+//  934     if(FALSE == ZDApp_StopJoiningCycle())
+??AppDevNwkDiscCyCle_4:
+        ; Setup parameters for call to function ZDApp_StopJoiningCycle
+        LCALL   ??ZDApp_StopJoiningCycle?relay
+        MOV     A,R1
+        JNZ     ??AppDevNwkDiscCyCle_9
+//  935     {
+//  936       ZDApp_StopJoiningCycle();
+        ; Setup parameters for call to function ZDApp_StopJoiningCycle
+        LCALL   ??ZDApp_StopJoiningCycle?relay
+//  937     }
+//  938     
+//  939     u8_ZDApp_StopJoiningCycleFlag = 1;
+??AppDevNwkDiscCyCle_9:
+        MOV     DPTR,#u8_ZDApp_StopJoiningCycleFlag
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  940     
+//  941     DeviceRehoinEventFlag = 0;
+        MOV     DPTR,#DeviceRehoinEventFlag
+        CLR     A
+        MOVX    @DPTR,A
+//  942     u8_AppDEviceJoinNwkTimeComing = 0;
+        MOV     DPTR,#u8_AppDEviceJoinNwkTimeComing
+        LCALL   ?Subroutine1 & 0xFFFF
+//  943     
+//  944     pwrmgr_attribute.pwrmgr_device =PWRMGR_BATTERY;
+//  945     pwrmgr_attribute.pwrmgr_task_state = 0;  
+//  946     
+//  947     osal_start_timerEx(zclSmartDoor_TaskID, 
+//  948                        ZCL_DEVICE_REJOIN_EVENT,
+//  949                        500); 
+??CrossCallReturnLabel_1:
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#-0xc
+        MOV     R5,#0x1
+        MOV     R2,A
+        MOV     R3,#0x8
+        LCALL   ??Subroutine10_0 & 0xFFFF
+//  950   }
+//  951   
+//  952 }
+??CrossCallReturnLabel_30:
+        LJMP    ?Subroutine0 & 0xFFFF
+        CFI EndBlock cfiBlock33
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine4:
+        CFI Block cfiCond34 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_18
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond35 Using cfiCommon0
+        CFI (cfiCond35) NoFunction
+        CFI (cfiCond35) Conditional ??CrossCallReturnLabel_19
+        CFI (cfiCond35) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond35) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond35) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond35) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond35) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond35) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond35) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond35) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond35) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond35) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond35) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond35) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond35) CFA_SP SP+0
+        CFI (cfiCond35) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiPicker36 Using cfiCommon1
+        CFI (cfiPicker36) NoFunction
+        CFI (cfiPicker36) Picker
+        LCALL   ??zclSwitchReportEvent?relay
+        ; Setup parameters for call to function osal_start_timerEx
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     R4,#0x64
+        MOV     R5,#0x0
+        MOV     R2,#-0x80
+        CFI EndBlock cfiCond34
+        CFI EndBlock cfiCond35
+        CFI EndBlock cfiPicker36
+        REQUIRE ??Subroutine9_0
+        ; // Fall through to label ??Subroutine9_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine9_0:
+        CFI Block cfiCond37 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_31
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond38 Using cfiCommon0
+        CFI (cfiCond38) NoFunction
+        CFI (cfiCond38) Conditional ??CrossCallReturnLabel_20
+        CFI (cfiCond38) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond38) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond38) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond38) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond38) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond38) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond38) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond38) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond38) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond38) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond38) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond38) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond38) CFA_SP SP+0
+        CFI (cfiCond38) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond39 Using cfiCommon0
+        CFI (cfiCond39) NoFunction
+        CFI (cfiCond39) Conditional ??CrossCallReturnLabel_21
+        CFI (cfiCond39) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond39) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond39) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond39) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond39) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond39) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond39) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond39) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond39) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond39) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond39) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond39) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond39) CFA_SP SP+0
+        CFI (cfiCond39) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond40 Using cfiCommon0
+        CFI (cfiCond40) NoFunction
+        CFI (cfiCond40) Conditional ??CrossCallReturnLabel_22
+        CFI (cfiCond40) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond40) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond40) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond40) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond40) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond40) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond40) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond40) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond40) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond40) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond40) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond40) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond40) CFA_SP SP+0
+        CFI (cfiCond40) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond41 Using cfiCommon0
+        CFI (cfiCond41) NoFunction
+        CFI (cfiCond41) Conditional ??CrossCallReturnLabel_23
+        CFI (cfiCond41) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond41) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond41) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond41) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond41) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond41) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond41) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond41) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond41) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond41) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond41) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond41) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond41) CFA_SP SP+0
+        CFI (cfiCond41) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond42 Using cfiCommon0
+        CFI (cfiCond42) NoFunction
+        CFI (cfiCond42) Conditional ??CrossCallReturnLabel_24
+        CFI (cfiCond42) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond42) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond42) CFA_SP SP+-5
+        CFI Block cfiCond43 Using cfiCommon0
+        CFI (cfiCond43) NoFunction
+        CFI (cfiCond43) Conditional ??CrossCallReturnLabel_18
+        CFI (cfiCond43) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond43) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond43) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond43) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond43) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond43) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond43) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond43) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond43) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond43) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond43) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond43) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond43) CFA_SP SP+0
+        CFI (cfiCond43) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond44 Using cfiCommon0
+        CFI (cfiCond44) NoFunction
+        CFI (cfiCond44) Conditional ??CrossCallReturnLabel_19
+        CFI (cfiCond44) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond44) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond44) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond44) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond44) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond44) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond44) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond44) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond44) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond44) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond44) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond44) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond44) CFA_SP SP+0
+        CFI (cfiCond44) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiPicker45 Using cfiCommon1
+        CFI (cfiPicker45) NoFunction
+        CFI (cfiPicker45) Picker
+        MOV     R3,#0x0
+        CFI EndBlock cfiCond37
+        CFI EndBlock cfiCond38
+        CFI EndBlock cfiCond39
+        CFI EndBlock cfiCond40
+        CFI EndBlock cfiCond41
+        CFI EndBlock cfiCond42
+        CFI EndBlock cfiCond43
+        CFI EndBlock cfiCond44
+        CFI EndBlock cfiPicker45
+        REQUIRE ??Subroutine10_0
+        ; // Fall through to label ??Subroutine10_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine10_0:
+        CFI Block cfiCond46 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_25
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond47 Using cfiCommon0
+        CFI (cfiCond47) NoFunction
+        CFI (cfiCond47) Conditional ??CrossCallReturnLabel_26
+        CFI (cfiCond47) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond47) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond47) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond47) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond47) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond47) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond47) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond47) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond47) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond47) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond47) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond47) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond47) CFA_SP SP+0
+        CFI (cfiCond47) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond48 Using cfiCommon0
+        CFI (cfiCond48) NoFunction
+        CFI (cfiCond48) Conditional ??CrossCallReturnLabel_27
+        CFI (cfiCond48) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond48) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond48) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond48) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond48) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond48) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond48) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond48) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond48) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond48) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond48) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond48) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond48) CFA_SP SP+0
+        CFI (cfiCond48) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond49 Using cfiCommon0
+        CFI (cfiCond49) NoFunction
+        CFI (cfiCond49) Conditional ??CrossCallReturnLabel_28
+        CFI (cfiCond49) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond49) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond49) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond49) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond49) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond49) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond49) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond49) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond49) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond49) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond49) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond49) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond49) CFA_SP SP+0
+        CFI (cfiCond49) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond50 Using cfiCommon0
+        CFI (cfiCond50) NoFunction
+        CFI (cfiCond50) Conditional ??CrossCallReturnLabel_29
+        CFI (cfiCond50) R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond50) VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond50) V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond50) V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond50) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond50) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond50) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond50) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond50) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond50) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond50) CFA_SP SP+0
+        CFI (cfiCond50) CFA_XSP16 add(XSP16, 10)
+        CFI Block cfiCond51 Using cfiCommon0
+        CFI (cfiCond51) NoFunction
+        CFI (cfiCond51) Conditional ??CrossCallReturnLabel_30
+        CFI (cfiCond51) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond51) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond51) CFA_SP SP+-5
+        CFI Block cfiCond52 Using cfiCommon0
+        CFI (cfiCond52) NoFunction
+        CFI (cfiCond52) Conditional ??CrossCallReturnLabel_31
+        CFI (cfiCond52) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond52) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond52) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond52) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond52) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond52) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond52) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond52) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond52) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond52) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond52) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond52) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond52) CFA_SP SP+0
+        CFI (cfiCond52) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond53 Using cfiCommon0
+        CFI (cfiCond53) NoFunction
+        CFI (cfiCond53) Conditional ??CrossCallReturnLabel_20
+        CFI (cfiCond53) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond53) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond53) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond53) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond53) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond53) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond53) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond53) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond53) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond53) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond53) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond53) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond53) CFA_SP SP+0
+        CFI (cfiCond53) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond54 Using cfiCommon0
+        CFI (cfiCond54) NoFunction
+        CFI (cfiCond54) Conditional ??CrossCallReturnLabel_21
+        CFI (cfiCond54) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond54) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond54) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond54) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond54) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond54) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond54) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond54) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond54) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond54) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond54) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond54) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond54) CFA_SP SP+0
+        CFI (cfiCond54) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond55 Using cfiCommon0
+        CFI (cfiCond55) NoFunction
+        CFI (cfiCond55) Conditional ??CrossCallReturnLabel_22
+        CFI (cfiCond55) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond55) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond55) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond55) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond55) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond55) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond55) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond55) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond55) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond55) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond55) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond55) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond55) CFA_SP SP+0
+        CFI (cfiCond55) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond56 Using cfiCommon0
+        CFI (cfiCond56) NoFunction
+        CFI (cfiCond56) Conditional ??CrossCallReturnLabel_23
+        CFI (cfiCond56) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond56) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond56) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond56) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond56) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond56) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond56) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond56) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond56) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond56) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond56) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond56) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond56) CFA_SP SP+0
+        CFI (cfiCond56) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond57 Using cfiCommon0
+        CFI (cfiCond57) NoFunction
+        CFI (cfiCond57) Conditional ??CrossCallReturnLabel_24
+        CFI (cfiCond57) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond57) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond57) CFA_SP SP+-5
+        CFI Block cfiCond58 Using cfiCommon0
+        CFI (cfiCond58) NoFunction
+        CFI (cfiCond58) Conditional ??CrossCallReturnLabel_18
+        CFI (cfiCond58) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond58) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond58) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond58) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond58) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond58) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond58) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond58) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond58) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond58) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond58) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond58) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond58) CFA_SP SP+0
+        CFI (cfiCond58) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond59 Using cfiCommon0
+        CFI (cfiCond59) NoFunction
+        CFI (cfiCond59) Conditional ??CrossCallReturnLabel_19
+        CFI (cfiCond59) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond59) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond59) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond59) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond59) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond59) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond59) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond59) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond59) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond59) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond59) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond59) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond59) CFA_SP SP+0
+        CFI (cfiCond59) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiPicker60 Using cfiCommon1
+        CFI (cfiPicker60) NoFunction
+        CFI (cfiPicker60) Picker
+        MOV     DPTR,#zclSmartDoor_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_start_timerEx?relay
+        RET
+        CFI EndBlock cfiCond46
+        CFI EndBlock cfiCond47
+        CFI EndBlock cfiCond48
+        CFI EndBlock cfiCond49
+        CFI EndBlock cfiCond50
+        CFI EndBlock cfiCond51
+        CFI EndBlock cfiCond52
+        CFI EndBlock cfiCond53
+        CFI EndBlock cfiCond54
+        CFI EndBlock cfiCond55
+        CFI EndBlock cfiCond56
+        CFI EndBlock cfiCond57
+        CFI EndBlock cfiCond58
+        CFI EndBlock cfiCond59
+        CFI EndBlock cfiPicker60
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine1:
+        CFI Block cfiCond61 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_0
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond62 Using cfiCommon0
+        CFI (cfiCond62) NoFunction
+        CFI (cfiCond62) Conditional ??CrossCallReturnLabel_1
+        CFI (cfiCond62) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond62) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond62) CFA_SP SP+-5
+        CFI Block cfiPicker63 Using cfiCommon1
+        CFI (cfiPicker63) NoFunction
+        CFI (cfiPicker63) Picker
+        MOVX    @DPTR,A
+        MOV     DPTR,#pwrmgr_attribute + 6
+        INC     A
+        LCALL   ?Subroutine6 & 0xFFFF
+??CrossCallReturnLabel_8:
+        RET
+        CFI EndBlock cfiCond61
+        CFI EndBlock cfiCond62
+        CFI EndBlock cfiPicker63
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine6:
+        CFI Block cfiCond64 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_7
+        CFI DPL0 Frame(CFA_SP, 4)
+        CFI DPH0 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        CFI Block cfiCond65 Using cfiCommon0
+        CFI (cfiCond65) NoFunction
+        CFI (cfiCond65) Conditional ??CrossCallReturnLabel_8, ??CrossCallReturnLabel_0
+        CFI (cfiCond65) R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI (cfiCond65) VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI (cfiCond65) V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI (cfiCond65) V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond65) V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond65) V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond65) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond65) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond65) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond65) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond65) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond65) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond65) CFA_SP SP+0
+        CFI (cfiCond65) CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond66 Using cfiCommon0
+        CFI (cfiCond66) NoFunction
+        CFI (cfiCond66) Conditional ??CrossCallReturnLabel_8, ??CrossCallReturnLabel_1
+        CFI (cfiCond66) DPL0 Frame(CFA_SP, 4)
+        CFI (cfiCond66) DPH0 Frame(CFA_SP, 5)
+        CFI (cfiCond66) CFA_SP SP+-5
+        CFI Block cfiPicker67 Using cfiCommon1
+        CFI (cfiPicker67) NoFunction
+        CFI (cfiPicker67) Picker
+        MOVX    @DPTR,A
+        MOV     DPTR,#pwrmgr_attribute
+        CLR     A
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    @DPTR,A
+        RET
+        CFI EndBlock cfiCond64
+        CFI EndBlock cfiCond65
+        CFI EndBlock cfiCond66
+        CFI EndBlock cfiPicker67
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclDevice_JoinNetworkOk>`:
+        DATA8
+        DB 12
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zcl_onoffFlag>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for ReJoinNetFlagInFlash>`:
+        DATA8
+        DB 255
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSmartDoor0_CmdCallbacks>`:
+        DATA16
+        DW ??zclSmartDoor_BasicResetCB?relay
+        DW ??zclSmartDoor_IdentifyCB?relay
+        DW ??zclSmartDoor_IdentifyQueryRspCB?relay
+        DW ??zclSmartDoor0_OnOffCB?relay
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DB 0, 0
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSmartDoor_Init?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclSmartDoor_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSmartDoor_event_loop?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclSmartDoor_event_loop
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSmartDoor_BasicResetCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclSmartDoor_BasicResetCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSmartDoor_IdentifyCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclSmartDoor_IdentifyCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSmartDoor_IdentifyQueryRspCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclSmartDoor_IdentifyQueryRspCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSmartDoor0_OnOffCB?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    zclSmartDoor0_OnOffCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??AppDEviceJoinNwk?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    AppDEviceJoinNwk
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??AppDevNwkDiscCyCle?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    AppDevNwkDiscCyCle
+
+        END
+// 
+// 1 304 bytes in segment BANKED_CODE
+//    48 bytes in segment BANK_RELAYS
+//     3 bytes in segment SFR_AN
+//    33 bytes in segment XDATA_I
+//    33 bytes in segment XDATA_ID
+//    14 bytes in segment XDATA_Z
+// 
+// 1 385 bytes of CODE  memory
+//     0 bytes of DATA  memory (+ 3 bytes shared)
+//    47 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none
